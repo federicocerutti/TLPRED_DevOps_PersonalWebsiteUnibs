@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionIntro from '../../../components/SectionIntro.astro';
+import FilterableList from '../../../components/FilterableList.astro';
+import { getLocalizedEvents } from '../../../lib/events-data';
+import { sectionLabels } from '../../../lib/site';
+
+const locale = 'en';
+const labels = sectionLabels[locale];
+const items = getLocalizedEvents(locale).map((entry) => ({
+  title: entry.title,
+  href: `/en/events/${entry.pathSlug}/`,
+  summary: entry.summary,
+  kind: entry.typeLabel,
+  image: entry.image,
+  imageAttribution: entry.imageAttribution,
+  meta: entry.meta,
+  tags: entry.sidebarItems.slice(1),
+  people: entry.sidebarItems.filter((item) => item.includes('Federico') || item.includes('Giorgio') || item.includes('Francesco') || item.includes('Renato')),
+  years: entry.year ? [entry.year] : [],
+}));
+---
+<BaseLayout locale={locale} title="Events | Federico Cerutti" description="Seminars, round tables, reports, and CyberChallenge editions featuring Federico Cerutti." image="/images/sourced/events/cyber-security-arena-2025.jpg" alternatePath="/eventi/">
+  <section class="section">
+    <div class="container">
+      <SectionIntro title="Events" intro="" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <FilterableList items={items} showOpenButton={false} spacious showKindFilter={false} showPersonFilter={false} labels={{ searchPlaceholder: labels.filterSearch, kind: labels.filterKind, tag: labels.filterTag, person: labels.filterPerson, year: labels.filterYear, all: labels.all, noResults: labels.noResults, openLabel: labels.readMore }} />
+    </div>
+  </section>
+</BaseLayout>

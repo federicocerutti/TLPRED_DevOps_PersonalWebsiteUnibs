@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AttributedImage from '../../../components/AttributedImage.astro';
+import DetailSidebar from '../../../components/DetailSidebar.astro';
+import { getEventTranslation, getLocalizedEvents } from '../../../lib/events-data';
+
+export function getStaticPaths() {
+  return getLocalizedEvents('en').map((entry) => ({ params: { slug: entry.pathSlug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const alt = getEventTranslation(entry.translationKey, 'it');
+---
+<BaseLayout locale="en" title={entry.seo.title} description={entry.seo.description} image={entry.image} alternatePath={alt ? `/eventi/${alt.pathSlug}/` : '/eventi/'}>
+  <section class="section">
+    <div class="container detail-shell">
+      <article class="surface detail-article">
+        <span class="eyebrow">{entry.typeLabel}</span>
+        <h1 class="detail-title">{entry.title}</h1>
+        <div class="detail-facts">
+          <p class="muted"><strong>Date:</strong> {entry.meta[0]}</p>
+          <p class="muted"><strong>Context:</strong> {entry.meta[1]}</p>
+          <p class="muted"><a href={entry.originalPageUrl} target="_blank" rel="noreferrer">Open the original CyberSecLab page</a></p>
+        </div>
+        <AttributedImage src={entry.image} alt={entry.title} attribution={entry.imageAttribution} imageStyle="margin: 1.25rem 0; border-radius: 18px; max-height: 420px; width: 100%; object-fit: cover;" />
+        <div class="prose" set:html={entry.body} />
+      </article>
+      <DetailSidebar title={entry.sidebarTitle} items={entry.sidebarItems} />
+    </div>
+  </section>
+</BaseLayout>

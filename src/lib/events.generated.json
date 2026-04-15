@@ -1,0 +1,656 @@
+[
+  {
+    "key": "clusit-ai-security-report-2026",
+    "en": {
+      "title": "Publication of the CLUSIT AI Security Report",
+      "summary": "Contribution to the publication of the CLUSIT AI Security report, focused on major AI security risks, evaluation methods, and governance measures for organisations adopting AI systems.",
+      "seoDescription": "Publication of the CLUSIT AI Security report with a contribution from Federico Cerutti.",
+      "meta": [
+        "01 March 2026",
+        "CLUSIT community"
+      ],
+      "body": "<p>In March 2026 the CLUSIT community published the <a href=\"https://aisecurity.clusit.it/\" target=\"_blank\" rel=\"noreferrer\">AI Security</a> report, a document devoted to AI security risks, emerging attack surfaces, and the controls needed by organisations that are bringing models and AI agents into real operational settings.</p><p>Federico Cerutti contributed to the report within the <a href=\"https://c4s.clusit.it/chi-siamo.php\" target=\"_blank\" rel=\"noreferrer\">CLUSIT Community for Security</a>, bringing into the document the Brescia node perspective on reliability, risk assessment, and the interplay between technical and organisational controls.</p><p>The report turns themes such as reliability, risk assessment, and organisational controls into a practical reference for people responsible for adopting AI systems in operational and regulated settings.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "AI security",
+        "CLUSIT",
+        "Report",
+        "Governance"
+      ],
+      "image": "/images/sourced/events/clusit-ai-security-report-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/geometric-shape-digital-wallpaper-oyXis2kALVg",
+        "sourceLabel": "Photo by fabio on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/clusit-ai-security-report-2026/",
+      "pathSlug": "clusit-ai-security-report-2026",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Pubblicazione del report AI Security CLUSIT",
+      "summary": "Contributo alla pubblicazione del report AI Security CLUSIT, dedicato ai principali rischi di sicurezza dell’AI, ai metodi di valutazione e alle misure di governance per le organizzazioni che adottano sistemi di intelligenza artificiale.",
+      "seoDescription": "Pubblicazione del report AI Security CLUSIT con contributo di Federico Cerutti.",
+      "meta": [
+        "01 marzo 2026",
+        "Community CLUSIT"
+      ],
+      "body": "<p>Nel marzo 2026 la community CLUSIT ha pubblicato il report <a href=\"https://aisecurity.clusit.it/\" target=\"_blank\" rel=\"noreferrer\">AI Security</a>, un documento dedicato ai rischi di sicurezza dei sistemi di intelligenza artificiale, alle superfici di attacco emergenti e ai controlli utili per organizzazioni che adottano modelli e agenti AI in contesti reali.</p><p>Federico Cerutti ha contribuito alla costruzione del rapporto all'interno della community <a href=\"https://c4s.clusit.it/chi-siamo.php\" target=\"_blank\" rel=\"noreferrer\">CLUSIT Community for Security</a>, portando nel documento il punto di vista del nodo di Brescia su affidabilità, valutazione del rischio e integrazione tra aspetti tecnici e organizzativi.</p><p>Il report si inserisce così nel lavoro di trasferimento e confronto con la comunità professionale, trasformando temi di ricerca in indicazioni leggibili e operative per chi deve governare l'adozione di sistemi AI.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "AI security",
+        "CLUSIT",
+        "Report",
+        "Governance"
+      ],
+      "image": "/images/sourced/events/clusit-ai-security-report-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/geometric-shape-digital-wallpaper-oyXis2kALVg",
+        "sourceLabel": "Photo by fabio on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/pubblicazione-ai-security-clusit-2026/",
+      "pathSlug": "pubblicazione-ai-security-clusit-2026",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "llm-red-teaming-nist-mitre-atlas-clusit-2026",
+    "en": {
+      "title": "LLM Red Teaming with NIST and MITRE ATLAS",
+      "summary": "Talk by Federico Cerutti for the CLUSIT community on red teaming large language models using NIST guidance and MITRE ATLAS as structuring references.",
+      "seoDescription": "CLUSIT talk by Federico Cerutti on large language model red teaming.",
+      "meta": [
+        "24 February 2026",
+        "CLUSIT community"
+      ],
+      "body": "<p>On February 24, 2026, Federico Cerutti delivered a CLUSIT community session on red teaming large language models, framing the topic through both NIST work and the MITRE ATLAS knowledge base in order to reason systematically about threats, test cases, and evaluation methods.</p><p>The talk approached the topic operationally: not only which attacks are relevant for generative systems today, but also how to design test scenarios, document results, and connect red teaming activity to governance and adoption decisions inside organisations.</p><p>Slides from the session are available as a PDF: <a href=\"https://cyberseclab.unibs.it/docs/2026-AIRedTeaming.pdf\" target=\"_blank\" rel=\"noreferrer\">LLM Red Teaming with NIST and MITRE ATLAS</a>. Additional context on the organiser is available from the <a href=\"https://c4s.clusit.it/chi-siamo.php\" target=\"_blank\" rel=\"noreferrer\">CLUSIT Community for Security</a> page.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "LLM",
+        "Red teaming",
+        "NIST",
+        "MITRE ATLAS"
+      ],
+      "image": "/images/sourced/events/llm-red-teaming-clusit-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/gray-ip-camera-on-black-wall-p9f6sjMglRE",
+        "sourceLabel": "Photo by Florian Olivo on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/llm-red-teaming-nist-mitre-atlas-clusit-2026/",
+      "pathSlug": "llm-red-teaming-nist-mitre-atlas-clusit-2026",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "LLM Red Teaming con NIST e MITRE ATLAS",
+      "summary": "Intervento di Federico Cerutti per la community CLUSIT sul red teaming dei large language model, con NIST e MITRE ATLAS come riferimenti per strutturare minacce, test e valutazioni.",
+      "seoDescription": "Intervento CLUSIT di Federico Cerutti sul red teaming dei large language models.",
+      "meta": [
+        "24 febbraio 2026",
+        "Community CLUSIT"
+      ],
+      "body": "<p>Il 24 febbraio 2026 Federico Cerutti ha tenuto per la community CLUSIT un incontro dedicato al red teaming dei large language model, usando come cornice sia il lavoro del NIST sia la knowledge base MITRE ATLAS per ragionare in modo strutturato su minacce, casi d'uso e metodi di valutazione.</p><p>L'intervento ha affrontato il tema in chiave operativa: non solo quali attacchi siano oggi rilevanti per i sistemi generativi, ma anche come costruire scenari di prova, documentare i risultati e collegare il red teaming alle decisioni di governance e adozione nei contesti organizzativi.</p><p>Le slide dell'incontro sono disponibili in formato PDF: <a href=\"https://cyberseclab.unibs.it/docs/2026-AIRedTeaming.pdf\" target=\"_blank\" rel=\"noreferrer\">LLM Red Teaming con NIST e MITRE ATLAS</a>. Ulteriori informazioni sulla community sono disponibili nella pagina <a href=\"https://c4s.clusit.it/chi-siamo.php\" target=\"_blank\" rel=\"noreferrer\">CLUSIT Community for Security</a>.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "LLM",
+        "Red teaming",
+        "NIST",
+        "MITRE ATLAS"
+      ],
+      "image": "/images/sourced/events/llm-red-teaming-clusit-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/gray-ip-camera-on-black-wall-p9f6sjMglRE",
+        "sourceLabel": "Photo by Florian Olivo on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/llm-red-teaming-nist-mitre-atlas-clusit-2026/",
+      "pathSlug": "llm-red-teaming-nist-mitre-atlas-clusit-2026",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "copernico-high-school-ai-seminar-2026",
+    "en": {
+      "title": "Public AI Seminar for Liceo Copernico",
+      "summary": "Seminar hosted at the University of Brescia for students of Liceo Copernico, combining an accessible introduction to AI with discussion of cybersecurity implications.",
+      "seoDescription": "Public seminar by Federico Cerutti on AI and cybersecurity for Liceo Copernico students.",
+      "meta": [
+        "03 February 2026",
+        "University of Brescia"
+      ],
+      "body": "<p>On February 3, 2026, Federico Cerutti delivered a public seminar at the University of Brescia for students from Liceo Copernico, aimed at introducing the main ideas behind artificial intelligence in a way that was accessible without flattening the complexity of the topic.</p><p>A relevant part of the session also addressed cybersecurity: how to think about misuse, fragility, and abuse of AI systems, why models should not be treated as neutral tools, and which questions matter when discussing reliability, responsible use, and data protection.</p><p>The seminar gave students a clearer vocabulary for understanding the limits, risks, and security implications of AI tools they already encounter in everyday life.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Outreach",
+        "AI literacy",
+        "Cybersecurity",
+        "School"
+      ],
+      "image": "/images/sourced/events/copernico-ai-seminar-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-man-standing-in-front-of-a-whiteboard-in-a-classroom-QNhxXsCkcDo",
+        "sourceLabel": "Photo by Yunus Tuğ on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/copernico-high-school-ai-seminar-2026/",
+      "pathSlug": "copernico-high-school-ai-seminar-2026",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Seminario divulgativo sull&#39;intelligenza artificiale per il Liceo Copernico",
+      "summary": "Seminario ospitato all’Università di Brescia per gli studenti del Liceo Copernico, con un’introduzione accessibile all’AI e una discussione sulle implicazioni per la cybersecurity.",
+      "seoDescription": "Seminario divulgativo di Federico Cerutti su AI e cybersecurity per il Liceo Copernico.",
+      "meta": [
+        "03 febbraio 2026",
+        "Università degli Studi di Brescia"
+      ],
+      "body": "<p>Il 3 febbraio 2026 Federico Cerutti ha tenuto presso l'Università di Brescia un seminario divulgativo rivolto al Liceo Copernico, pensato per introdurre in modo accessibile i principali concetti dell'intelligenza artificiale e mostrare come si traducano in strumenti, applicazioni e limiti concreti.</p><p>Una parte rilevante dell'incontro è stata dedicata anche alla sicurezza informatica: come valutare rischi e abusi possibili dei sistemi AI, perché i modelli non vadano trattati come strumenti neutri e quali domande porsi quando si parla di affidabilità, uso responsabile e protezione dei dati.</p><p>Ne è uscito un appuntamento di taglio divulgativo ma non semplificato, rivolto a studenti che si confrontano sempre più spesso con tecnologie AI senza avere ancora strumenti critici per leggerne implicazioni e vulnerabilità.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Outreach",
+        "AI literacy",
+        "Cybersecurity",
+        "Scuola"
+      ],
+      "image": "/images/sourced/events/copernico-ai-seminar-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-man-standing-in-front-of-a-whiteboard-in-a-classroom-QNhxXsCkcDo",
+        "sourceLabel": "Photo by Yunus Tuğ on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/seminario-ai-liceo-copernico-2026/",
+      "pathSlug": "seminario-ai-liceo-copernico-2026",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "cyberchallenge-2026",
+    "en": {
+      "title": "CyberChallenge 2026",
+      "summary": "2026 CyberChallenge edition at the Brescia node, with the local programme running from January to June and integrated with the national platform.",
+      "seoDescription": "2026 CyberChallenge edition for the Brescia node.",
+      "meta": [
+        "2026",
+        "CyberChallenge"
+      ],
+      "body": "<p>In 2026 the Brescia node again takes part in <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a>, the main Italian national training programme for university students and young talents interested in cybersecurity.</p><p>As in the other local editions, the Brescia track runs from January to June and combines selection, technical training, hands-on exercises, and preparation for competitive and applied settings, creating a bridge between teaching, lab work, and the national cybersecurity community.</p><p>The 2026 edition continues that established local effort in training, mentoring, and preparation for both competitive and applied cyber scenarios.</p>",
+      "sidebarTitle": "Mentors and references",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/selective-focus-photography-of-people-sits-in-front-of-table-inside-room-sggw4-qDD54",
+        "sourceLabel": "Photo by Annie Spratt on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/cyberchallenge/2026/",
+      "pathSlug": "2026",
+      "typeLabel": "Annual edition"
+    },
+    "it": {
+      "title": "CyberChallenge 2026",
+      "summary": "Edizione 2026 di CyberChallenge per il nodo di Brescia, con programma locale da gennaio a giugno e integrazione con la piattaforma nazionale.",
+      "seoDescription": "Edizione 2026 di CyberChallenge per il nodo di Brescia.",
+      "meta": [
+        "2026",
+        "CyberChallenge"
+      ],
+      "body": "<p>Anche nel 2026 il nodo di Brescia partecipa a <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a>, il principale programma nazionale di addestramento per studenti universitari e giovani talenti interessati alla sicurezza informatica.</p><p>Come per le altre edizioni locali, il percorso si sviluppa da gennaio a giugno e combina selezione, formazione tecnica, esercitazioni e avvicinamento alle competizioni, creando un ponte tra didattica, laboratorio e comunità nazionale della cybersecurity.</p><p>L'edizione 2026 prosegue un lavoro ormai stabile sul territorio, fatto di addestramento, mentoring e preparazione a scenari competitivi e applicati.</p>",
+      "sidebarTitle": "Mentor e riferimenti",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2026.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/selective-focus-photography-of-people-sits-in-front-of-table-inside-room-sggw4-qDD54",
+        "sourceLabel": "Photo by Annie Spratt on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/cyberchallenge/2026/",
+      "pathSlug": "2026",
+      "typeLabel": "Edizione annuale"
+    }
+  },
+  {
+    "key": "cyber-security-arena-2025-opening-panel-moderation",
+    "en": {
+      "title": "Moderation of the opening panel at Cyber & Security Arena 2025",
+      "summary": "Federico Cerutti moderated the opening panel of Cyber & Security Arena 2025 in Milan, helping set the public discussion on cyber threats, emerging technologies, and organisational priorities.",
+      "seoDescription": "Moderation of the opening panel at Cyber & Security Arena 2025 in Milan.",
+      "meta": [
+        "17 November 2025",
+        "Milan"
+      ],
+      "body": "<p>On November 17, 2025, Federico Cerutti moderated the opening panel of Cyber &amp; Security Arena 2025 in Milan, helping frame the initial discussion around the threat landscape, digital transformation, AI, and security priorities for public and private organisations.</p><p>The moderation helped keep technical, strategic, and organisational perspectives in the same conversation, giving the opening panel a clear structure and practical direction.</p><p>The event belongs to the wider Italian circuit of cybersecurity and digital-transformation forums; a short listing is also available through the <a href=\"https://www.sicurezza.it/eventi/calendario-eventi.html\" target=\"_blank\" rel=\"noreferrer\">sicurezza.it event calendar</a>.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Moderation",
+        "Cybersecurity",
+        "Public event",
+        "Milan"
+      ],
+      "image": "/images/sourced/events/cyber-security-arena-2025.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/diverse-audience-attentively-listening-at-a-conference-event-CvG2lnWbm8s",
+        "sourceLabel": "Photo by Carlos Gil on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/cyber-security-arena-2025-opening-panel-moderation/",
+      "pathSlug": "cyber-security-arena-2025-opening-panel-moderation",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Moderazione del panel di apertura della Cyber & Security Arena 2025",
+      "summary": "Federico Cerutti ha moderato il panel di apertura della Cyber & Security Arena 2025 a Milano, contribuendo a impostare il dibattito su minacce cyber, tecnologie emergenti e priorità organizzative.",
+      "seoDescription": "Moderazione del panel di apertura della Cyber & Security Arena 2025 a Milano.",
+      "meta": [
+        "17 novembre 2025",
+        "Milano"
+      ],
+      "body": "<p>Il 17 novembre 2025 Federico Cerutti ha moderato il panel di apertura della Cyber &amp; Security Arena 2025 a Milano, contribuendo a impostare il dibattito iniziale su stato della minaccia, trasformazione digitale, AI e priorità di sicurezza per organizzazioni pubbliche e private.</p><p>La moderazione ha dato ritmo a un confronto tra prospettive tecniche, strategiche e organizzative, con l'obiettivo di mettere a fuoco le questioni che oggi orientano le scelte di imprese e istituzioni.</p><p>Una sintesi generale dell'iniziativa può essere ricavata dal calendario eventi di <a href=\"https://www.sicurezza.it/eventi/calendario-eventi.html\" target=\"_blank\" rel=\"noreferrer\">sicurezza.it</a>, che colloca la manifestazione nel panorama italiano degli appuntamenti dedicati a cybersecurity e trasformazione digitale.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Moderazione",
+        "Cybersecurity",
+        "Evento pubblico",
+        "Milano"
+      ],
+      "image": "/images/sourced/events/cyber-security-arena-2025.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/diverse-audience-attentively-listening-at-a-conference-event-CvG2lnWbm8s",
+        "sourceLabel": "Photo by Carlos Gil on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/cyber-security-arena-2025-moderazione-panel-apertura/",
+      "pathSlug": "cyber-security-arena-2025-moderazione-panel-apertura",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "domani-lavoro-cybersecurity-professions-roundtable-2025",
+    "en": {
+      "title": "Round table at Domani Lavoro on new cybersecurity professions",
+      "summary": "Federico Cerutti and Giorgio Pedrazzi took part in a round table at Domani Lavoro, at the Brescia fair, on the new professional profiles required by cybersecurity.",
+      "seoDescription": "Round table on new professional profiles and cybersecurity at the Brescia fair.",
+      "meta": [
+        "05 November 2025",
+        "Brescia trade fair"
+      ],
+      "body": "<p>On November 5, 2025, Federico Cerutti and Giorgio Pedrazzi took part in a round table at Domani Lavoro, hosted at the Brescia fair, to discuss the role of new professional profiles required by cybersecurity and the need for people who can connect technical expertise, governance, and compliance.</p><p>The discussion focused on skills rather than slogans: not only deeply technical specialists, but also professionals able to coordinate processes, understand regulatory constraints, and translate cyber risk into sustainable organisational decisions.</p><p>The round table connected cybersecurity education with labour demand and career orientation, especially for roles that need to move comfortably between technical work, governance, and regulation.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Giorgio Pedrazzi",
+        "Work",
+        "Skills",
+        "Cybersecurity",
+        "Brescia"
+      ],
+      "image": "/images/sourced/events/domani-lavoro-roundtable-2025.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-woman-holding-a-microphone-in-a-dark-room-gpIneON8juQ",
+        "sourceLabel": "Photo by Pippa Maria on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/domani-lavoro-cybersecurity-professions-roundtable-2025/",
+      "pathSlug": "domani-lavoro-cybersecurity-professions-roundtable-2025",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Tavola rotonda a Domani Lavoro sulle nuove professionalità della cybersecurity",
+      "summary": "Federico Cerutti e Giorgio Pedrazzi hanno partecipato a una tavola rotonda a Domani Lavoro, alla fiera di Brescia, sulle nuove professionalità richieste dalla cybersecurity.",
+      "seoDescription": "Tavola rotonda su nuove professionalità e sicurezza informatica alla fiera di Brescia.",
+      "meta": [
+        "05 novembre 2025",
+        "Fiera di Brescia"
+      ],
+      "body": "<p>Il 5 novembre 2025 Federico Cerutti e Giorgio Pedrazzi hanno partecipato a una tavola rotonda presso Domani Lavoro, alla fiera di Brescia, per discutere il ruolo delle nuove professionalità richieste dalla sicurezza informatica e il bisogno di profili capaci di collegare tecnica, governance e compliance.</p><p>L'incontro ha messo al centro il tema delle competenze: non solo specialisti tecnici, ma anche figure in grado di coordinare processi, comprendere i vincoli normativi e tradurre i rischi cyber in decisioni organizzative sostenibili.</p><p>Il confronto ha legato formazione, orientamento professionale e domanda del territorio, mostrando come la cybersecurity richieda percorsi capaci di parlare insieme a università, imprese e istituzioni locali.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Giorgio Pedrazzi",
+        "Lavoro",
+        "Competenze",
+        "Cybersecurity",
+        "Brescia"
+      ],
+      "image": "/images/sourced/events/domani-lavoro-roundtable-2025.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-woman-holding-a-microphone-in-a-dark-room-gpIneON8juQ",
+        "sourceLabel": "Photo by Pippa Maria on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/domani-lavoro-tavola-rotonda-cybersecurity-2025/",
+      "pathSlug": "domani-lavoro-tavola-rotonda-cybersecurity-2025",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "romecup-2025-ai-security-talk",
+    "en": {
+      "title": "AI security talk at RomeCup 2025",
+      "summary": "Participation in RomeCup 2025 with a talk by Federico Cerutti devoted to AI security and the operational implications of adopting AI systems.",
+      "seoDescription": "Talk by Federico Cerutti on AI security at RomeCup 2025.",
+      "meta": [
+        "06 May 2025",
+        "RomeCup 2025, Rome"
+      ],
+      "body": "<p>On May 6, 2025, Federico Cerutti took part in RomeCup 2025 with a talk on AI security, bringing the topic into an event that traditionally connects education, innovation, robotics, and the social impact of technology.</p><p>The talk offered a deliberately non-celebratory reading of AI: alongside application opportunities, it discussed limits, risks, abuse surfaces, and the need to evaluate systems and models also in terms of robustness and responsibility.</p><p>The official <a href=\"https://2025.romecup.org/\" target=\"_blank\" rel=\"noreferrer\">RomeCup 2025</a> website gives the broader context of the event, which brings together education, robotics, innovation, and public discussion around technology.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "AI security",
+        "RomeCup",
+        "Outreach",
+        "Robotics and education"
+      ],
+      "image": "/images/sourced/events/romecup-2025-ai-security.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/students-raising-hands-in-a-lecture-hall-classroom-r_UZcR2VFqE",
+        "sourceLabel": "Photo by Vitaly Gariev on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/romecup-2025-ai-security-talk/",
+      "pathSlug": "romecup-2025-ai-security-talk",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Intervento sulla sicurezza dell&#39;AI a RomeCup 2025",
+      "summary": "Partecipazione a RomeCup 2025 con un intervento di Federico Cerutti dedicato alla sicurezza dell’AI e alle implicazioni operative dell’adozione di sistemi di intelligenza artificiale.",
+      "seoDescription": "Intervento di Federico Cerutti sulla sicurezza dell'AI a RomeCup 2025.",
+      "meta": [
+        "06 maggio 2025",
+        "RomeCup 2025, Roma"
+      ],
+      "body": "<p>Il 6 maggio 2025 Federico Cerutti ha partecipato alla RomeCup 2025 con un intervento dedicato alla sicurezza dell'intelligenza artificiale, portando il tema dentro una manifestazione che intreccia tradizionalmente formazione, innovazione, robotica e impatto sociale delle tecnologie.</p><p>L'intervento ha offerto una lettura non celebrativa dell'AI: oltre alle opportunità applicative, sono stati discussi limiti, rischi, superfici di abuso e la necessità di valutare sistemi e modelli anche dal punto di vista della robustezza e della responsabilità.</p><p>Il contesto generale della manifestazione è documentato dal sito ufficiale <a href=\"https://2025.romecup.org/\" target=\"_blank\" rel=\"noreferrer\">RomeCup 2025</a>, utile per inquadrare la dimensione educativa e pubblica dell'iniziativa.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "AI security",
+        "RomeCup",
+        "Divulgazione",
+        "Robotics and education"
+      ],
+      "image": "/images/sourced/events/romecup-2025-ai-security.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/students-raising-hands-in-a-lecture-hall-classroom-r_UZcR2VFqE",
+        "sourceLabel": "Photo by Vitaly Gariev on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/romecup-2025-sicurezza-ai/",
+      "pathSlug": "romecup-2025-sicurezza-ai",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "cyberchallenge-2025",
+    "en": {
+      "title": "CyberChallenge 2025",
+      "summary": "2025 CyberChallenge edition at the Brescia node, with local training and mentoring activities running from January to June.",
+      "seoDescription": "2025 CyberChallenge edition for the Brescia node.",
+      "meta": [
+        "2025",
+        "CyberChallenge"
+      ],
+      "body": "<p>In 2025 the Brescia node carried forward a new edition of <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a>, confirming the lab presence in the national cyber training programme aimed at students and young talents.</p><p>The local edition ran from January to June, with a combination of initial selection, technical training, practical activities, and mentoring, in continuity with the model already established in previous years.</p><p>The programme strengthened the training role of the node by placing students and young participants in a setting that combines lab work, competition, and advanced skill-building.</p>",
+      "sidebarTitle": "Mentors and references",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2025.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-group-of-people-sitting-around-a-table-with-laptops-pfkknbsGuIc",
+        "sourceLabel": "Photo by Redmind Studio on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/cyberchallenge/2025/",
+      "pathSlug": "2025",
+      "typeLabel": "Annual edition"
+    },
+    "it": {
+      "title": "CyberChallenge 2025",
+      "summary": "Edizione 2025 di CyberChallenge per il nodo di Brescia, con attività locali di formazione e mentoring da gennaio a giugno.",
+      "seoDescription": "Edizione 2025 di CyberChallenge per il nodo di Brescia.",
+      "meta": [
+        "2025",
+        "CyberChallenge"
+      ],
+      "body": "<p>Nel 2025 il nodo di Brescia ha portato avanti una nuova edizione di <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a>, confermando la presenza del laboratorio nel programma nazionale di addestramento cyber rivolto a studenti e giovani talenti.</p><p>L'edizione si è sviluppata localmente da gennaio a giugno, con una combinazione di selezione iniziale, training tecnico, attività pratiche e mentoring, in continuità con il modello già sperimentato negli anni precedenti.</p><p>Il percorso ha rafforzato la dimensione formativa del nodo, accompagnando studenti e giovani partecipanti in un contesto che unisce laboratorio, competizione e crescita di competenze avanzate.</p>",
+      "sidebarTitle": "Mentor e riferimenti",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2025.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-group-of-people-sitting-around-a-table-with-laptops-pfkknbsGuIc",
+        "sourceLabel": "Photo by Redmind Studio on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/cyberchallenge/2025/",
+      "pathSlug": "2025",
+      "typeLabel": "Edizione annuale"
+    }
+  },
+  {
+    "key": "salone-del-risparmio-responsible-secure-ai-2024",
+    "en": {
+      "title": "Round table at Salone del Risparmio on responsible and secure AI",
+      "summary": "Federico Cerutti took part in a round table at Salone del Risparmio in Milan devoted to the responsible and secure use of artificial intelligence.",
+      "seoDescription": "Round table on responsible and secure AI at Salone del Risparmio in Milan.",
+      "meta": [
+        "09 April 2024",
+        "Milan"
+      ],
+      "body": "<p>On April 9, 2024, Federico Cerutti took part in a round table organised within Salone del Risparmio in Milan, with a discussion centred on the responsible and secure use of artificial intelligence in settings where reliability, transparency, and risk cannot be treated as secondary issues.</p><p>The discussion brought secure and responsible AI into a regulated and decision-sensitive environment, where adopting complex technologies requires explicit criteria for transparency, control, and accountability.</p><p>The round-table format encouraged exchange between different profiles and underscored the need for AI governance that keeps technical, organisational, and accountability concerns together.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "AI governance",
+        "Responsible AI",
+        "Finance",
+        "Round table"
+      ],
+      "image": "/images/sourced/events/salone-del-risparmio-roundtable-2024.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-close-up-of-a-microphone-with-a-blurry-background-XpCtBKcM3Ds",
+        "sourceLabel": "Photo by Gabriel Tiveron on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/salone-del-risparmio-responsible-secure-ai-2024/",
+      "pathSlug": "salone-del-risparmio-responsible-secure-ai-2024",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Tavola rotonda al Salone del Risparmio su uso responsabile e sicuro dell&#39;AI",
+      "summary": "Federico Cerutti ha preso parte a una tavola rotonda al Salone del Risparmio di Milano dedicata all’uso responsabile e sicuro dell’intelligenza artificiale.",
+      "seoDescription": "Tavola rotonda su uso responsabile e sicuro dell'AI al Salone del Risparmio di Milano.",
+      "meta": [
+        "09 aprile 2024",
+        "Milano"
+      ],
+      "body": "<p>Il 9 aprile 2024 Federico Cerutti ha preso parte a una tavola rotonda organizzata dal Salone del Risparmio di Milano, con una discussione centrata sull'uso responsabile e sicuro dell'intelligenza artificiale in contesti nei quali affidabilità, trasparenza e rischio non possono essere trattati come elementi secondari.</p><p>Il confronto ha portato questi temi dentro un settore regolato e ad alta sensibilità decisionale, dove l'adozione di tecnologie complesse richiede criteri chiari di valutazione, controllo e accountability.</p><p>Il formato di tavola rotonda ha favorito il dialogo tra profili diversi, mettendo in evidenza la necessità di una governance dell'AI che tenga insieme aspetti tecnici, organizzativi e istituzionali.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "AI governance",
+        "Responsible AI",
+        "Finance",
+        "Round table"
+      ],
+      "image": "/images/sourced/events/salone-del-risparmio-roundtable-2024.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/a-close-up-of-a-microphone-with-a-blurry-background-XpCtBKcM3Ds",
+        "sourceLabel": "Photo by Gabriel Tiveron on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/salone-del-risparmio-ai-responsabile-sicuro-2024/",
+      "pathSlug": "salone-del-risparmio-ai-responsabile-sicuro-2024",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "cyberchallenge-2024",
+    "en": {
+      "title": "CyberChallenge 2024",
+      "summary": "2024 CyberChallenge edition in Brescia, with local selection, training, and mentoring activities between January and June.",
+      "seoDescription": "2024 CyberChallenge edition for the Brescia node.",
+      "meta": [
+        "2024",
+        "CyberChallenge"
+      ],
+      "body": "<p>In 2024 the Brescia node continued its participation in <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a>, contributing locally to the training of new profiles interested in cybersecurity.</p><p>The local cycle ran from January to June and followed the typical structure of the national programme: participant selection, progressive technical training, exercises, and preparation for competitive and applied scenarios.</p><p>The 2024 edition confirms the role of the Brescia node as a connection point between the university, the lab, the national community, and the growth of advanced cyber skills.</p>",
+      "sidebarTitle": "Mentors and references",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2024.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/students-working-on-laptops-at-a-shared-desk-rh4xapY-haI",
+        "sourceLabel": "Photo by Raka Rahmadani on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/cyberchallenge/2024/",
+      "pathSlug": "2024",
+      "typeLabel": "Annual edition"
+    },
+    "it": {
+      "title": "CyberChallenge 2024",
+      "summary": "Edizione 2024 di CyberChallenge a Brescia, con selezione locale, formazione e mentoring tra gennaio e giugno.",
+      "seoDescription": "Edizione 2024 di CyberChallenge per il nodo di Brescia.",
+      "meta": [
+        "2024",
+        "CyberChallenge"
+      ],
+      "body": "<p>Nel 2024 il nodo di Brescia ha proseguito la propria partecipazione a <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a>, contribuendo alla formazione locale di nuovi profili interessati alla sicurezza informatica.</p><p>Il ciclo locale si è sviluppato da gennaio a giugno, seguendo la struttura tipica del programma nazionale: selezione dei partecipanti, training progressivo, esercitazioni e preparazione a scenari competitivi e applicati.</p><p>L'edizione 2024 conferma il ruolo del nodo come punto di raccordo tra università, laboratorio, comunità nazionale e crescita di competenze cyber avanzate.</p>",
+      "sidebarTitle": "Mentor e riferimenti",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2024.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/students-working-on-laptops-at-a-shared-desk-rh4xapY-haI",
+        "sourceLabel": "Photo by Raka Rahmadani on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/cyberchallenge/2024/",
+      "pathSlug": "2024",
+      "typeLabel": "Edizione annuale"
+    }
+  },
+  {
+    "key": "clusit-supply-chain-security-report-2023",
+    "en": {
+      "title": "Publication of the CLUSIT Supply Chain Security report",
+      "summary": "Contribution to the publication of the Supply Chain Security report promoted by the CLUSIT community, focused on dependency risk, abuse, and threat propagation across digital supply chains.",
+      "seoDescription": "Publication of the CLUSIT Supply Chain Security report with a contribution from Federico Cerutti.",
+      "meta": [
+        "01 March 2023",
+        "CLUSIT community"
+      ],
+      "body": "<p>In March 2023 the <a href=\"https://supplychainsecurity.clusit.it/\" target=\"_blank\" rel=\"noreferrer\">Supply Chain Security</a> report was published, with a contribution from Federico Cerutti within the activities promoted by the CLUSIT community.</p><p>The document addresses the security of digital supply chains, with attention to software dependencies, third parties, risk propagation, and the difficulty of maintaining control in complex ecosystems where the boundary between internal and external actors becomes increasingly blurred.</p><p>The report addresses one of the structural security problems of contemporary organisations, where a weakness in one supplier or dependency can propagate across an entire digital ecosystem.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Supply chain security",
+        "CLUSIT",
+        "Report",
+        "Cyber risk"
+      ],
+      "image": "/images/sourced/events/clusit-supply-chain-security-2023.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/silver-stainless-steel-chain-XR4TJbKwtzA",
+        "sourceLabel": "Photo by !ME on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/clusit-supply-chain-security-report-2023/",
+      "pathSlug": "clusit-supply-chain-security-report-2023",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Pubblicazione del report Supply Chain Security CLUSIT",
+      "summary": "Contributo alla pubblicazione del report Supply Chain Security promosso dalla community CLUSIT, incentrato su rischio da dipendenze, abusi e propagazione delle minacce nelle catene di fornitura digitali.",
+      "seoDescription": "Pubblicazione del report Supply Chain Security CLUSIT con contributo di Federico Cerutti.",
+      "meta": [
+        "01 marzo 2023",
+        "Community CLUSIT"
+      ],
+      "body": "<p>Nel marzo 2023 è stato pubblicato il report <a href=\"https://supplychainsecurity.clusit.it/\" target=\"_blank\" rel=\"noreferrer\">Supply Chain Security</a>, cui Federico Cerutti ha contribuito nell'ambito delle attività promosse dalla community CLUSIT.</p><p>Il documento affronta il tema della sicurezza delle catene di fornitura digitali, con attenzione a dipendenze software, terze parti, propagazione del rischio e difficoltà di controllo in ecosistemi complessi nei quali il confine tra soggetti interni ed esterni è sempre meno netto.</p><p>Il contributo colloca questo lavoro nel dialogo con la comunità professionale su un tema ormai centrale per la resilienza delle organizzazioni, traducendo un problema sistemico in strumenti di lettura e prevenzione più concreti.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Supply chain security",
+        "CLUSIT",
+        "Report",
+        "Cyber risk"
+      ],
+      "image": "/images/sourced/events/clusit-supply-chain-security-2023.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/silver-stainless-steel-chain-XR4TJbKwtzA",
+        "sourceLabel": "Photo by !ME on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/pubblicazione-supply-chain-security-clusit-2023/",
+      "pathSlug": "pubblicazione-supply-chain-security-clusit-2023",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "cyberchallenge-2023",
+    "en": {
+      "title": "CyberChallenge 2023",
+      "summary": "First CyberChallenge edition at the Brescia node, running from January to June and ending with a result that placed Brescia in the national top 10.",
+      "seoDescription": "First 2023 CyberChallenge edition for the Brescia node.",
+      "meta": [
+        "2023",
+        "CyberChallenge"
+      ],
+      "body": "<p>The year 2023 marked the first <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a> edition for the Brescia node, with a local track running from January to June and focused on building the first cohorts of students trained within the national programme.</p><p>The edition was especially significant also in terms of results: the University of Brescia entered the national top 10, as reported by the official university news item <a href=\"https://www.unibs.it/it/ateneo/comunicazione/tutte-le-news/cyberchallengeit-2023-brescia-nella-top-10\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT 2023, Brescia in the top 10</a>.</p><p>That first experience laid the groundwork for the continuity of the Brescia node inside the national programme, making CyberChallenge one of the main training and outreach activities of the lab.</p>",
+      "sidebarTitle": "Mentors and references",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2023.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/three-young-men-focused-on-computer-screens-7t_lDHak9ug",
+        "sourceLabel": "Photo by Mikhail Seleznev on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/cyberchallenge/2023/",
+      "pathSlug": "2023",
+      "typeLabel": "Annual edition"
+    },
+    "it": {
+      "title": "CyberChallenge 2023",
+      "summary": "Prima edizione di CyberChallenge per il nodo di Brescia, sviluppata da gennaio a giugno e conclusa con un risultato che ha portato Brescia nella top 10 nazionale.",
+      "seoDescription": "Prima edizione 2023 di CyberChallenge per il nodo di Brescia.",
+      "meta": [
+        "2023",
+        "CyberChallenge"
+      ],
+      "body": "<p>Il 2023 ha segnato la prima edizione di <a href=\"https://cyberchallenge.it/\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT</a> per il nodo di Brescia, con un percorso locale sviluppato da gennaio a giugno e dedicato alla costruzione delle prime coorti di studenti formati nel programma nazionale.</p><p>L'edizione è stata particolarmente significativa anche sul piano dei risultati: l'Università di Brescia è entrata nella top 10 nazionale, come riportato anche dalla notizia ufficiale <a href=\"https://www.unibs.it/it/ateneo/comunicazione/tutte-le-news/cyberchallengeit-2023-brescia-nella-top-10\" target=\"_blank\" rel=\"noreferrer\">CyberChallenge.IT 2023, Brescia nella top 10</a>.</p><p>Questa prima esperienza ha posto le basi della continuità del nodo nel programma nazionale, rendendo CyberChallenge una delle principali attività di formazione e outreach del laboratorio.</p>",
+      "sidebarTitle": "Mentor e riferimenti",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Francesco Gringoli",
+        "Renato Lo Cigno",
+        "cyberchallenge.it"
+      ],
+      "image": "/images/sourced/cyberchallenge/cyberchallenge-2023.jpg",
+      "imageAttribution": {
+        "sourceUrl": "https://unsplash.com/photos/three-young-men-focused-on-computer-screens-7t_lDHak9ug",
+        "sourceLabel": "Photo by Mikhail Seleznev on Unsplash"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/cyberchallenge/2023/",
+      "pathSlug": "2023",
+      "typeLabel": "Edizione annuale"
+    }
+  }
+]

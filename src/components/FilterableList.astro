@@ -1,0 +1,176 @@
+---
+import AttributedImage from './AttributedImage.astro';
+import type { ImageAttribution } from '../lib/content-data';
+
+interface Item {
+  title: string;
+  href: string;
+  summary: string;
+  kind?: string;
+  status?: string;
+  image?: string;
+  imageAttribution?: ImageAttribution;
+  meta?: string[];
+  tags?: string[];
+  people?: string[];
+  years?: string[];
+}
+
+interface Props {
+  items: Item[];
+  labels: {
+    searchPlaceholder: string;
+    kind?: string;
+    status?: string;
+    tag: string;
+    person: string;
+    year: string;
+    all: string;
+    noResults: string;
+    openLabel: string;
+  };
+  showOpenButton?: boolean;
+  spacious?: boolean;
+  showKindFilter?: boolean;
+  showStatusFilter?: boolean;
+  showTagFilter?: boolean;
+  showPersonFilter?: boolean;
+}
+
+const {
+  items,
+  labels,
+  showOpenButton = true,
+  spacious = false,
+  showKindFilter = true,
+  showStatusFilter = true,
+  showTagFilter = true,
+  showPersonFilter = true,
+} = Astro.props;
+const kindOptions = [...new Set(items.map((item) => item.kind).filter(Boolean))].sort();
+const statusOptions = [...new Set(items.map((item) => item.status).filter(Boolean))].sort();
+const tagOptions = [...new Set(items.flatMap((item) => item.tags ?? []))].sort();
+const personOptions = [...new Set(items.flatMap((item) => item.people ?? []))].sort();
+const yearOptions = [...new Set(items.flatMap((item) => item.years ?? []))].sort().reverse();
+---
+
+<div class="filter-shell">
+  <div class="surface filter-controls" data-filter-root>
+    <input type="search" placeholder={labels.searchPlaceholder} data-filter-search />
+    {showKindFilter && kindOptions.length > 0 && labels.kind && <select data-filter-kind>
+      <option value="">{labels.kind}: {labels.all}</option>
+      {kindOptions.map((option) => <option value={option}>{option}</option>)}
+    </select>}
+    {showStatusFilter && statusOptions.length > 0 && labels.status && <select data-filter-status>
+      <option value="">{labels.status}: {labels.all}</option>
+      {statusOptions.map((option) => <option value={option}>{option}</option>)}
+    </select>}
+    {showTagFilter && <select data-filter-tag>
+      <option value="">{labels.tag}: {labels.all}</option>
+      {tagOptions.map((option) => <option value={option}>{option}</option>)}
+    </select>}
+    {showPersonFilter && <select data-filter-person>
+      <option value="">{labels.person}: {labels.all}</option>
+      {personOptions.map((option) => <option value={option}>{option}</option>)}
+    </select>}
+    <select data-filter-year>
+      <option value="">{labels.year}: {labels.all}</option>
+      {yearOptions.map((option) => <option value={option}>{option}</option>)}
+    </select>
+  </div>
+  <div class:list={['filter-list', spacious && 'filter-list-spacious']} data-filter-list>
+    {items.map((item) => (
+      <article
+        class:list={['filter-item', !spacious && 'card']}
+        data-title={item.title.toLowerCase()}
+        data-summary={item.summary.toLowerCase()}
+        data-kind={(item.kind ?? '').toLowerCase()}
+        data-status={(item.status ?? '').toLowerCase()}
+        data-tags={(item.tags ?? []).join('|').toLowerCase()}
+        data-people={(item.people ?? []).join('|').toLowerCase()}
+        data-years={(item.years ?? []).join('|').toLowerCase()}
+      >
+        {item.image && (
+          <AttributedImage
+            src={item.image}
+            alt={item.title}
+            attribution={item.imageAttribution}
+            href={item.href}
+            compact
+            imageStyle="height: 220px; width: 100%; object-fit: cover;"
+          />
+        )}
+        <div class="stack" style="padding: 1.1rem;">
+          {item.meta && item.meta.length > 0 && <div class="meta">{item.meta.map((entry) => <span>{entry}</span>)}</div>}
+          <h3 style="margin: 0; font-size: 1.25rem; letter-spacing: -0.04em;"><a href={item.href}>{item.title}</a></h3>
+          <p class="muted" style="margin: 0;">{item.summary}</p>
+          {item.tags && item.tags.length > 0 && <div class="meta">{item.tags.map((tag) => <span class="tag">{tag}</span>)}</div>}
+          {showOpenButton && <div><a class="button secondary" href={item.href}>{labels.openLabel}</a></div>}
+        </div>
+      </article>
+    ))}
+  </div>
+  <p class="muted is-hidden" data-filter-empty>{labels.noResults}</p>
+</div>
+
+<style>
+  @media (max-width: 720px) {
+    .filter-shell {
+      gap: 1.5rem;
+    }
+
+    .filter-item .stack {
+      padding: 0.9rem !important;
+    }
+
+    .filter-item h3 {
+      font-size: 1.15rem !important;
+      line-height: 1.08;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-filter-root]').forEach((root) => {
+    const shell = root.parentElement;
+    if (!shell) return;
+
+    const search = root.querySelector('[data-filter-search]');
+    const kind = root.querySelector('[data-filter-kind]');
+    const status = root.querySelector('[data-filter-status]');
+    const tag = root.querySelector('[data-filter-tag]');
+    const person = root.querySelector('[data-filter-person]');
+    const year = root.querySelector('[data-filter-year]');
+    const items = [...shell.querySelectorAll('.filter-item')];
+    const empty = shell.querySelector('[data-filter-empty]');
+
+    const applyFilters = () => {
+      const query = (search instanceof HTMLInputElement ? search.value : '').trim().toLowerCase();
+      const kindValue = kind instanceof HTMLSelectElement ? kind.value.toLowerCase() : '';
+      const statusValue = status instanceof HTMLSelectElement ? status.value.toLowerCase() : '';
+      const tagValue = tag instanceof HTMLSelectElement ? tag.value.toLowerCase() : '';
+      const personValue = person instanceof HTMLSelectElement ? person.value.toLowerCase() : '';
+      const yearValue = year instanceof HTMLSelectElement ? year.value.toLowerCase() : '';
+
+      let visible = 0;
+
+      items.forEach((item) => {
+        const matchesQuery = !query || item.dataset.title?.includes(query) || item.dataset.summary?.includes(query);
+        const matchesKind = !kindValue || item.dataset.kind === kindValue;
+        const matchesStatus = !statusValue || item.dataset.status === statusValue;
+        const matchesTag = !tagValue || item.dataset.tags?.includes(tagValue);
+        const matchesPerson = !personValue || item.dataset.people?.includes(personValue);
+        const matchesYear = !yearValue || item.dataset.years?.split('|').includes(yearValue);
+        const show = Boolean(matchesQuery && matchesKind && matchesStatus && matchesTag && matchesPerson && matchesYear);
+        item.classList.toggle('is-hidden', !show);
+        if (show) visible += 1;
+      });
+
+      empty?.classList.toggle('is-hidden', visible !== 0);
+    };
+
+    [search, kind, status, tag, person, year].forEach((control) => control?.addEventListener('input', applyFilters));
+    [kind, status, tag, person, year].forEach((control) => control?.addEventListener('change', applyFilters));
+    applyFilters();
+  });
+</script>

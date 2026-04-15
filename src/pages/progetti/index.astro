@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+import FilterableList from '../../components/FilterableList.astro';
+import { getLocalizedCollection } from '../../lib/content-data';
+import { getProjectActiveYears, sectionLabels } from '../../lib/site';
+
+const locale = 'it';
+const labels = sectionLabels[locale];
+const items = getLocalizedCollection('projects', locale).map((entry) => ({
+  title: entry.title,
+  href: `/progetti/${entry.pathSlug}/`,
+  summary: entry.summary,
+  kind: 'Progetto',
+  status: entry.status,
+  image: entry.image,
+  imageAttribution: entry.imageAttribution,
+  meta: [entry.funder, entry.status],
+  tags: entry.tags,
+  people: entry.people,
+  years: getProjectActiveYears(entry.startDate, entry.endDate),
+}));
+---
+<BaseLayout locale={locale} title="Progetti | Federico Cerutti" description="Progetti selezionati su cybersecurity, AI, causal reasoning e decision support." image="/images/sourced/projects/project-true.jpg" alternatePath="/en/projects/">
+  <section class="section">
+    <div class="container">
+      <SectionIntro title="Progetti selezionati" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <FilterableList items={items} showOpenButton={false} spacious showKindFilter={false} showTagFilter={false} showPersonFilter={false} labels={{ searchPlaceholder: labels.filterSearch, kind: labels.filterKind, status: labels.filterStatus, tag: labels.filterTag, person: labels.filterPerson, year: labels.filterYear, all: labels.all, noResults: labels.noResults, openLabel: labels.readMore }} />
+    </div>
+  </section>
+</BaseLayout>

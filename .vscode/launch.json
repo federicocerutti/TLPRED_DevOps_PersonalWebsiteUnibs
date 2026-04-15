@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Astro: Debug site",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev -- --host 127.0.0.1 --port 4321",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "(?:Local|localhost).*?(https?://[^\\s]+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome",
+        "webRoot": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Astro: Open browser on existing dev server",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:4321",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

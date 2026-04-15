@@ -1,0 +1,43 @@
+---
+import AttributedImage from './AttributedImage.astro';
+import type { ImageAttribution } from '../lib/content-data';
+
+interface Props {
+  title: string;
+  href: string;
+  summary: string;
+  image?: string;
+  imageAttribution?: ImageAttribution;
+  imageStyle?: string;
+  meta?: string[];
+  tags?: string[];
+  ctaLabel?: string;
+  plain?: boolean;
+}
+const { title, href, summary, image, imageAttribution, imageStyle, meta = [], tags = [], ctaLabel, plain = false } = Astro.props;
+---
+<article class:list={['stack', 'content-card', !plain && 'card', plain && 'content-card--plain']} style={plain ? 'gap: 0.85rem;' : undefined}>
+  {image && (
+    <AttributedImage
+      src={image}
+      alt={title}
+      attribution={imageAttribution}
+      href={href}
+      compact
+      imageStyle={imageStyle ?? 'height: 220px; width: 100%; object-fit: cover;'}
+    />
+  )}
+  {meta.length > 0 && <div class="meta">{meta.map((item) => <span>{item}</span>)}</div>}
+  <h3 style="margin: 0; font-size: 1.25rem; font-weight: 400; letter-spacing: -0.04em;"><a href={href}>{title}</a></h3>
+  <p class="muted" style="margin: 0;">{summary}</p>
+  {tags.length > 0 && <div class="meta">{tags.map((tag) => <span class="tag">{tag}</span>)}</div>}
+  {ctaLabel && <div><a class="button secondary" href={href}>{ctaLabel}</a></div>}
+</article>
+
+<style>
+  @media (max-width: 720px) {
+    .content-card {
+      gap: 0.7rem;
+    }
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AttributedImage from '../../../components/AttributedImage.astro';
+import DetailSidebar from '../../../components/DetailSidebar.astro';
+import { getLocalizedCollection, getTranslation } from '../../../lib/content-data';
+
+export function getStaticPaths() {
+  return getLocalizedCollection('projects', 'en').map((entry) => ({ params: { slug: entry.pathSlug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const alt = getTranslation('projects', entry.translationKey, 'it');
+---
+<BaseLayout locale="en" title={entry.seo.title} description={entry.seo.description} image={entry.image} alternatePath={alt ? `/progetti/${alt.pathSlug}/` : '/progetti/'}>
+  <section class="section">
+    <div class="container detail-shell">
+      <article class="surface detail-article">
+        <span class="eyebrow">Project</span>
+        <h1 class="detail-title">{entry.title}</h1>
+        <div class="detail-facts">
+          <p class="muted"><strong>Funder:</strong> {entry.funder}</p>
+          <p class="muted"><strong>Timeline:</strong> {entry.startDate} {entry.endDate ? `– ${entry.endDate}` : ''}</p>
+          <p class="muted"><strong>Status:</strong> {entry.status}</p>
+        </div>
+        {entry.image && (
+          <AttributedImage
+            src={entry.image}
+            alt={entry.title}
+            attribution={entry.imageAttribution}
+            imageStyle="margin: 1.25rem 0; max-height: 420px; width: 100%; object-fit: cover;"
+          />
+        )}
+        <div class="prose" set:html={entry.body} />
+      </article>
+      <DetailSidebar title="References" items={entry.tags.concat(entry.people)} />
+    </div>
+  </section>
+</BaseLayout>

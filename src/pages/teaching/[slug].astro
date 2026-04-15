@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DetailSidebar from '../../components/DetailSidebar.astro';
+import { getLocalizedCollection, getTranslation } from '../../lib/content-data';
+
+export function getStaticPaths() {
+  return getLocalizedCollection('teachingPages', 'it').map((entry) => ({ params: { slug: entry.pathSlug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const alt = getTranslation('teachingPages', entry.translationKey, 'en');
+---
+<BaseLayout locale="it" title={entry.seo.title} description={entry.seo.description} image="/images/people/federico-cerutti.png" alternatePath={alt ? `/en/teaching/${alt.pathSlug}/` : '/en/teaching/'}>
+  <section class="section">
+    <div class="container detail-shell">
+      <article class="surface detail-article">
+        <span class="eyebrow">{entry.typeLabel}</span>
+        <h1 class="detail-title">{entry.title}</h1>
+        <div class="detail-facts">
+          <p class="muted"><strong>Data:</strong> {entry.dateLabel}</p>
+          <p class="muted"><strong>Docenti:</strong> {entry.people.join(', ')}</p>
+          <p class="muted"><strong>Sede:</strong> {entry.location}</p>
+          <p class="muted"><a href={entry.sourceUrl} target="_blank" rel="noreferrer">Pagina originale</a></p>
+        </div>
+        <div class="prose" set:html={entry.body} />
+      </article>
+      <DetailSidebar title="Temi" items={entry.tags} />
+    </div>
+  </section>
+
+  <style>
+    .prose iframe {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      border: 0;
+      margin: 0.75rem 0 1.5rem;
+    }
+  </style>
+</BaseLayout>

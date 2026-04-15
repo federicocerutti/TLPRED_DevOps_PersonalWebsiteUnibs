@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentCard from '../../components/ContentCard.astro';
+import { getProfile } from '../../lib/content-data';
+import { getFeaturedEvents } from '../../lib/events-data';
+
+const locale = 'it';
+const profile = getProfile(locale);
+const shortBio = `Federico Cerutti è Professore Ordinario presso il Dipartimento di Ingegneria dell’Informazione dell’Università degli Studi di Brescia. Guida il nodo di Brescia del <a href="https://cyberseclab.unibs.it/" target="_blank" rel="noreferrer">CINI National Cybersecurity Lab</a> ed è Honorary Senior Lecturer alla Cardiff University, Visiting Fellow alla University of Southampton e Visiting Professor presso Imperial College London. La sua ricerca si concentra sulla sicurezza dell’intelligenza artificiale, in particolare su come apprendere e ragionare quando i dati sono incerti, rumorosi o incompleti. Il filo conduttore è costruire sistemi che non si limitino a produrre una risposta, ma che aiutino anche a capire quanto sia affidabile e su quali evidenze si basi.`;
+const featuredEvents = getFeaturedEvents(locale);
+---
+<BaseLayout locale={locale} title={profile.seo.title} description={profile.seo.description} image={profile.portrait} alternatePath="/">
+  <section class="section home-hero-section">
+    <div class="container hero-grid home-hero">
+      <article class="hero-panel prose short-bio" set:html={`<p>${shortBio}</p>`} />
+      <aside class="surface profile-panel">
+        <img class="home-portrait portrait-image" src={profile.portrait} alt={profile.portraitAlt} />
+      </aside>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container stack">
+      <div class="stack" style="max-width: 42rem;">
+        <span class="eyebrow">Attività recenti</span>
+        <h2 style="margin: 0; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 0.98; letter-spacing: -0.05em;">Eventi</h2>
+      </div>
+      <div class="grid event-grid">
+        {featuredEvents.map((entry) => (
+          <ContentCard
+            title={entry.title}
+            href={`/eventi/${entry.pathSlug}/`}
+            summary={entry.summary}
+            image={entry.image}
+            imageAttribution={entry.imageAttribution}
+            meta={entry.meta}
+            tags={entry.sidebarItems.slice(1)}
+          />
+        ))}
+      </div>
+      <div>
+        <a class="button" href="/eventi/">Sfoglia tutti gli eventi</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .home-hero-section {
+      padding-top: 1.5rem;
+    }
+
+    .home-hero {
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.65fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .short-bio {
+      max-width: 38rem;
+      font-size: clamp(1.12rem, 1.7vw, 1.35rem);
+      line-height: 1.6;
+      letter-spacing: -0.015em;
+    }
+
+    .short-bio p {
+      margin: 0;
+    }
+
+    .short-bio a {
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
+    }
+
+    .profile-panel {
+      display: flex;
+      justify-content: center;
+    }
+
+    .event-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+    }
+
+    .home-portrait {
+      width: min(100%, 360px);
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    @media (max-width: 960px) {
+      .home-hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .event-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .short-bio {
+        max-width: none;
+      }
+    }
+  </style>
+</BaseLayout>
