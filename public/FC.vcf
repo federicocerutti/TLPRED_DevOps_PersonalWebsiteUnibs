@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Federico Cerutti
+N:Cerutti;Federico;;;
+TITLE:Full Professor, University of Brescia
+NOTE:Chair of the Brescia branch of the CINI National Cybersecurity Lab; Honorary Senior Lecturer, Cardiff University; Visiting Fellow, University of Southampton; Visiting Professor, Imperial College London.
+ORG:University of Brescia
+URL:https://federico-cerutti.unibs.it
+REV:20260521T113715Z
+TEL;TYPE=CELL:+39 328 92 56 426
+EMAIL:federico.cerutti@acm.org
+END:VCARD
