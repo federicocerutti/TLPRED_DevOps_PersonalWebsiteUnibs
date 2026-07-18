@@ -1,5 +1,121 @@
 [
   {
+    "key": "richmond-cyber-resilience-forum-governing-agent-autonomy-cyber-security-2026",
+    "en": {
+      "title": "Federico Cerutti at the Richmond Cyber Resilience Forum: governing agent autonomy in cyber security",
+      "summary": "Talk by Federico Cerutti at the Richmond Cyber Resilience Forum in Rimini on Agentic AI and agent autonomy.",
+      "seoDescription": "Federico Cerutti speaking at the Richmond Cyber Resilience Forum in Rimini on Agentic AI and agent autonomy.",
+      "meta": [
+        "11 May 2026",
+        "Grand Hotel Rimini, Rimini"
+      ],
+      "body": "<p>On 11 and 12 May 2026, Federico Cerutti will speak at the <a href=\"https://www.richmonditalia.it/eventi/cyber-resilience-forum/\" target=\"_blank\" rel=\"noreferrer\">Richmond Cyber Resilience Forum Spring</a> in Rimini with a talk titled <em>Governing agent autonomy in Cyber Security</em>.</p><p>The talk addresses one of the most relevant issues for cyber organisations today: the entry of Agentic AI systems into cyber processes. These systems do more than suggest or summarise information; they can observe context, use tools, make intermediate decisions, and produce effects in the operating environment.</p><p>This evolution creates important opportunities for incident handling, cyber threat intelligence, and support during ransomware crises. At the same time, it changes the nature of risk: when a system can act, the central question is no longer only how accurate its answer is, but how operational delegation is governed.</p><p>The talk will offer a technical and organisational reading of the topic, with knowledge as a condition of governability. Sources, memory, data provenance, context representation, policy, and information-state quality are not implementation details: they are part of the control architecture that makes safe delegation possible.</p><p>Mandate, permissions, evidence, and escalation criteria are what keep autonomy, control, and organisational trust aligned.</p><h2>Materials</h2><p>The <a href=\"/docs/20260510-RichmondCyberResilienceForum-handout.pdf\" target=\"_blank\" rel=\"noreferrer\">talk handout</a> and <a href=\"/docs/20260510-RichmondCyberResilienceForum-slides.pdf\" target=\"_blank\" rel=\"noreferrer\">talk slides</a> are also available.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Agentic AI",
+        "Cybersecurity",
+        "Governance",
+        "Agent autonomy",
+        "Cyber resilience"
+      ],
+      "image": "/images/sourced/events/2026-richmond.png",
+      "imageAttribution": {
+        "sourceUrl": "https://www.richmonditalia.it/eventi/cyber-resilience-forum/",
+        "sourceLabel": "Official Richmond Italia event page"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/richmond-cyber-resilience-forum-governing-agent-autonomy-cyber-security-2026/",
+      "pathSlug": "richmond-cyber-resilience-forum-governing-agent-autonomy-cyber-security-2026",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Federico Cerutti al Richmond Cyber Resilience Forum: governare l’autonomia degli agenti nella cyber security",
+      "summary": "Intervento di Federico Cerutti al Richmond Cyber Resilience Forum di Rimini su Agentic AI e autonomia degli agenti.",
+      "seoDescription": "Intervento di Federico Cerutti al Richmond Cyber Resilience Forum di Rimini su Agentic AI e autonomia degli agenti.",
+      "meta": [
+        "11 maggio 2026",
+        "Grand Hotel Rimini, Rimini"
+      ],
+      "body": "<p>L'intervento affronta uno dei temi oggi più rilevanti per le organizzazioni che si occupano di sicurezza informatica: l'ingresso dei sistemi di Agentic AI nei processi cyber. Si tratta di sistemi capaci non solo di suggerire o sintetizzare informazioni, ma anche di osservare il contesto, utilizzare strumenti, prendere decisioni intermedie e produrre effetti nell'ambiente operativo.</p><p>Questa evoluzione apre opportunità importanti per la gestione degli incidenti, la cyber threat intelligence e il supporto nelle crisi ransomware. Allo stesso tempo, cambia la natura del rischio: quando un sistema può agire, la questione centrale non è più soltanto l'accuratezza della risposta, ma il governo della delega operativa.</p><p>La conferenza proporrà una lettura tecnica e organizzativa del tema, con particolare attenzione al ruolo della conoscenza come condizione di governabilità. Fonti, memoria, provenienza dei dati, rappresentazione del contesto, policy e qualità dello stato informativo non sono dettagli implementativi: sono parte dell'architettura di controllo che rende possibile una delega sicura.</p><p>Mandato, permessi, evidenze e criteri di escalation diventano così gli elementi che tengono insieme autonomia, controllo e fiducia organizzativa.</p><h2>Materiali</h2><p>Sono disponibili anche l'<a href=\"/docs/20260510-RichmondCyberResilienceForum-handout.pdf\" target=\"_blank\" rel=\"noreferrer\">handout dell’intervento</a> e le <a href=\"/docs/20260510-RichmondCyberResilienceForum-slides.pdf\" target=\"_blank\" rel=\"noreferrer\">slide dell’intervento</a>.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Agentic AI",
+        "Cybersecurity",
+        "Governance",
+        "Autonomia degli agenti",
+        "Resilienza cyber"
+      ],
+      "image": "/images/sourced/events/2026-richmond.png",
+      "imageAttribution": {
+        "sourceUrl": "https://www.richmonditalia.it/eventi/cyber-resilience-forum/",
+        "sourceLabel": "Pagina ufficiale dell'evento Richmond Italia"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/richmond-cyber-resilience-forum-governare-autonomia-agenti-cyber-security-2026/",
+      "pathSlug": "richmond-cyber-resilience-forum-governare-autonomia-agenti-cyber-security-2026",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "cybersecurity-of-operational-knowledge",
+    "en": {
+      "title": "Cybersecurity of operational knowledge: protecting what keeps organisations running",
+      "summary": "Talk by Federico Cerutti at the Confindustria Brescia Cybersecurity Masterclass on operational knowledge protection.",
+      "seoDescription": "Talk by Federico Cerutti at the Confindustria Brescia Cybersecurity Masterclass on operational knowledge protection.",
+      "meta": [
+        "22 April 2026",
+        "Confindustria Brescia"
+      ],
+      "body": "<p>On 22 April 2026, Federico Cerutti spoke at <strong>Cybersecurity Masterclass | La leva strategica che abilita la crescita della tua azienda</strong>, organised by Confindustria Brescia, with a talk on the <strong>cybersecurity of operational knowledge</strong>.</p><p>The talk focused on an aspect of security that is often overlooked: operational continuity does not depend only on protecting data, networks and information systems. It also depends on the practical know-how that allows processes, plants and people to keep working when reality diverges from procedures: configurations, accumulated exceptions, operator routines, maintenance criteria, key-user experience, and the ways in which an organisation recognises and resolves recurring problems.</p><p>In many companies, especially in industrial settings, operational knowledge is distributed across people, machines, operational technology, ERP systems, supply chain platforms, external providers and, increasingly, artificial intelligence systems. This makes cybersecurity not only a technical issue, but also a matter of organisational coherence: protecting the company’s ability to interpret signals, make decisions and act reliably.</p><p>The talk discussed three forms of fragility: the dispersion of operational knowledge, its distortion through configurations, updates or unmanaged practices, and the growing mediation introduced by dashboards, predictive systems and AI tools. In all these cases, the risk is not limited to data exfiltration or system unavailability. It also concerns the gradual loss of the organisation’s ability to understand how and why a process works.</p><p>The proposed perspective invites companies to treat operational knowledge as a critical asset to be mapped, documented and protected. Before selecting tools, organisations need to identify critical know-how, single points of failure, relevant exceptions, knowledge exchanges with external parties and the unmanaged use of generative AI tools.</p><p>The Masterclass page is available on the Confindustria Brescia website: <a href=\"https://www.confindustriabrescia.it/contenuto/cybersecurity-masterclass-la-leva-strategica-che-abilita-la-crescita-della-tua-azienda-0804---2204---1305-15167\" target=\"_blank\" rel=\"noreferrer\">Cybersecurity Masterclass | La leva strategica che abilita la crescita della tua azienda</a>.</p><p>The recording of the second session is available on demand: <a href=\"https://confindustriabrescia.morescreens.eu/cybersecurity-masterclass-la-leva-3\" target=\"_blank\" rel=\"noreferrer\">Cybersecurity Masterclass | 2nd session</a> (access according to the platform conditions).</p><h2>Materials</h2><p>The <a href=\"/docs/20260422-ConfindustriaBrescia-Cybersecurity-Masterclass-handout.pdf\" target=\"_blank\" rel=\"noreferrer\">talk notes</a> and <a href=\"/docs/20260422-ConfindustriaBrescia-Cybersecurity-Masterclass-slides.pdf\" target=\"_blank\" rel=\"noreferrer\">slides</a> are also available.</p>",
+      "sidebarTitle": "Speakers and tags",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Cybersecurity",
+        "Operational knowledge",
+        "OT",
+        "AI",
+        "Supply chain",
+        "Operational continuity"
+      ],
+      "image": "/images/sourced/events/20260422-masterclass.png",
+      "imageAttribution": {
+        "sourceUrl": "https://www.confindustriabrescia.it/contenuto/cybersecurity-masterclass-la-leva-strategica-che-abilita-la-crescita-della-tua-azienda-0804---2204---1305-15167",
+        "sourceLabel": "Official Confindustria Brescia event page"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/en/events/cybersecurity-of-operational-knowledge/",
+      "pathSlug": "cybersecurity-of-operational-knowledge",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Cybersecurity della conoscenza operativa: proteggere ciò che fa funzionare l’impresa",
+      "summary": "Talk di Federico Cerutti alla Cybersecurity Masterclass di Confindustria Brescia sulla protezione della conoscenza operativa.",
+      "seoDescription": "Talk di Federico Cerutti alla Cybersecurity Masterclass di Confindustria Brescia sulla protezione della conoscenza operativa.",
+      "meta": [
+        "22 aprile 2026",
+        "Confindustria Brescia"
+      ],
+      "body": "<p>Il 22 aprile 2026 Federico Cerutti è intervenuto alla <strong>Cybersecurity Masterclass | La leva strategica che abilita la crescita della tua azienda</strong>, promossa da Confindustria Brescia, con un talk dedicato alla <strong>cybersecurity della conoscenza operativa</strong>.</p><p>L’intervento si è concentrato su un aspetto spesso sottovalutato della sicurezza: la continuità operativa non dipende soltanto dalla protezione di dati, reti e sistemi informativi. Dipende anche dal sapere pratico che consente a processi, impianti e persone di funzionare quando la realtà si discosta dalle procedure: configurazioni, eccezioni sedimentate, routine degli operatori, criteri di manutenzione, esperienza dei key user e modi con cui l’organizzazione riconosce e risolve i problemi ricorrenti.</p><p>In molte imprese, soprattutto nei contesti industriali, la conoscenza operativa è distribuita tra persone, macchine, sistemi OT, ERP, piattaforme di supply chain, fornitori esterni e, sempre più spesso, sistemi di intelligenza artificiale. Questo rende la cybersecurity non solo un problema tecnico, ma anche una questione di coerenza organizzativa: proteggere la capacità dell’impresa di interpretare segnali, prendere decisioni e agire in modo affidabile.</p><p>Il talk ha discusso tre forme di fragilità: la dispersione della conoscenza operativa, la sua distorsione attraverso configurazioni, aggiornamenti o pratiche non governate, e la crescente mediazione esercitata da dashboard, sistemi predittivi e strumenti di AI. In tutti questi casi, il rischio non riguarda soltanto l’esfiltrazione di dati o l’indisponibilità dei sistemi, ma la perdita progressiva della capacità dell’organizzazione di capire come e perché un processo funziona.</p><p>La prospettiva proposta invita quindi a considerare la conoscenza operativa come un asset critico da mappare, documentare e proteggere. Prima ancora della scelta degli strumenti, diventa essenziale individuare il know-how critico, i punti singoli di fallimento, le eccezioni rilevanti, gli scambi di conoscenza con l’esterno e l’uso non governato di strumenti di AI generativa.</p><p>La pagina della Masterclass è disponibile sul sito di Confindustria Brescia: <a href=\"https://www.confindustriabrescia.it/contenuto/cybersecurity-masterclass-la-leva-strategica-che-abilita-la-crescita-della-tua-azienda-0804---2204---1305-15167\" target=\"_blank\" rel=\"noreferrer\">Cybersecurity Masterclass | La leva strategica che abilita la crescita della tua azienda</a>.</p><p>La registrazione del secondo appuntamento è disponibile on demand: <a href=\"https://confindustriabrescia.morescreens.eu/cybersecurity-masterclass-la-leva-3\" target=\"_blank\" rel=\"noreferrer\">Cybersecurity Masterclass | 2° appuntamento</a> (accesso secondo le condizioni della piattaforma).</p><h2>Materiali</h2><p>Sono disponibili anche gli <a href=\"/docs/20260422-ConfindustriaBrescia-Cybersecurity-Masterclass-handout.pdf\" target=\"_blank\" rel=\"noreferrer\">appunti dell’intervento</a> e le <a href=\"/docs/20260422-ConfindustriaBrescia-Cybersecurity-Masterclass-slides.pdf\" target=\"_blank\" rel=\"noreferrer\">slide dell’intervento</a>.</p>",
+      "sidebarTitle": "Relatori e tag",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Cybersecurity",
+        "Conoscenza operativa",
+        "OT",
+        "AI",
+        "Supply chain",
+        "Continuità operativa"
+      ],
+      "image": "/images/sourced/events/20260422-masterclass.png",
+      "imageAttribution": {
+        "sourceUrl": "https://www.confindustriabrescia.it/contenuto/cybersecurity-masterclass-la-leva-strategica-che-abilita-la-crescita-della-tua-azienda-0804---2204---1305-15167",
+        "sourceLabel": "Pagina ufficiale dell'evento Confindustria Brescia"
+      },
+      "originalPageUrl": "https://cyberseclab.unibs.it/eventi/cybersecurity-della-conoscenza-operativa/",
+      "pathSlug": "cybersecurity-della-conoscenza-operativa",
+      "typeLabel": "Evento"
+    }
+  },
+  {
     "key": "clusit-ai-security-report-2026",
     "en": {
       "title": "Publication of the CLUSIT AI Security Report",
