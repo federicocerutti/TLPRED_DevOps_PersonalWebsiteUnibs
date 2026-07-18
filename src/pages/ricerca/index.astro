@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+import FilterableList from '../../components/FilterableList.astro';
+import { getLocalizedCollection } from '../../lib/content-data';
+import { formatDate, sectionLabels } from '../../lib/site';
+
+const locale = 'it';
+const labels = sectionLabels[locale];
+const items = getLocalizedCollection('papers', locale).map((entry) => ({ title: entry.title, href: `/ricerca/${entry.pathSlug}/`, summary: entry.summary, kind: entry.typeLabel, image: entry.image, imageAttribution: entry.imageAttribution, meta: [formatDate(new Date(entry.publishedAt), locale)], tags: entry.tags, people: entry.authors, years: [entry.publishedAt.slice(0, 4)] }));
+---
+<BaseLayout locale={locale} title="Ricerca | Federico Cerutti" description="Pubblicazioni selezionate su AI affidabile, cybersecurity e ragionamento." image="/images/research/temporal-references-emergent-communication.jpg" alternatePath="/en/research/">
+  <section class="section"><div class="container"><SectionIntro title="Ricerca selezionata" intro="Pubblicazioni su AI affidabile, cybersecurity e sistemi intelligenti verificabili." /></div></section>
+  <section class="section"><div class="container"><FilterableList items={items} showOpenButton={false} spacious showStatusFilter={false} labels={{ searchPlaceholder: labels.filterSearch, kind: labels.filterKind, tag: labels.filterTag, person: labels.filterPerson, year: labels.filterYear, all: labels.all, noResults: labels.noResults, openLabel: labels.readMore }} /></div></section>
+</BaseLayout>
