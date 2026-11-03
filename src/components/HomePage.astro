@@ -8,6 +8,7 @@ import {
   organizationsById,
   worksById,
   collaborationCopy,
+  collaborationPath,
 } from '../lib/portfolio';
 import { sourceUrl } from '../lib/research';
 import type { Locale } from '../lib/site';
@@ -70,7 +71,7 @@ const events = getLocalizedEvents(locale).slice(0, 3);
         {featuredCollaborations.map((f) => (
           <article class="stack">
             <h3>
-              <a href={`${network}#${f.organizationId}`}>{f.label}</a>
+              <a href={collaborationPath(f.organizationId, locale)}>{f.label}</a>
             </h3>
             <p class="small muted">
               {collaborationCopy(organizationsById.get(f.organizationId)!, locale).identity}

@@ -42,3 +42,9 @@ Collaboration cards use bilingual View related work / Close related work text an
 ## Navigation and collaboration copy refinement
 
 Teaching and Events are primary navigation items in both languages. The academic-leadership section is removed from home only; the opening still mentions appointments/CINI, and the detailed roles remain on advisory/About. Home proceeds directly to collaborations and students. Shared bilingual organisation introductions and longer publication-grounded collaboration descriptions are maintained in `src/lib/portfolio.ts`, reused for the homepage ARL/AFRL/Beretta features. Organisation introductions are distinct from descriptions of joint work; no client outcomes are claimed. Public organisation sources checked include beretta.com/en-us/company, airbus.com/en, honeywell.com/us/en, blueprism.com, aboutamazon.com/what-we-do/devices-services, research.ibm.com and army.mil/arl.
+
+## Dedicated collaboration pages
+
+Each collaboration now has a bilingual static detail page below the existing research-network routes. Index cards are normal links with descriptions; papers/reports appear on the detail page, with back navigation and language alternates. No expandable card UI. The sitemap includes all detail pages. University cards/details omit the organisation one-liner. Homepage text has larger paragraph/list gaps and more line spacing.
+
+Owner corrections: remove Texas A&M University-Commerce, University of Texas at Dallas, Fordham and Alpen-Adria Klagenfurt. Consolidate historical Koblenz-Landau work under University of Koblenz with ID deduplication. The owner confirms Bakdash was at ARL for the Subjective Bayesian Networks paper (scopus:2-s2.0-85045180992); include it under ARL. Imported source history is retained; portfolio presentation applies these owner corrections.

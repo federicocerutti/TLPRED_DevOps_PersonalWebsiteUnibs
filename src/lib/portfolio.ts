@@ -20,6 +20,11 @@ export const featuredCollaborations = [
 // selected organisations/work from presentation while retaining source history.
 export const excludedWorkIds = new Set(['scopus:2-s2.0-85061303311']);
 const hiddenOrganizations = new Set([
+  'org:texas-a-m-university-commerce',
+  'org:university-of-texas-at-dallas',
+  'org:fordham-university',
+  'org:alpen-adria-universitaet-klagenfurt',
+  'org:university-of-koblenz-landau-historical',
   'org:aneurin-bevan-continuous-improvement',
   'org:cardiff-university',
   'org:university-of-brescia',
@@ -28,7 +33,8 @@ const hiddenOrganizations = new Set([
   'org:ibm-research-uk-site-unspecified',
   'org:ibm-research-us-site-unspecified',
 ]);
-const ibmAliases: Record<string, string> = {
+const organisationAliases: Record<string, string> = {
+  'org:university-of-koblenz': 'org:university-of-koblenz-landau-historical',
   'org:ibm-research-hursley-uk': 'org:ibm-research-uk-site-unspecified',
   'org:ibm-t-j-watson-research-center': 'org:ibm-research-us-site-unspecified',
 };
@@ -37,7 +43,11 @@ export const collaborations = research.organizations
   .map((o) => ({
     ...o,
     workIds: [
-      ...new Set([...o.workIds, ...(organizationsById.get(ibmAliases[o.id])?.workIds ?? [])]),
+      ...new Set([
+        ...o.workIds,
+        ...(o.id === 'org:us-army-research-laboratory-devcom' ? ['scopus:2-s2.0-85045180992'] : []),
+        ...(organizationsById.get(organisationAliases[o.id])?.workIds ?? []),
+      ]),
     ].filter((id) => !excludedWorkIds.has(id)),
   }))
   .sort((a, b) => {
@@ -192,3 +202,8 @@ export function collaborationCopy(o: (typeof collaborations)[number], locale: 'e
       : 'The collaboration concerns methods for artificial intelligence and reasoning. The linked publications describe the questions investigated and the findings of individual studies.';
   return { identity, description };
 }
+
+export const collaborationPath = (id: string, locale: 'en' | 'it') =>
+  `${locale === 'it' ? '/it/rete-di-ricerca/' : '/en/research-network/'}${id.replace(/^org:/, '')}/`;
+export const organisationName = (name: string) =>
+  name.replace(' (verified current)', '').replace(' (DAIS joint demonstration)', '');

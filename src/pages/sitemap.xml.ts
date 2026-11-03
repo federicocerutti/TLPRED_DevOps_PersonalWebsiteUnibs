@@ -1,3 +1,4 @@
+import { collaborations, collaborationPath } from '../lib/portfolio';
 import { getLocalizedCollection } from '../lib/content-data';
 import { getLocalizedEvents } from '../lib/events-data';
 const staticPages = Object.keys(import.meta.glob('./**/*.astro'))
@@ -9,6 +10,7 @@ const staticPages = Object.keys(import.meta.glob('./**/*.astro'))
       .replace(/\.astro$/, '/'),
   );
 const details = ['en', 'it'].flatMap((locale) => [
+  ...collaborations.map((o) => collaborationPath(o.id, locale as 'en' | 'it')),
   ...getLocalizedCollection('papers', locale as 'en' | 'it').map(
     (p) => `${locale === 'en' ? '/en/research/' : '/ricerca/'}${p.pathSlug}/`,
   ),

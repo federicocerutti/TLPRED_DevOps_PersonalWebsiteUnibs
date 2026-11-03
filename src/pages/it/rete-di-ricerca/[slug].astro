@@ -1,0 +1,13 @@
+---
+import Page from '../../../components/CollaborationDetail.astro';
+import { collaborations } from '../../../lib/portfolio';
+export function getStaticPaths() {
+  return collaborations.map((o) => ({
+    params: { slug: o.id.replace(/^org:/, '') },
+    props: { organization: o },
+  }));
+}
+const { organization } = Astro.props;
+---
+
+<Page locale="it" organization={organization} />

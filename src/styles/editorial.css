@@ -981,3 +981,43 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.collaboration-card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  padding: 1.6rem;
+}
+.collaboration-card-link:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.home-profile .stack > * + * {
+  margin-top: 1.6rem;
+}
+.home-profile .biography {
+  line-height: 1.8;
+}
+.featured-collaborations {
+  gap: 3rem;
+}
+.featured-collaborations article > * + * {
+  margin-top: 1.4rem;
+}
+.featured-collaborations article p {
+  line-height: 1.85;
+}
+.featured-collaborations .plain-links {
+  margin-top: 1.6rem;
+}
+.featured-collaborations .plain-links li + li {
+  margin-top: 1rem;
+}
+.home-introduction {
+  padding-bottom: 3.5rem;
+}
+@media (max-width: 720px) {
+  .featured-collaborations {
+    gap: 3rem;
+  }
+}

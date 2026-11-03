@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  collaborationCopy,
+  collaborationPath,
+  organisationName,
+  worksById,
+} from '../lib/portfolio';
+import { research, sourceUrl } from '../lib/research';
+import type { collaborations } from '../lib/portfolio';
+import type { Locale } from '../lib/site';
+interface Props {
+  locale: Locale;
+  organization: (typeof collaborations)[number];
+}
+const { locale, organization: o } = Astro.props;
+const it = locale === 'it';
+const copy = collaborationCopy(o, locale);
+const works = o.workIds
+  .map((id) => worksById.get(id)!)
+  .filter(Boolean)
+  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+const affiliations = research.verifiedAffiliations.filter((a) => a.institutionId === o.id);
+const reports = research.daisReports.filter((d) => affiliations.some((a) => a.sourceUrl === d.url));
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${organisationName(o.name)} | Federico Cerutti`}
+  description={copy.description}
+  alternatePath={collaborationPath(o.id, it ? 'en' : 'it')}
+>
+  <section class="page-intro">
+    <div class="container stack">
+      <p>
+        <a href={it ? '/it/rete-di-ricerca/' : '/en/research-network/'}>
+          ← {it ? 'Tutte le collaborazioni' : 'All collaborations'}
+        </a>
+      </p>
+      <h1>{organisationName(o.name)}</h1>
+      {o.sector !== 'Academic' && <p class="muted">{copy.identity}</p>}
+      <p class="lede">{copy.description}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container stack">
+      {(works.length > 0 || reports.length > 0) && (
+        <h2>{it ? 'Pubblicazioni e rapporti tecnici' : 'Papers and technical reports'}</h2>
+      )}
+      <ol class="publications">
+        {works.map((w) => (
+          <li class="publication">
+            <h3>
+              <a href={sourceUrl(w)}>{w.title}</a>
+            </h3>
+            <p class="small muted">
+              {w.year} · {w.venue}
+            </p>
+          </li>
+        ))}
+        {reports.map((d) => (
+          <li class="publication">
+            <h3>
+              <a href={d.url}>{d.title}</a>
+            </h3>
+            <p class="small muted">{d.year}</p>
+          </li>
+        ))}
+      </ol>
+      {o.sourceUrl && (
+        <p>
+          <a href={o.sourceUrl}>{it ? 'Sito dell’organizzazione' : 'Organisation website'}</a>
+        </p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

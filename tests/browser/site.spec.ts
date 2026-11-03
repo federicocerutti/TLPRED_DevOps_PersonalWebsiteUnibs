@@ -80,29 +80,26 @@ test('static portfolio listings, legacy queries and attribution', async ({ page 
     'org:imperial-college-london',
   ])
     await expect(page.locator(`[id="${id}"]`)).toHaveCount(0);
-  const hursley = page.locator('[id="org:ibm-research-hursley-uk"]');
-  const watson = page.locator('[id="org:ibm-t-j-watson-research-center"]');
-  await expect(hursley.locator('li')).toHaveCount(8);
-  await expect(watson.locator('li')).toHaveCount(10);
-  await expect(hursley.locator('summary')).toContainText('View related work');
-  await expect(hursley.locator('.organisation-introduction')).toContainText('IBM');
-  expect((await hursley.locator('.collaboration-description').innerText()).length).toBeGreaterThan(
-    100,
+  await expect(page.locator('main details')).toHaveCount(0);
+  for (const name of ['Texas A&M', 'Texas at Dallas', 'Fordham', 'Klagenfurt', 'Koblenz-Landau'])
+    await expect(page.locator('main')).not.toContainText(name);
+  const universities = page.locator('.collaboration-group').last();
+  await expect(universities.locator('.organisation-introduction')).toHaveCount(0);
+  await page.locator('[id="org:ibm-research-hursley-uk"]').click();
+  await expect(page).toHaveURL(/research-network\/ibm-research-hursley-uk\//);
+  await expect(page.locator('.publication')).toHaveCount(8);
+  await page.getByRole('link', { name: 'All collaborations', exact: true }).click();
+  await page.locator('[id="org:ibm-t-j-watson-research-center"]').click();
+  await expect(page.locator('.publication')).toHaveCount(10);
+  await page.goto('/en/research-network/university-of-koblenz/');
+  await expect(page.locator('.publication')).toHaveCount(8);
+  await expect(page.locator('.organisation-introduction')).toHaveCount(0);
+  await page.goto('/en/research-network/us-army-research-laboratory-devcom/');
+  await expect(page.locator('main')).toContainText(
+    'Subjective bayesian networks and human-in-the-loop situational understanding',
   );
-
-  await expect(page.locator('main')).not.toContainText('Stefano Morzenti');
-  const beretta = page.locator('[id="org:fabbrica-d-armi-pietro-beretta"]');
-  await expect(beretta.locator('li').first()).not.toBeVisible();
-  await beretta.locator('summary').click();
-  await expect(beretta.locator('li').first()).toBeVisible();
-  await expect(page.locator('[id="org:nec-laboratories-europe-verified-current"] li')).toHaveCount(
-    0,
-  );
-  await page.goto('/en/research-network/#org:us-army-research-laboratory-devcom');
-  await expect(page.locator('[id="org:us-army-research-laboratory-devcom"]')).toHaveAttribute(
-    'open',
-    '',
-  );
+  await page.getByRole('link', { name: 'Passa a Italiano' }).click();
+  await expect(page).toHaveURL(/it\/rete-di-ricerca\/us-army-research-laboratory-devcom\//);
   await page.goto('/en/projects/');
   await expect(page.getByRole('heading', { name: 'Current projects', exact: true })).toBeVisible();
   await expect(
@@ -122,6 +119,7 @@ test('light and night Inter Light layouts, keyboard focus and screenshots', asyn
       ['/en/advisory/', 'advisory'],
       ['/it/', 'home-it'],
       ['/en/research-network/', 'collaborations'],
+      ['/en/research-network/fabbrica-d-armi-pietro-beretta/', 'collaboration-detail'],
     ]) {
       await page.goto(path);
       await page.evaluate(() => document.fonts.ready);
