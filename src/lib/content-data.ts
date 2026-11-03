@@ -1,4 +1,7 @@
 import type { Locale } from './site';
+import additionalProjects from './additional-projects.json';
+import projectImages from './project-images.json';
+import pastTeaching from './past-teaching.json';
 
 type Seo = { title: string; description: string };
 export type ImageAttribution = {
@@ -30,6 +33,8 @@ type ResearchItem = BaseEntry & {
 };
 
 type Project = BaseEntry & {
+  role?: string;
+  timelineLabel?: string;
   startDate: string;
   endDate?: string;
   status: string;
@@ -833,6 +838,14 @@ const projects: Record<Locale, Project[]> = {
   ],
 };
 
+for (const locale of ['it', 'en'] as const) {
+  projects[locale].push(...additionalProjects[locale] as Project[]);
+  for (const project of projects[locale]) {
+    const image = (projectImages as Record<string, { image: string; imageAttribution: ImageAttribution }>)[project.pathSlug];
+    if (image) Object.assign(project, image);
+  }
+}
+
 const teachingPages: Record<Locale, TeachingPage[]> = {
   it: [
     {
@@ -1487,8 +1500,8 @@ const teachingByLocale: Record<Locale, TeachingSection[]> = {
       title: 'Insegnamenti correnti',
       intro: '',
       items: [
-        { title: 'Digital Transformation', summary: 'Corso nell’ambito della Laurea Magistrale in Computer Engineering presso l’Università degli Studi di Brescia.' },
-        { title: 'Computer Security', summary: 'Corso con attenzione ai rischi e alle opportunità delle nuove tecnologie nel contesto della sicurezza informatica.' },
+        { title: 'Cyber and AI Risk Management', href: 'https://unibs.coursecatalogue.cineca.it/corsi/2026/1479/insegnamenti/2026/8822_139266_29548/2025/1479', summary: 'Gestione del rischio cyber e analisi di cyber threat intelligence nei sistemi tradizionali e abilitati dall’AI. Il corso collega sicurezza e resilienza all’uso e alla supervisione di workflow di sicurezza assistiti dall’intelligenza artificiale.' },
+        { title: 'Enterprise Intelligent Systems', href: 'https://unibs.coursecatalogue.cineca.it/corsi/2025/1477/insegnamenti/2026/8811_139203_29554/2025/8811?coorte=2025&schemaid=3626', summary: 'Sistemi intelligenti che combinano conoscenza organizzativa, dati e competenze umane. Il corso affronta il ruolo dell’AI nel supportare decisioni e attività aziendali, con attenzione alla qualità delle evidenze, alla tracciabilità e al controllo umano.' },
       ],
     },
     {
@@ -1519,8 +1532,8 @@ const teachingByLocale: Record<Locale, TeachingSection[]> = {
       title: 'Current teaching',
       intro: '',
       items: [
-        { title: 'Digital Transformation', summary: 'Course within the MSc in Computer Engineering at the University of Brescia.' },
-        { title: 'Computer Security', summary: 'Course focused on the risks and opportunities of new technologies in security contexts.' },
+        { title: 'Cyber and AI Risk Management', href: 'https://unibs.coursecatalogue.cineca.it/corsi/2026/1479/insegnamenti/2026/8822_139266_29548/2025/1479', summary: 'Cyber risk management and cyber threat intelligence analysis across conventional and AI-enabled systems. The course connects security and resilience with the use and oversight of AI-assisted security workflows.' },
+        { title: 'Enterprise Intelligent Systems', href: 'https://unibs.coursecatalogue.cineca.it/corsi/2025/1477/insegnamenti/2026/8811_139203_29554/2025/8811?coorte=2025&schemaid=3626', summary: 'Intelligent systems that bring together organisational knowledge, data and human expertise. The course examines how AI supports enterprise decisions and activities, with attention to evidence quality, traceability and human control.' },
       ],
     },
     {
@@ -1581,7 +1594,19 @@ export function getProfile(locale: Locale) {
 }
 
 export function getTeachingSections(locale: Locale) {
-  return teachingByLocale[locale];
+  const history = pastTeaching[locale];
+  return [...teachingByLocale[locale], ...history.sections].map(section => ({
+    ...section,
+    items: [
+      ...section.items,
+      ...(section.translationKey === 'phd-courses' ? history.phdCourses : []),
+    ].sort((a, b) => section.translationKey === 'phd-courses'
+      ? Number(b.when?.match(/\d{4}/)?.[0] ?? 0) - Number(a.when?.match(/\d{4}/)?.[0] ?? 0)
+      : 0).map((item: TeachingItem) => {
+      const detail = teachingPages[locale].find(page => item.href?.endsWith(`/${page.pathSlug}/`));
+      return detail ? { ...item, title: detail.title, summary: detail.summary } : item;
+    }),
+  }));
 }
 
 export function getContactSection(locale: Locale) {

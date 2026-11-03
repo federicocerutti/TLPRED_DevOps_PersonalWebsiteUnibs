@@ -5,13 +5,15 @@ import { getProfile } from '../lib/content-data';
 import { getLocalizedEvents } from '../lib/events-data';
 import {
   featuredCollaborations,
+  collaborationStatistics,
+  currentCollaborationFocus,
   organizationsById,
   worksById,
   collaborationCopy,
   collaborationPath,
 } from '../lib/portfolio';
 import { sourceUrl } from '../lib/research';
-import type { Locale } from '../lib/site';
+import { site, type Locale } from '../lib/site';
 interface Props {
   locale: Locale;
 }
@@ -21,6 +23,11 @@ const profile = getProfile(locale);
 const network = it ? '/it/rete-di-ricerca/' : '/en/research-network/';
 const projects = it ? '/progetti/' : '/en/projects/';
 const events = getLocalizedEvents(locale).slice(0, 3);
+const networkStatistics = [
+  { value: collaborationStatistics.companies, label: it ? 'aziende' : 'companies' },
+  { value: collaborationStatistics.institutions, label: it ? 'istituzioni e centri di ricerca' : 'institutions and research centres' },
+  { value: collaborationStatistics.universities, label: it ? 'università' : 'universities' },
+];
 ---
 
 <BaseLayout
@@ -51,7 +58,14 @@ const events = getLocalizedEvents(locale).slice(0, 3);
           <a href={it ? '/it/consulenza/' : '/en/advisory/'}>
             {it ? 'Ricerca, consulenza e formazione' : 'Research, consultancy and training'}
           </a>{' '}
-          · <a href="mailto:federico.cerutti@unibs.it">federico.cerutti@unibs.it</a>
+        </p>
+        <p class="home-contact-links">
+          <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+          <a href={site.contactPhoneUrl}>{site.contactPhone}</a>
+          <a href={site.linkedinUrl}>LinkedIn</a>
+          <a href="/federico-cerutti.vcf" download="federico-cerutti.vcf">
+            {it ? 'Salva contatto (vCard)' : 'Save contact (vCard)'}
+          </a>
         </p>
       </div>
       <img
@@ -67,6 +81,23 @@ const events = getLocalizedEvents(locale).slice(0, 3);
   <section class="section">
     <div class="container stack">
       <h2>{it ? 'Collaborazioni' : 'Collaborations'}</h2>
+      <p class="collaboration-section-intro">
+        {it
+          ? 'Collaboro con aziende, laboratori pubblici e università su AI, cybersecurity e ragionamento per supportare le decisioni.'
+          : 'I work with companies, public laboratories and universities on AI, cybersecurity and reasoning to support decisions.'}
+      </p>
+      <div class="research-network-summary stack">
+        <dl class="network-statistics">
+          {networkStatistics.map(stat => (
+            <div>
+              <dt>{stat.label}</dt>
+              <dd>{stat.value}</dd>
+            </div>
+          ))}
+        </dl>
+        <p><a href={network}>{it ? 'Esplora tutte le collaborazioni' : 'Explore all collaborations'} →</a></p>
+      </div>
+      <h2 class="recent-collaborations-heading">{it ? 'Collaborazioni recenti' : 'Recent collaborations'}</h2>
       <div class="three-col featured-collaborations">
         {featuredCollaborations.map((f) => (
           <article class="stack">
@@ -76,23 +107,23 @@ const events = getLocalizedEvents(locale).slice(0, 3);
             <p class="small muted">
               {collaborationCopy(organizationsById.get(f.organizationId)!, locale).identity}
             </p>
-            <p>{collaborationCopy(organizationsById.get(f.organizationId)!, locale).description}</p>
-            <ul class="plain-links">
-              {f.workIds.map((id) => {
-                const w = worksById.get(id)!;
-                return (
-                  <li>
-                    <a href={sourceUrl(w)}>{w.title}</a> <span class="muted">({w.year})</span>
-                  </li>
-                );
-              })}
-            </ul>
+            <p>{currentCollaborationFocus[f.organizationId][locale]}</p>
+            <p class="featured-collaboration-links">
+              <a href={collaborationPath(f.organizationId, locale)}>
+                {it ? 'Scopri la collaborazione' : 'Explore the collaboration'}
+              </a>
+              {(() => {
+                const w = worksById.get(f.workIds[0])!;
+                const url = sourceUrl(w);
+                return url && <a href={url} title={w.title}>
+                  {it ? 'Articolo recente' : 'Recent paper'} ({w.year})
+                </a>;
+              })()}
+            </p>
           </article>
         ))}
       </div>
-      <p>
-        <a href={network}>{it ? 'Tutte le collaborazioni' : 'All collaborations'}</a>
-      </p>
+
     </div>
   </section>
   <section class="section">
@@ -120,6 +151,7 @@ const events = getLocalizedEvents(locale).slice(0, 3);
             href={`${it ? '/eventi/' : '/en/events/'}${e.pathSlug}/`}
             summary={e.summary}
             image={e.image}
+            imageStyle={e.imageFit === 'contain' ? 'height: 220px; width: 100%; object-fit: contain; background: #fff;' : undefined}
             imageAttribution={e.imageAttribution}
             meta={e.meta}
             plain
@@ -132,3 +164,11 @@ const events = getLocalizedEvents(locale).slice(0, 3);
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .home-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.5rem;
+  }
+</style>

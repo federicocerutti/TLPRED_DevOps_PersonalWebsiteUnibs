@@ -1,4 +1,5 @@
 import data from '../../data/research-network/public.json' with { type: 'json' };
+import publicationLinks from '../../data/research-network/publication-links.json' with { type: 'json' };
 export const research = data;
 export type Work = (typeof data.works)[number];
 export type Person = (typeof data.people)[number];
@@ -23,7 +24,22 @@ export const normalize = (s: string) =>
     .normalize('NFKD')
     .replace(/\p{Diacritic}/gu, '')
     .toLowerCase();
-export const sourceUrl = (w: Work) => (w.doi ? `https://doi.org/${w.doi}` : w.url);
+const curatedLinks: Record<string, { url: string; reference: string }> = publicationLinks;
+const isScopus = (url: string) => {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return host === 'scopus.com' || host.endsWith('.scopus.com');
+  } catch {
+    return true;
+  }
+};
+// Keep imported records unchanged; presentation never falls back to Scopus.
+export const sourceUrl = (w: Work) => {
+  if (w.doi) return `https://doi.org/${w.doi}`;
+  const curated = curatedLinks[w.id]?.url;
+  if (curated && !isScopus(curated)) return curated;
+  return w.url && !isScopus(w.url) ? w.url : '';
+};
 export const scopusUrl = (w: Work) =>
   w.scopusEid ? `https://www.scopus.com/record/display.uri?eid=${w.scopusEid}` : '';
 export const dblpUrls = (w: Work) =>

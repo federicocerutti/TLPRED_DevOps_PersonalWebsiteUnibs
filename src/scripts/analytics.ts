@@ -1,4 +1,4 @@
-import { allowedEvents, cleanUrl, type AnalyticsConfig } from '../lib/analytics';
+import { cleanUrl, type AnalyticsConfig } from '../lib/analytics';
 declare global {
   interface Window {
     _paq?: unknown[][];
@@ -9,92 +9,43 @@ if (!window.__ceruttiAnalytics) {
   window.__ceruttiAnalytics = true;
   const root = document.querySelector<HTMLElement>('[data-analytics-config]');
   const config: AnalyticsConfig = JSON.parse(root?.dataset.analyticsConfig ?? '{"enabled":false}');
-  const key = 'cerutti-analytics-consent-v1';
-  let consent = false,
-    loaded = false,
-    lastPage = '';
-  let previousPage = cleanUrl(document.referrer);
+  const privacySignal = navigator.doNotTrack === '1' ||
+    (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true;
+  // A prior refusal remains respected; no new analytics preference is stored.
+  let priorRefusal = false;
   try {
-    const saved = JSON.parse(localStorage.getItem(key) ?? 'null');
-    consent = saved?.allowed === true && saved.expires > Date.now();
+    priorRefusal = JSON.parse(localStorage.getItem('cerutti-analytics-consent-v1') ?? 'null')?.allowed === false;
   } catch {}
-  const queue = (...values: unknown[]) => {
-    (window._paq ??= []).push(values);
-  };
-  const status = () =>
-    document.querySelectorAll<HTMLElement>('[data-consent-status]').forEach((el) => {
-      const it = document.documentElement.lang === 'it';
-      el.textContent =
-        config.enabled && consent
-          ? it
-            ? 'Statistiche attive con il tuo consenso.'
-            : 'Analytics is on with your consent.'
-          : it
-            ? 'Statistiche disattivate.'
-            : 'Analytics is off.';
-    });
-  const pageview = () => {
-    if (!config.enabled || !consent) return;
-    const current = cleanUrl(window.location.href);
-    if (lastPage === current) return;
-    queue('setReferrerUrl', previousPage);
-    queue('setCustomUrl', current);
-    queue('setDocumentTitle', document.title);
-    queue('trackPageView');
-    if (/\/(research-network|rete-di-ricerca)\//.test(new URL(current).pathname))
-      queue('trackEvent', 'Website', 'network-view');
-    previousPage = current;
-    lastPage = current;
-  };
-  const start = () => {
-    if (!config.enabled || !consent) return;
-    if (!loaded) {
-      queue('requireConsent');
-      queue('disableCookies');
-      queue('setTrackerUrl', config.url + 'matomo.php');
-      queue('setSiteId', config.siteId);
-      loaded = true;
-      const script = document.createElement('script');
-      script.async = true;
-      script.referrerPolicy = 'no-referrer';
-      script.src = config.url + 'matomo.js';
-      document.head.append(script);
-    }
-    queue('setConsentGiven');
+  if (config.enabled && !privacySignal && !priorRefusal) {
+    const queue = (...values: unknown[]) => (window._paq ??= []).push(values);
+    // Fresh, memory-only page identifier lets heartbeats update this page's duration.
+    // It is never stored or reused across page loads, tabs or websites.
+    const pageId = Array.from(crypto.getRandomValues(new Uint8Array(8)),
+      byte => byte.toString(16).padStart(2, '0')).join('');
+    queue('disableCookies');
+    queue('disableBrowserFeatureDetection');
+    queue('setDoNotTrack', true);
+    queue('setVisitorId', pageId);
+    queue('setReferrerUrl', '');
+    queue('setRequestMethod', 'POST');
+    queue('setTrackerUrl', config.url + 'matomo.php');
+    queue('setSiteId', config.siteId);
+    queue('enableHeartBeatTimer', 30);
+    let lastPage = '';
+    const pageview = () => {
+      const current = cleanUrl(window.location.href);
+      if (lastPage === current) return;
+      queue('setCustomUrl', current);
+      queue('setDocumentTitle', document.title);
+      queue('trackPageView');
+      lastPage = current;
+    };
     pageview();
-  };
-  const decide = (allowed: boolean) => {
-    consent = allowed;
-    try {
-      localStorage.setItem(key, JSON.stringify({ allowed, expires: Date.now() + 180 * 86400000 }));
-    } catch {}
-    if (allowed) start();
-    else {
-      if (loaded) {
-        queue('forgetConsentGiven');
-        queue('deleteCookies');
-      }
-      lastPage = '';
-    }
-    status();
-  };
-  document.addEventListener('click', (event) => {
-    const target = event.target instanceof Element ? event.target : null;
-    if (target?.closest('[data-consent-accept]')) decide(true);
-    if (target?.closest('[data-consent-reject]')) decide(false);
-    const action = target?.closest<HTMLElement>('[data-analytics-event]')?.dataset.analyticsEvent;
-    if (config.enabled && consent && action && allowedEvents.has(action))
-      queue('trackEvent', 'Website', action);
-  });
-  document.addEventListener('research:interaction', (event) => {
-    const action = (event as CustomEvent<string>).detail;
-    if (config.enabled && consent && allowedEvents.has(action))
-      queue('trackEvent', 'Website', action);
-  });
-  document.addEventListener('astro:page-load', () => {
-    status();
-    pageview();
-  });
-  status();
-  start();
+    const script = document.createElement('script');
+    script.async = true;
+    script.referrerPolicy = 'no-referrer';
+    script.src = config.url + 'matomo.js';
+    document.head.append(script);
+    document.addEventListener('astro:page-load', pageview);
+  }
 }

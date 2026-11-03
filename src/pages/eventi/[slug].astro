@@ -20,9 +20,9 @@ const alt = getEventTranslation(entry.translationKey, 'en');
         <div class="detail-facts">
           <p class="muted"><strong>Data:</strong> {entry.meta[0]}</p>
           <p class="muted"><strong>Contesto:</strong> {entry.meta[1]}</p>
-          <p class="muted"><a href={entry.originalPageUrl} target="_blank" rel="noreferrer">Apri la pagina originale del CyberSecLab</a></p>
+          <p class="muted"><a href={entry.originalPageUrl} target="_blank" rel="noreferrer">{entry.originalPageLabel ?? 'Apri la pagina originale del CyberSecLab'}</a></p>
         </div>
-        <AttributedImage src={entry.image} alt={entry.title} attribution={entry.imageAttribution} imageStyle="margin: 1.25rem 0; border-radius: 18px; max-height: 420px; width: 100%; object-fit: cover;" />
+        <AttributedImage src={entry.image} alt={entry.title} attribution={entry.imageAttribution} imageStyle={entry.imageFit === 'contain' ? 'margin: 1.25rem 0; width: 100%; height: auto; object-fit: contain; background: #fff;' : 'margin: 1.25rem 0; border-radius: 18px; max-height: 420px; width: 100%; object-fit: cover;'} />
         <div class="prose" set:html={entry.body} />
       </article>
       <DetailSidebar title={entry.sidebarTitle} items={entry.sidebarItems} />

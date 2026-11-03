@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentCard from './ContentCard.astro';
+import { getLocalizedCollection } from '../lib/content-data';
+import type { Locale } from '../lib/site';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const it = locale === 'it';
+const entries = getLocalizedCollection('projects', locale);
+const current = entries.filter(e => ['running', 'in corso'].includes(e.status));
+const previous = entries.filter(e => !current.includes(e)).sort((a,b) => b.startDate.localeCompare(a.startDate));
+const sections = [{ title: it ? 'Progetti in corso' : 'Current projects', items: current }, { title: it ? 'Progetti precedenti' : 'Previous projects', items: previous }];
+---
+<BaseLayout locale={locale} title={it ? 'Progetti | Federico Cerutti' : 'Projects | Federico Cerutti'} description={it ? 'Progetti di ricerca attuali e precedenti, ruoli e collaborazioni.' : 'Current and previous research projects, roles and collaborations.'} image="/images/sourced/projects/project-true.jpg" alternatePath={it ? '/en/projects/' : '/progetti/'}>
+  <section class="page-intro"><div class="container stack">
+    <h1>{it ? 'Progetti' : 'Projects'}</h1>
+    <p>{it ? 'AI, cybersecurity e ragionamento per le decisioni, sviluppati attraverso ricerca finanziata e collaborazioni con università, laboratori e imprese.' : 'AI, cybersecurity and reasoning for decisions, developed through funded research and collaborations with universities, laboratories and industry.'}</p>
+  </div></section>
+  {sections.map(section => (
+    <section class="section"><div class="container stack project-group">
+      <h2>{section.title}</h2>
+      <div class="project-grid portfolio-list">{section.items.map(entry => (
+        <div class="project-card">
+          <ContentCard
+            title={entry.title}
+            href={`${it ? '/progetti/' : '/en/projects/'}${entry.pathSlug}/`}
+            summary={entry.summary}
+            image={entry.image}
+            imageAttribution={entry.imageAttribution}
+            meta={[entry.timelineLabel ?? `${entry.startDate.slice(0,4)}${entry.endDate ? `–${entry.endDate.slice(0,4)}` : ''}`]}
+            plain
+          >
+            <dl class="project-facts small muted">
+              {entry.role && <div><dt>{it ? 'Ruolo' : 'Role'}</dt><dd>{entry.role}</dd></div>}
+              <div><dt>{it ? 'Finanziamento' : 'Funding'}</dt><dd>{entry.funder}</dd></div>
+            </dl>
+            <a class="small" href={`${it ? '/progetti/' : '/en/projects/'}${entry.pathSlug}/`}>{it ? 'Approfondisci il progetto' : 'Explore the project'} →</a>
+          </ContentCard>
+        </div>
+      ))}</div>
+    </div></section>
+  ))}
+</BaseLayout>
+<style>
+  .project-group > h2 { margin-bottom:2rem; }
+  .project-card { min-width:0; }
+  .project-facts { display:grid; gap:.45rem; margin:0; }
+  .project-facts div { display:grid; gap:.15rem; }
+  .project-facts dt { font-size:.8rem; }
+  .project-facts dd { margin:0; }
+</style>

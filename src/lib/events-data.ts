@@ -11,8 +11,10 @@ type RawEventLocale = {
   sidebarTitle: string;
   sidebarItems: string[];
   image: string;
+  imageFit?: 'cover' | 'contain';
   imageAttribution: ImageAttribution;
   originalPageUrl: string;
+  originalPageLabel?: string;
   pathSlug: string;
   typeLabel: string;
 };
@@ -37,8 +39,10 @@ export type EventEntry = {
   sidebarTitle: string;
   sidebarItems: string[];
   image: string;
+  imageFit?: 'cover' | 'contain';
   imageAttribution: ImageAttribution;
   originalPageUrl: string;
+  originalPageLabel?: string;
   pathSlug: string;
   typeLabel: string;
   year: string;
@@ -69,8 +73,10 @@ const normalizedEvents = (rawEvents as RawEvent[]).flatMap((entry) =>
       sidebarTitle: localized.sidebarTitle,
       sidebarItems: localized.sidebarItems,
       image: localized.image,
+      imageFit: localized.imageFit,
       imageAttribution: localized.imageAttribution,
       originalPageUrl: localized.originalPageUrl,
+      originalPageLabel: localized.originalPageLabel,
       pathSlug: baseSlug,
       typeLabel: localized.typeLabel,
       year,

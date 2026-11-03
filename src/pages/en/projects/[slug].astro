@@ -18,8 +18,9 @@ const alt = getTranslation('projects', entry.translationKey, 'it');
         <span class="eyebrow">Project</span>
         <h1 class="detail-title">{entry.title}</h1>
         <div class="detail-facts">
+          {entry.role && <p class="muted"><strong>Role:</strong> {entry.role}</p>}
           <p class="muted"><strong>Funder:</strong> {entry.funder}</p>
-          <p class="muted"><strong>Timeline:</strong> {entry.startDate} {entry.endDate ? `– ${entry.endDate}` : ''}</p>
+          <p class="muted"><strong>Timeline:</strong> {entry.timelineLabel ?? `${entry.startDate}${entry.endDate ? ` – ${entry.endDate}` : ''}`}</p>
           <p class="muted"><strong>Status:</strong> {entry.status}</p>
         </div>
         {entry.image && (

@@ -1,0 +1,222 @@
+{
+  "en": {
+    "phdCourses": [
+      {
+        "title": "Humans-in-the-loop: designing meaningful human-AI interactions",
+        "when": "2024",
+        "summary": "Co-taught doctoral course for the Italian National PhD Programme in Artificial Intelligence."
+      },
+      {
+        "title": "Human-Computer Interaction for AI",
+        "when": "2023",
+        "summary": "Co-taught doctoral course at Politecnico di Milano."
+      },
+      {
+        "title": "Introduction to UNIX/Linux",
+        "when": "2017",
+        "summary": "Doctoral course at Cardiff University PhD Academy; sole lecturer."
+      }
+    ],
+    "sections": [
+      {
+        "translationKey": "earlier-university-teaching",
+        "title": "Earlier university teaching",
+        "intro": "Teaching experience across undergraduate and master’s programmes at Brescia, Cardiff and Aberdeen.",
+        "items": [
+          {
+            "title": "Innovazione Digitale",
+            "when": "Started 2022",
+            "summary": "University of Brescia. Master’s degree in Computer Engineering; sole lecturer, 9 ECTS."
+          },
+          {
+            "title": "Sicurezza Informatica",
+            "when": "Started 2019",
+            "summary": "University of Brescia. Master’s degree in Computer Engineering; shared teaching, 6 ECTS."
+          },
+          {
+            "title": "Sistemi di Elaborazione",
+            "when": "Started 2020",
+            "summary": "University of Brescia. Bachelor’s degree in Engineering of Technologies for Digital Enterprises; course leader with shared teaching, 6 ECTS."
+          },
+          {
+            "title": "Secure Applications, Identity and Trust",
+            "when": "2015–2019",
+            "summary": "Cardiff University. MSc Advanced Computer Science and MSc Information Security and Privacy; sole lecturer, 20 UK credits."
+          },
+          {
+            "title": "Programming Paradigms",
+            "when": "2017–2018",
+            "summary": "Cardiff University. MSc Advanced Computer Science and MSc Information Security and Privacy; shared teaching, 20 UK credits."
+          },
+          {
+            "title": "Informatics",
+            "when": "2015–2016",
+            "summary": "Cardiff University. BSc Computer Science; sole lecturer, 10 UK credits."
+          },
+          {
+            "title": "Research Methods",
+            "when": "2014–2015",
+            "summary": "University of Aberdeen. MSc Computer Science; teaching assistant."
+          },
+          {
+            "title": "Robotics — AI Meets Reality",
+            "when": "2014–2015",
+            "summary": "University of Aberdeen. MSc Computer Science; teaching assistant."
+          },
+          {
+            "title": "Adaptive Interactive Systems",
+            "when": "2013–2014",
+            "summary": "University of Aberdeen. MSc Computer Science; tutorial teaching."
+          },
+          {
+            "title": "Web Application Development",
+            "when": "2013–2014",
+            "summary": "University of Aberdeen. BSc Computer Science; tutorial teaching."
+          },
+          {
+            "title": "Web Technology",
+            "when": "2013–2014",
+            "summary": "University of Aberdeen. BSc Computer Science; tutorial teaching."
+          },
+          {
+            "title": "Formal Languages and Computability",
+            "when": "2012–2013",
+            "summary": "University of Aberdeen. BSc Computer Science; tutorial teaching."
+          },
+          {
+            "title": "Algorithmic Problem Solving",
+            "when": "2012–2013",
+            "summary": "University of Aberdeen. BSc Computer Science; tutorial teaching."
+          },
+          {
+            "title": "Fondamenti di Informatica A",
+            "when": "2011–2012",
+            "summary": "University of Brescia. Bachelor’s degree in Information Engineering; tutorial teaching."
+          }
+        ]
+      },
+      {
+        "translationKey": "professional-postgraduate-teaching",
+        "title": "Postgraduate professional teaching",
+        "intro": "Teaching on a specialised postgraduate programme at the University of Brescia.",
+        "items": [
+          {
+            "title": "Intelligenza Artificiale, Mente, Impresa",
+            "when": "2021–2022",
+            "summary": "Responsible for four teaching activities on the University of Brescia’s second-level university master’s programme."
+          }
+        ]
+      }
+    ]
+  },
+  "it": {
+    "phdCourses": [
+      {
+        "title": "Humans-in-the-loop: designing meaningful human-AI interactions",
+        "when": "2024",
+        "summary": "Corso di dottorato in co-docenza per il Dottorato Nazionale in Intelligenza Artificiale."
+      },
+      {
+        "title": "Human-Computer Interaction for AI",
+        "when": "2023",
+        "summary": "Corso di dottorato in co-docenza al Politecnico di Milano."
+      },
+      {
+        "title": "Introduction to UNIX/Linux",
+        "when": "2017",
+        "summary": "Corso di dottorato presso la PhD Academy della Cardiff University; unico docente."
+      }
+    ],
+    "sections": [
+      {
+        "translationKey": "earlier-university-teaching",
+        "title": "Insegnamenti universitari precedenti",
+        "intro": "Esperienza didattica in corsi di laurea e laurea magistrale a Brescia, Cardiff e Aberdeen.",
+        "items": [
+          {
+            "title": "Innovazione Digitale",
+            "when": "Avvio nel 2022",
+            "summary": "Università di Brescia. Laurea magistrale in Ingegneria Informatica; unico docente, 9 CFU."
+          },
+          {
+            "title": "Sicurezza Informatica",
+            "when": "Avvio nel 2019",
+            "summary": "Università di Brescia. Laurea magistrale in Ingegneria Informatica; docenza condivisa, 6 CFU."
+          },
+          {
+            "title": "Sistemi di Elaborazione",
+            "when": "Avvio nel 2020",
+            "summary": "Università di Brescia. Laurea in Ingegneria delle Tecnologie per l’Impresa Digitale; responsabile del corso con docenza condivisa, 6 CFU."
+          },
+          {
+            "title": "Secure Applications, Identity and Trust",
+            "when": "2015–2019",
+            "summary": "Cardiff University. MSc Advanced Computer Science e MSc Information Security and Privacy; unico docente, 20 crediti UK."
+          },
+          {
+            "title": "Programming Paradigms",
+            "when": "2017–2018",
+            "summary": "Cardiff University. MSc Advanced Computer Science e MSc Information Security and Privacy; docenza condivisa, 20 crediti UK."
+          },
+          {
+            "title": "Informatics",
+            "when": "2015–2016",
+            "summary": "Cardiff University. BSc Computer Science; unico docente, 10 crediti UK."
+          },
+          {
+            "title": "Research Methods",
+            "when": "2014–2015",
+            "summary": "University of Aberdeen. MSc Computer Science; teaching assistant."
+          },
+          {
+            "title": "Robotics — AI Meets Reality",
+            "when": "2014–2015",
+            "summary": "University of Aberdeen. MSc Computer Science; teaching assistant."
+          },
+          {
+            "title": "Adaptive Interactive Systems",
+            "when": "2013–2014",
+            "summary": "University of Aberdeen. MSc Computer Science; esercitazioni."
+          },
+          {
+            "title": "Web Application Development",
+            "when": "2013–2014",
+            "summary": "University of Aberdeen. BSc Computer Science; esercitazioni."
+          },
+          {
+            "title": "Web Technology",
+            "when": "2013–2014",
+            "summary": "University of Aberdeen. BSc Computer Science; esercitazioni."
+          },
+          {
+            "title": "Formal Languages and Computability",
+            "when": "2012–2013",
+            "summary": "University of Aberdeen. BSc Computer Science; esercitazioni."
+          },
+          {
+            "title": "Algorithmic Problem Solving",
+            "when": "2012–2013",
+            "summary": "University of Aberdeen. BSc Computer Science; esercitazioni."
+          },
+          {
+            "title": "Fondamenti di Informatica A",
+            "when": "2011–2012",
+            "summary": "Università di Brescia. Laurea in Ingegneria dell’Informazione; esercitazioni."
+          }
+        ]
+      },
+      {
+        "translationKey": "professional-postgraduate-teaching",
+        "title": "Didattica nei master universitari",
+        "intro": "Didattica in un percorso di specializzazione post-laurea dell’Università di Brescia.",
+        "items": [
+          {
+            "title": "Intelligenza Artificiale, Mente, Impresa",
+            "when": "2021–2022",
+            "summary": "Responsabile di quattro attività didattiche nel Master universitario di II livello dell’Università di Brescia."
+          }
+        ]
+      }
+    ]
+  }
+}

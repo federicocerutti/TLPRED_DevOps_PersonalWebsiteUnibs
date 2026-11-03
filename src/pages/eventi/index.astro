@@ -11,6 +11,7 @@ const items = getLocalizedEvents(locale).map((entry) => ({
   summary: entry.summary,
   kind: entry.typeLabel,
   image: entry.image,
+  imageStyle: entry.imageFit === 'contain' ? 'height: 220px; width: 100%; object-fit: contain; background: #fff;' : undefined,
   imageAttribution: entry.imageAttribution,
   meta: entry.meta,
   tags: entry.sidebarItems.slice(1),
@@ -28,7 +29,7 @@ const items = getLocalizedEvents(locale).map((entry) => ({
 <BaseLayout
   locale={locale}
   title="Eventi | Federico Cerutti"
-  description="Seminari, tavole rotonde, report ed edizioni di CyberChallenge che coinvolgono Federico Cerutti."
+  description="Conferenze, tutorial di ricerca, keynote su invito, tavole rotonde ed eventi pubblici con Federico Cerutti."
   image="/images/sourced/events/cyber-security-arena-2025.jpg"
   alternatePath="/en/events/"
 >

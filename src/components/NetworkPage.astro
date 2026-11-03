@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentCard from './ContentCard.astro';
 import {
   collaborations,
   collaborationCopy,
@@ -35,11 +36,6 @@ const groups = [
   <section class="page-intro">
     <div class="container stack">
       <h1>{it ? 'Collaborazioni' : 'Collaborations'}</h1>
-      <p>
-        {it
-          ? 'Dall’industria ai laboratori pubblici e alle università: ricerca condivisa su AI, cybersecurity e decisioni. Visita la pagina di un’organizzazione per conoscere la collaborazione e leggere i lavori collegati.'
-          : 'From industry to public laboratories and universities: shared research on AI, cybersecurity and decisions. Visit an organisation’s page to learn about the collaboration and read the related work.'}
-      </p>
     </div>
   </section>
   <section class="section">
@@ -47,29 +43,17 @@ const groups = [
       {groups.map((group) => (
         <section class="collaboration-group stack">
           <h2>{group.title}</h2>
-          <div class="collaboration-cards">
+          <div class="portfolio-list">
             {collaborations
               .filter((o) => group.sectors.includes(o.sector))
               .map((o) => (
-                <a
+                <ContentCard
                   id={o.id}
-                  class="collaboration-card collaboration-card-link stack"
+                  title={organisationName(o.name)}
                   href={collaborationPath(o.id, locale)}
-                >
-                  <h3>{organisationName(o.name)}</h3>
-                  {o.sector !== 'Academic' && (
-                    <p class="organisation-introduction small muted">
-                      {collaborationCopy(o, locale).identity}
-                    </p>
-                  )}
-                  <p class="collaboration-description">
-                    {collaborationCopy(o, locale).description}
-                  </p>
-                  <span class="collaboration-action">
-                    {it ? 'Scopri la collaborazione' : 'Explore the collaboration'}{' '}
-                    <span aria-hidden="true">→</span>
-                  </span>
-                </a>
+                  summary={collaborationCopy(o, locale).description}
+                  plain
+                />
               ))}
           </div>
         </section>

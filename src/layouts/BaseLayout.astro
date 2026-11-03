@@ -3,6 +3,7 @@ import '../styles/editorial.css';
 import '@fontsource/inter/300.css';
 import Analytics from '../components/Analytics.astro';
 import { navByLocale, secondaryNavByLocale, site, type Locale } from '../lib/site';
+import { pageStructuredData, serializeStructuredData } from '../lib/seo';
 
 interface Props {
   locale: Locale;
@@ -33,6 +34,13 @@ const currentUrl = new URL(
 const alternateUrl = alternatePath
   ? new URL(alternatePath, Astro.site ?? site.baseUrl).toString()
   : null;
+const defaultLanguageUrl = locale === 'en' ? currentUrl : alternateUrl;
+const structuredData = pageStructuredData({
+  locale,
+  title,
+  description,
+  canonicalUrl: currentUrl,
+});
 const currentPath = Astro.url.pathname;
 const requestedImage = image || site.socialImage;
 const socialImagePath = requestedImage.toLowerCase().endsWith('.svg')
@@ -96,6 +104,10 @@ function isActivePath(href: string) {
     {alternateUrl && (
       <link rel="alternate" hreflang={locale === 'it' ? 'en' : 'it'} href={alternateUrl} />
     )}
+    {defaultLanguageUrl && (
+      <link rel="alternate" hreflang="x-default" href={defaultLanguageUrl} />
+    )}
+    <script type="application/ld+json" is:inline set:html={serializeStructuredData(structuredData)} />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:locale" content={socialLocale} />
     <meta property="og:locale:alternate" content={alternateSocialLocale} />

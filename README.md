@@ -133,3 +133,37 @@ Teaching and Events are primary navigation items in both languages. The academic
 Each collaboration now has a bilingual static detail page below the existing research-network routes. Index cards are normal links with descriptions; papers/reports appear on the detail page, with back navigation and language alternates. No expandable card UI. The sitemap includes all detail pages. University cards/details omit the organisation one-liner. Homepage text has larger paragraph/list gaps and more line spacing.
 
 Owner corrections: remove Texas A&M University-Commerce, University of Texas at Dallas, Fordham and Alpen-Adria Klagenfurt. Consolidate historical Koblenz-Landau work under University of Koblenz with ID deduplication. The owner confirms Bakdash was at ARL for the Subjective Bayesian Networks paper (scopus:2-s2.0-85045180992); include it under ARL. Imported source history is retained; portfolio presentation applies these owner corrections.
+
+## Spacious collaboration list and current teaching — 3 November 2026
+
+Local continuation from `5e206e2` on `codex/research-advisory-redesign`: the collaboration index is now a single-column list without borders or backgrounds, grouped as companies, institutions/research centres and universities. Each entry has a linked heading and an explicit detail-page link, a readable text width and generous paragraph spacing. University organisation one-liners remain omitted. Dedicated bilingual pages and owner-corrected attribution are preserved.
+
+Current teaching in both languages now lists Cyber and AI Risk Management (catalogue link `8822_139266_29548`) and Enterprise Intelligent Systems (`8811_139203_29554`, with its query parameters). The owner confirmed both titles and this mapping in the continuation chat. Earlier Digital Transformation and Computer Security entries are replaced; tutorials and PhD courses remain intact.
+
+Verification: type check without diagnostics, 10 unit tests, all seven browser scenarios passing (six on the full run, corrected back-link selector passing on a targeted rerun), 202 built HTML pages and 3,655 internal links with sitemap coverage verified. Desktop/mobile light/night screenshots reviewed. Homepage spacing preserved. Preview remains at http://127.0.0.1:4321/. Changes are local and uncommitted; no deployment or analytics activation.
+
+## Original paper references — 3 November 2026
+
+Owner requested paper links to actual references rather than Scopus. `data/research-network/publication-links.json` now holds 37 verified publication destinations with public source references; exact DBLP-key matches against the existing publication manifest were supplemented with primary publisher/proceedings checks. The homepage and bilingual collaboration detail pages use DOI first, then curated original destinations, then existing non-Scopus URLs. Scopus is never a paper-link fallback. Imported snapshot records remain unchanged.
+
+Four prefaces and the 2014 BNAIC input/output abstract lack a verified original destination and are shown as unlinked titles. The similarly titled journal version was deliberately not substituted for the conference abstract. About/contact retains the owner's Scopus author-profile link, which is separate from paper links.
+
+Checks: zero type diagnostics, 11 unit tests and eight browser tests pass; 202 built pages, 3,655 internal links and sitemap verified. No Scopus paper-record hyperlinks in the build. Preview-only; local changes remain uncommitted.
+
+## Collaboration cards aligned with Projects — latest owner correction
+
+On 3 November the owner replaced the single-column direction: collaborations must use cards like Projects, without overlines or extra labels. The index now reuses `ContentCard` in its plain variant and the existing `portfolio-list` grid (three desktop columns, one mobile column). Entries contain only a linked institution name and the collaboration description. Organisation introductions remain on non-university detail pages. Group headings, dedicated pages, institution corrections and original paper destinations are preserved. This supersedes the spacious-list layout below.
+
+Preview-only; changes remain local and uncommitted.
+
+## Homepage current collaborations and network reach — latest revision
+
+Owner requested a marketing-oriented homepage refinement on 3 November 2026. The featured section is now “Current collaborations” / “Collaborazioni in corso”, retaining ARL, AFRL and Beretta with shorter research-focus descriptions and two simple links: the dedicated collaboration page and one recent paper at its original destination. Long publication lists are moved out of the homepage presentation; all works remain available on detail pages.
+
+“The wider research network” distinguishes current and past research relationships and displays derived totals: **8 companies, 7 institutions/research centres, 37 universities**. Counts derive from the curated collaboration presentation; the two IBM research sites count as one company. Figures describe research relationships, not active clients, contracts or endorsements. No country or publication-count claims were added.
+
+Verified: zero type diagnostics, 11 unit tests, nine browser tests, 202 HTML pages and 3,558 internal links/sitemap coverage. English/Italian desktop/mobile light/night screenshots reviewed. Preview at http://127.0.0.1:4321/. Local changes remain uncommitted; no deployment or analytics activation.
+
+## SEO and crawler verification
+
+See [SEO audit and checks](docs/SEO.md). After building, `npm run verify:dist` now also verifies per-page SEO metadata, JSON-LD, multilingual alternates and crawler discovery. The audit covers the local version; deployment remains a separate owner-authorised step.

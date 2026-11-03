@@ -1,0 +1,486 @@
+{
+  "en": [
+    {
+      "translationKey": "project-posbi",
+      "locale": "en",
+      "pathSlug": "posbi",
+      "title": "POSBI — Piattaforma di Omica Spaziale e Bioimaging Integrato",
+      "summary": "Spatial omics and integrated bioimaging research infrastructure, connecting biomedical research with AI-enabled analysis and scientific computing.",
+      "seo": {
+        "title": "POSBI — Piattaforma di Omica Spaziale e Bioimaging Integrato | Projects",
+        "description": "Spatial omics and integrated bioimaging research infrastructure, connecting biomedical research with AI-enabled analysis and scientific computing."
+      },
+      "startDate": "2026",
+      "timelineLabel": "Active participation",
+      "status": "running",
+      "funder": "Regione Lombardia",
+      "role": "Project participant",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Spatial omics and integrated bioimaging research infrastructure, connecting biomedical research with AI-enabled analysis and scientific computing.</p><p>Role: Project participant.</p><p><a href=\"https://www.unibs.it/it/ateneo/comunicazione/tutte-le-news/alluniversita-di-brescia-nasce-una-nuova-infrastruttura-di-ricerca-avanzata\">Official project announcement</a></p>"
+    },
+    {
+      "translationKey": "project-aidecc",
+      "locale": "en",
+      "pathSlug": "aidecc",
+      "title": "AIDECC — Argumentation for Informed Decisions with applications to Energy Consumption in Computing",
+      "summary": "Argumentation and causal modelling to investigate energy consumption in neural-network training and support informed decisions about efficiency and performance trade-offs.",
+      "seo": {
+        "title": "AIDECC — Argumentation for Informed Decisions with applications to Energy Consumption in Computing | Projects",
+        "description": "Argumentation and causal modelling to investigate energy consumption in neural-network training and support informed decisions about efficiency and performance trade-offs."
+      },
+      "startDate": "2024",
+      "timelineLabel": "2024 · FAIR cascade call",
+      "status": "previous",
+      "funder": "FAIR / PNRR, NextGenerationEU",
+      "role": "Principal investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Argumentation and causal modelling to investigate energy consumption in neural-network training and support informed decisions about efficiency and performance trade-offs.</p><p>Role: Principal investigator.</p><p><a href=\"https://fondazione-fair.it/news/cascade-call-per-la-ricerca-i-vincitori-del-bando-dello-spoke-9/\">Official project announcement</a></p>"
+    },
+    {
+      "translationKey": "project-scientific-enquiry",
+      "locale": "en",
+      "pathSlug": "scientific-enquiry",
+      "title": "Scientific Enquiry with Qualitative and Quantitative Uncertainty",
+      "summary": "Research on scientific enquiry under qualitative and quantitative uncertainty, funded through the Rita Levi-Montalcini programme.",
+      "seo": {
+        "title": "Scientific Enquiry with Qualitative and Quantitative Uncertainty | Projects",
+        "description": "Research on scientific enquiry under qualitative and quantitative uncertainty, funded through the Rita Levi-Montalcini programme."
+      },
+      "startDate": "2019",
+      "endDate": "2022",
+      "timelineLabel": "2019–2022",
+      "status": "finished",
+      "funder": "MUR — Rita Levi-Montalcini",
+      "role": "Principal investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Research on scientific enquiry under qualitative and quantitative uncertainty, funded through the Rita Levi-Montalcini programme.</p><p>Role: Principal investigator.</p>"
+    },
+    {
+      "translationKey": "project-coalition-learning-reasoning",
+      "locale": "en",
+      "pathSlug": "coalition-learning-reasoning",
+      "title": "Learning and Reasoning in Complex Coalition Information Environments",
+      "summary": "Learning and reasoning in coalition information environments, with a consortium involving Cardiff, UCL, UCLA, IBM, ARL and Dstl.",
+      "seo": {
+        "title": "Learning and Reasoning in Complex Coalition Information Environments | Projects",
+        "description": "Learning and reasoning in coalition information environments, with a consortium involving Cardiff, UCL, UCLA, IBM, ARL and Dstl."
+      },
+      "startDate": "2017",
+      "endDate": "2019",
+      "timelineLabel": "2017–2019",
+      "status": "finished",
+      "funder": "US ARL / UK Dstl",
+      "role": "Principal investigator; consortium coordinator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Learning and reasoning in coalition information environments, with a consortium involving Cardiff, UCL, UCLA, IBM, ARL and Dstl.</p><p>Role: Principal investigator; consortium coordinator.</p>"
+    },
+    {
+      "translationKey": "project-international-criminal-trials",
+      "locale": "en",
+      "pathSlug": "international-criminal-trials",
+      "title": "Supporting the analysis of international criminal trials with artificial intelligence and data mining techniques",
+      "summary": "AI and data mining for the analysis of international criminal trials, in a project coordinated by Swansea University.",
+      "seo": {
+        "title": "Supporting the analysis of international criminal trials with artificial intelligence and data mining techniques | Projects",
+        "description": "AI and data mining for the analysis of international criminal trials, in a project coordinated by Swansea University."
+      },
+      "startDate": "2017",
+      "endDate": "2018",
+      "timelineLabel": "2017–2018",
+      "status": "finished",
+      "funder": "DE Crucible",
+      "role": "Co-investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>AI and data mining for the analysis of international criminal trials, in a project coordinated by Swansea University.</p><p>Role: Co-investigator.</p>"
+    },
+    {
+      "translationKey": "project-human-machine-intelligence",
+      "locale": "en",
+      "pathSlug": "human-machine-intelligence",
+      "title": "Human-machine teaming for intelligence analysis",
+      "summary": "Human–machine collaboration for intelligence analysis, coordinated by Southampton with Cardiff and St Andrews.",
+      "seo": {
+        "title": "Human-machine teaming for intelligence analysis | Projects",
+        "description": "Human–machine collaboration for intelligence analysis, coordinated by Southampton with Cardiff and St Andrews."
+      },
+      "startDate": "2017",
+      "endDate": "2017",
+      "timelineLabel": "2017",
+      "status": "finished",
+      "funder": "UK Dstl",
+      "role": "Co-investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Human–machine collaboration for intelligence analysis, coordinated by Southampton with Cardiff and St Andrews.</p><p>Role: Co-investigator.</p>"
+    },
+    {
+      "translationKey": "project-impact-facility",
+      "locale": "en",
+      "pathSlug": "impact-facility",
+      "title": "IMPACT Facility — Interaction & Modelling Platform for Action, Control & Tracking",
+      "summary": "Research infrastructure for interaction and modelling of action, control and tracking at Cardiff University.",
+      "seo": {
+        "title": "IMPACT Facility — Interaction & Modelling Platform for Action, Control & Tracking | Projects",
+        "description": "Research infrastructure for interaction and modelling of action, control and tracking at Cardiff University."
+      },
+      "startDate": "2017",
+      "endDate": "2017",
+      "timelineLabel": "2017",
+      "status": "finished",
+      "funder": "Cardiff University",
+      "role": "Co-applicant",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Research infrastructure for interaction and modelling of action, control and tracking at Cardiff University.</p><p>Role: Co-applicant.</p>"
+    },
+    {
+      "translationKey": "project-migration-policy",
+      "locale": "en",
+      "pathSlug": "migration-policy",
+      "title": "Informing better migration and refugee policy-making in the presence of rumours and unsubstantiated claims",
+      "summary": "Research on migration and refugee policy-making in the presence of rumours and unsubstantiated claims, collaborating with Özyeğin University.",
+      "seo": {
+        "title": "Informing better migration and refugee policy-making in the presence of rumours and unsubstantiated claims | Projects",
+        "description": "Research on migration and refugee policy-making in the presence of rumours and unsubstantiated claims, collaborating with Özyeğin University."
+      },
+      "startDate": "2016",
+      "endDate": "2016",
+      "timelineLabel": "2016",
+      "status": "finished",
+      "funder": "EPSRC Priming Pump / Cardiff University",
+      "role": "Principal investigator; consortium coordinator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Research on migration and refugee policy-making in the presence of rumours and unsubstantiated claims, collaborating with Özyeğin University.</p><p>Role: Principal investigator; consortium coordinator.</p>"
+    },
+    {
+      "translationKey": "project-coalition-inference-management",
+      "locale": "en",
+      "pathSlug": "coalition-inference-management",
+      "title": "Inference Management for Coalition Information Sharing",
+      "summary": "Inference management for information sharing within coalitions.",
+      "seo": {
+        "title": "Inference Management for Coalition Information Sharing | Projects",
+        "description": "Inference management for information sharing within coalitions."
+      },
+      "startDate": "2015",
+      "endDate": "2016",
+      "timelineLabel": "2015–2016",
+      "status": "finished",
+      "funder": "US ARL / UK Dstl",
+      "role": "Research fellow; PI: Dr. Oren",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Inference management for information sharing within coalitions.</p><p>Role: Research fellow; PI: Dr. Oren.</p>"
+    },
+    {
+      "translationKey": "project-uncertain-dynamic-data",
+      "locale": "en",
+      "pathSlug": "uncertain-dynamic-data",
+      "title": "Making Sense of Incomplete, Uncertain and Dynamic Data in Support of Decision Making",
+      "summary": "Research on interpreting incomplete, uncertain and changing data to support decision-making.",
+      "seo": {
+        "title": "Making Sense of Incomplete, Uncertain and Dynamic Data in Support of Decision Making | Projects",
+        "description": "Research on interpreting incomplete, uncertain and changing data to support decision-making."
+      },
+      "startDate": "2015",
+      "endDate": "2016",
+      "timelineLabel": "2015–2016",
+      "status": "finished",
+      "funder": "US ARL / UK Dstl",
+      "role": "Research fellow; PI: Dr. Pan",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Research on interpreting incomplete, uncertain and changing data to support decision-making.</p><p>Role: Research fellow; PI: Dr. Pan.</p>"
+    },
+    {
+      "translationKey": "project-information-fusion-uncertainty",
+      "locale": "en",
+      "pathSlug": "information-fusion-uncertainty",
+      "title": "Information Fusion and Inference Management under Uncertainties",
+      "summary": "Information fusion and inference management under uncertainty.",
+      "seo": {
+        "title": "Information Fusion and Inference Management under Uncertainties | Projects",
+        "description": "Information fusion and inference management under uncertainty."
+      },
+      "startDate": "2013",
+      "endDate": "2015",
+      "timelineLabel": "2013–2015",
+      "status": "finished",
+      "funder": "UK Dstl",
+      "role": "Research fellow; PI: Dr. Oren",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Information fusion and inference management under uncertainty.</p><p>Role: Research fellow; PI: Dr. Oren.</p>"
+    }
+  ],
+  "it": [
+    {
+      "translationKey": "project-posbi",
+      "locale": "it",
+      "pathSlug": "posbi",
+      "title": "POSBI — Piattaforma di Omica Spaziale e Bioimaging Integrato",
+      "summary": "Infrastruttura di ricerca per omica spaziale e bioimaging integrato, che collega ricerca biomedica, analisi con AI e calcolo scientifico.",
+      "seo": {
+        "title": "POSBI — Piattaforma di Omica Spaziale e Bioimaging Integrato | Progetti",
+        "description": "Infrastruttura di ricerca per omica spaziale e bioimaging integrato, che collega ricerca biomedica, analisi con AI e calcolo scientifico."
+      },
+      "startDate": "2026",
+      "timelineLabel": "Partecipazione attiva",
+      "status": "in corso",
+      "funder": "Regione Lombardia",
+      "role": "Partecipante al progetto",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Infrastruttura di ricerca per omica spaziale e bioimaging integrato, che collega ricerca biomedica, analisi con AI e calcolo scientifico.</p><p>Ruolo: Partecipante al progetto.</p><p><a href=\"https://www.unibs.it/it/ateneo/comunicazione/tutte-le-news/alluniversita-di-brescia-nasce-una-nuova-infrastruttura-di-ricerca-avanzata\">Presentazione ufficiale del progetto</a></p>"
+    },
+    {
+      "translationKey": "project-aidecc",
+      "locale": "it",
+      "pathSlug": "aidecc",
+      "title": "AIDECC — Argumentation for Informed Decisions with applications to Energy Consumption in Computing",
+      "summary": "Argomentazione e modelli causali per studiare il consumo energetico nell’addestramento di reti neurali e supportare decisioni sui compromessi tra efficienza e prestazioni.",
+      "seo": {
+        "title": "AIDECC — Argumentation for Informed Decisions with applications to Energy Consumption in Computing | Progetti",
+        "description": "Argomentazione e modelli causali per studiare il consumo energetico nell’addestramento di reti neurali e supportare decisioni sui compromessi tra efficienza e prestazioni."
+      },
+      "startDate": "2024",
+      "timelineLabel": "2024 · Bando a cascata FAIR",
+      "status": "precedente",
+      "funder": "FAIR / PNRR, NextGenerationEU",
+      "role": "Principal investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Argomentazione e modelli causali per studiare il consumo energetico nell’addestramento di reti neurali e supportare decisioni sui compromessi tra efficienza e prestazioni.</p><p>Ruolo: Principal investigator.</p><p><a href=\"https://fondazione-fair.it/news/cascade-call-per-la-ricerca-i-vincitori-del-bando-dello-spoke-9/\">Presentazione ufficiale del progetto</a></p>"
+    },
+    {
+      "translationKey": "project-scientific-enquiry",
+      "locale": "it",
+      "pathSlug": "scientific-enquiry",
+      "title": "Scientific Enquiry with Qualitative and Quantitative Uncertainty",
+      "summary": "Ricerca sull’indagine scientifica in presenza di incertezza qualitativa e quantitativa, finanziata dal programma Rita Levi-Montalcini.",
+      "seo": {
+        "title": "Scientific Enquiry with Qualitative and Quantitative Uncertainty | Progetti",
+        "description": "Ricerca sull’indagine scientifica in presenza di incertezza qualitativa e quantitativa, finanziata dal programma Rita Levi-Montalcini."
+      },
+      "startDate": "2019",
+      "endDate": "2022",
+      "timelineLabel": "2019–2022",
+      "status": "concluso",
+      "funder": "MUR — Rita Levi-Montalcini",
+      "role": "Principal investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Ricerca sull’indagine scientifica in presenza di incertezza qualitativa e quantitativa, finanziata dal programma Rita Levi-Montalcini.</p><p>Ruolo: Principal investigator.</p>"
+    },
+    {
+      "translationKey": "project-coalition-learning-reasoning",
+      "locale": "it",
+      "pathSlug": "coalition-learning-reasoning",
+      "title": "Learning and Reasoning in Complex Coalition Information Environments",
+      "summary": "Apprendimento e ragionamento in ambienti informativi di coalizione, con un consorzio che coinvolgeva Cardiff, UCL, UCLA, IBM, ARL e Dstl.",
+      "seo": {
+        "title": "Learning and Reasoning in Complex Coalition Information Environments | Progetti",
+        "description": "Apprendimento e ragionamento in ambienti informativi di coalizione, con un consorzio che coinvolgeva Cardiff, UCL, UCLA, IBM, ARL e Dstl."
+      },
+      "startDate": "2017",
+      "endDate": "2019",
+      "timelineLabel": "2017–2019",
+      "status": "concluso",
+      "funder": "US ARL / UK Dstl",
+      "role": "Principal investigator; coordinatore del consorzio",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Apprendimento e ragionamento in ambienti informativi di coalizione, con un consorzio che coinvolgeva Cardiff, UCL, UCLA, IBM, ARL e Dstl.</p><p>Ruolo: Principal investigator; coordinatore del consorzio.</p>"
+    },
+    {
+      "translationKey": "project-international-criminal-trials",
+      "locale": "it",
+      "pathSlug": "international-criminal-trials",
+      "title": "Supporting the analysis of international criminal trials with artificial intelligence and data mining techniques",
+      "summary": "AI e data mining per l’analisi dei processi penali internazionali, in un progetto coordinato dall’Università di Swansea.",
+      "seo": {
+        "title": "Supporting the analysis of international criminal trials with artificial intelligence and data mining techniques | Progetti",
+        "description": "AI e data mining per l’analisi dei processi penali internazionali, in un progetto coordinato dall’Università di Swansea."
+      },
+      "startDate": "2017",
+      "endDate": "2018",
+      "timelineLabel": "2017–2018",
+      "status": "concluso",
+      "funder": "DE Crucible",
+      "role": "Co-investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>AI e data mining per l’analisi dei processi penali internazionali, in un progetto coordinato dall’Università di Swansea.</p><p>Ruolo: Co-investigator.</p>"
+    },
+    {
+      "translationKey": "project-human-machine-intelligence",
+      "locale": "it",
+      "pathSlug": "human-machine-intelligence",
+      "title": "Human-machine teaming for intelligence analysis",
+      "summary": "Collaborazione uomo–macchina per l’analisi di intelligence, coordinata da Southampton con Cardiff e St Andrews.",
+      "seo": {
+        "title": "Human-machine teaming for intelligence analysis | Progetti",
+        "description": "Collaborazione uomo–macchina per l’analisi di intelligence, coordinata da Southampton con Cardiff e St Andrews."
+      },
+      "startDate": "2017",
+      "endDate": "2017",
+      "timelineLabel": "2017",
+      "status": "concluso",
+      "funder": "UK Dstl",
+      "role": "Co-investigator",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Collaborazione uomo–macchina per l’analisi di intelligence, coordinata da Southampton con Cardiff e St Andrews.</p><p>Ruolo: Co-investigator.</p>"
+    },
+    {
+      "translationKey": "project-impact-facility",
+      "locale": "it",
+      "pathSlug": "impact-facility",
+      "title": "IMPACT Facility — Interaction & Modelling Platform for Action, Control & Tracking",
+      "summary": "Infrastruttura di ricerca per interazione e modellazione di azione, controllo e tracciamento presso Cardiff University.",
+      "seo": {
+        "title": "IMPACT Facility — Interaction & Modelling Platform for Action, Control & Tracking | Progetti",
+        "description": "Infrastruttura di ricerca per interazione e modellazione di azione, controllo e tracciamento presso Cardiff University."
+      },
+      "startDate": "2017",
+      "endDate": "2017",
+      "timelineLabel": "2017",
+      "status": "concluso",
+      "funder": "Cardiff University",
+      "role": "Co-proponente",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Infrastruttura di ricerca per interazione e modellazione di azione, controllo e tracciamento presso Cardiff University.</p><p>Ruolo: Co-proponente.</p>"
+    },
+    {
+      "translationKey": "project-migration-policy",
+      "locale": "it",
+      "pathSlug": "migration-policy",
+      "title": "Informing better migration and refugee policy-making in the presence of rumours and unsubstantiated claims",
+      "summary": "Ricerca sulle politiche migratorie e per i rifugiati in presenza di voci e affermazioni non comprovate, in collaborazione con l’Università Özyeğin.",
+      "seo": {
+        "title": "Informing better migration and refugee policy-making in the presence of rumours and unsubstantiated claims | Progetti",
+        "description": "Ricerca sulle politiche migratorie e per i rifugiati in presenza di voci e affermazioni non comprovate, in collaborazione con l’Università Özyeğin."
+      },
+      "startDate": "2016",
+      "endDate": "2016",
+      "timelineLabel": "2016",
+      "status": "concluso",
+      "funder": "EPSRC Priming Pump / Cardiff University",
+      "role": "Principal investigator; coordinatore del consorzio",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Ricerca sulle politiche migratorie e per i rifugiati in presenza di voci e affermazioni non comprovate, in collaborazione con l’Università Özyeğin.</p><p>Ruolo: Principal investigator; coordinatore del consorzio.</p>"
+    },
+    {
+      "translationKey": "project-coalition-inference-management",
+      "locale": "it",
+      "pathSlug": "coalition-inference-management",
+      "title": "Inference Management for Coalition Information Sharing",
+      "summary": "Gestione delle inferenze per la condivisione di informazioni nelle coalizioni.",
+      "seo": {
+        "title": "Inference Management for Coalition Information Sharing | Progetti",
+        "description": "Gestione delle inferenze per la condivisione di informazioni nelle coalizioni."
+      },
+      "startDate": "2015",
+      "endDate": "2016",
+      "timelineLabel": "2015–2016",
+      "status": "concluso",
+      "funder": "US ARL / UK Dstl",
+      "role": "Research fellow; PI: Dr. Oren",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Gestione delle inferenze per la condivisione di informazioni nelle coalizioni.</p><p>Ruolo: Research fellow; PI: Dr. Oren.</p>"
+    },
+    {
+      "translationKey": "project-uncertain-dynamic-data",
+      "locale": "it",
+      "pathSlug": "uncertain-dynamic-data",
+      "title": "Making Sense of Incomplete, Uncertain and Dynamic Data in Support of Decision Making",
+      "summary": "Ricerca sull’interpretazione di dati incompleti, incerti e dinamici a supporto delle decisioni.",
+      "seo": {
+        "title": "Making Sense of Incomplete, Uncertain and Dynamic Data in Support of Decision Making | Progetti",
+        "description": "Ricerca sull’interpretazione di dati incompleti, incerti e dinamici a supporto delle decisioni."
+      },
+      "startDate": "2015",
+      "endDate": "2016",
+      "timelineLabel": "2015–2016",
+      "status": "concluso",
+      "funder": "US ARL / UK Dstl",
+      "role": "Research fellow; PI: Dr. Pan",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Ricerca sull’interpretazione di dati incompleti, incerti e dinamici a supporto delle decisioni.</p><p>Ruolo: Research fellow; PI: Dr. Pan.</p>"
+    },
+    {
+      "translationKey": "project-information-fusion-uncertainty",
+      "locale": "it",
+      "pathSlug": "information-fusion-uncertainty",
+      "title": "Information Fusion and Inference Management under Uncertainties",
+      "summary": "Fusione delle informazioni e gestione delle inferenze in condizioni di incertezza.",
+      "seo": {
+        "title": "Information Fusion and Inference Management under Uncertainties | Progetti",
+        "description": "Fusione delle informazioni e gestione delle inferenze in condizioni di incertezza."
+      },
+      "startDate": "2013",
+      "endDate": "2015",
+      "timelineLabel": "2013–2015",
+      "status": "concluso",
+      "funder": "UK Dstl",
+      "role": "Research fellow; PI: Dr. Oren",
+      "tags": [],
+      "people": [
+        "Federico Cerutti"
+      ],
+      "body": "<p>Fusione delle informazioni e gestione delle inferenze in condizioni di incertezza.</p><p>Ruolo: Research fellow; PI: Dr. Oren.</p>"
+    }
+  ]
+}

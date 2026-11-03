@@ -12,7 +12,7 @@ export const featuredCollaborations = [
   },
   {
     organizationId: 'org:fabbrica-d-armi-pietro-beretta',
-    label: 'Beretta',
+    label: "Fabbrica d'Armi Pietro Beretta",
     workIds: ['scopus:2-s2.0-105037632387'],
   },
 ];
@@ -30,6 +30,7 @@ const hiddenOrganizations = new Set([
   'org:university-of-brescia',
   'org:university-of-southampton',
   'org:imperial-college-london',
+  'org:university-of-southern-california',
   'org:ibm-research-uk-site-unspecified',
   'org:ibm-research-us-site-unspecified',
 ]);
@@ -55,6 +56,30 @@ export const collaborations = research.organizations
     const bi = featuredCollaborations.findIndex((x) => x.organizationId === b.id);
     return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) || a.name.localeCompare(b.name);
   });
+// Count the curated presentation, consolidating IBM's two sites as one company.
+const companyGroups: Record<string, string> = {
+  'org:ibm-research-hursley-uk': 'ibm',
+  'org:ibm-t-j-watson-research-center': 'ibm',
+};
+export const collaborationStatistics = {
+  companies: new Set(collaborations.filter(o => o.sector === 'Industry').map(o => companyGroups[o.id] ?? o.id)).size,
+  institutions: collaborations.filter(o => ['Government / defence', 'Public research', 'Public organisation'].includes(o.sector)).length,
+  universities: collaborations.filter(o => o.sector === 'Academic').length,
+};
+export const currentCollaborationFocus: Record<string, { en: string; it: string }> = {
+  'org:us-army-research-laboratory-devcom': {
+    en: 'We combined learning and reasoning to recognise complex events and understand their causes, with uncertainty made explicit.',
+    it: 'Abbiamo combinato apprendimento e ragionamento per riconoscere eventi complessi e comprenderne le cause, rendendo esplicita l’incertezza.',
+  },
+  'org:us-air-force-research-laboratory': {
+    en: 'We investigated AI for interpreting sensor data: from Wi-Fi sensing to causal event detection under computational constraints.',
+    it: 'Abbiamo studiato l’AI per interpretare dati sensoriali: dal sensing Wi-Fi al riconoscimento causale di eventi con risorse di calcolo limitate.',
+  },
+  'org:fabbrica-d-armi-pietro-beretta': {
+    en: 'We explored human digital twins for sport and rehabilitation, connecting digital representations with movement and physical activity.',
+    it: 'Abbiamo esplorato i digital twin umani per sport e riabilitazione, collegando rappresentazioni digitali, movimento e attività fisica.',
+  },
+};
 export { organizationsById, worksById, peopleById };
 
 // Organisation introductions use public descriptions; collaboration text is
@@ -63,68 +88,68 @@ const organisationCopy: Record<string, [string, string, string, string]> = {
   'org:us-army-research-laboratory-devcom': [
     'The US Army’s fundamental research laboratory.',
     'Il laboratorio di ricerca fondamentale dello US Army.',
-    'Our joint research spans reasoning under uncertainty, cyber threat analysis and complex event detection. Recent work combines learning and symbolic reasoning to recognise events and their causes from streams of data.',
-    'La ricerca condivisa riguarda ragionamento sotto incertezza, analisi delle minacce cyber e rilevamento di eventi complessi. I lavori recenti combinano apprendimento e ragionamento simbolico per riconoscere eventi e cause nei flussi di dati.',
+    'Our joint research spanned reasoning under uncertainty, cyber threat analysis and complex event detection. Recent work combined learning and symbolic reasoning to recognise events and their causes from streams of data.',
+    'La ricerca condivisa ha riguardato ragionamento sotto incertezza, analisi delle minacce cyber e rilevamento di eventi complessi. I lavori recenti hanno combinato apprendimento e ragionamento simbolico per riconoscere eventi e cause nei flussi di dati.',
   ],
   'org:us-air-force-research-laboratory': [
     'A US Air Force research laboratory working on aerospace and defence technologies.',
     'Laboratorio di ricerca della US Air Force per tecnologie aerospaziali e della difesa.',
-    'The collaboration explores how learning and symbolic reasoning can interpret sensor data. Joint work includes Wi-Fi sensing for passive radar and causal event processing with limited computing resources.',
-    'La collaborazione esplora come apprendimento e ragionamento simbolico possano interpretare dati da sensori. I lavori includono sensing Wi-Fi per radar passivi ed elaborazione causale di eventi con risorse di calcolo limitate.',
+    'The collaboration explored how learning and symbolic reasoning can interpret sensor data. Joint work included Wi-Fi sensing for passive radar and causal event processing with limited computing resources.',
+    'La collaborazione ha esplorato come apprendimento e ragionamento simbolico possano interpretare dati da sensori. I lavori hanno incluso sensing Wi-Fi per radar passivi ed elaborazione causale di eventi con risorse di calcolo limitate.',
   ],
   'org:fabbrica-d-armi-pietro-beretta': [
     'An Italian manufacturer of firearms for sport, hunting and defence.',
     'Azienda italiana produttrice di armi per sport, caccia e difesa.',
-    'Our shared work examines human digital twins in sport and rehabilitation. A systematic review brings together research on digital representations of people and their use in understanding movement and physical activity.',
-    'Il lavoro condiviso esamina i digital twin umani nello sport e nella riabilitazione. Una revisione sistematica raccoglie la ricerca sulle rappresentazioni digitali delle persone e sul loro impiego per comprendere movimento e attività fisica.',
+    'Our shared work examined human digital twins in sport and rehabilitation. A systematic review brought together research on digital representations of people and their use in understanding movement and physical activity.',
+    'Il lavoro condiviso ha esaminato i digital twin umani nello sport e nella riabilitazione. Una revisione sistematica ha raccolto la ricerca sulle rappresentazioni digitali delle persone e sul loro impiego per comprendere movimento e attività fisica.',
   ],
   'org:airbus-dais-joint-demonstration': [
     'A European aerospace company producing aircraft and space and defence systems.',
     'Gruppo aerospaziale europeo che produce aeromobili e sistemi spaziali e per la difesa.',
-    'The connection includes a joint demonstration in the DAIS programme in 2017. The linked technical contribution documents that shared activity.',
-    'Il collegamento comprende una dimostrazione congiunta nel programma DAIS nel 2017. Il contributo tecnico collegato documenta questa attività condivisa.',
+    'The connection included a joint demonstration in the DAIS programme in 2017. The linked technical contribution documented that shared activity.',
+    'Il collegamento ha compreso una dimostrazione congiunta nel programma DAIS nel 2017. Il contributo tecnico collegato ha documentato questa attività condivisa.',
   ],
   'org:amazon-alexa-ai': [
     'Amazon’s AI research activity associated with its Alexa assistant.',
     'Attività di ricerca AI di Amazon legata all’assistente Alexa.',
-    'Joint publications examine risk-aware classification and reasoning about uncertain probabilities. They include work on recognising stages of cyber attacks while accounting for uncertainty in the classification.',
-    'Le pubblicazioni congiunte esaminano classificazione consapevole del rischio e ragionamento su probabilità incerte. Includono il riconoscimento delle fasi di attacchi cyber tenendo conto dell’incertezza della classificazione.',
+    'Joint publications examined risk-aware classification and reasoning about uncertain probabilities. They included work on recognising stages of cyber attacks while accounting for uncertainty in the classification.',
+    'Le pubblicazioni congiunte hanno esaminato classificazione consapevole del rischio e ragionamento su probabilità incerte. Hanno incluso il riconoscimento delle fasi di attacchi cyber tenendo conto dell’incertezza della classificazione.',
   ],
   'org:bae-systems-ai-labs': [
     'AI research within the aerospace, defence and security group BAE Systems.',
     'Ricerca AI nel gruppo aerospaziale, difesa e sicurezza BAE Systems.',
-    'The shared publication surveys methods for interpreting deep learning models. It examines research on making model behaviour and predictions more understandable.',
-    'La pubblicazione condivisa passa in rassegna i metodi per interpretare modelli di deep learning. Esamina la ricerca su come rendere più comprensibili comportamento e previsioni dei modelli.',
+    'The shared publication surveyed methods for interpreting deep learning models. It examined research on making model behaviour and predictions more understandable.',
+    'La pubblicazione condivisa ha passato in rassegna i metodi per interpretare modelli di deep learning. Ha esaminato la ricerca su come rendere più comprensibili comportamento e previsioni dei modelli.',
   ],
   'org:blue-prism-ai-labs': [
     'AI research associated with Blue Prism’s business-process automation software.',
     'Ricerca AI legata al software Blue Prism per l’automazione dei processi aziendali.',
-    'Joint research distinguishes uncertainty due to incomplete knowledge from variability in data. Publications study probabilistic circuits, Bayesian networks and uncertainty-aware classifiers.',
-    'La ricerca congiunta distingue l’incertezza dovuta a conoscenze incomplete dalla variabilità dei dati. Le pubblicazioni studiano circuiti probabilistici, reti bayesiane e classificatori che rappresentano l’incertezza.',
+    'Joint research distinguished uncertainty due to incomplete knowledge from variability in data. Publications studied probabilistic circuits, Bayesian networks and uncertainty-aware classifiers.',
+    'La ricerca congiunta ha distinto l’incertezza dovuta a conoscenze incomplete dalla variabilità dei dati. Le pubblicazioni hanno studiato circuiti probabilistici, reti bayesiane e classificatori che rappresentano l’incertezza.',
   ],
   'org:honeywell': [
     'An industrial technology company active in automation and aerospace.',
     'Azienda di tecnologie industriali attiva nell’automazione e nell’aerospazio.',
-    'Our shared work examines human–machine collaboration in intelligence analysis. It includes an expert evaluation and research on supporting reasoning with different kinds of information.',
-    'Il lavoro condiviso esamina la collaborazione uomo–macchina nell’analisi di intelligence. Comprende una valutazione da parte di esperti e ricerca sul supporto al ragionamento con diversi tipi di informazioni.',
+    'Our shared work examined human–machine collaboration in intelligence analysis. It included an expert evaluation and research on supporting reasoning with different kinds of information.',
+    'Il lavoro condiviso ha esaminato la collaborazione uomo–macchina nell’analisi di intelligence. Ha compreso una valutazione da parte di esperti e ricerca sul supporto al ragionamento con diversi tipi di informazioni.',
   ],
   'org:ibm-research-hursley-uk': [
     'An IBM technology and research site in Hursley, United Kingdom.',
     'Sede tecnologica e di ricerca IBM a Hursley, nel Regno Unito.',
-    'Joint research connects interpretable AI, uncertainty and human judgement. Publications examine trust calibration, situational understanding and explanations for decisions, including social media moderation.',
-    'La ricerca congiunta collega AI interpretabile, incertezza e giudizio umano. Le pubblicazioni esaminano calibrazione della fiducia, comprensione delle situazioni e spiegazioni delle decisioni, anche nella moderazione dei social media.',
+    'Joint research connected interpretable AI, uncertainty and human judgement. Publications examined trust calibration, situational understanding and explanations for decisions, including social media moderation.',
+    'La ricerca congiunta ha collegato AI interpretabile, incertezza e giudizio umano. Le pubblicazioni hanno esaminato calibrazione della fiducia, comprensione delle situazioni e spiegazioni delle decisioni, anche nella moderazione dei social media.',
   ],
   'org:ibm-t-j-watson-research-center': [
     'An IBM Research centre in the United States.',
     'Centro IBM Research negli Stati Uniti.',
-    'The collaboration spans interpretable AI, learning and reasoning in complex information environments. Shared publications address trust, situational understanding and the enforcement of privacy policies.',
-    'La collaborazione riguarda AI interpretabile, apprendimento e ragionamento in ambienti informativi complessi. Le pubblicazioni condivise affrontano fiducia, comprensione delle situazioni e applicazione di politiche di privacy.',
+    'The collaboration spanned interpretable AI, learning and reasoning in complex information environments. Shared publications addressed trust, situational understanding and the enforcement of privacy policies.',
+    'La collaborazione ha riguardato AI interpretabile, apprendimento e ragionamento in ambienti informativi complessi. Le pubblicazioni condivise hanno affrontato fiducia, comprensione delle situazioni e applicazione di politiche di privacy.',
   ],
   'org:nec-laboratories-europe-verified-current': [
     'NEC’s European research organisation for information and communication technologies.',
     'Organizzazione europea di ricerca NEC nelle tecnologie dell’informazione e della comunicazione.',
-    'A connection with the laboratory’s AI research community, linking academic research interests with an industrial research environment.',
-    'Un collegamento con la comunità di ricerca AI del laboratorio, che mette in relazione interessi di ricerca accademici e un ambiente di ricerca industriale.',
+    'The collaboration connected academic research interests with the laboratory’s industrial AI research community.',
+    'La collaborazione ha messo in relazione interessi di ricerca accademici con la comunità di ricerca AI industriale del laboratorio.',
   ],
 };
 
@@ -195,11 +220,11 @@ export function collaborationCopy(o: (typeof collaborations)[number], locale: 'e
   const selected = topics.filter(([pattern]) => pattern.test(titles)).slice(0, 2);
   const description = selected.length
     ? it
-      ? `Il lavoro condiviso riguarda ${selected.map((t) => t[2]).join('; ')}. Le pubblicazioni collegate approfondiscono questi temi attraverso modelli, metodi e valutazioni di ricerca.`
-      : `Our shared work concerns ${selected.map((t) => t[1]).join('; ')}. The linked publications develop these topics through research models, methods and evaluations.`
+      ? `Il lavoro condiviso ha riguardato ${selected.map((t) => t[2]).join('; ')}. Le pubblicazioni collegate hanno approfondito questi temi attraverso modelli, metodi e valutazioni di ricerca.`
+      : `Our shared work concerned ${selected.map((t) => t[1]).join('; ')}. The linked publications developed these topics through research models, methods and evaluations.`
     : it
-      ? 'La collaborazione riguarda metodi di intelligenza artificiale e ragionamento. Le pubblicazioni collegate descrivono le domande affrontate e i risultati dei singoli studi.'
-      : 'The collaboration concerns methods for artificial intelligence and reasoning. The linked publications describe the questions investigated and the findings of individual studies.';
+      ? 'La collaborazione ha riguardato metodi di intelligenza artificiale e ragionamento. Le pubblicazioni collegate hanno descritto le domande affrontate e i risultati dei singoli studi.'
+      : 'The collaboration concerned methods for artificial intelligence and reasoning. The linked publications described the questions investigated and the findings of individual studies.';
   return { identity, description };
 }
 

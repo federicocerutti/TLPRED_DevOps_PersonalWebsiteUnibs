@@ -8,6 +8,7 @@ interface Item {
   kind?: string;
   status?: string;
   image?: string;
+  imageStyle?: string;
   imageAttribution?: ImageAttribution;
   meta?: string[];
   tags?: string[];
@@ -28,6 +29,7 @@ const { items } = Astro.props;
       href={item.href}
       summary={item.summary}
       image={item.image}
+      imageStyle={item.imageStyle}
       imageAttribution={item.imageAttribution}
       meta={item.meta}
       plain

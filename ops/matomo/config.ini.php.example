@@ -21,11 +21,22 @@ enable_browser_archiving_triggering = 0
 
 [Deletelogs]
 delete_logs_enable = 1
-delete_logs_older_than = 90
+delete_logs_older_than = 7
+delete_logs_schedule_lowest_interval = 1
 
-[Deletereports]
 delete_reports_enable = 1
-delete_reports_older_than = 12
+delete_reports_older_than = 6
 delete_reports_keep_basic_metrics = 0
 delete_reports_keep_month_reports = 0
 delete_reports_keep_year_reports = 0
+
+[Live]
+disable_visitor_log = 1
+disable_visitor_profile = 1
+
+; Apply via PrivacyManager native settings after installation, before tracking:
+; ipAnonymizerEnabled=true, ipAddressMaskLength=3 (IPv6 masks 104 bits)
+; useAnonymizedIpForVisitEnrichment=true, forceCookielessTracking=true
+; randomizeConfigId=true, doNotTrackEnabled=true
+; Use country-only geolocation; disable DevicesDetection/DevicePlugins and Referrers.
+; Verify memory-only page cid matches heartbeat while random config IDs are enabled.

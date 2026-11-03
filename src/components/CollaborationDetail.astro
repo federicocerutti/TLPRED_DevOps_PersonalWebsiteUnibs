@@ -51,7 +51,7 @@ const reports = research.daisReports.filter((d) => affiliations.some((a) => a.so
         {works.map((w) => (
           <li class="publication">
             <h3>
-              <a href={sourceUrl(w)}>{w.title}</a>
+              {sourceUrl(w) ? <a href={sourceUrl(w)}>{w.title}</a> : <span>{w.title}</span>}
             </h3>
             <p class="small muted">
               {w.year} · {w.venue}

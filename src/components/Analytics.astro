@@ -1,6 +1,5 @@
 ---
 import { publicTrackerUrl } from '../lib/analytics';
-const { locale } = Astro.props;
 const url = publicTrackerUrl(import.meta.env.PUBLIC_MATOMO_URL ?? '');
 const siteId = import.meta.env.PUBLIC_MATOMO_SITE_ID ?? '';
 const enabled =
@@ -9,43 +8,9 @@ const enabled =
   !!url &&
   /^[1-9]\d*$/.test(siteId);
 const config = { enabled, url: enabled ? url : '', siteId: enabled ? siteId : '' };
-const it = locale === 'it';
 ---
 
-<div
-  class="container"
-  data-analytics-config={JSON.stringify(config)}
-  data-locale={locale}
-  style="padding-bottom:2rem;font-size:.78rem"
->
-  <details id="analytics-settings">
-    <summary>{it ? 'Privacy e statistiche facoltative' : 'Privacy and optional analytics'}</summary>
-    <div class="stack">
-      <p>
-        {it
-          ? 'Le statistiche Matomo sono facoltative. Se approvate e attivate, vengono raccolte solo dopo il tuo consenso: pagine visitate e azioni aggregate. Non vengono inviati testi di ricerca, indirizzi email o identificativi utente. Puoi revocare il consenso in qualsiasi momento.'
-          : 'Matomo analytics is optional. When approved and enabled, it runs only after your consent: page visits and aggregate actions. Search text, email addresses and user identifiers are not sent. You can withdraw consent at any time.'}
-      </p>
-      <p>
-        {it
-          ? 'Le preferenze di consenso sono salvate localmente per 180 giorni. Anche in caso di consenso, le statistiche restano disattivate finché configurazione e approvazione privacy non sono disponibili.'
-          : 'Consent preferences are stored locally for 180 days. Even with consent, analytics stays disabled until configuration and privacy approval are available.'}
-      </p>
-      <p data-consent-status aria-live="polite">
-        {it ? 'Statistiche disattivate.' : 'Analytics is off.'}
-      </p>
-      <div class="actions">
-        <button type="button" data-consent-accept disabled={!enabled}>
-          {it ? 'Consenti statistiche facoltative' : 'Allow optional analytics'}
-        </button>
-        <button type="button" data-consent-reject>
-          {it ? 'Rifiuta / revoca consenso' : 'Decline / withdraw consent'}
-        </button>
-        <a href={it ? '/it/privacy/' : '/en/privacy/'}>{it ? 'Informativa' : 'Privacy notice'}</a>
-      </div>
-    </div>
-  </details>
-</div>
+<div hidden data-analytics-config={JSON.stringify(config)}></div>
 <script>
   import '../scripts/analytics';
 </script>

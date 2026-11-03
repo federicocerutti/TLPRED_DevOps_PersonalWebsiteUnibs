@@ -5,6 +5,9 @@ export const site = {
   baseUrl: 'https://federico-cerutti.unibs.it',
   socialImage: '/images/people/federico-cerutti.png',
   contactEmail: 'federico.cerutti@unibs.it',
+  contactPhone: '+39 030 371 5453',
+  contactPhoneUrl: 'tel:+390303715453',
+  linkedinUrl: 'https://www.linkedin.com/in/federicocerutti/',
   contactPerson: 'Prof. Federico Cerutti',
   contactRole: {
     it: 'Professore Ordinario, Università degli Studi di Brescia',

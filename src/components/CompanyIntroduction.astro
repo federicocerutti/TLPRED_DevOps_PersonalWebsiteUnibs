@@ -7,3 +7,8 @@ const { locale = 'en' } = Astro.props;
     ? 'Collaboro con aziende ed enti attraverso contratti conto terzi con l’Università degli Studi di Brescia: attività a pagamento di ricerca, consulenza tecnico-scientifica e formazione, definite insieme a partire da un problema concreto.'
     : 'I work with companies and institutions through commissioned research, technical consultancy and training agreements with the University of Brescia (“contratti conto terzi”). These are paid activities, with the scope, working arrangements and fees agreed for each engagement.'}
 </p>
+<p>
+  {locale === 'it'
+    ? 'Le aziende possono anche finanziare borse di dottorato, sostenendo un percorso di ricerca su temi di interesse condiviso con l’Università.'
+    : 'Companies can also sponsor PhD scholarships, supporting a research programme on topics of shared interest with the university.'}
+</p>

@@ -1,3 +1,43 @@
+## Added completed events — Fusion, TIG and Federmanager
+
+Owner reported attendance/speaking at these past events on 3 November 2026. Added bilingual records and dedicated pages, sorted into the homepage’s three newest activities:
+
+- **Fusion 2026, Trondheim, 23–26 June 2026:** official conference dates and logo from https://www.ntnu.edu/fusion2026. Two papers grounded in the personal-knowledge Fusion 2026 publicity package: CHARL-TRE (arXiv `2604.22979`) and Chronos frequency probing (`2605.06361`). Conference publication is owner-confirmed; publicly linked arXiv versions are labelled preprints. Existing local paper pages remain linked.
+- **TIG CISO Panel Milano, 15 September 2026:** official programme https://www.theinnovationgroup.it/events/ciso-leaders-panel-milano-2026/ confirms Centro Congressi Fondazione Cariplo. Recording https://www.youtube.com/watch?v=OfLQq6fZh8w titled “Intervento di Federico Cerutti su AI RED TEAMING”, verified through YouTube oEmbed; its supplied thumbnail is used. Also links https://www.youtube.com/watch?v=gAcp7xjDS28, verified as the Open Innovation Lombardia interview “Federico Cerutti (UniBS): Cybersecurity, il ruolo critico dell’AI e le PMI italiane”, clearly labelled an earlier related interview without inventing a date.
+- **Federmanager Mantova / Federmanager Academy, 24 September 2026:** owner supplied the event poster, preserved as an image. Event title “Cybersecurity e impresa: innovare senza perdere il controllo”, Sala Rossa at Confindustria Mantova. Owner’s talk: “Dall’AI che risponde all’AI che agisce: conoscenza, delega e controllo”, programme slot 17:10–18:00. These details come from the supplied poster, not an inferred event summary.
+
+Logos/posters use contain sizing on cards and uncropped detail images. New sources have their own link labels instead of the inherited CyberSecLab label. No video embeds/autoplay added. Seventeen activity records now have loaded images in both languages. All 12 browser tests pass; build produces 208 HTML pages and verifies 3,821 internal links/sitemap coverage. Preview only; changes are local and uncommitted.
+
+## Homepage current collaborations and network reach — latest revision
+
+Owner requested a marketing-oriented homepage refinement on 3 November 2026. The featured section is now “Current collaborations” / “Collaborazioni in corso”, retaining ARL, AFRL and Beretta with shorter research-focus descriptions and two simple links: the dedicated collaboration page and one recent paper at its original destination. Long publication lists are moved out of the homepage presentation; all works remain available on detail pages.
+
+“The wider research network” distinguishes current and past research relationships and displays derived totals: **8 companies, 7 institutions/research centres, 37 universities**. Counts derive from the curated collaboration presentation; the two IBM research sites count as one company. Figures describe research relationships, not active clients, contracts or endorsements. No country or publication-count claims were added.
+
+Verified: zero type diagnostics, 11 unit tests, nine browser tests, 202 HTML pages and 3,558 internal links/sitemap coverage. English/Italian desktop/mobile light/night screenshots reviewed. Preview at http://127.0.0.1:4321/. Local changes remain uncommitted; no deployment or analytics activation.
+
+## Collaboration cards aligned with Projects — latest owner correction
+
+On 3 November the owner replaced the single-column direction: collaborations must use cards like Projects, without overlines or extra labels. The index now reuses `ContentCard` in its plain variant and the existing `portfolio-list` grid (three desktop columns, one mobile column). Entries contain only a linked institution name and the collaboration description. Organisation introductions remain on non-university detail pages. Group headings, dedicated pages, institution corrections and original paper destinations are preserved. This supersedes the spacious-list layout below.
+
+Preview-only; changes remain local and uncommitted.
+
+## Original paper references — 3 November 2026
+
+Owner requested paper links to actual references rather than Scopus. `data/research-network/publication-links.json` now holds 37 verified publication destinations with public source references; exact DBLP-key matches against the existing publication manifest were supplemented with primary publisher/proceedings checks. The homepage and bilingual collaboration detail pages use DOI first, then curated original destinations, then existing non-Scopus URLs. Scopus is never a paper-link fallback. Imported snapshot records remain unchanged.
+
+Four prefaces and the 2014 BNAIC input/output abstract lack a verified original destination and are shown as unlinked titles. The similarly titled journal version was deliberately not substituted for the conference abstract. About/contact retains the owner's Scopus author-profile link, which is separate from paper links.
+
+Checks: zero type diagnostics, 11 unit tests and eight browser tests pass; 202 built pages, 3,655 internal links and sitemap verified. No Scopus paper-record hyperlinks in the build. Preview-only; local changes remain uncommitted.
+
+## Spacious collaboration list and current teaching — 3 November 2026
+
+Local continuation from `5e206e2` on `codex/research-advisory-redesign`: the collaboration index is now a single-column list without borders or backgrounds, grouped as companies, institutions/research centres and universities. Each entry has a linked heading and an explicit detail-page link, a readable text width and generous paragraph spacing. University organisation one-liners remain omitted. Dedicated bilingual pages and owner-corrected attribution are preserved.
+
+Current teaching in both languages now lists Cyber and AI Risk Management (catalogue link `8822_139266_29548`) and Enterprise Intelligent Systems (`8811_139203_29554`, with its query parameters). The owner confirmed both titles and this mapping in the continuation chat. Earlier Digital Transformation and Computer Security entries are replaced; tutorials and PhD courses remain intact.
+
+Verification: type check without diagnostics, 10 unit tests, all seven browser scenarios passing (six on the full run, corrected back-link selector passing on a targeted rerun), 202 built HTML pages and 3,655 internal links with sitemap coverage verified. Desktop/mobile light/night screenshots reviewed. Homepage spacing preserved. Preview remains at http://127.0.0.1:4321/. Changes are local and uncommitted; no deployment or analytics activation.
+
 # Company-first portfolio revision
 
 This supersedes the earlier visual/content direction below. Night mode restored. Homepage leads with adopting AI and protecting organisational knowledge; student invitation stays secondary. Advisory gives concrete offers for knowledge protection, AI/cyber risk review, decision traceability and training, plus a plain explanation of commissioning UniBS.
@@ -48,3 +88,92 @@ Teaching and Events are primary navigation items in both languages. The academic
 Each collaboration now has a bilingual static detail page below the existing research-network routes. Index cards are normal links with descriptions; papers/reports appear on the detail page, with back navigation and language alternates. No expandable card UI. The sitemap includes all detail pages. University cards/details omit the organisation one-liner. Homepage text has larger paragraph/list gaps and more line spacing.
 
 Owner corrections: remove Texas A&M University-Commerce, University of Texas at Dallas, Fordham and Alpen-Adria Klagenfurt. Consolidate historical Koblenz-Landau work under University of Koblenz with ID deduplication. The owner confirms Bakdash was at ARL for the Subjective Bayesian Networks paper (scopus:2-s2.0-85045180992); include it under ARL. Imported source history is retained; portfolio presentation applies these owner corrections.
+
+Latest owner correction, 3 November 2026: removed the Research and academic leadership section from Advisory/Consulenza in both languages. About retains the academic-role section. Type check and build/internal-link verification passed; both local preview routes checked.
+
+Latest homepage order, 3 November 2026: generic “Collaborations” heading and introduction, then current/past network statistics (8 companies, 7 institutions/research centres, 37 universities) and the full-network link, followed by “Recent collaborations” / “Collaborazioni recenti” featuring ARL, AFRL and Beretta. This replaces the preceding current-first ordering and wording.
+
+Activity images restored, 3 November 2026: all 14 bilingual event records already referenced existing image files matching origin/main. AttributedImage was suppressing any image with an Unsplash attribution. Removed that source-based rendering filter so all supplied images render, retaining source badges. Because this is the shared component, other supplied Unsplash images also render consistently. Verified 14 loaded activity images in each event listing and three homepage activity thumbnails per language; ten browser tests, type check, build and 3,672 internal links/sitemap checks pass. Preview-only, local uncommitted changes.
+
+Teaching cards expanded, 3 November 2026: both routes now share TeachingPage with visible section headings, introductory text, two desktop columns/one mobile column, larger full titles, generous paragraph spacing and explicit catalogue/material links. Current-course summaries use broad themes supported by the CARM goal and EIS course context; no assessment, schedule, credit or unconfirmed delivery details are published. Historical titles/summaries derive from the existing bilingual teaching detail records, preserving dates and URLs. Type check without diagnostics, build and 3,686 internal links verified; all eleven browser tests pass; desktop/mobile light/night screenshots reviewed. Preview-only, uncommitted.
+
+## Expanded Projects page — 3 November 2026
+
+Owner requested POSBI as current participation (not PI), AIDECC and older funded projects from the supplied CV. The bilingual Projects index now has 20 entries, larger two-column layouts (one on mobile), role/funding/year metadata and dedicated bilingual detail pages. Source facts live in `src/lib/additional-projects.json`; shared rendering in `ProjectsPage.astro`. AIDECC is under Previous projects, with the award year but no invented completion date. Public UNIBS/FAIR announcement links are on the respective detail pages. Older CV submitted proposals were excluded. Source details and email/OneDrive provenance remain in the private knowledge-base continuation note.
+
+Verified: no type diagnostics, 11 unit tests, 238 HTML pages, 4,361 internal links/sitemap/private-field checks, 13 browser tests, both languages at desktop/mobile widths and no JavaScript. Local preview: http://127.0.0.1:4321/en/projects/ . Uncommitted, no deployment or analytics activation. Existing strategy task xCOj9P1GqKHCsZUzdS2Es updated and read back.
+
+## Event editorial correction — 3 November 2026
+
+Owner corrected the Open Innovation interview placement: it is now a separate bilingual event dated **6 February 2025**, with slug `open-innovation-cybersecurity-ai-pmi-2025`, its own attributed video thumbnail and article/video links. Removed the earlier-interview section from TIG CISO Panel. Source article confirms the publication date: https://www.openinnovation.regione.lombardia.it/it/news/news/8414/cerutti-unibs-cybersecurity-il-ruolo-critico-dell-ai-e-le-pmi-italiane . The date records publication, not a claimed recording date. Mantova narrative shortened to the event and talk topic; time-slot and extra programme commentary removed. The original poster remains available. Activities now total 18. This supersedes the earlier description of a related interview on TIG. Prefer relevant topics and outcomes over programme minutiae or editorial explanations in public copy. Local preview only.
+
+Owner refinement: removed the two internal “Paper overview” links and Italian equivalents from the Fusion 2026 event page; retained direct preprint links. Preview rebuilt, no deployment.
+
+Owner refinement: company-sponsored PhD scholarships now appear alongside conto terzi on Collaborations, and in the shared company introduction on Advisory, in both languages. Wording focuses on research themes of shared interest; no invented procedural or financial details. Local preview only.
+
+Owner refinement: removed the homepage current/past research relationships sentence and its Italian equivalent; collaboration statistics retained. Local preview rebuilt.
+
+Owner editorial preference: collaboration snippets use past tense in both languages, including homepage featured descriptions and shared curated/generated descriptions on index and detail pages. Organisation identity descriptions retained. Preview only.
+
+## Project removals and unique images — 3 November 2026
+
+Owner removed Sidneo and MedRAD2; MedRAD remains. The website now contains **18 projects**, each with a new, distinct Unsplash image selected for its research subject. Shared mapping `src/lib/project-images.json` applies the same attributed image to each project’s bilingual index/detail presentations. These are illustrative stock images, not photographs of the project, its team or facilities. All source pages confirmed free access under the Unsplash licence. No generation was needed. Prior raw assets and historical CV records remain intact.
+
+The source manifest records original photo URLs, authors, source image URLs and content hashes. New source IDs were checked against other site content; all 18 downloaded images had distinct hashes, absent from existing images. Visually reviewed the full contact sheet and final desktop preview. Images load on all 18 entries in both languages at desktop/mobile sizes. Removed detail pages are absent from the build.
+
+Checks: zero type diagnostics, 11 unit tests, 236 HTML pages, 4,377 internal links/sitemap/private-field checks and 13 passing browser tests. Local preview rebuilt; edits remain uncommitted and unpublished. Super Productivity strategy task `xCOj9P1GqKHCsZUzdS2Es` updated and verified.
+
+Owner layout correction: Projects now use the same `ContentCard` and `portfolio-list` grid as Events: three desktop columns, one mobile column, 220px images and matching heading sizes/spacing. This supersedes the larger two-column project layout. All 18 images and factual project metadata remain. Local preview only.
+
+## CV event archive expansion — 3 November 2026
+
+Owner requested more conference participation, paper-related talks and roundtables from the CV. Added **31 selected bilingual entries**, bringing the archive to **49 events**. Coverage: 19 conference/doctoral-consortium entries, four IJCAI tutorials, three roundtables, three invited workshops and two invited keynotes, spanning 2009–2023. Academic visits and programme committee service were excluded. Existing recent events and their artwork remain.
+
+Participation roles come from the CV; associated papers come from the publication manifest and link directly to original publisher/proceedings/DOI records. Conference speaker participation and paper coauthorship are kept distinct in the text. The IJCAI doctoral-consortium entry is correctly 2011, confirmed against the official proceedings; the CV’s “2021” in its 2011 section is a typo. Tutorial pages supply the exact IJCAI 2019 title/date and existing bilingual materials links. Verified programme dates for Dagstuhl 2016, Lorentz 2018 and Bochum 2018; other unsupported day/month dates remain year-only. Generic host links are labelled as host links, not as recovered programmes.
+
+Four newly sourced Unsplash photographs illustrate the historical archive; source badges explicitly label them illustrative. No stock photograph is presented as a photograph of the actual event. English/Italian index descriptions now include conferences, tutorials and keynotes. Public output does not contain private CV paths or biographical family context.
+
+Local preview only; edits remain uncommitted and unpublished. Existing Super Productivity strategy task: `xCOj9P1GqKHCsZUzdS2Es`.
+
+Verified: zero type diagnostics; 11 unit tests; 298 HTML pages; 5,657 internal links, bilingual alternates/sitemap and private-field checks; 15 browser tests, plus a focused repeat of the updated theme/static-navigation check. Visually reviewed desktop and mobile archive layouts, loaded images and actual light/night rendering. All 49 event cards have images; recent homepage events remain unchanged. Super Productivity strategy task updated and read back successfully.
+
+## Past teaching from the CV — 3 November 2026
+
+Added 18 teaching records from the owner-supplied CV: 14 university courses at Brescia, Cardiff and Aberdeen, three doctoral courses (Humans-in-the-loop, 2024; Human-Computer Interaction for AI, 2023; Introduction to UNIX/Linux, 2017), and the Intelligenza Artificiale, Mente, Impresa second-level university master’s programme (2021–2022). Teaching now has five bilingual sections and 27 entries: two current courses, four research tutorials, six doctoral courses, 14 earlier university courses and one postgraduate professional programme.
+
+Original course titles, recorded years, degree levels and lecturer/shared-teaching/teaching-assistant/tutorial-teaching roles are preserved. Credits describe the course, not a claimed personal teaching load. The older CV’s ongoing Brescia courses show their starting years only; no end dates or current status were inferred. No new syllabus or materials URL was invented. Student names and dated supervision totals were excluded. Existing current catalogue links and tutorial/doctoral detail pages remain.
+
+Data: `src/lib/past-teaching.json`; shared teaching sections merge and order doctoral courses. Teaching presentation now uses section keys for introductions and link labels, and stable section anchors, so adding historical sections does not mislabel them. Current-course regression checks target the current section, allowing legitimate historical courses to appear elsewhere. Local preview only; uncommitted and unpublished. Strategy task: `xCOj9P1GqKHCsZUzdS2Es`.
+
+Verified: no type diagnostics; 11 unit tests; build of 298 HTML pages; 5,657 internal links, sitemap and private-field checks; 16 browser tests. Bilingual history and doctoral sections visually reviewed at desktop/mobile sizes; existing theme and keyboard checks pass. Super Productivity strategy task updated and read back.
+
+Owner layout correction — Teaching now reuses the same plain `ContentCard` component and `portfolio-list` grid as Projects and Events: three columns on desktop, one on mobile, matching card width, 1.25rem headings and card/row spacing. Supersedes the earlier two-column teaching layout and larger heading/spacing rules. Shared cards support headings without a link for historical courses with no published materials. All 27 bilingual teaching entries and their existing links remain. Local preview only.
+
+Teaching layout verified: no type diagnostics, build, 5,657 internal links/sitemap checks and 16 browser tests. Reviewed both languages at desktop/mobile sizes, light/night themes, keyboard focus and static navigation. Strategy task updated and verified.
+
+2026-11-03 — Removed the Teaching page subtitle and all section introduction descriptions in both languages. Section headings, all 27 course entries and the shared three-column layout remain. Local preview rebuilt; build and internal-link checks passed. Unpublished.
+
+2026-11-03 — Removed both introductory paragraphs from the Collaborations page in English and Italian, including the commissioned-research/PhD-sponsorship paragraph. Kept the heading, organisation groups and all organisation cards/detail links. The separate Advisory company introduction retains its collaboration options. Local preview rebuilt; build and internal-link checks passed. Unpublished.
+
+2026-11-03 — Homepage featured collaboration renamed from Beretta to Fabbrica d'Armi Pietro Beretta in both languages. Existing organisation/detail and paper links preserved. Preview rebuilt; both generated homepages verified. Unpublished.
+
+2026-11-03 — Removed University of Southern California from curated collaborations in both languages. Generated detail pages and sitemap entry omitted by the shared curation filter; raw historical research records preserved. Homepage university statistics update automatically. Preview rebuilt; both collaboration lists and absence of the detail page verified; internal-link/sitemap checks passed. Unpublished.
+
+2026-11-03 — Removed MedRAD and the 2022 Digital Twins and Cyber Physical Systems / Beretta project from both project lists and generated detail pages. Projects now total 16. Historical CV/source records and prior image assets retained. Preview rebuilt; removal and internal-link/sitemap checks verified. Unpublished.
+
+## SEO and AI crawler audit — 3 November 2026
+
+Audited local generated pages and read-only production responses. Existing static HTML, metadata, HTTPS canonicals, reciprocal English/Italian links, sitemap and permissive robots policy were sound. Added shared JSON-LD Person/WebSite/WebPage identity/page relationships and English `x-default` alternates. Identity fields use existing visible public facts and profile links; no dates, event organiser claims or course ratings were invented. JSON-LD serialization escapes script delimiters. No crawler policy change or llms.txt requirement introduced.
+
+Added `scripts/verify-seo.mjs` to `verify:dist`, plus standalone `verify:seo`. Checks every content page for metadata/schema consistency, languages, reciprocal alternates, canonical sitemap entries, existing social images and robots discovery. Two meaningful schema/serialization unit tests added. Verified: no type diagnostics, 13 unit tests, 292 built HTML files (289 content pages and three bibliography redirects), 5,537 internal links/private-field/sitemap checks, all 289 SEO page checks and 16 browser tests including static content.
+
+Production homepage, robots and sitemap returned HTTP 200. A request labelled OAI-SearchBot received identical HTML to the browser-labelled request; this is a user-agent response test from this Mac, not verification of real crawler IP access. Live sitemap still contains 31 URLs from the older deployment. SEO improvements and the expanded local sitemap remain unpublished. Actual indexing/ranking and Search Console status were not verified. See website `docs/SEO.md` for primary guidance and repeatable checks. Existing strategy task `xCOj9P1GqKHCsZUzdS2Es` updated and read back.
+
+
+2026-11-03 — Added a downloadable UTF-8 vCard 3.0 (`public/federico-cerutti.vcf`) with name, university, role, university email, owner-supplied work phone +39 030 371 5453, website and LinkedIn. Both homepages have a wrapping contact-link row with email, phone, LinkedIn and bilingual Save contact links. Verified type checks, build, internal links/SEO and all 17 browser tests, including actual vCard downloads on both mobile homepages without JavaScript. Strategy task `xCOj9P1GqKHCsZUzdS2Es` updated and read back. Local preview only; uncommitted and unpublished.
+
+## Owner-authorised production release and Matomo staging — 3 November 2026
+
+Owner authorised commit/sync/deploy and the minimal cookieless analytics profile. Removed the optional analytics footer panel; kept the university policy link and revised historical privacy pages to link to it. Prepared page-view-only tracking with cookie/browser-feature detection disabled, 30-second heartbeat, fresh memory-only per-document identity, no referrers or events, and Do Not Track/GPC/prior-refusal suppression. Backend session/config ID randomisation and country-only reporting must be verified before activation. Retention template corrected to native Deletelogs section and shortened to seven raw-log days/six report months. See docs/MATOMO.md for exact status.
+
+Matomo 5.14.2 signature verified and staged privately on web.unibs.it with a private TLS database config. Authenticated encrypted DB check passes. HTTP PHP probe returned source text, then was removed; no dedicated account PHP-FPM pool exists. No public mount/database installation/administrator/site ID/cron/backups or analytics activation was attempted after this blocker. University sysadmins must provision the account's PHP-FPM handler and protected mount, then runtime, privacy and recovery checks must pass. Website can deploy safely with tracking disabled. No Apache logs accessed.

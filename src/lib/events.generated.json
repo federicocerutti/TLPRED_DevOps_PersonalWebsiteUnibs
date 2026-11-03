@@ -768,5 +768,1830 @@
       "pathSlug": "2023",
       "typeLabel": "Edizione annuale"
     }
+  },
+  {
+    "key": "fusion-2026-trondheim",
+    "en": {
+      "title": "Fusion 2026: interpretable sensing and temporal AI",
+      "summary": "Participation in Fusion 2026 in Trondheim, with two conference papers on interpretable Wi-Fi sensing and frequency information in the Chronos foundation model.",
+      "seoDescription": "Participation in Fusion 2026 in Trondheim, with two conference papers on interpretable Wi-Fi sensing and frequency information in the Chronos foundation model.",
+      "meta": [
+        "23–26 June 2026",
+        "Trondheim, Norway"
+      ],
+      "body": "<p>I took part in the 29th International Conference on Information Fusion (Fusion 2026) in Trondheim, Norway, held on 23–26 June 2026. Our two conference papers address interpretability in wireless sensing and temporal foundation models.</p><h2>Two conference papers</h2><h3>Towards Causally Interpretable Wi-Fi CSI-Based Human Activity Recognition with Discrete Latent Compression and LTL Rule Extraction</h3><p>CHARL-TRE connects discrete latent compression, causal discovery and deterministic Linear Temporal Logic rules to make activity classification from Wi-Fi signals more inspectable. The evaluation remains preliminary and bounded.</p><p><a href=\"https://arxiv.org/abs/2604.22979\">Read the preprint</a></p><h3>Preliminary Insights in Chronos Frequency Data Understanding and Reconstruction</h3><p>This study uses controlled sinusoidal inputs, probes and concept-erasure interventions to examine how Chronos represents frequency information across its decoder layers, and where that information becomes less accessible.</p><p><a href=\"https://arxiv.org/abs/2605.06361\">Read the preprint</a></p>",
+      "sidebarTitle": "Context and themes",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Fusion 2026",
+        "Interpretable AI",
+        "Wi-Fi sensing",
+        "Temporal foundation models"
+      ],
+      "image": "/images/sourced/events/fusion-2026-logo.png",
+      "imageFit": "contain",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/fusion-2026-logo.png",
+        "sourceUrl": "https://www.ntnu.edu/fusion2026",
+        "sourceLabel": "Official Fusion 2026 conference website"
+      },
+      "originalPageUrl": "https://www.ntnu.edu/fusion2026",
+      "originalPageLabel": "Official conference website",
+      "pathSlug": "fusion-2026-trondheim",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Fusion 2026: sensing interpretabile e AI temporale",
+      "summary": "Partecipazione a Fusion 2026 a Trondheim, con due paper su sensing Wi-Fi interpretabile e informazione in frequenza nel foundation model Chronos.",
+      "seoDescription": "Partecipazione a Fusion 2026 a Trondheim, con due paper su sensing Wi-Fi interpretabile e informazione in frequenza nel foundation model Chronos.",
+      "meta": [
+        "23–26 giugno 2026",
+        "Trondheim, Norvegia"
+      ],
+      "body": "<p>Ho partecipato alla 29ª International Conference on Information Fusion (Fusion 2026), tenutasi a Trondheim, in Norvegia, dal 23 al 26 giugno 2026. I nostri due paper affrontano l’interpretabilità nel sensing wireless e nei foundation model temporali.</p><h2>Due paper alla conferenza</h2><h3>Towards Causally Interpretable Wi-Fi CSI-Based Human Activity Recognition with Discrete Latent Compression and LTL Rule Extraction</h3><p>CHARL-TRE collega compressione latente discreta, scoperta causale e regole deterministiche di logica temporale lineare per rendere più ispezionabile la classificazione delle attività a partire dai segnali Wi-Fi. La valutazione resta preliminare e circoscritta.</p><p><a href=\"https://arxiv.org/abs/2604.22979\">Leggi il preprint</a></p><h3>Preliminary Insights in Chronos Frequency Data Understanding and Reconstruction</h3><p>Lo studio usa segnali sinusoidali controllati, probe e interventi di concept erasure per esaminare come Chronos rappresenta l’informazione in frequenza nei layer del decoder e dove tale informazione diventa meno accessibile.</p><p><a href=\"https://arxiv.org/abs/2605.06361\">Leggi il preprint</a></p>",
+      "sidebarTitle": "Contesto e temi",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Fusion 2026",
+        "Interpretable AI",
+        "Wi-Fi sensing",
+        "Temporal foundation models"
+      ],
+      "image": "/images/sourced/events/fusion-2026-logo.png",
+      "imageFit": "contain",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/fusion-2026-logo.png",
+        "sourceUrl": "https://www.ntnu.edu/fusion2026",
+        "sourceLabel": "Sito ufficiale della conferenza Fusion 2026"
+      },
+      "originalPageUrl": "https://www.ntnu.edu/fusion2026",
+      "originalPageLabel": "Sito ufficiale della conferenza",
+      "pathSlug": "fusion-2026-trondheim",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "tig-ciso-panel-milano-2026",
+    "en": {
+      "title": "AI red teaming at the TIG CISO Panel in Milan",
+      "summary": "Participation in the TIG CISO Panel Milano 2026, with a contribution on AI red teaming and the published recording of the talk.",
+      "seoDescription": "Participation in the TIG CISO Panel Milano 2026, with a contribution on AI red teaming and the published recording of the talk.",
+      "meta": [
+        "15 September 2026",
+        "Centro Congressi Fondazione Cariplo, Milan"
+      ],
+      "body": "<p>I took part in the CISO Panel Milano 2026, organised by The Innovation Group on 15 September at Centro Congressi Fondazione Cariplo. My contribution focused on AI red teaming.</p><h2>Recording</h2><p><a href=\"https://www.youtube.com/watch?v=OfLQq6fZh8w\">Watch “Intervento di Federico Cerutti su AI RED TEAMING”</a>, published by The Innovation Group Channel.</p><p><a href=\"https://www.theinnovationgroup.it/events/ciso-leaders-panel-milano-2026/\">Official event programme</a></p>",
+      "sidebarTitle": "Context and themes",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "The Innovation Group",
+        "AI red teaming",
+        "CISO",
+        "Cybersecurity"
+      ],
+      "image": "/images/sourced/events/tig-ciso-panel-milano-2026.jpg",
+      "imageFit": "cover",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/tig-ciso-panel-milano-2026.jpg",
+        "sourceUrl": "https://www.youtube.com/watch?v=OfLQq6fZh8w",
+        "sourceLabel": "TIG talk recording on YouTube"
+      },
+      "originalPageUrl": "https://www.youtube.com/watch?v=OfLQq6fZh8w",
+      "originalPageLabel": "Talk recording",
+      "pathSlug": "tig-ciso-panel-milano-2026",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "AI red teaming al CISO Panel TIG di Milano",
+      "summary": "Partecipazione al CISO Panel Milano 2026 di The Innovation Group, con un intervento sull’AI red teaming e la registrazione pubblicata dell’intervento.",
+      "seoDescription": "Partecipazione al CISO Panel Milano 2026 di The Innovation Group, con un intervento sull’AI red teaming e la registrazione pubblicata dell’intervento.",
+      "meta": [
+        "15 settembre 2026",
+        "Centro Congressi Fondazione Cariplo, Milano"
+      ],
+      "body": "<p>Ho partecipato al CISO Panel Milano 2026, organizzato da The Innovation Group il 15 settembre presso il Centro Congressi Fondazione Cariplo. Il mio contributo era dedicato all’AI red teaming.</p><h2>Registrazione</h2><p><a href=\"https://www.youtube.com/watch?v=OfLQq6fZh8w\">Guarda “Intervento di Federico Cerutti su AI RED TEAMING”</a>, pubblicato da The Innovation Group Channel.</p><p><a href=\"https://www.theinnovationgroup.it/events/ciso-leaders-panel-milano-2026/\">Programma ufficiale dell’evento</a></p>",
+      "sidebarTitle": "Contesto e temi",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "The Innovation Group",
+        "AI red teaming",
+        "CISO",
+        "Cybersecurity"
+      ],
+      "image": "/images/sourced/events/tig-ciso-panel-milano-2026.jpg",
+      "imageFit": "cover",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/tig-ciso-panel-milano-2026.jpg",
+        "sourceUrl": "https://www.youtube.com/watch?v=OfLQq6fZh8w",
+        "sourceLabel": "Registrazione dell’intervento TIG su YouTube"
+      },
+      "originalPageUrl": "https://www.youtube.com/watch?v=OfLQq6fZh8w",
+      "originalPageLabel": "Registrazione dell’intervento",
+      "pathSlug": "tig-ciso-panel-milano-2026",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "federmanager-mantova-ai-conoscenza-delega-controllo-2026",
+    "en": {
+      "title": "From AI that answers to AI that acts: knowledge, delegation and control",
+      "summary": "Talk at the Federmanager Mantova and Federmanager Academy conference “Cybersecurity e impresa: innovare senza perdere il controllo”.",
+      "seoDescription": "Talk at the Federmanager Mantova and Federmanager Academy conference “Cybersecurity e impresa: innovare senza perdere il controllo”.",
+      "meta": [
+        "24 September 2026",
+        "Sala Rossa, Confindustria Mantova"
+      ],
+      "body": "<p>I spoke at <em>Cybersecurity e impresa: innovare senza perdere il controllo</em>, organised by Federmanager Mantova and Federmanager Academy on 24 September 2026.</p><p>My talk, <em>Dall’AI che risponde all’AI che agisce: conoscenza, delega e controllo</em>, explored how organisations can govern AI systems that support decisions and act through business tools and processes, with clear permissions, accountability and human oversight.</p><p><a href=\"/images/sourced/events/federmanager-mantova-2026.png\">Event poster and programme</a></p>",
+      "sidebarTitle": "Context and themes",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Federmanager Mantova",
+        "Federmanager Academy",
+        "AI governance",
+        "Knowledge",
+        "Delegation"
+      ],
+      "image": "/images/sourced/events/federmanager-mantova-2026.png",
+      "imageFit": "contain",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/federmanager-mantova-2026.png",
+        "sourceUrl": "/images/sourced/events/federmanager-mantova-2026.png",
+        "sourceLabel": "Event poster supplied by Federico Cerutti"
+      },
+      "originalPageUrl": "/images/sourced/events/federmanager-mantova-2026.png",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "federmanager-mantova-ai-conoscenza-delega-controllo-2026",
+      "typeLabel": "Event"
+    },
+    "it": {
+      "title": "Dall’AI che risponde all’AI che agisce: conoscenza, delega e controllo",
+      "summary": "Intervento al convegno di Federmanager Mantova e Federmanager Academy “Cybersecurity e impresa: innovare senza perdere il controllo”.",
+      "seoDescription": "Intervento al convegno di Federmanager Mantova e Federmanager Academy “Cybersecurity e impresa: innovare senza perdere il controllo”.",
+      "meta": [
+        "24 settembre 2026",
+        "Sala Rossa, Confindustria Mantova"
+      ],
+      "body": "<p>Sono intervenuto a <em>Cybersecurity e impresa: innovare senza perdere il controllo</em>, promosso da Federmanager Mantova e Federmanager Academy il 24 settembre 2026.</p><p>Il mio intervento, <em>Dall’AI che risponde all’AI che agisce: conoscenza, delega e controllo</em>, ha affrontato la governance dei sistemi di AI che supportano decisioni e operano attraverso strumenti e processi aziendali: autorizzazioni chiare, responsabilità e supervisione umana.</p><p><a href=\"/images/sourced/events/federmanager-mantova-2026.png\">Locandina e programma</a></p>",
+      "sidebarTitle": "Contesto e temi",
+      "sidebarItems": [
+        "Federico Cerutti",
+        "Federmanager Mantova",
+        "Federmanager Academy",
+        "AI governance",
+        "Knowledge",
+        "Delegation"
+      ],
+      "image": "/images/sourced/events/federmanager-mantova-2026.png",
+      "imageFit": "contain",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/federmanager-mantova-2026.png",
+        "sourceUrl": "/images/sourced/events/federmanager-mantova-2026.png",
+        "sourceLabel": "Locandina fornita da Federico Cerutti"
+      },
+      "originalPageUrl": "/images/sourced/events/federmanager-mantova-2026.png",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "federmanager-mantova-ai-conoscenza-delega-controllo-2026",
+      "typeLabel": "Evento"
+    }
+  },
+  {
+    "key": "open-innovation-cybersecurity-ai-pmi-2025",
+    "en": {
+      "title": "Cybersecurity, AI and Italian SMEs — Open Innovation interview",
+      "summary": "Video interview on AI in cybersecurity, the opportunities and risks of generative AI, and the digital divide facing Italian SMEs.",
+      "seoDescription": "Video interview on AI in cybersecurity, the opportunities and risks of generative AI, and the digital divide facing Italian SMEs.",
+      "meta": [
+        "6 February 2025",
+        "Open Innovation Lombardia"
+      ],
+      "body": "<p>In this interview for Open Innovation Lombardia, I discuss the role of AI in cybersecurity and how generative AI changes the risks and opportunities for businesses, particularly Italian SMEs.</p><p><a href=\"https://www.youtube.com/watch?v=gAcp7xjDS28\">Watch the video interview</a></p><p><a href=\"https://www.openinnovation.regione.lombardia.it/it/news/news/8414/cerutti-unibs-cybersecurity-il-ruolo-critico-dell-ai-e-le-pmi-italiane\">Read the Open Innovation article</a></p>",
+      "sidebarTitle": "Themes",
+      "sidebarItems": [
+        "Cybersecurity",
+        "AI",
+        "Italian SMEs",
+        "Digital divide"
+      ],
+      "image": "/images/sourced/events/open-innovation-cybersecurity-ai-pmi-2025.jpg",
+      "imageFit": "cover",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/open-innovation-cybersecurity-ai-pmi-2025.jpg",
+        "sourceUrl": "https://www.youtube.com/watch?v=gAcp7xjDS28",
+        "sourceLabel": "Open Innovation Lombardia video interview"
+      },
+      "originalPageUrl": "https://www.openinnovation.regione.lombardia.it/it/news/news/8414/cerutti-unibs-cybersecurity-il-ruolo-critico-dell-ai-e-le-pmi-italiane",
+      "originalPageLabel": "Open Innovation article",
+      "pathSlug": "open-innovation-cybersecurity-ai-pmi-2025",
+      "typeLabel": "Interview"
+    },
+    "it": {
+      "title": "Cybersecurity, AI e PMI italiane — intervista Open Innovation",
+      "summary": "Videointervista sul ruolo dell’AI nella cybersecurity, sulle opportunità e sui rischi dell’AI generativa e sul divario digitale delle PMI italiane.",
+      "seoDescription": "Videointervista sul ruolo dell’AI nella cybersecurity, sulle opportunità e sui rischi dell’AI generativa e sul divario digitale delle PMI italiane.",
+      "meta": [
+        "6 febbraio 2025",
+        "Open Innovation Lombardia"
+      ],
+      "body": "<p>In questa intervista per Open Innovation Lombardia discuto il ruolo dell’AI nella cybersecurity e come l’AI generativa cambia rischi e opportunità per le imprese, in particolare le PMI italiane.</p><p><a href=\"https://www.youtube.com/watch?v=gAcp7xjDS28\">Guarda la videointervista</a></p><p><a href=\"https://www.openinnovation.regione.lombardia.it/it/news/news/8414/cerutti-unibs-cybersecurity-il-ruolo-critico-dell-ai-e-le-pmi-italiane\">Leggi l’articolo su Open Innovation</a></p>",
+      "sidebarTitle": "Temi",
+      "sidebarItems": [
+        "Cybersecurity",
+        "AI",
+        "PMI italiane",
+        "Digital divide"
+      ],
+      "image": "/images/sourced/events/open-innovation-cybersecurity-ai-pmi-2025.jpg",
+      "imageFit": "cover",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/open-innovation-cybersecurity-ai-pmi-2025.jpg",
+        "sourceUrl": "https://www.youtube.com/watch?v=gAcp7xjDS28",
+        "sourceLabel": "Videointervista Open Innovation Lombardia"
+      },
+      "originalPageUrl": "https://www.openinnovation.regione.lombardia.it/it/news/news/8414/cerutti-unibs-cybersecurity-il-ruolo-critico-dell-ai-e-le-pmi-italiane",
+      "originalPageLabel": "Articolo Open Innovation",
+      "pathSlug": "open-innovation-cybersecurity-ai-pmi-2025",
+      "typeLabel": "Intervista"
+    }
+  },
+  {
+    "key": "fusion-2022",
+    "en": {
+      "title": "FUSION 2022",
+      "summary": "Conference speaker, with research on inference in uncertain Bayesian networks.",
+      "seoDescription": "Conference speaker, with research on inference in uncertain Bayesian networks.",
+      "meta": [
+        "2022",
+        "International Conference on Information Fusion"
+      ],
+      "body": "<p>I participated as a speaker at FUSION 2022.</p><p>Research published at the conference: <a href=\"https://ieeexplore.ieee.org/document/9841392\">SOLBP: Second-Order Loopy Belief Propagation for Inference in Uncertain Bayesian Networks</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://ieeexplore.ieee.org/document/9841392",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "fusion-2022",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "FUSION 2022",
+      "summary": "Partecipazione come relatore, con ricerche su inferenza nelle reti bayesiane incerte.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su inferenza nelle reti bayesiane incerte.",
+      "meta": [
+        "2022",
+        "International Conference on Information Fusion"
+      ],
+      "body": "<p>Ho partecipato come relatore a FUSION 2022.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://ieeexplore.ieee.org/document/9841392\">SOLBP: Second-Order Loopy Belief Propagation for Inference in Uncertain Bayesian Networks</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://ieeexplore.ieee.org/document/9841392",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "fusion-2022",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "comma-2022",
+    "en": {
+      "title": "COMMA 2022",
+      "summary": "Conference speaker, with research on consistency in formal argumentation.",
+      "seoDescription": "Conference speaker, with research on consistency in formal argumentation.",
+      "meta": [
+        "2022",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>I participated as a speaker at COMMA 2022.</p><p>Research published at the conference: <a href=\"https://doi.org/10.3233/FAIA220141\">A Generalized Notion of Consistency with Applications to Formal Argumentation</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/FAIA220141",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "comma-2022",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "COMMA 2022",
+      "summary": "Partecipazione come relatore, con ricerche su consistenza nell’argomentazione formale.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su consistenza nell’argomentazione formale.",
+      "meta": [
+        "2022",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>Ho partecipato come relatore a COMMA 2022.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.3233/FAIA220141\">A Generalized Notion of Consistency with Applications to Formal Argumentation</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/FAIA220141",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "comma-2022",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "cycon-2021",
+    "en": {
+      "title": "CyCon 2021",
+      "summary": "Conference speaker, with research on identifying and responding to viral cyber threats.",
+      "seoDescription": "Conference speaker, with research on identifying and responding to viral cyber threats.",
+      "meta": [
+        "2021",
+        "International Conference on Cyber Conflict"
+      ],
+      "body": "<p>I participated as a speaker at CyCon 2021.</p><p>Research published at the conference: <a href=\"https://doi.org/10.23919/CyCon51939.2021.9468294\">Self-Aware Effective Identification and Response to Viral Cyber Threats</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.23919/CyCon51939.2021.9468294",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "cycon-2021",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "CyCon 2021",
+      "summary": "Partecipazione come relatore, con ricerche su identificazione e risposta alle minacce informatiche virali.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su identificazione e risposta alle minacce informatiche virali.",
+      "meta": [
+        "2021",
+        "International Conference on Cyber Conflict"
+      ],
+      "body": "<p>Ho partecipato come relatore a CyCon 2021.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.23919/CyCon51939.2021.9468294\">Self-Aware Effective Identification and Response to Viral Cyber Threats</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.23919/CyCon51939.2021.9468294",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "cycon-2021",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "aixia-2021",
+    "en": {
+      "title": "AI*IA 2021",
+      "summary": "Conference speaker, with research on trustworthy AI and Bayesian argumentation.",
+      "seoDescription": "Conference speaker, with research on trustworthy AI and Bayesian argumentation.",
+      "meta": [
+        "2021",
+        "Italian Association for Artificial Intelligence"
+      ],
+      "body": "<p>I participated as a speaker at AI*IA 2021.</p><p>Research published at the conference: <a href=\"https://doi.org/10.1007/978-3-031-08421-8_26\">Supporting Trustworthy Artificial Intelligence via Bayesian Argumentation</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-031-08421-8_26",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "aixia-2021",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "AI*IA 2021",
+      "summary": "Partecipazione come relatore, con ricerche su AI affidabile e argomentazione bayesiana.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su AI affidabile e argomentazione bayesiana.",
+      "meta": [
+        "2021",
+        "Italian Association for Artificial Intelligence"
+      ],
+      "body": "<p>Ho partecipato come relatore a AI*IA 2021.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.1007/978-3-031-08421-8_26\">Supporting Trustworthy Artificial Intelligence via Bayesian Argumentation</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-031-08421-8_26",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "aixia-2021",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "aaai-2020",
+    "en": {
+      "title": "AAAI 2020",
+      "summary": "Conference speaker, with research on uncertainty-aware deep classifiers.",
+      "seoDescription": "Conference speaker, with research on uncertainty-aware deep classifiers.",
+      "meta": [
+        "2020",
+        "AAAI Conference on Artificial Intelligence"
+      ],
+      "body": "<p>I participated as a speaker at AAAI 2020.</p><p>Research published at the conference: <a href=\"https://doi.org/10.1609/aaai.v34i04.6015\">Uncertainty-Aware Deep Classifiers Using Generative Models</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1609/aaai.v34i04.6015",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "aaai-2020",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "AAAI 2020",
+      "summary": "Partecipazione come relatore, con ricerche su classificatori profondi consapevoli dell’incertezza.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su classificatori profondi consapevoli dell’incertezza.",
+      "meta": [
+        "2020",
+        "AAAI Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Ho partecipato come relatore a AAAI 2020.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.1609/aaai.v34i04.6015\">Uncertainty-Aware Deep Classifiers Using Generative Models</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1609/aaai.v34i04.6015",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "aaai-2020",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "agreement-technologies-2020",
+    "en": {
+      "title": "Agreement Technologies 2020",
+      "summary": "Conference speaker, with research on negotiation at the edge of the network.",
+      "seoDescription": "Conference speaker, with research on negotiation at the edge of the network.",
+      "meta": [
+        "2020",
+        "Agreement Technologies / EUMAS"
+      ],
+      "body": "<p>I participated as a speaker at Agreement Technologies 2020.</p><p>Research published at the conference: <a href=\"https://doi.org/10.1007/978-3-030-66412-1_22\">Increasing Negotiation Performance at the Edge of the Network</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-030-66412-1_22",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "agreement-technologies-2020",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "Agreement Technologies 2020",
+      "summary": "Partecipazione come relatore, con ricerche su negoziazione ai margini della rete.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su negoziazione ai margini della rete.",
+      "meta": [
+        "2020",
+        "Agreement Technologies / EUMAS"
+      ],
+      "body": "<p>Ho partecipato come relatore a Agreement Technologies 2020.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.1007/978-3-030-66412-1_22\">Increasing Negotiation Performance at the Edge of the Network</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-030-66412-1_22",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "agreement-technologies-2020",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "aaai-2019",
+    "en": {
+      "title": "AAAI 2019",
+      "summary": "Conference speaker, with research on probabilistic logic programming and uncertain probabilities.",
+      "seoDescription": "Conference speaker, with research on probabilistic logic programming and uncertain probabilities.",
+      "meta": [
+        "2019",
+        "AAAI Conference on Artificial Intelligence"
+      ],
+      "body": "<p>I participated as a speaker at AAAI 2019.</p><p>Research published at the conference: <a href=\"https://doi.org/10.1609/aaai.v33i01.33017769\">Probabilistic Logic Programming with Beta-Distributed Random Variables</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1609/aaai.v33i01.33017769",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "aaai-2019",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "AAAI 2019",
+      "summary": "Partecipazione come relatore, con ricerche su programmazione logica probabilistica e probabilità incerte.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su programmazione logica probabilistica e probabilità incerte.",
+      "meta": [
+        "2019",
+        "AAAI Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Ho partecipato come relatore a AAAI 2019.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.1609/aaai.v33i01.33017769\">Probabilistic Logic Programming with Beta-Distributed Random Variables</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1609/aaai.v33i01.33017769",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "aaai-2019",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "fusion-2018",
+    "en": {
+      "title": "FUSION 2018",
+      "summary": "Conference speaker, with research on scientific enquiry with uncertain sources.",
+      "seoDescription": "Conference speaker, with research on scientific enquiry with uncertain sources.",
+      "meta": [
+        "2018",
+        "International Conference on Information Fusion"
+      ],
+      "body": "<p>I participated as a speaker at FUSION 2018.</p><p>Research published at the conference: <a href=\"https://doi.org/10.23919/ICIF.2018.8455649\">Supporting Scientific Enquiry with Uncertain Sources</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.23919/ICIF.2018.8455649",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "fusion-2018",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "FUSION 2018",
+      "summary": "Partecipazione come relatore, con ricerche su indagine scientifica con fonti incerte.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su indagine scientifica con fonti incerte.",
+      "meta": [
+        "2018",
+        "International Conference on Information Fusion"
+      ],
+      "body": "<p>Ho partecipato come relatore a FUSION 2018.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.23919/ICIF.2018.8455649\">Supporting Scientific Enquiry with Uncertain Sources</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.23919/ICIF.2018.8455649",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "fusion-2018",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "comma-2018",
+    "en": {
+      "title": "COMMA 2018",
+      "summary": "Conference speaker, with research on intelligence analysis and report generation.",
+      "seoDescription": "Conference speaker, with research on intelligence analysis and report generation.",
+      "meta": [
+        "2018",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>I participated as a speaker at COMMA 2018.</p><p>Research published at the conference: <a href=\"https://doi.org/10.3233/978-1-61499-906-5-269\">CISpaces.org: From Fact Extraction to Report Generation</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-906-5-269",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "comma-2018",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "COMMA 2018",
+      "summary": "Partecipazione come relatore, con ricerche su analisi di intelligence e generazione di rapporti.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su analisi di intelligence e generazione di rapporti.",
+      "meta": [
+        "2018",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>Ho partecipato come relatore a COMMA 2018.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.3233/978-1-61499-906-5-269\">CISpaces.org: From Fact Extraction to Report Generation</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-906-5-269",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "comma-2018",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "jurix-2018",
+    "en": {
+      "title": "JURIX 2018",
+      "summary": "Conference speaker, with research on argumentation tools for analysing legal cases.",
+      "seoDescription": "Conference speaker, with research on argumentation tools for analysing legal cases.",
+      "meta": [
+        "2018",
+        "Legal Knowledge and Information Systems"
+      ],
+      "body": "<p>I participated as a speaker at JURIX 2018.</p><p>Research published at the conference: <a href=\"https://doi.org/10.3233/978-1-61499-935-5-186\">A Tool to Highlight Weaknesses and Strengthen Cases: CISpaces.org</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-935-5-186",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "jurix-2018",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "JURIX 2018",
+      "summary": "Partecipazione come relatore, con ricerche su strumenti di argomentazione per l’analisi dei casi giuridici.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su strumenti di argomentazione per l’analisi dei casi giuridici.",
+      "meta": [
+        "2018",
+        "Legal Knowledge and Information Systems"
+      ],
+      "body": "<p>Ho partecipato come relatore a JURIX 2018.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.3233/978-1-61499-935-5-186\">A Tool to Highlight Weaknesses and Strengthen Cases: CISpaces.org</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-935-5-186",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "jurix-2018",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "kr-2016",
+    "en": {
+      "title": "KR 2016",
+      "summary": "Conference speaker, with research on efficient solvers for abstract argumentation.",
+      "seoDescription": "Conference speaker, with research on efficient solvers for abstract argumentation.",
+      "meta": [
+        "2016",
+        "Principles of Knowledge Representation and Reasoning"
+      ],
+      "body": "<p>I participated as a speaker at KR 2016.</p><p>Research published at the conference: <a href=\"https://aaai.org/papers/60-12842-jargsemsat-an-efficient-off-the-shelf-solver-for-abstract-argumentation-frameworks/\">jArgSemSAT: An Efficient Off-the-Shelf Solver for Abstract Argumentation Frameworks</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://aaai.org/papers/60-12842-jargsemsat-an-efficient-off-the-shelf-solver-for-abstract-argumentation-frameworks/",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "kr-2016",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "KR 2016",
+      "summary": "Partecipazione come relatore, con ricerche su risolutori efficienti per l’argomentazione astratta.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su risolutori efficienti per l’argomentazione astratta.",
+      "meta": [
+        "2016",
+        "Principles of Knowledge Representation and Reasoning"
+      ],
+      "body": "<p>Ho partecipato come relatore a KR 2016.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://aaai.org/papers/60-12842-jargsemsat-an-efficient-off-the-shelf-solver-for-abstract-argumentation-frameworks/\">jArgSemSAT: An Efficient Off-the-Shelf Solver for Abstract Argumentation Frameworks</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://aaai.org/papers/60-12842-jargsemsat-an-efficient-off-the-shelf-solver-for-abstract-argumentation-frameworks/",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "kr-2016",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "comma-2016",
+    "en": {
+      "title": "COMMA 2016",
+      "summary": "Conference speaker, with research on solvers for computational argumentation.",
+      "seoDescription": "Conference speaker, with research on solvers for computational argumentation.",
+      "meta": [
+        "2016",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>I participated as a speaker at COMMA 2016.</p><p>Research published at the conference: <a href=\"https://doi.org/10.3233/978-1-61499-686-6-207\">Where Are We Now? State of the Art and Future Trends of Solvers for Hard Argumentation Problems</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-686-6-207",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "comma-2016",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "COMMA 2016",
+      "summary": "Partecipazione come relatore, con ricerche su risolutori per l’argomentazione computazionale.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su risolutori per l’argomentazione computazionale.",
+      "meta": [
+        "2016",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>Ho partecipato come relatore a COMMA 2016.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.3233/978-1-61499-686-6-207\">Where Are We Now? State of the Art and Future Trends of Solvers for Hard Argumentation Problems</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-686-6-207",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "comma-2016",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "aamas-2015",
+    "en": {
+      "title": "AAMAS 2015",
+      "summary": "Conference speaker, with research on reasoning with evidence in intelligence analysis.",
+      "seoDescription": "Conference speaker, with research on reasoning with evidence in intelligence analysis.",
+      "meta": [
+        "2015",
+        "Autonomous Agents and Multiagent Systems"
+      ],
+      "body": "<p>I participated as a speaker at AAMAS 2015.</p><p>Research published at the conference: <a href=\"https://dl.acm.org/citation.cfm?id=2773254\">Supporting Reasoning with Different Types of Evidence in Intelligence Analysis</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://dl.acm.org/citation.cfm?id=2773254",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "aamas-2015",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "AAMAS 2015",
+      "summary": "Partecipazione come relatore, con ricerche su ragionamento con evidenze nell’analisi di intelligence.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su ragionamento con evidenze nell’analisi di intelligence.",
+      "meta": [
+        "2015",
+        "Autonomous Agents and Multiagent Systems"
+      ],
+      "body": "<p>Ho partecipato come relatore a AAMAS 2015.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://dl.acm.org/citation.cfm?id=2773254\">Supporting Reasoning with Different Types of Evidence in Intelligence Analysis</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://dl.acm.org/citation.cfm?id=2773254",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "aamas-2015",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "ecai-2014",
+    "en": {
+      "title": "ECAI 2014",
+      "summary": "Conference speaker, with research on formal arguments, preferences and human-facing interfaces.",
+      "seoDescription": "Conference speaker, with research on formal arguments, preferences and human-facing interfaces.",
+      "meta": [
+        "2014",
+        "European Conference on Artificial Intelligence"
+      ],
+      "body": "<p>I participated as a speaker at ECAI 2014.</p><p>Research published at the conference: <a href=\"https://doi.org/10.3233/978-1-61499-419-0-207\">Formal Arguments, Preferences, and Natural Language Interfaces to Humans: an Empirical Evaluation</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-419-0-207",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "ecai-2014",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "ECAI 2014",
+      "summary": "Partecipazione come relatore, con ricerche su argomenti formali, preferenze e interfacce per le persone.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su argomenti formali, preferenze e interfacce per le persone.",
+      "meta": [
+        "2014",
+        "European Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Ho partecipato come relatore a ECAI 2014.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.3233/978-1-61499-419-0-207\">Formal Arguments, Preferences, and Natural Language Interfaces to Humans: an Empirical Evaluation</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-419-0-207",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "ecai-2014",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "kr-2014",
+    "en": {
+      "title": "KR 2014",
+      "summary": "Conference speaker, with research on algorithms for abstract argumentation.",
+      "seoDescription": "Conference speaker, with research on algorithms for abstract argumentation.",
+      "meta": [
+        "2014",
+        "Principles of Knowledge Representation and Reasoning"
+      ],
+      "body": "<p>I participated as a speaker at KR 2014.</p><p>Research published at the conference: <a href=\"https://aaai.org/papers/0042-7974-an-scc-recursive-meta-algorithm-for-computing-preferred-labellings-in-abstract-argumentation/\">An SCC Recursive Meta-Algorithm for Computing Preferred Labellings in Abstract Argumentation</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://aaai.org/papers/0042-7974-an-scc-recursive-meta-algorithm-for-computing-preferred-labellings-in-abstract-argumentation/",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "kr-2014",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "KR 2014",
+      "summary": "Partecipazione come relatore, con ricerche su algoritmi per l’argomentazione astratta.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su algoritmi per l’argomentazione astratta.",
+      "meta": [
+        "2014",
+        "Principles of Knowledge Representation and Reasoning"
+      ],
+      "body": "<p>Ho partecipato come relatore a KR 2014.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://aaai.org/papers/0042-7974-an-scc-recursive-meta-algorithm-for-computing-preferred-labellings-in-abstract-argumentation/\">An SCC Recursive Meta-Algorithm for Computing Preferred Labellings in Abstract Argumentation</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://aaai.org/papers/0042-7974-an-scc-recursive-meta-algorithm-for-computing-preferred-labellings-in-abstract-argumentation/",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "kr-2014",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "comma-2014",
+    "en": {
+      "title": "COMMA 2014",
+      "summary": "Conference speaker, with research on SAT-based argumentation solvers.",
+      "seoDescription": "Conference speaker, with research on SAT-based argumentation solvers.",
+      "meta": [
+        "2014",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>I participated as a speaker at COMMA 2014.</p><p>Research published at the conference: <a href=\"https://doi.org/10.3233/978-1-61499-436-7-455\">ArgSemSAT: Solving Argumentation Problems Using SAT</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-436-7-455",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "comma-2014",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "COMMA 2014",
+      "summary": "Partecipazione come relatore, con ricerche su risolutori per l’argomentazione basati su SAT.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su risolutori per l’argomentazione basati su SAT.",
+      "meta": [
+        "2014",
+        "Computational Models of Argument"
+      ],
+      "body": "<p>Ho partecipato come relatore a COMMA 2014.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.3233/978-1-61499-436-7-455\">ArgSemSAT: Solving Argumentation Problems Using SAT</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.3233/978-1-61499-436-7-455",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "comma-2014",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "tafa-2013",
+    "en": {
+      "title": "TAFA 2013",
+      "summary": "Conference speaker, with research on SAT-based computation of preferred extensions.",
+      "seoDescription": "Conference speaker, with research on SAT-based computation of preferred extensions.",
+      "meta": [
+        "2013",
+        "Theory and Applications of Formal Argumentation"
+      ],
+      "body": "<p>I participated as a speaker at TAFA 2013.</p><p>Research published at the conference: <a href=\"https://doi.org/10.1007/978-3-642-54373-9_12\">Computing Preferred Extensions in Abstract Argumentation: A SAT-Based Approach</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-642-54373-9_12",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "tafa-2013",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "TAFA 2013",
+      "summary": "Partecipazione come relatore, con ricerche su calcolo delle estensioni preferite mediante SAT.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su calcolo delle estensioni preferite mediante SAT.",
+      "meta": [
+        "2013",
+        "Theory and Applications of Formal Argumentation"
+      ],
+      "body": "<p>Ho partecipato come relatore a TAFA 2013.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.1007/978-3-642-54373-9_12\">Computing Preferred Extensions in Abstract Argumentation: A SAT-Based Approach</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-642-54373-9_12",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "tafa-2013",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "ecsqaru-2009",
+    "en": {
+      "title": "ECSQARU 2009",
+      "summary": "Conference speaker, with research on attacks on attacks in abstract argumentation.",
+      "seoDescription": "Conference speaker, with research on attacks on attacks in abstract argumentation.",
+      "meta": [
+        "2009",
+        "Symbolic and Quantitative Approaches to Reasoning with Uncertainty"
+      ],
+      "body": "<p>I participated as a speaker at ECSQARU 2009.</p><p>Research published at the conference: <a href=\"https://doi.org/10.1007/978-3-642-02906-6_9\">Encompassing Attacks to Attacks in Abstract Argumentation Frameworks</a>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-642-02906-6_9",
+      "originalPageLabel": "Read the paper",
+      "pathSlug": "ecsqaru-2009",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "ECSQARU 2009",
+      "summary": "Partecipazione come relatore, con ricerche su attacchi ad attacchi nell’argomentazione astratta.",
+      "seoDescription": "Partecipazione come relatore, con ricerche su attacchi ad attacchi nell’argomentazione astratta.",
+      "meta": [
+        "2009",
+        "Symbolic and Quantitative Approaches to Reasoning with Uncertainty"
+      ],
+      "body": "<p>Ho partecipato come relatore a ECSQARU 2009.</p><p>Ricerca pubblicata alla conferenza: <a href=\"https://doi.org/10.1007/978-3-642-02906-6_9\">Encompassing Attacks to Attacks in Abstract Argumentation Frameworks</a>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://doi.org/10.1007/978-3-642-02906-6_9",
+      "originalPageLabel": "Leggi l’articolo",
+      "pathSlug": "ecsqaru-2009",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "ijcai-2022",
+    "en": {
+      "title": "IJCAI 2022 — Evidential Reasoning and Learning",
+      "summary": "Tutorial instructor and conference speaker on evidential reasoning, learning and uncertainty in AI.",
+      "seoDescription": "Tutorial instructor and conference speaker on evidential reasoning, learning and uncertainty in AI.",
+      "meta": [
+        "2022",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>I delivered the Evidential Reasoning and Learning tutorial with Lance Kaplan and participated as a conference speaker.</p><p><a href=\"/en/teaching/evidential-reasoning-learning/\">Tutorial materials</a> · <a href=\"https://doi.org/10.24963/ijcai.2022/760\">Evidential Reasoning and Learning: a Survey</a></p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Tutorial instructor"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://ijcai-22.org/tutorials/index.html",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "ijcai-2022",
+      "typeLabel": "Tutorial"
+    },
+    "it": {
+      "title": "IJCAI 2022 — Evidential Reasoning and Learning",
+      "summary": "Docente del tutorial e relatore su ragionamento evidenziale, apprendimento e incertezza nell’AI.",
+      "seoDescription": "Docente del tutorial e relatore su ragionamento evidenziale, apprendimento e incertezza nell’AI.",
+      "meta": [
+        "2022",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Ho tenuto il tutorial Evidential Reasoning and Learning con Lance Kaplan e partecipato come relatore alla conferenza.</p><p><a href=\"/teaching/ragionamento-evidenziale-e-apprendimento/\">Materiali del tutorial</a> · <a href=\"https://doi.org/10.24963/ijcai.2022/760\">Evidential Reasoning and Learning: a Survey</a></p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Docente del tutorial"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://ijcai-22.org/tutorials/index.html",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "ijcai-2022",
+      "typeLabel": "Tutorial"
+    }
+  },
+  {
+    "key": "ijcai-2019-tutorial",
+    "en": {
+      "title": "IJCAI 2019 — Argumentation and Machine Learning",
+      "summary": "Tutorial on how computational argumentation and machine learning can reinforce each other.",
+      "seoDescription": "Tutorial on how computational argumentation and machine learning can reinforce each other.",
+      "meta": [
+        "12 August 2019",
+        "IJCAI 2019, Macao"
+      ],
+      "body": "<p>I delivered the tutorial <em>Argumentation and Machine Learning</em> at IJCAI 2019.</p><p><a href=\"/en/teaching/argumentation-machine-learning/\">Tutorial materials and recording</a></p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Tutorial instructor"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://federico-cerutti.unibs.it/tutorials/2019-ijcai-argml/",
+      "originalPageLabel": "Original tutorial page",
+      "pathSlug": "ijcai-2019-tutorial",
+      "typeLabel": "Tutorial"
+    },
+    "it": {
+      "title": "IJCAI 2019 — Argumentation and Machine Learning",
+      "summary": "Tutorial sulle sinergie tra argomentazione computazionale e machine learning.",
+      "seoDescription": "Tutorial sulle sinergie tra argomentazione computazionale e machine learning.",
+      "meta": [
+        "12 agosto 2019",
+        "IJCAI 2019, Macao"
+      ],
+      "body": "<p>Ho tenuto il tutorial <em>Argumentation and Machine Learning</em> a IJCAI 2019.</p><p><a href=\"/teaching/argomentazione-e-machine-learning/\">Materiali e registrazione del tutorial</a></p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Docente del tutorial"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://federico-cerutti.unibs.it/tutorials/2019-ijcai-argml/",
+      "originalPageLabel": "Pagina originale del tutorial",
+      "pathSlug": "ijcai-2019-tutorial",
+      "typeLabel": "Tutorial"
+    }
+  },
+  {
+    "key": "ijcai-2017-tutorial",
+    "en": {
+      "title": "IJCAI 2017 — Argumentation in Artificial Intelligence",
+      "summary": "Tutorial with Mauro Vallati on computational argumentation, from theory to practice.",
+      "seoDescription": "Tutorial with Mauro Vallati on computational argumentation, from theory to practice.",
+      "meta": [
+        "2017",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Mauro Vallati and I delivered the tutorial <em>Argumentation in Artificial Intelligence: From Theory to Practice</em>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Tutorial instructor"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://ijcai-17.org/tutorial-program.html",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "ijcai-2017-tutorial",
+      "typeLabel": "Tutorial"
+    },
+    "it": {
+      "title": "IJCAI 2017 — Argumentation in Artificial Intelligence",
+      "summary": "Tutorial con Mauro Vallati sull’argomentazione computazionale, dalla teoria alla pratica.",
+      "seoDescription": "Tutorial con Mauro Vallati sull’argomentazione computazionale, dalla teoria alla pratica.",
+      "meta": [
+        "2017",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Con Mauro Vallati ho tenuto il tutorial <em>Argumentation in Artificial Intelligence: From Theory to Practice</em>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Docente del tutorial"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://ijcai-17.org/tutorial-program.html",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "ijcai-2017-tutorial",
+      "typeLabel": "Tutorial"
+    }
+  },
+  {
+    "key": "ijcai-2015-tutorial",
+    "en": {
+      "title": "IJCAI 2015 — Argumentation in Artificial Intelligence",
+      "summary": "Tutorial on argumentation in AI, twenty years after Dung’s foundational work.",
+      "seoDescription": "Tutorial on argumentation in AI, twenty years after Dung’s foundational work.",
+      "meta": [
+        "2015",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>I delivered the tutorial <em>Argumentation in Artificial Intelligence: 20 Years after Dung’s Work</em>, covering established results, implementations, applications and open questions.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Tutorial instructor"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://ijcai-15.org/list-of-tutorials/",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "ijcai-2015-tutorial",
+      "typeLabel": "Tutorial"
+    },
+    "it": {
+      "title": "IJCAI 2015 — Argumentation in Artificial Intelligence",
+      "summary": "Tutorial sull’argomentazione nell’AI, a vent’anni dal lavoro fondativo di Dung.",
+      "seoDescription": "Tutorial sull’argomentazione nell’AI, a vent’anni dal lavoro fondativo di Dung.",
+      "meta": [
+        "2015",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Ho tenuto il tutorial <em>Argumentation in Artificial Intelligence: 20 Years after Dung’s Work</em>, dedicato a risultati consolidati, implementazioni, applicazioni e questioni aperte.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Docente del tutorial"
+      ],
+      "image": "/images/sourced/events/archive-tutorial.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-tutorial.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-seats-6rLqAxjR_Ew",
+        "sourceLabel": "Illustrative photo by Jan Antonin Kolar on Unsplash"
+      },
+      "originalPageUrl": "https://ijcai-15.org/list-of-tutorials/",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "ijcai-2015-tutorial",
+      "typeLabel": "Tutorial"
+    }
+  },
+  {
+    "key": "ijcai-2011-doctoral-consortium",
+    "en": {
+      "title": "IJCAI 2011 — Doctoral Consortium",
+      "summary": "Doctoral presentation on argumentation-based practical reasoning and decision support.",
+      "seoDescription": "Doctoral presentation on argumentation-based practical reasoning and decision support.",
+      "meta": [
+        "2011",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>I presented my doctoral research on decision support through argumentation-based practical reasoning at the IJCAI Doctoral Consortium.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Speaker"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://www.ijcai.org/proceedings/2011/465",
+      "originalPageLabel": "Read the doctoral paper",
+      "pathSlug": "ijcai-2011-doctoral-consortium",
+      "typeLabel": "Conference"
+    },
+    "it": {
+      "title": "IJCAI 2011 — Doctoral Consortium",
+      "summary": "Presentazione dottorale sul ragionamento pratico basato sull’argomentazione e sul supporto alle decisioni.",
+      "seoDescription": "Presentazione dottorale sul ragionamento pratico basato sull’argomentazione e sul supporto alle decisioni.",
+      "meta": [
+        "2011",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "body": "<p>Ho presentato la mia ricerca dottorale sul supporto alle decisioni attraverso il ragionamento pratico basato sull’argomentazione al Doctoral Consortium di IJCAI.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore"
+      ],
+      "image": "/images/sourced/events/archive-conference.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-conference.jpg",
+        "sourceUrl": "https://unsplash.com/photos/white-chair-lot-J5XqX-qvEZE",
+        "sourceLabel": "Illustrative photo by ål nik on Unsplash"
+      },
+      "originalPageUrl": "https://www.ijcai.org/proceedings/2011/465",
+      "originalPageLabel": "Leggi l’articolo dottorale",
+      "pathSlug": "ijcai-2011-doctoral-consortium",
+      "typeLabel": "Conferenza"
+    }
+  },
+  {
+    "key": "techdefense-2023",
+    "en": {
+      "title": "TechDefense 2023 — Artificial Intelligence for Intelligence Analysis",
+      "summary": "Panel member and conference speaker on AI for intelligence analysis.",
+      "seoDescription": "Panel member and conference speaker on AI for intelligence analysis.",
+      "meta": [
+        "2023",
+        "IEEE Technologies for Defense and Security"
+      ],
+      "body": "<p>I took part in the roundtable <em>Artificial Intelligence for Intelligence Analysis</em> and participated as a speaker at IEEE TechDefense 2023.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Panel member"
+      ],
+      "image": "/images/sourced/events/archive-roundtable.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-roundtable.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-meeting-room-6MtJ-y1hzTs",
+        "sourceLabel": "Illustrative photo by Slidebean on Unsplash"
+      },
+      "originalPageUrl": "https://www.techdefense.org/techdefense2023/round-table-artificial-intelligence",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "techdefense-2023",
+      "typeLabel": "Roundtable"
+    },
+    "it": {
+      "title": "TechDefense 2023 — Artificial Intelligence for Intelligence Analysis",
+      "summary": "Membro del panel e relatore su AI per l’analisi di intelligence.",
+      "seoDescription": "Membro del panel e relatore su AI per l’analisi di intelligence.",
+      "meta": [
+        "2023",
+        "IEEE Technologies for Defense and Security"
+      ],
+      "body": "<p>Ho partecipato alla tavola rotonda <em>Artificial Intelligence for Intelligence Analysis</em> e come relatore a IEEE TechDefense 2023.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Membro del panel"
+      ],
+      "image": "/images/sourced/events/archive-roundtable.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-roundtable.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-meeting-room-6MtJ-y1hzTs",
+        "sourceLabel": "Illustrative photo by Slidebean on Unsplash"
+      },
+      "originalPageUrl": "https://www.techdefense.org/techdefense2023/round-table-artificial-intelligence",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "techdefense-2023",
+      "typeLabel": "Tavola rotonda"
+    }
+  },
+  {
+    "key": "turing-data-science-directors-2018",
+    "en": {
+      "title": "Directors of Data Science Institutes — Alan Turing Institute",
+      "summary": "Panel member at a roundtable bringing together directors of data science institutes.",
+      "seoDescription": "Panel member at a roundtable bringing together directors of data science institutes.",
+      "meta": [
+        "2018",
+        "Alan Turing Institute, London"
+      ],
+      "body": "<p>I participated as a panel member in the Directors of Data Science Institutes roundtable at the Alan Turing Institute in London.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Panel member"
+      ],
+      "image": "/images/sourced/events/archive-roundtable.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-roundtable.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-meeting-room-6MtJ-y1hzTs",
+        "sourceLabel": "Illustrative photo by Slidebean on Unsplash"
+      },
+      "originalPageUrl": "https://www.turing.ac.uk/",
+      "originalPageLabel": "Host institution",
+      "pathSlug": "turing-data-science-directors-2018",
+      "typeLabel": "Roundtable"
+    },
+    "it": {
+      "title": "Directors of Data Science Institutes — Alan Turing Institute",
+      "summary": "Membro del panel di una tavola rotonda tra direttori di istituti di data science.",
+      "seoDescription": "Membro del panel di una tavola rotonda tra direttori di istituti di data science.",
+      "meta": [
+        "2018",
+        "Alan Turing Institute, London"
+      ],
+      "body": "<p>Ho partecipato come membro del panel alla tavola rotonda Directors of Data Science Institutes presso l’Alan Turing Institute di Londra.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Membro del panel"
+      ],
+      "image": "/images/sourced/events/archive-roundtable.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-roundtable.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-meeting-room-6MtJ-y1hzTs",
+        "sourceLabel": "Illustrative photo by Slidebean on Unsplash"
+      },
+      "originalPageUrl": "https://www.turing.ac.uk/",
+      "originalPageLabel": "Istituzione ospitante",
+      "pathSlug": "turing-data-science-directors-2018",
+      "typeLabel": "Tavola rotonda"
+    }
+  },
+  {
+    "key": "dais-ita-deep-learning-reasoning-2017",
+    "en": {
+      "title": "DAIS-ITA — Deep Learning and Complex Reasoning",
+      "summary": "Panel member for “Deep Learning and Complex Reasoning: Progress and Prospects”.",
+      "seoDescription": "Panel member for “Deep Learning and Complex Reasoning: Progress and Prospects”.",
+      "meta": [
+        "2017",
+        "DAIS-ITA, London"
+      ],
+      "body": "<p>I participated as a panel member at the DAIS-ITA meeting on <em>Deep Learning and Complex Reasoning: Progress and Prospects</em> in London.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Panel member"
+      ],
+      "image": "/images/sourced/events/archive-roundtable.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-roundtable.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-meeting-room-6MtJ-y1hzTs",
+        "sourceLabel": "Illustrative photo by Slidebean on Unsplash"
+      },
+      "originalPageUrl": "https://dais-ita.org/",
+      "originalPageLabel": "DAIS-ITA research programme",
+      "pathSlug": "dais-ita-deep-learning-reasoning-2017",
+      "typeLabel": "Roundtable"
+    },
+    "it": {
+      "title": "DAIS-ITA — Deep Learning and Complex Reasoning",
+      "summary": "Membro del panel su “Deep Learning and Complex Reasoning: Progress and Prospects”.",
+      "seoDescription": "Membro del panel su “Deep Learning and Complex Reasoning: Progress and Prospects”.",
+      "meta": [
+        "2017",
+        "DAIS-ITA, London"
+      ],
+      "body": "<p>Ho partecipato come membro del panel al meeting DAIS-ITA su <em>Deep Learning and Complex Reasoning: Progress and Prospects</em> a Londra.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Membro del panel"
+      ],
+      "image": "/images/sourced/events/archive-roundtable.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-roundtable.jpg",
+        "sourceUrl": "https://unsplash.com/photos/empty-meeting-room-6MtJ-y1hzTs",
+        "sourceLabel": "Illustrative photo by Slidebean on Unsplash"
+      },
+      "originalPageUrl": "https://dais-ita.org/",
+      "originalPageLabel": "Programma di ricerca DAIS-ITA",
+      "pathSlug": "dais-ita-deep-learning-reasoning-2017",
+      "typeLabel": "Tavola rotonda"
+    }
+  },
+  {
+    "key": "lorentz-human-aware-argumentation-2018",
+    "en": {
+      "title": "Human-Aware Computational Argumentation",
+      "summary": "Invited speaker at the workshop on human-aware computational argumentation.",
+      "seoDescription": "Invited speaker at the workshop on human-aware computational argumentation.",
+      "meta": [
+        "14–18 May 2018",
+        "Lorentz Center"
+      ],
+      "body": "<p>I participated as an invited speaker in the Lorentz Center workshop <em>Human-Aware Computational Argumentation</em>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Invited speaker"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://www.lorentzcenter.nl/human-aware-computational-argumentation.html",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "lorentz-human-aware-argumentation-2018",
+      "typeLabel": "Invited talk"
+    },
+    "it": {
+      "title": "Human-Aware Computational Argumentation",
+      "summary": "Relatore invitato al workshop sull’argomentazione computazionale centrata sulle persone.",
+      "seoDescription": "Relatore invitato al workshop sull’argomentazione computazionale centrata sulle persone.",
+      "meta": [
+        "14–18 maggio 2018",
+        "Lorentz Center"
+      ],
+      "body": "<p>Ho partecipato come relatore invitato al workshop del Lorentz Center <em>Human-Aware Computational Argumentation</em>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore invitato"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://www.lorentzcenter.nl/human-aware-computational-argumentation.html",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "lorentz-human-aware-argumentation-2018",
+      "typeLabel": "Intervento su invito"
+    }
+  },
+  {
+    "key": "bochum-argumentation-human-reasoning-2018",
+    "en": {
+      "title": "Bridging Formal Argumentation and Human Reasoning",
+      "summary": "Invited speaker at “Bridging the Gap between Formal Argumentation and Actual Human Reasoning”.",
+      "seoDescription": "Invited speaker at “Bridging the Gap between Formal Argumentation and Actual Human Reasoning”.",
+      "meta": [
+        "4–5 October 2018",
+        "Ruhr University Bochum"
+      ],
+      "body": "<p>I participated as an invited speaker in the conference <em>Bridging the Gap between Formal Argumentation and Actual Human Reasoning</em> at Ruhr University Bochum.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Invited speaker"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://homepage.rub.de/defeasible-reasoning/events/ArgRea-2018.html",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "bochum-argumentation-human-reasoning-2018",
+      "typeLabel": "Invited talk"
+    },
+    "it": {
+      "title": "Bridging Formal Argumentation and Human Reasoning",
+      "summary": "Relatore invitato a “Bridging the Gap between Formal Argumentation and Actual Human Reasoning”.",
+      "seoDescription": "Relatore invitato a “Bridging the Gap between Formal Argumentation and Actual Human Reasoning”.",
+      "meta": [
+        "4–5 ottobre 2018",
+        "Ruhr University Bochum"
+      ],
+      "body": "<p>Ho partecipato come relatore invitato alla conferenza <em>Bridging the Gap between Formal Argumentation and Actual Human Reasoning</em> presso la Ruhr University Bochum.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore invitato"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://homepage.rub.de/defeasible-reasoning/events/ArgRea-2018.html",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "bochum-argumentation-human-reasoning-2018",
+      "typeLabel": "Intervento su invito"
+    }
+  },
+  {
+    "key": "dagstuhl-natural-language-argumentation-2016",
+    "en": {
+      "title": "Natural Language Argumentation — Dagstuhl Seminar",
+      "summary": "Invited speaker at the seminar on mining, processing and reasoning over textual arguments.",
+      "seoDescription": "Invited speaker at the seminar on mining, processing and reasoning over textual arguments.",
+      "meta": [
+        "17–22 April 2016",
+        "Schloss Dagstuhl"
+      ],
+      "body": "<p>I participated as an invited speaker in Dagstuhl Seminar 16161, <em>Natural Language Argumentation: Mining, Processing, and Reasoning over Textual Arguments</em>.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Invited speaker"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/16161",
+      "originalPageLabel": "Event programme",
+      "pathSlug": "dagstuhl-natural-language-argumentation-2016",
+      "typeLabel": "Invited talk"
+    },
+    "it": {
+      "title": "Natural Language Argumentation — Dagstuhl Seminar",
+      "summary": "Relatore invitato al seminario su estrazione, elaborazione e ragionamento sugli argomenti testuali.",
+      "seoDescription": "Relatore invitato al seminario su estrazione, elaborazione e ragionamento sugli argomenti testuali.",
+      "meta": [
+        "17–22 aprile 2016",
+        "Schloss Dagstuhl"
+      ],
+      "body": "<p>Ho partecipato come relatore invitato al seminario Dagstuhl 16161, <em>Natural Language Argumentation: Mining, Processing, and Reasoning over Textual Arguments</em>.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Relatore invitato"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/16161",
+      "originalPageLabel": "Programma dell’evento",
+      "pathSlug": "dagstuhl-natural-language-argumentation-2016",
+      "typeLabel": "Intervento su invito"
+    }
+  },
+  {
+    "key": "cmna-2018-keynote",
+    "en": {
+      "title": "CMNA 2018 — Invited keynote",
+      "summary": "Invited keynote at the 18th Workshop on Computational Models of Natural Argument.",
+      "seoDescription": "Invited keynote at the 18th Workshop on Computational Models of Natural Argument.",
+      "meta": [
+        "2018",
+        "Computational Models of Natural Argument"
+      ],
+      "body": "<p>I participated as an invited keynote speaker at CMNA 2018.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Invited keynote"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://seminars.csc.liv.ac.uk/index.php?past=1&series=all&session=2017%2F18",
+      "originalPageLabel": "University seminar archive",
+      "pathSlug": "cmna-2018-keynote",
+      "typeLabel": "Keynote"
+    },
+    "it": {
+      "title": "CMNA 2018 — Keynote su invito",
+      "summary": "Keynote su invito al 18º Workshop on Computational Models of Natural Argument.",
+      "seoDescription": "Keynote su invito al 18º Workshop on Computational Models of Natural Argument.",
+      "meta": [
+        "2018",
+        "Computational Models of Natural Argument"
+      ],
+      "body": "<p>Ho partecipato come keynote speaker su invito a CMNA 2018.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Keynote su invito"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://seminars.csc.liv.ac.uk/index.php?past=1&series=all&session=2017%2F18",
+      "originalPageLabel": "Archivio dei seminari universitari",
+      "pathSlug": "cmna-2018-keynote",
+      "typeLabel": "Keynote"
+    }
+  },
+  {
+    "key": "southampton-innovation-camp-2023",
+    "en": {
+      "title": "Innovation Camp 2023 — Invited keynote",
+      "summary": "Invited keynote at the Southampton doctoral training centre’s Innovation Camp.",
+      "seoDescription": "Invited keynote at the Southampton doctoral training centre’s Innovation Camp.",
+      "meta": [
+        "2023",
+        "University of Southampton, MINDS CDT"
+      ],
+      "body": "<p>I participated as an invited keynote speaker at Innovation Camp 2023, organised by the University of Southampton’s UKRI Centre for Doctoral Training in Machine Intelligence for Nano-Electronic Devices and Systems.</p>",
+      "sidebarTitle": "Participation",
+      "sidebarItems": [
+        "Invited keynote"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://www.mindscdt.southampton.ac.uk/programme/",
+      "originalPageLabel": "Host doctoral training centre",
+      "pathSlug": "southampton-innovation-camp-2023",
+      "typeLabel": "Keynote"
+    },
+    "it": {
+      "title": "Innovation Camp 2023 — Keynote su invito",
+      "summary": "Keynote su invito all’Innovation Camp del centro di formazione dottorale di Southampton.",
+      "seoDescription": "Keynote su invito all’Innovation Camp del centro di formazione dottorale di Southampton.",
+      "meta": [
+        "2023",
+        "University of Southampton, MINDS CDT"
+      ],
+      "body": "<p>Ho partecipato come keynote speaker su invito a Innovation Camp 2023, organizzato dallo UKRI Centre for Doctoral Training in Machine Intelligence for Nano-Electronic Devices and Systems dell’Università di Southampton.</p>",
+      "sidebarTitle": "Partecipazione",
+      "sidebarItems": [
+        "Keynote su invito"
+      ],
+      "image": "/images/sourced/events/archive-workshop.jpg",
+      "imageAttribution": {
+        "assetPath": "/images/sourced/events/archive-workshop.jpg",
+        "sourceUrl": "https://unsplash.com/photos/rows-of-empty-chairs-in-a-wood-paneled-room-6hSBcpa7qVI",
+        "sourceLabel": "Illustrative photo by Adolfo Félix on Unsplash"
+      },
+      "originalPageUrl": "https://www.mindscdt.southampton.ac.uk/programme/",
+      "originalPageLabel": "Centro di formazione dottorale ospitante",
+      "pathSlug": "southampton-innovation-camp-2023",
+      "typeLabel": "Keynote"
+    }
   }
 ]

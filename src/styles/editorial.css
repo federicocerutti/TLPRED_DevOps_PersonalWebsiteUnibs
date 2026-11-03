@@ -902,36 +902,8 @@ h3 {
 .home-opening {
   font-size: clamp(1.9rem, 3vw, 2.65rem);
 }
-.collaboration-cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: start;
-}
-.collaboration-card {
-  border: 1px solid var(--line);
-  padding: 1.3rem;
-}
-.collaboration-card summary {
-  list-style: none;
-}
-.collaboration-card summary::-webkit-details-marker {
-  display: none;
-}
-
-.collaboration-card h3 {
-  margin-bottom: 0.8rem;
-}
-.collaboration-card .plain-links {
-  font-size: 0.85rem;
-}
 .collaboration-group + .collaboration-group {
-  margin-top: 4rem;
-}
-@media (max-width: 720px) {
-  .collaboration-cards {
-    grid-template-columns: 1fr;
-  }
+  margin-top: 5rem;
 }
 
 :root[data-theme='dark'] .home-portrait,
@@ -951,47 +923,12 @@ h3 {
   font-size: 0.9rem;
   color: var(--muted);
 }
-.collaboration-action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1.3rem;
-  font-size: 0.8rem;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-.collaboration-action svg {
-  transition: transform 0.15s;
-}
-.collaboration-card .when-open {
-  display: none;
-}
-.collaboration-card[open] .when-open {
-  display: inline;
-}
-.collaboration-card[open] .when-closed {
-  display: none;
-}
-.collaboration-card[open] .collaboration-action svg {
-  transform: rotate(180deg);
-}
 @media (max-width: 720px) {
   .roles-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.collaboration-card-link {
-  text-decoration: none;
-  display: block;
-  height: 100%;
-  padding: 1.6rem;
-}
-.collaboration-card-link:hover h3 {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
 .home-profile .stack > * + * {
   margin-top: 1.6rem;
 }
@@ -1019,5 +956,48 @@ h3 {
 @media (max-width: 720px) {
   .featured-collaborations {
     gap: 3rem;
+  }
+}
+
+.collaboration-section-intro {
+  max-width: 65ch;
+}
+.featured-collaboration-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.5rem;
+  font-size: 0.9rem;
+}
+.research-network-summary {
+  margin-top: 1rem;
+}
+.recent-collaborations-heading {
+  margin-top: 3.5rem !important;
+}
+.network-statistics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+.network-statistics > div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+.network-statistics dt {
+  color: var(--muted);
+}
+.network-statistics dd {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  font-weight: 300;
+}
+@media (max-width: 720px) {
+  .network-statistics {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

@@ -27,7 +27,6 @@ const imageHref = href;
 const opensExternal = Boolean(imageHref && /^https?:\/\//.test(imageHref));
 ---
 
-{!attribution?.sourceUrl.includes('unsplash.com') && (
   <div
     class:list={['attributed-image', compact && 'attributed-image-compact']}
     style={wrapperStyle}
@@ -56,7 +55,6 @@ const opensExternal = Boolean(imageHref && /^https?:\/\//.test(imageHref));
       </a>
     )}
   </div>
-)}
 
 <style>
   .attributed-image {

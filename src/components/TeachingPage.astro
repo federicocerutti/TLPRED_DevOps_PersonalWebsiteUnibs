@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentCard from './ContentCard.astro';
+import { getTeachingSections } from '../lib/content-data';
+import type { Locale } from '../lib/site';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const it = locale === 'it';
+const sections = getTeachingSections(locale);
+---
+<BaseLayout
+  locale={locale}
+  title={it ? 'Didattica | Federico Cerutti' : 'Teaching | Federico Cerutti'}
+  description={it ? 'Insegnamenti correnti e precedenti, tutorial di ricerca, corsi di dottorato e master universitari.' : 'Current and earlier university teaching, research tutorials, PhD courses and postgraduate programmes.'}
+  image="/images/people/federico-cerutti.png"
+  alternatePath={it ? '/en/teaching/' : '/teaching/'}
+>
+  <section class="page-intro">
+    <div class="container stack">
+      <h1>{it ? 'Didattica' : 'Teaching'}</h1>
+    </div>
+  </section>
+  {sections.map((section) => (
+    <section class="section teaching-section" id={section.translationKey}>
+      <div class="container stack">
+        <div class="teaching-section-intro stack">
+          <h2>{section.title}</h2>
+        </div>
+        <div class="teaching-grid portfolio-list">
+          {section.items.map(item => (
+            <div class="teaching-card">
+              <ContentCard
+                title={item.title}
+                href={item.href}
+                summary={item.summary}
+                meta={item.when ? [item.when] : []}
+                plain
+              >
+              {item.href && <a class="small" href={item.href}>
+                {section.translationKey === 'current-teaching'
+                  ? it ? 'Programma nel catalogo UniBS' : 'UniBS course catalogue'
+                  : it ? 'Descrizione e materiali' : 'Overview and materials'} →
+              </a>}
+              </ContentCard>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+</BaseLayout>
+<style>
+  .teaching-grid {
+    margin-top: 2rem;
+  }
+  .teaching-card {
+    min-width: 0;
+  }
+</style>

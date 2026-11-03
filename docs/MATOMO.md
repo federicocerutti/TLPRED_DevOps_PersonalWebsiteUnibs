@@ -1,4 +1,35 @@
-# Matomo: preparation and activation runbook
+# Matomo: deployment status and activation runbook
+
+
+## Latest owner-authorised deployment — 3 November 2026
+
+The owner authorised committing, synchronising and deploying the website, installing Matomo, removing the optional analytics footer panel, and preparing minimal automatic cookieless measurement under the university privacy policy. This supersedes the earlier preview-only and opt-in integration instructions below. The existing university privacy-policy footer link remains. No legal determination about the policy's coverage is claimed.
+
+**Activation is blocked by the web host's PHP configuration.** A short-lived random-name PHP probe containing only a PHP version/effective-identity check was returned as source code, not executed, over verified HTTPS. It was immediately removed. Apache's enabled modules include `proxy_fcgi`, and the host has PHP-FPM pools for other sites, but no pool/socket for this website account. No other site's pool was used. The actual HTTP PHP identity remains unknown. No Apache access logs were accessed.
+
+Matomo 5.14.2 was downloaded to private server storage and verified with the upstream detached signature and the current signing key obtained from the official HTTPS endpoint. Fingerprint: `F529A27008477483777FC23D63BB30D0E5D2C749`. Release ZIP SHA-256: `d6ce9e2083f688741ecdccd9f13ca54761fc47592bd8926f1e2d3bcf45daeffb`. Private extracted release: `/home/federico-cerutti/.local/share/matomo/releases/5.14.2`; `current` points there. A private TLS database config was rendered from the already-provisioned environment at `/home/federico-cerutti/.config/matomo/config.ini.php`, mode 0600, and symlinked from the private release's config directory. Application and private directories remain owner-only. No credential was printed, copied locally or committed. Authenticated certificate-verified DB access passed again.
+
+This is **staging**, not a completed Matomo installation: no public application mount, site ID, administrator account, database tables, cron, analytics backup job or tracker activation was created. `installation_in_progress=1` remains set. The deployed website must remain `enabled:false` until all runtime and recovery checks pass. Do not expose PHP application/config source on this host.
+
+### Prepared minimal measurement profile
+
+- Remove the optional-consent panel. Keep the university policy link and have legacy privacy URLs point to that policy without obsolete consent controls.
+- Page views and approximate focused-page time only; no custom events, automatic outlinks/downloads, query strings, URL fragments, referrers, User IDs, cross-site tracking, recordings or heatmaps.
+- Frontend disables cookies and browser-feature detection before any tracking; respects Do Not Track, Global Privacy Control and previously saved refusals. It stores no new analytics preference.
+- Use a cryptographically random 16-hex page ID held only in memory. It changes on every document load and is not shared across tabs, reloads, websites or persisted storage. Pair it with backend randomisation of `config_id` on every request so Matomo does not derive a reusable browser/IP session identity. Heartbeats require correlation within that one page; this is not a claim of identifier-free collection or accurate unique visitors/sessions. Verify actual page-ID heartbeat matching with the real installed tracker before activation.
+- `enableHeartBeatTimer(30)` measures approximate active-page duration. Matomo responds to focus/unload/browser events rather than continuously polling at fixed intervals. No keystrokes, pointer coordinates or interaction contents are recorded.
+- Force cookieless tracking globally in native PrivacyManager settings. Enable IP anonymisation with mask length 3 (IPv4 masks three bytes; release source maps IPv6 to 104 masked bits); use the masked IP for location enrichment. Disable visitor logs/profiles and unnecessary device/referrer reports. Use country-only geolocation and suppress city/region/coordinates; accept unknown countries. The prepared frontend alone cannot enforce backend minimisation.
+- Prepared retention: **7 days raw logs and 6 months aggregate reports**, replacing the unapproved 90-day/12-month defaults. These values are in the staged config and template, under the upstream `[Deletelogs]` section. Until installation and scheduled deletion are tested, retention is not operational. Backups must also have bounded retention and be included in the effective retention review.
+
+### University administrator handoff required
+
+Ask university sysadmins to provision a dedicated PHP-FPM pool for this account and an Apache `/matomo/` alias/handler to the private release. Confirm the real PHP identity and grant only the required read/traversal permissions to application/config/CA and write permissions to Matomo's runtime directories. Keep `server.env` inaccessible to HTTP. Apply upstream hardening, disable directory listings and deny config, tmp, vendor, private files and unauthenticated installation access. Verify all these through HTTP before mounting the app publicly.
+
+Once that host support exists, finish the restricted installation using the existing dedicated TLS database (do not recreate it), register the exact website, obtain the real site ID and secure administrator credentials privately. Apply/read back all native privacy settings. Test the real tracker, no cookies, per-page ID lifetime, heartbeat updates, masked-IP country enrichment and raw-record fields; do not enable while device or precise-location data remains. Install/test hourly archiving with overlap protection, purge scheduling, encrypted bounded backups and an isolated restore. Keep browser-triggered archiving off after the scheduled job passes. Activate only by rebuilding with the verified endpoint/site ID and both enablement flags, then repeat production privacy checks.
+
+Sources: [current installation guide](https://matomo.org/faq/on-premise/installing-matomo/), [release signing key](https://matomo.org/blog/2022/03/our-release-signature-has-changed/), [JavaScript tracker and heartbeat](https://developer.matomo.org/guides/tracking-javascript), [privacy controls](https://matomo.org/guide/manage-matomo/privacy/). The privacy settings, IPv6 mask mapping and explicit `cid` handling were also inspected in the verified 5.14.2 release's native source.
+
+## Historical preparation record (superseded where noted above)
 
 ## Verified on 3 November 2026
 
@@ -20,11 +51,25 @@ Keep the actual `config/config.ini.php` outside the web root with access limited
 2. Verify the database user is restricted to the real app-host source address and the dedicated database. The previous database setup reports these restrictions; reverify them administratively. Add source-scoped firewall rules with the network administrator; no firewall restriction was established by the earlier database setup. Never expose the database publicly.
 3. Review the currently supported Matomo release and PHP security patches, then perform installation behind restricted administrative access. Do not re-create the existing database. Provide only required installation privileges, then review runtime/upgrade privileges.
 4. Register the exact website URL through authorised Matomo administration. Obtain the real numeric Site ID; the repository contains no assumed value.
-5. Configure IP anonymisation (at least two IPv4 bytes, equivalent IPv6 minimisation), anonymised geolocation, 90-day raw-log retention and 12-month aggregate retention as proposed controller-review defaults. Keep session recordings, heatmaps, user IDs and cross-site tracking off. Disable browser-triggered archiving after a working scheduled job is verified.
+5. Apply the owner-selected privacy profile below before collecting any visits. Disable browser-triggered archiving after a working scheduled job is verified.
 6. Use a private scheduled job for `php <app>/console core:archive --url=https://federico-cerutti.unibs.it/matomo/`, hourly with overlap protection. Capture output outside the document root; rotate it and alert on failure. Do not put API tokens in command arguments.
 7. Configure encrypted daily database backups with bounded retention, separate config/application backups, and a tested restore into an isolated instance. Take database and application snapshots before every upgrade; restore both together for rollback. Pin releases and review updates monthly. Monitor certificate expiry, job completion and backup age.
 
 ## Privacy and enablement gates
+
+### Owner-selected minimal analytics profile — 3 November 2026
+
+The owner wants aggregate page popularity, visits by day/hour and approximate country-level location, with no analytics cookies or intentional collection of personal details. Select three-byte IPv4 masking and verify the installed release's corresponding IPv6 masking. Use the **masked IP for geolocation/enrichment**; do not use the original IP for a more accurate lookup. Country reporting may be inaccurate or unavailable; do not promise region-level precision. Masking reduces identifiability but does not establish that all processing is anonymous.
+
+In Matomo Administration → Privacy → Anonymize data, enable **Force tracking without cookies** globally as well as the frontend `disableCookies` call. The frontend also calls `disableBrowserFeatureDetection` before tracking: do not collect screen resolution or browser plugin information. This does not itself eliminate Matomo's session hash or all visitor-level records. Before activation, review those features and disable unnecessary visitor profiles/log reports; report pageviews rather than claim precise unique-person counts.
+
+Keep User IDs, cross-site tracking, session recordings, heatmaps and precise location collection off. Retain only sanitised pathnames and allowlisted aggregate events. Review the proposed 90-day raw-log and 12-month report retention with the controller; these are preparation defaults, not approved or applied settings. Optional heartbeat-based duration measurement remains unconfigured pending a separate decision.
+
+The owner confirms that Apache access logs are outside their visibility and access; only university sysadmins can administer them. Matomo masking cannot change those logs. Do not claim full IP removal from the hosting infrastructure or attempt to access the logs under this work. The website notice must distinguish the website analytics from university-managed hosting logs.
+
+These settings are a preparation checklist for a future authorised installation. No live Matomo configuration has been applied because Matomo is not installed. Existing activation and consent gates remain in place pending confirmation of the appropriate legal basis and any analytics exemption.
+
+Sources: [IP masking](https://matomo.org/faq/general/how-does-ip-address-anonymisation-work-in-matomo/), [global cookieless enforcement](https://matomo.org/faq/how-to/how-do-i-enforce-tracking-without-cookies/), [browser feature detection](https://matomo.org/faq/how-to/how-do-i-disable-browser-feature-detection-completely/).
 
 The current build has tracking disabled. Both `MATOMO_ENABLED=true` and `MATOMO_PRIVACY_APPROVED=true`, a valid public HTTPS service URL and numeric Site ID are required at build time. The private DB environment is never imported by Astro.
 
