@@ -54,11 +54,19 @@ REMOTE_BACKUP_FILE="${REMOTE_BACKUP_DIR%/}/${REMOTE_SITE_NAME}-${TIMESTAMP}.tar.
 LOCAL_BACKUP_DIR="${LOCAL_BACKUP_DIR:-$ROOT_DIR/backups/$REMOTE_SITE_NAME}"
 LOCAL_BACKUP_FILE="$LOCAL_BACKUP_DIR/${REMOTE_SITE_NAME}-${TIMESTAMP}.tar.gz"
 
+# A preview must not create backups or alter the remote server.
+if [[ "$DRY_RUN" == true && "$BACKUP_ONLY" == false ]]; then
+  cd "$ROOT_DIR"
+  npm run build
+  rsync -avz --delete --dry-run --exclude=/matomo --filter='P /matomo' --filter='P /matomo/***' dist/ "$REMOTE_TARGET"
+  exit 0
+fi
+
 mkdir -p "$LOCAL_BACKUP_DIR"
 
 echo "Creating remote backup: ${REMOTE_HOST}:${REMOTE_BACKUP_FILE}"
 ssh "$REMOTE_HOST" \
-  "set -euo pipefail; mkdir -p '$REMOTE_BACKUP_DIR'; test -d '$REMOTE_PATH'; tar -C '$REMOTE_PATH' -czf '$REMOTE_BACKUP_FILE' ."
+  "set -euo pipefail; mkdir -p '$REMOTE_BACKUP_DIR'; test -d '$REMOTE_PATH'; tar --exclude='./matomo' --exclude='./.env*' -C '$REMOTE_PATH' -czf '$REMOTE_BACKUP_FILE' ."
 
 echo "Copying backup locally: $LOCAL_BACKUP_FILE"
 rsync -avz "${REMOTE_HOST}:${REMOTE_BACKUP_FILE}" "$LOCAL_BACKUP_FILE"
@@ -75,7 +83,7 @@ echo "Building site"
 npm run build
 
 echo "Deploying to $REMOTE_TARGET"
-RSYNC_FLAGS=(-avz --delete)
+RSYNC_FLAGS=(-avz --delete --exclude=/matomo --filter='P /matomo' --filter='P /matomo/***')
 if [[ "$DRY_RUN" == true ]]; then
   RSYNC_FLAGS+=(--dry-run)
 fi

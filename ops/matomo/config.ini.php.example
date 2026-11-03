@@ -1,0 +1,31 @@
+; <?php exit; ?> DO NOT REMOVE THIS LINE
+; Template only. Render placeholders in protected server storage, never web assets.
+[database]
+host = "<private database host>"
+port = "<verified database port>"
+username = "<dedicated service user>"
+password = "<provisioned secret>"
+dbname = "<dedicated database>"
+tables_prefix = "matomo_"
+adapter = "PDO\MYSQL"
+charset = "utf8mb4"
+enable_ssl = 1
+ssl_ca = "<absolute private CA certificate path>"
+ssl_no_verify = 0
+
+[General]
+trusted_hosts[] = "federico-cerutti.unibs.it"
+force_ssl = 1
+; Enable only AFTER archive cron has been verified.
+enable_browser_archiving_triggering = 0
+
+[Deletelogs]
+delete_logs_enable = 1
+delete_logs_older_than = 90
+
+[Deletereports]
+delete_reports_enable = 1
+delete_reports_older_than = 12
+delete_reports_keep_basic_metrics = 0
+delete_reports_keep_month_reports = 0
+delete_reports_keep_year_reports = 0

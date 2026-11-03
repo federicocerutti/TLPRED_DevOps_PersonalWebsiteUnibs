@@ -83,3 +83,27 @@ REMOTE_BACKUP_DIR='.website-backups' LOCAL_BACKUP_DIR='./backups/website' ./scri
 - Bio, projects, tutorials, courses, and thesis topics were derived from the existing personal site plus the curated content already assembled in this repo.
 - The second pass broadens the publication selection and improves the homepage narrative so the site reads as a personal academic homepage rather than a trimmed lab-site clone.
 - The content is intentionally structured in `src/lib/content-data.ts` so it can be extended without changing page templates.
+
+
+## Research-led advisory redesign (November 2026)
+
+The site now includes bilingual advisory/about pages, an internal publications archive and an evidence-first research network. The original detail routes and content model remain in place. The derived data is public with owner-authorised reuse; raw imports and review notes stay in ignored `.private/` storage.
+
+```sh
+npm ci
+npm run check
+npm test
+npm run build
+npm run verify:dist
+npm run preview -- --host 127.0.0.1
+# In another terminal (Chrome installed):
+npm run test:browser
+```
+
+Node 22.12+ is required. Astro was updated to 7.4.5 to resolve advisories in the old dependency tree; output remains static. All added interaction code is vanilla TypeScript. Browser tests use the installed Google Chrome channel. The source includes optional development tools for typing, browser tests and formatting, without a client framework or graph dependency.
+
+Main additions: `/en/advisory/`, `/it/consulenza/`, `/en/about/`, `/it/profilo/`, `/en/research-network/`, `/it/rete-di-ricerca/`, `/it/ricerca/`, bilingual privacy pages. Publication summaries remain at their previous detail URLs. `/ricerca/` and `/en/` remain served, with canonical targets pointing to the primary routes.
+
+Network state uses `view=institutions|people`, `q`, `sector`, `country`, `from`, `to`, `selected`. Publication state uses `q`, `year`, `status`. Counts are identifier-based and period-specific. A derived historical affiliation never becomes evidence of present employment. DAIS and verified employer evidence do not add indexed publications. See `data/research-network/README.md` and `docs/CONTENT-REVIEW.md`.
+
+Matomo is prepared but disabled, with no production changes. See `docs/MATOMO.md` for the actual verified/blocked status. Both enablement and privacy approval flags, a real HTTPS tracker endpoint and a real Site ID are required. `scripts/deploy.sh --dry-run` now leaves the server unchanged, and website rsync protects directory or symlink `/matomo` mounts. New website backups exclude Matomo and environment files and are ignored by Git. Never run a production deployment before reviewing the preview and rollback backup.
