@@ -30,3 +30,11 @@ The former network URLs now serve static collaborations: organisations, collabor
 See README for check/build/test commands. Preview URL: http://127.0.0.1:4321/. Browser screenshots are generated under `/private/tmp/portfolio-preview/`; durable copies and the continuation record are in personal-knowledge at `management/2026-11-03-personal-website-redesign-handoff.md`.
 
 Review appointment titles before eventual publication: the inherited Cardiff biography/footer titles differ. No new appointment claims were introduced by this revision.
+
+## Academic leadership and collaboration curation
+
+The owner requested prominence for the Brescia professorship, Imperial Visiting Professor, Southampton Visiting Fellow, Cardiff Honorary Senior Lecturer, and directorship of the Brescia node of the CINI National Cybersecurity Lab. A shared role section appears on home, advisory and About; the homepage opening also names the network. The footer Cardiff title is aligned with the biography. These are individual appointments, not institutional endorsements of consultancy.
+
+Owner correction: unspecified UK IBM records are presented under Hursley, unspecified US records under T. J. Watson, with work-ID deduplication. The original imported classifications remain as historical source data. Intelpoint, Aneurin Bevan and the Cardiff/Brescia/Southampton/Imperial collaboration cards are hidden; the TwITter paper is excluded from collaboration output. The four universities appear as appointments instead.
+
+Collaboration cards use bilingual View related work / Close related work text and a rotating chevron. Night-mode portraits use reduced brightness/contrast to soften their white background without changing the original image.

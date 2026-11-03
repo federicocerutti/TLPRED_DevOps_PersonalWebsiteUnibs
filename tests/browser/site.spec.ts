@@ -3,6 +3,10 @@ import { test, expect } from '@playwright/test';
 test('company journey and bilingual university agreements', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.home-profile')).toContainText('I help companies');
+  await expect(page.locator('.academic-roles')).toContainText('Imperial College London');
+  await expect(page.locator('.academic-roles')).toContainText('Honorary Senior Lecturer');
+  await expect(page.locator('.academic-roles')).toContainText('Director of the Brescia node');
+
   await expect(page.locator('.featured-collaborations h3')).toHaveText(['ARL', 'AFRL', 'Beretta']);
   await expect(page.getByRole('link', { name: 'TRUE', exact: true })).toHaveAttribute(
     'href',
@@ -49,7 +53,7 @@ test('static portfolio listings, legacy queries and attribution', async ({ page 
   ]) {
     await page.goto(path);
     await expect(
-      page.locator('main input, main select, main form, main svg, [data-network-panel]'),
+      page.locator('main input, main select, main form, svg.network-diagram, [data-network-panel]'),
     ).toHaveCount(0);
     await expect(page.locator('h1')).toHaveCount(1);
   }
@@ -60,6 +64,22 @@ test('static portfolio listings, legacy queries and attribution', async ({ page 
     'Universities',
   ]);
   await expect(page.locator('main')).not.toContainText('Intelpoint');
+  await expect(page.locator('main')).not.toContainText('Aneurin Bevan');
+  await expect(page.locator('main')).not.toContainText('TwITter');
+  await expect(page.locator('main')).not.toContainText('site unspecified');
+  for (const id of [
+    'org:cardiff-university',
+    'org:university-of-brescia',
+    'org:university-of-southampton',
+    'org:imperial-college-london',
+  ])
+    await expect(page.locator(`[id="${id}"]`)).toHaveCount(0);
+  const hursley = page.locator('[id="org:ibm-research-hursley-uk"]');
+  const watson = page.locator('[id="org:ibm-t-j-watson-research-center"]');
+  await expect(hursley.locator('li')).toHaveCount(8);
+  await expect(watson.locator('li')).toHaveCount(10);
+  await expect(hursley.locator('summary')).toContainText('View related work');
+
   await expect(page.locator('main')).not.toContainText('Stefano Morzenti');
   const beretta = page.locator('[id="org:fabbrica-d-armi-pietro-beretta"]');
   await expect(beretta.locator('li').first()).not.toBeVisible();
@@ -81,7 +101,9 @@ test('static portfolio listings, legacy queries and attribution', async ({ page 
 });
 
 test('light and night Inter Light layouts, keyboard focus and screenshots', async ({ page }) => {
-  await page.addInitScript(() => { if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light'); });
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light');
+  });
   await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });

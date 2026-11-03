@@ -115,3 +115,11 @@ The opening now leads with AI adoption, critical organisational knowledge and ri
 The neutral night theme and saved preference are restored. Collaborations are expandable cards grouped as companies, institutions/research centres and universities. Opening a card reveals related papers/reports; personal names are omitted, Intelpoint is excluded, and no unsupported NEC publication attribution is added. Native details remain operable without JavaScript. Homepage organisation links open the relevant card.
 
 The local papers archive is removed; its three former landing routes redirect to DBLP and are excluded from the sitemap. Existing research detail URLs remain available. There is no local publication listing to maintain.
+
+## Academic leadership and collaboration curation
+
+The owner requested prominence for the Brescia professorship, Imperial Visiting Professor, Southampton Visiting Fellow, Cardiff Honorary Senior Lecturer, and directorship of the Brescia node of the CINI National Cybersecurity Lab. A shared role section appears on home, advisory and About; the homepage opening also names the network. The footer Cardiff title is aligned with the biography. These are individual appointments, not institutional endorsements of consultancy.
+
+Owner correction: unspecified UK IBM records are presented under Hursley, unspecified US records under T. J. Watson, with work-ID deduplication. The original imported classifications remain as historical source data. Intelpoint, Aneurin Bevan and the Cardiff/Brescia/Southampton/Imperial collaboration cards are hidden; the TwITter paper is excluded from collaboration output. The four universities appear as appointments instead.
+
+Collaboration cards use bilingual View related work / Close related work text and a rotating chevron. Night-mode portraits use reduced brightness/contrast to soften their white background without changing the original image.

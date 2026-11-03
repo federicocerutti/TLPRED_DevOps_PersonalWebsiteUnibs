@@ -1,0 +1,50 @@
+---
+import type { Locale } from '../lib/site';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const it = locale === 'it';
+---
+
+<section class="section academic-roles">
+  <div class="container stack">
+    <h2>{it ? 'Ricerca e responsabilità accademiche' : 'Research and academic leadership'}</h2>
+    <p class="lede">
+      {it
+        ? 'Professore Ordinario a Brescia. Incarichi accademici a Imperial, Southampton e Cardiff. Direttore del nodo di Brescia del CINI National Cybersecurity Lab.'
+        : 'Full Professor in Brescia. Academic appointments at Imperial, Southampton and Cardiff. Director of the Brescia node of the CINI National Cybersecurity Lab.'}
+    </p>
+    <div class="roles-grid">
+      <article class="stack">
+        <h3>
+          <a href="https://www.unibs.it/">Università degli Studi di Brescia</a>
+        </h3>
+        <p>{it ? 'Professore Ordinario' : 'Full Professor'}</p>
+      </article>
+      <article class="stack">
+        <h3>
+          <a href="https://www.imperial.ac.uk/">Imperial College London</a>
+        </h3>
+        <p>Visiting Professor</p>
+      </article>
+      <article class="stack">
+        <h3>
+          <a href="https://www.southampton.ac.uk/">University of Southampton</a>
+        </h3>
+        <p>Visiting Fellow</p>
+      </article>
+      <article class="stack">
+        <h3>
+          <a href="https://www.cardiff.ac.uk/">Cardiff University</a>
+        </h3>
+        <p>Honorary Senior Lecturer</p>
+      </article>
+    </div>
+    <p>
+      <a href="https://cyberseclab.unibs.it/">
+        CINI National Cybersecurity Lab — {it ? 'nodo di Brescia' : 'Brescia node'}
+      </a>
+    </p>
+  </div>
+</section>

@@ -1,4 +1,5 @@
 ---
+import AcademicRoles from './AcademicRoles.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentCard from './ContentCard.astro';
 import { getProfile } from '../lib/content-data';
@@ -38,8 +39,8 @@ const events = getLocalizedEvents(locale).slice(0, 3);
         </p>
         <p>
           {it
-            ? 'Sono Federico Cerutti, Professore Ordinario all’Università degli Studi di Brescia. Porto ricerca su AI e cybersecurity nella consulenza tecnica e nella formazione per le organizzazioni.'
-            : 'I’m Federico Cerutti, Full Professor at the University of Brescia. I bring AI and cybersecurity research into technical consultancy and training for organisations.'}
+            ? 'Sono Federico Cerutti, Professore Ordinario all’Università degli Studi di Brescia. Dirigo il nodo di Brescia del CINI National Cybersecurity Lab e ho incarichi accademici a Imperial, Southampton e Cardiff. Porto questa esperienza nella consulenza tecnica e nella formazione per le organizzazioni.'
+            : 'I’m Federico Cerutti, Full Professor at the University of Brescia. As director of the Brescia node of the CINI National Cybersecurity Lab, with academic appointments at Imperial, Southampton and Cardiff, I bring AI and cybersecurity research into technical consultancy and training.'}
         </p>
         <p>
           <a href={it ? '/it/consulenza/' : '/en/advisory/'}>
@@ -58,6 +59,7 @@ const events = getLocalizedEvents(locale).slice(0, 3);
       />
     </div>
   </section>
+  <AcademicRoles locale={locale} />
   <section class="section">
     <div class="container stack">
       <h2>{it ? 'Collaborazioni' : 'Collaborations'}</h2>
