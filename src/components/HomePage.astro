@@ -1,10 +1,14 @@
 ---
-import AcademicRoles from './AcademicRoles.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentCard from './ContentCard.astro';
 import { getProfile } from '../lib/content-data';
 import { getLocalizedEvents } from '../lib/events-data';
-import { featuredCollaborations, organizationsById, worksById } from '../lib/portfolio';
+import {
+  featuredCollaborations,
+  organizationsById,
+  worksById,
+  collaborationCopy,
+} from '../lib/portfolio';
 import { sourceUrl } from '../lib/research';
 import type { Locale } from '../lib/site';
 interface Props {
@@ -59,7 +63,6 @@ const events = getLocalizedEvents(locale).slice(0, 3);
       />
     </div>
   </section>
-  <AcademicRoles locale={locale} />
   <section class="section">
     <div class="container stack">
       <h2>{it ? 'Collaborazioni' : 'Collaborations'}</h2>
@@ -69,7 +72,10 @@ const events = getLocalizedEvents(locale).slice(0, 3);
             <h3>
               <a href={`${network}#${f.organizationId}`}>{f.label}</a>
             </h3>
-            <p class="small muted">{organizationsById.get(f.organizationId)?.name}</p>
+            <p class="small muted">
+              {collaborationCopy(organizationsById.get(f.organizationId)!, locale).identity}
+            </p>
+            <p>{collaborationCopy(organizationsById.get(f.organizationId)!, locale).description}</p>
             <ul class="plain-links">
               {f.workIds.map((id) => {
                 const w = worksById.get(id)!;

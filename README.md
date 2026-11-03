@@ -123,3 +123,7 @@ The owner requested prominence for the Brescia professorship, Imperial Visiting 
 Owner correction: unspecified UK IBM records are presented under Hursley, unspecified US records under T. J. Watson, with work-ID deduplication. The original imported classifications remain as historical source data. Intelpoint, Aneurin Bevan and the Cardiff/Brescia/Southampton/Imperial collaboration cards are hidden; the TwITter paper is excluded from collaboration output. The four universities appear as appointments instead.
 
 Collaboration cards use bilingual View related work / Close related work text and a rotating chevron. Night-mode portraits use reduced brightness/contrast to soften their white background without changing the original image.
+
+## Navigation and collaboration copy refinement
+
+Teaching and Events are primary navigation items in both languages. The academic-leadership section is removed from home only; the opening still mentions appointments/CINI, and the detailed roles remain on advisory/About. Home proceeds directly to collaborations and students. Shared bilingual organisation introductions and longer publication-grounded collaboration descriptions are maintained in `src/lib/portfolio.ts`, reused for the homepage ARL/AFRL/Beretta features. Organisation introductions are distinct from descriptions of joint work; no client outcomes are claimed. Public organisation sources checked include beretta.com/en-us/company, airbus.com/en, honeywell.com/us/en, blueprism.com, aboutamazon.com/what-we-do/devices-services, research.ibm.com and army.mil/arl.

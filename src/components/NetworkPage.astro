@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { collaborations, worksById } from '../lib/portfolio';
+import { collaborations, worksById, collaborationCopy } from '../lib/portfolio';
 import { research, sourceUrl } from '../lib/research';
 import type { Locale } from '../lib/site';
 interface Props {
@@ -16,39 +16,6 @@ const groups = [
   },
   { title: it ? 'Università' : 'Universities', sectors: ['Academic'] },
 ];
-const summary = (o: (typeof collaborations)[number]) => {
-  const titles = o.workIds
-    .map((id) => worksById.get(id)?.title ?? '')
-    .join(' ')
-    .toLowerCase();
-  if (/beretta/i.test(o.name))
-    return it
-      ? 'Digital twin per lo sport e la riabilitazione.'
-      : 'Digital twins for sport and rehabilitation.';
-  if (/airbus/i.test(o.name))
-    return it
-      ? 'Dimostrazione congiunta nell’ambito del programma DAIS.'
-      : 'A joint demonstration within the DAIS programme.';
-  if (/nec/i.test(o.name))
-    return it
-      ? 'Collegamenti di ricerca nell’intelligenza artificiale.'
-      : 'Research connections in artificial intelligence.';
-  if (/cyber|threat|attack|security/.test(titles))
-    return it ? 'Cybersecurity e analisi delle minacce.' : 'Cybersecurity and threat analysis.';
-  if (/uncertain|bayesian|probabili|risk/.test(titles))
-    return it
-      ? 'Affidabilità dell’AI e ragionamento sotto incertezza.'
-      : 'AI reliability and reasoning under uncertainty.';
-  if (/argument/.test(titles))
-    return it ? 'Argomentazione e supporto alle decisioni.' : 'Argumentation and decision support.';
-  if (/event|signal|sensor|fusion/.test(titles))
-    return it
-      ? 'Analisi di segnali, eventi e dati da sensori.'
-      : 'Analysis of signals, events and sensor data.';
-  return it
-    ? 'Ricerca su intelligenza artificiale e ragionamento.'
-    : 'Research on artificial intelligence and reasoning.';
-};
 ---
 
 <BaseLayout
@@ -98,7 +65,12 @@ const summary = (o: (typeof collaborations)[number]) => {
                           .replace(' (verified current)', '')
                           .replace(' (DAIS joint demonstration)', '')}
                       </h3>
-                      <p class="small muted">{summary(o)}</p>
+                      <p class="organisation-introduction small muted">
+                        {collaborationCopy(o, locale).identity}
+                      </p>
+                      <p class="collaboration-description">
+                        {collaborationCopy(o, locale).description}
+                      </p>
                       <span class="collaboration-action">
                         <span class="when-closed">
                           {it ? 'Vedi i lavori' : 'View related work'}

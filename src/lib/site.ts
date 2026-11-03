@@ -65,26 +65,22 @@ export const navByLocale: Record<Locale, { label: string; href: string }[]> = {
     { label: 'Advisory', href: '/en/advisory/' },
     { label: 'Collaborations', href: '/en/research-network/' },
     { label: 'Projects', href: '/en/projects/' },
+    { label: 'Teaching', href: '/en/teaching/' },
+    { label: 'Events', href: '/en/events/' },
     { label: 'About', href: '/en/about/' },
   ],
   it: [
     { label: 'Consulenza', href: '/it/consulenza/' },
     { label: 'Collaborazioni', href: '/it/rete-di-ricerca/' },
     { label: 'Progetti', href: '/progetti/' },
+    { label: 'Didattica', href: '/teaching/' },
+    { label: 'Eventi', href: '/eventi/' },
     { label: 'Profilo', href: '/it/profilo/' },
   ],
 };
 export const secondaryNavByLocale = {
-  en: [
-    { label: 'Teaching', href: '/en/teaching/' },
-    { label: 'Events', href: '/en/events/' },
-    { label: 'DBLP', href: site.dblpUrl },
-  ],
-  it: [
-    { label: 'Didattica', href: '/teaching/' },
-    { label: 'Eventi', href: '/eventi/' },
-    { label: 'DBLP', href: site.dblpUrl },
-  ],
+  en: [{ label: 'DBLP', href: site.dblpUrl }],
+  it: [{ label: 'DBLP', href: site.dblpUrl }],
 };
 
 export function formatDate(date: Date, locale: Locale) {

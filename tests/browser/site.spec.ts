@@ -3,10 +3,16 @@ import { test, expect } from '@playwright/test';
 test('company journey and bilingual university agreements', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.home-profile')).toContainText('I help companies');
-  await expect(page.locator('.academic-roles')).toContainText('Imperial College London');
-  await expect(page.locator('.academic-roles')).toContainText('Honorary Senior Lecturer');
-  await expect(page.locator('.academic-roles')).toContainText('Director of the Brescia node');
-
+  await expect(page.locator('.academic-roles')).toHaveCount(0);
+  const navigation = page.getByRole('navigation', { name: 'Primary navigation' });
+  await expect(navigation.getByRole('link', { name: 'Teaching', exact: true })).toHaveAttribute(
+    'href',
+    '/en/teaching/',
+  );
+  await expect(navigation.getByRole('link', { name: 'Events', exact: true })).toHaveAttribute(
+    'href',
+    '/en/events/',
+  );
   await expect(page.locator('.featured-collaborations h3')).toHaveText(['ARL', 'AFRL', 'Beretta']);
   await expect(page.getByRole('link', { name: 'TRUE', exact: true })).toHaveAttribute(
     'href',
@@ -79,6 +85,10 @@ test('static portfolio listings, legacy queries and attribution', async ({ page 
   await expect(hursley.locator('li')).toHaveCount(8);
   await expect(watson.locator('li')).toHaveCount(10);
   await expect(hursley.locator('summary')).toContainText('View related work');
+  await expect(hursley.locator('.organisation-introduction')).toContainText('IBM');
+  expect((await hursley.locator('.collaboration-description').innerText()).length).toBeGreaterThan(
+    100,
+  );
 
   await expect(page.locator('main')).not.toContainText('Stefano Morzenti');
   const beretta = page.locator('[id="org:fabbrica-d-armi-pietro-beretta"]');
