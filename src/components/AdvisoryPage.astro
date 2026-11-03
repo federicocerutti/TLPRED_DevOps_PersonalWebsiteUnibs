@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactInvitation from './ContactInvitation.astro';
+import type { Locale } from '../lib/site';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const it = locale === 'it';
+const services = it
+  ? [
+      [
+        'Affidabilità e incertezza dell’AI',
+        'Quali limiti hanno le valutazioni disponibili? Quando un modello dovrebbe esprimere incertezza? Quanto sono comprensibili le sue raccomandazioni?',
+        'Revisione delle evidenze e dei criteri di valutazione; raccomandazioni tecniche motivate.',
+      ],
+      [
+        'Sicurezza dell’AI e cybersecurity',
+        'Quali ipotesi di sicurezza richiedono verifica? Come interpretare informazioni eterogenee sulle minacce?',
+        'Esame indipendente di approcci, assunzioni e limiti; indicazioni sulle verifiche da approfondire.',
+      ],
+      [
+        'Decisioni e supervisione umana',
+        'Come confrontare evidenze contrastanti? Quali spiegazioni aiutano un analista? Come rendere esplicito il ragionamento?',
+        'Analisi del processo decisionale e dei requisiti di spiegazione; confronto tra opzioni.',
+      ],
+    ]
+  : [
+      [
+        'AI reliability & uncertainty',
+        'What are the limits of the available evaluation? When should a model express uncertainty? How understandable are its recommendations?',
+        'Review of evidence and evaluation criteria; reasoned technical recommendations.',
+      ],
+      [
+        'AI security & cybersecurity',
+        'Which security assumptions need scrutiny? How should heterogeneous threat information be interpreted?',
+        'Independent examination of approaches, assumptions and limitations; advice on further evaluation.',
+      ],
+      [
+        'Decisions & human oversight',
+        'How can conflicting evidence be compared? Which explanations help an analyst? How can reasoning be made explicit?',
+        'Examination of decision processes and explanation requirements; assessment of alternatives.',
+      ],
+    ];
+---
+
+<BaseLayout
+  locale={locale}
+  title={
+    it
+      ? 'Consulenza tecnica indipendente | Federico Cerutti'
+      : 'Independent technical advisory | Federico Cerutti'
+  }
+  description={
+    it
+      ? 'Valutazioni indipendenti, revisioni tecniche, formazione e strategia su AI e cybersecurity.'
+      : 'Independent assessments, technical reviews, training and strategy on AI and cybersecurity.'
+  }
+  alternatePath={it ? '/en/advisory/' : '/it/consulenza/'}
+>
+  <section class="page-intro">
+    <div class="container">
+      <span class="eyebrow">
+        {it ? 'Consulenza / Formazione / Strategia' : 'Advisory / Training / Strategy'}
+      </span>
+      <h1>
+        {it
+          ? 'Un esame indipendente delle decisioni tecniche.'
+          : 'An independent look at technical decisions.'}
+      </h1>
+      <p class="lede">
+        {it
+          ? 'Lavoro su sicurezza dell’AI, cybersecurity e ragionamento sotto incertezza. La consulenza porta questa prospettiva di ricerca nelle domande concrete di aziende e organizzazioni pubbliche.'
+          : 'My research concerns AI security, cybersecurity and reasoning under uncertainty. Advisory work brings that research perspective to practical questions faced by companies and public organisations.'}
+      </p>
+      <div class="actions" style="margin-top:2rem">
+        <a
+          class="button"
+          data-analytics-event="advisory-contact"
+          href="mailto:federico.cerutti@unibs.it"
+        >
+          {it ? 'Discutiamo una consulenza' : 'Discuss an advisory engagement'} ↗
+        </a>
+        <a
+          class="text-link"
+          href={
+            it ? '/it/rete-di-ricerca/?sector=Industry' : '/en/research-network/?sector=Industry'
+          }
+        >
+          {it ? 'Esamina le connessioni di ricerca' : 'Inspect research connections'} →
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">
+            {it ? 'Consulenza tecnica indipendente' : 'Independent technical advisory'}
+          </span>
+          <h2>{it ? 'Partire dalla domanda giusta.' : 'Start with the question.'}</h2>
+        </div>
+        <p class="muted">
+          {it
+            ? 'Ambito e risultati attesi vengono concordati sulla base del problema e delle evidenze disponibili.'
+            : 'Scope and expected outputs are agreed around the problem and the evidence available.'}
+        </p>
+      </div>
+      <div class="three-col">
+        {services.map((s, i) => (
+          <article class="card stack">
+            <span class="number">0{i + 1} /</span>
+            <h3>{s[0]}</h3>
+            <p class="muted">{s[1]}</p>
+            <p class="small">{s[2]}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section advisory-band">
+    <div class="container two-col">
+      <div class="stack">
+        <span class="eyebrow">{it ? 'Interlocutori' : 'Who this is for'}</span>
+        <h2>{it ? 'La stessa ricerca, domande diverse.' : 'Different roles. Shared questions.'}</h2>
+      </div>
+      <ul class="service-list">
+        <li>
+          <h3>
+            {it ? 'Responsabili tecnici, AI e sicurezza' : 'Technical, AI & security leaders'}
+          </h3>
+          <p>
+            {it
+              ? 'Un confronto indipendente su metodi, valutazioni, rischi e requisiti di affidabilità.'
+              : 'An independent perspective on methods, evaluations, risks and reliability requirements.'}
+          </p>
+        </li>
+        <li>
+          <h3>{it ? 'Dirigenti e organi di governo' : 'Executives & boards'}</h3>
+          <p>
+            {it
+              ? 'Chiarire le implicazioni tecniche delle decisioni, le domande da porre e i limiti delle evidenze.'
+              : 'Clarify the technical implications of decisions, questions to ask and limitations of the evidence.'}
+          </p>
+        </li>
+        <li>
+          <h3>{it ? 'Partner di ricerca e innovazione' : 'Research & innovation partners'}</h3>
+          <p>
+            {it
+              ? 'Esaminare domande scientifiche, opzioni metodologiche e opportunità di collaborazione di ricerca.'
+              : 'Examine scientific questions, methodological choices and opportunities for research collaboration.'}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container two-col">
+      <div class="stack">
+        <span class="eyebrow">{it ? 'Formazione e strategia' : 'Training & strategy'}</span>
+        <h2>{it ? 'Comprendere prima di scegliere.' : 'Understand before choosing.'}</h2>
+        <p class="muted">
+          {it
+            ? 'Briefing per dirigenti e workshop specialistici su sicurezza dell’AI, incertezza, argomentazione e decisioni uomo–AI. Contenuti e livello tecnico vengono adattati al pubblico e agli obiettivi concordati.'
+            : 'Executive briefings and specialist workshops on AI security, uncertainty, argumentation and human–AI decisions. Content and technical depth are adapted to the audience and agreed objectives.'}
+        </p>
+      </div>
+      <div class="stack">
+        <h3>{it ? 'Come iniziare' : 'How to begin'}</h3>
+        <ol>
+          <li>
+            {it
+              ? 'Descrivi il problema, il contesto e le tempistiche in una breve email.'
+              : 'Email a short description of the problem, context and timing.'}
+          </li>
+          <li>
+            {it
+              ? 'Chiariamo la domanda, le evidenze disponibili e l’adeguatezza dell’incarico.'
+              : 'We clarify the question, available evidence and whether the engagement is a fit.'}
+          </li>
+          <li>
+            {it
+              ? 'Concordiamo un ambito definito e un risultato: valutazione, revisione, raccomandazioni, briefing o workshop.'
+              : 'We agree a defined scope and an output: assessment, review, recommendations, briefing or workshop.'}
+          </li>
+        </ol>
+        <a class="text-link" href={it ? '/it/ricerca/' : '/en/research/'}>
+          {it ? 'Consulta le pubblicazioni' : 'Read the publications'} →
+        </a>
+      </div>
+    </div>
+  </section>
+  <ContactInvitation locale={locale} />
+</BaseLayout>

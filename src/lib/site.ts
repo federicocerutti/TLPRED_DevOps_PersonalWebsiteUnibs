@@ -11,7 +11,8 @@ export const site = {
     en: 'Full Professor, University of Brescia',
   },
   address: 'Dipartimento di Ingegneria dell’Informazione, via Branze 38, 25123 Brescia, Italy',
-  addressUrl: 'https://www.unibs.it/it/ateneo/organizzazione/dipartimenti/ingegneria-dellinformazione-dii',
+  addressUrl:
+    'https://www.unibs.it/it/ateneo/organizzazione/dipartimenti/ingegneria-dellinformazione-dii',
   dblpUrl: 'https://dblp.org/pid/97/18.html',
 };
 
@@ -60,17 +61,31 @@ export const sectionLabels = {
 };
 
 export const navByLocale: Record<Locale, { label: string; href: string }[]> = {
-  it: [
-    { label: 'Articoli scientifici', href: site.dblpUrl },
-    { label: 'Progetti', href: '/progetti/' },
-    { label: 'Didattica', href: '/teaching/' },
-    { label: 'Eventi', href: '/eventi/' },
-  ],
   en: [
-    { label: 'Papers', href: site.dblpUrl },
+    { label: 'Advisory', href: '/en/advisory/' },
+    { label: 'Research', href: '/en/research/' },
+    { label: 'Research network', href: '/en/research-network/' },
     { label: 'Projects', href: '/en/projects/' },
+    { label: 'About / contact', href: '/en/about/' },
+  ],
+  it: [
+    { label: 'Consulenza', href: '/it/consulenza/' },
+    { label: 'Ricerca', href: '/it/ricerca/' },
+    { label: 'Rete di ricerca', href: '/it/rete-di-ricerca/' },
+    { label: 'Progetti', href: '/progetti/' },
+    { label: 'Profilo / contatti', href: '/it/profilo/' },
+  ],
+};
+export const secondaryNavByLocale = {
+  en: [
     { label: 'Teaching', href: '/en/teaching/' },
     { label: 'Events', href: '/en/events/' },
+    { label: 'DBLP', href: site.dblpUrl },
+  ],
+  it: [
+    { label: 'Didattica', href: '/teaching/' },
+    { label: 'Eventi', href: '/eventi/' },
+    { label: 'DBLP', href: site.dblpUrl },
   ],
 };
 

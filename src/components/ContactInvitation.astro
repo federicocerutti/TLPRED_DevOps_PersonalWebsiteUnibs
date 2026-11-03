@@ -1,0 +1,32 @@
+---
+import { site } from '../lib/site';
+const { locale = 'en' } = Astro.props;
+const it = locale === 'it';
+---
+
+<section class="section contact-band">
+  <div class="container two-col">
+    <div>
+      <span class="eyebrow">{it ? 'Parliamone' : 'Start a conversation'}</span>
+      <h2>{it ? 'Quale decisione devi prendere?' : 'What decision are you facing?'}</h2>
+    </div>
+    <div class="stack">
+      <p class="lede">
+        {it
+          ? 'Per discutere una consulenza, scrivimi indicando il problema, il contesto della tua organizzazione e le tempistiche.'
+          : 'To discuss an advisory engagement, email me with the problem, your organisational context and your timing.'}
+      </p>
+      <div class="actions">
+        <a
+          class="button"
+          data-analytics-event="advisory-contact"
+          href={`mailto:${site.contactEmail}`}
+        >
+          {it ? 'Discutiamo una consulenza' : 'Discuss an advisory engagement'}{' '}
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <p class="small muted">{site.contactEmail}</p>
+    </div>
+  </div>
+</section>

@@ -27,27 +27,36 @@ const imageHref = href;
 const opensExternal = Boolean(imageHref && /^https?:\/\//.test(imageHref));
 ---
 
-<div class:list={['attributed-image', compact && 'attributed-image-compact']} style={wrapperStyle}>
-  {imageHref ? (
-    <a href={imageHref} target={opensExternal ? '_blank' : undefined} rel={opensExternal ? 'noreferrer' : undefined}>
+{!attribution?.sourceUrl.includes('unsplash.com') && (
+  <div
+    class:list={['attributed-image', compact && 'attributed-image-compact']}
+    style={wrapperStyle}
+  >
+    {imageHref ? (
+      <a
+        href={imageHref}
+        target={opensExternal ? '_blank' : undefined}
+        rel={opensExternal ? 'noreferrer' : undefined}
+      >
+        <img src={src} alt={alt} loading={loading} style={imageStyle} />
+      </a>
+    ) : (
       <img src={src} alt={alt} loading={loading} style={imageStyle} />
-    </a>
-  ) : (
-    <img src={src} alt={alt} loading={loading} style={imageStyle} />
-  )}
-  {attribution && (
-    <a
-      class="attribution-badge"
-      href={attribution.sourceUrl}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={attribution.sourceLabel}
-      title={attribution.sourceLabel}
-    >
-      <span>{compact ? 'Source' : attribution.sourceLabel}</span>
-    </a>
-  )}
-</div>
+    )}
+    {attribution && (
+      <a
+        class="attribution-badge"
+        href={attribution.sourceUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={attribution.sourceLabel}
+        title={attribution.sourceLabel}
+      >
+        <span>{compact ? 'Source' : attribution.sourceLabel}</span>
+      </a>
+    )}
+  </div>
+)}
 
 <style>
   .attributed-image {

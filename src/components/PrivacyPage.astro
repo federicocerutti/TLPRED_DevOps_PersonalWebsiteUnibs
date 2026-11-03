@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const { locale } = Astro.props;
+const it = locale === 'it';
+---
+
+<BaseLayout
+  locale={locale}
+  title={it ? 'Privacy e statistiche | Federico Cerutti' : 'Privacy & analytics | Federico Cerutti'}
+  description={
+    it
+      ? 'Preferenze e statistiche facoltative del sito.'
+      : 'Website preferences and optional analytics.'
+  }
+  alternatePath={it ? '/en/privacy/' : '/it/privacy/'}
+>
+  <section class="page-intro">
+    <div class="container">
+      <h1>{it ? 'Privacy e statistiche' : 'Privacy & analytics'}</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose stack">
+      <h2>{it ? 'Preferenze del browser' : 'Browser preferences'}</h2>
+      <p>
+        {it
+          ? 'Il sito salva nel browser la preferenza di tema e, se espressa, la scelta relativa alle statistiche facoltative. Il consenso alle statistiche scade dopo 180 giorni.'
+          : 'The site stores your theme preference and, when expressed, your choice about optional analytics in your browser. Analytics consent expires after 180 days.'}
+      </p>
+      <h2>{it ? 'Statistiche facoltative' : 'Optional analytics'}</h2>
+      <p>
+        {it
+          ? 'Le statistiche Matomo sono disattivate in questa versione. L’attivazione richiede configurazione verificata e approvazione dell’informativa e delle impostazioni da parte del titolare competente. Non vengono effettuate richieste al servizio di statistiche senza consenso.'
+          : 'Matomo analytics is disabled in this release. Activation requires verified configuration and approval of the notice and settings by the appropriate controller. No analytics requests are made without consent.'}
+      </p>
+      <p>
+        {it
+          ? 'L’integrazione predisposta limita la raccolta a pagine e azioni aggregate, elimina parametri e frammenti dagli URL tracciati e non invia ricerche testuali, email o identificativi utente. Non abilita registrazioni di sessione, heatmap o tracciamento tra siti.'
+          : 'The prepared integration limits collection to page visits and aggregate actions, removes query parameters and fragments from tracked URLs, and sends no search text, email addresses or user identifiers. It does not enable session recordings, heatmaps or cross-site tracking.'}
+      </p>
+      <p>
+        {it
+          ? 'Prima dell’attivazione, questa informativa dovrà specificare titolare, contatti, finalità e base giuridica, destinatari, conservazione e diritti, con riferimento alla configurazione effettiva.'
+          : 'Before activation, this notice must specify the controller, contacts, purposes and legal basis, recipients, retention and rights in accordance with the actual configuration.'}
+      </p>
+      <a href="#analytics-settings">{it ? 'Gestisci le preferenze' : 'Manage preferences'}</a>
+      <p>
+        <a href="https://www.unibs.it/it/privacy-policy-university-portals">
+          {it
+            ? 'Informativa dell’Università degli Studi di Brescia'
+            : 'University of Brescia privacy policy'}
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

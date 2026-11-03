@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactInvitation from './ContactInvitation.astro';
+import { getProfile } from '../lib/content-data';
+import { bio as enBio } from '../lib/bio-en';
+import { bio as itBio } from '../lib/bio-it';
+import type { Locale } from '../lib/site';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const it = locale === 'it';
+const profile = getProfile(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  title={it ? 'Profilo e contatti | Federico Cerutti' : 'About & contact | Federico Cerutti'}
+  description={profile.seo.description}
+  alternatePath={it ? '/en/about/' : '/it/profilo/'}
+>
+  <section class="page-intro">
+    <div class="container">
+      <span class="eyebrow">{it ? 'Profilo accademico' : 'Academic profile'}</span>
+      <h1>Federico Cerutti</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container two-col">
+      <article class="prose stack">
+        <div set:html={`<p>${it ? itBio : enBio}</p>`} />
+        <h2>{it ? 'Percorso e ricerca' : 'Background & research'}</h2>
+        <div set:html={profile.aboutHtml} />
+        <h2>{it ? 'Servizio accademico' : 'Academic service'}</h2>
+        <ul>
+          {profile.service.map((s) => (
+            <li>{s}</li>
+          ))}
+        </ul>
+        <div class="actions">
+          {profile.socialLinks.map((s) => (
+            <a class="text-link" href={s.href}>
+              {s.label} ↗
+            </a>
+          ))}
+        </div>
+        <p>
+          <a href={it ? '/teaching/' : '/en/teaching/'}>
+            {it ? 'Didattica e tutorial' : 'Teaching & tutorials'}
+          </a>{' '}
+          · <a href={it ? '/eventi/' : '/en/events/'}>{it ? 'Eventi' : 'Events'}</a>
+        </p>
+      </article>
+      <figure class="portrait-block">
+        <img src={profile.portrait} alt={profile.portraitAlt} width="360" height="450" />
+        <figcaption>Università degli Studi di Brescia</figcaption>
+      </figure>
+    </div>
+  </section>
+  <ContactInvitation locale={locale} />
+</BaseLayout>

@@ -1,35 +1,33 @@
 import { getLocalizedCollection } from '../lib/content-data';
-
-const staticUrls = [
-  '/',
-  '/en/',
-  '/it/',
-  '/progetti/',
-  '/en/projects/',
-  '/teaching/',
-  '/en/teaching/',
-];
-
-const projectUrls = [
-  ...getLocalizedCollection('projects', 'it').map((entry) => `/progetti/${entry.pathSlug}/`),
-  ...getLocalizedCollection('projects', 'en').map((entry) => `/en/projects/${entry.pathSlug}/`),
-];
-
-const teachingUrls = [
-  ...getLocalizedCollection('teachingPages', 'it').map((entry) => `/teaching/${entry.pathSlug}/`),
-  ...getLocalizedCollection('teachingPages', 'en').map((entry) => `/en/teaching/${entry.pathSlug}/`),
-];
-
-const urls = [...staticUrls, ...projectUrls, ...teachingUrls];
-
+import { getLocalizedEvents } from '../lib/events-data';
+const staticPages = Object.keys(import.meta.glob('./**/*.astro'))
+  .filter((p) => !p.includes('['))
+  .map((p) =>
+    p
+      .replace(/^\.\//, '/')
+      .replace(/index\.astro$/, '')
+      .replace(/\.astro$/, '/'),
+  );
+const details = ['en', 'it'].flatMap((locale) => [
+  ...getLocalizedCollection('papers', locale as 'en' | 'it').map(
+    (p) => `${locale === 'en' ? '/en/research/' : '/ricerca/'}${p.pathSlug}/`,
+  ),
+  ...getLocalizedCollection('projects', locale as 'en' | 'it').map(
+    (p) => `${locale === 'en' ? '/en/projects/' : '/progetti/'}${p.pathSlug}/`,
+  ),
+  ...getLocalizedCollection('teachingPages', locale as 'en' | 'it').map(
+    (p) => `${locale === 'en' ? '/en/teaching/' : '/teaching/'}${p.pathSlug}/`,
+  ),
+  ...getLocalizedEvents(locale as 'en' | 'it').map(
+    (p) => `${locale === 'en' ? '/en/events/' : '/eventi/'}${p.pathSlug}/`,
+  ),
+]);
 export function GET() {
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-    .map((url) => `  <url><loc>https://federico-cerutti.unibs.it${url}</loc></url>`)
-    .join('\n')}\n</urlset>`;
-
-  return new Response(body, {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-    },
-  });
+  const urls = [...new Set([...staticPages, ...details])].filter(
+    (p) => p !== '/en/' && p !== '/ricerca/',
+  );
+  return new Response(
+    `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((p) => `<url><loc>https://federico-cerutti.unibs.it${p}</loc></url>`).join('')}</urlset>`,
+    { headers: { 'Content-Type': 'application/xml; charset=utf-8' } },
+  );
 }

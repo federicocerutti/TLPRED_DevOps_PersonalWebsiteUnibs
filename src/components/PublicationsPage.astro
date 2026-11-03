@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLocalizedCollection } from '../lib/content-data';
+import { research, years, sourceUrl, workNames, dblpUrls, scopusUrl } from '../lib/research';
+import type { Locale } from '../lib/site';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const it = locale === 'it';
+const selected = getLocalizedCollection('papers', locale);
+---
+
+<BaseLayout
+  locale={locale}
+  title={it ? 'Pubblicazioni | Federico Cerutti' : 'Publications | Federico Cerutti'}
+  description={
+    it
+      ? 'Pubblicazioni ricercabili su AI, cybersecurity, incertezza e argomentazione.'
+      : 'Searchable publications on AI, cybersecurity, uncertainty and argumentation.'
+  }
+  alternatePath={it ? '/en/research/' : '/it/ricerca/'}
+>
+  <section class="page-intro">
+    <div class="container">
+      <span class="eyebrow">
+        {it ? 'Ricerca / Archivio bibliografico' : 'Research / Bibliographic archive'}
+      </span>
+      <h1>{it ? 'Pubblicazioni.' : 'Publications.'}</h1>
+      <p class="lede">
+        {it
+          ? 'AI security, cybersecurity, ragionamento sotto incertezza, argomentazione e decisioni uomo–AI.'
+          : 'AI security, cybersecurity, reasoning under uncertainty, argumentation and human–AI decision-making.'}
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" data-publications>
+      <p class="archive-note">
+        {it
+          ? '162 opere riconciliate: 143 record Scopus e 19 record presenti solo in DBLP. Sette versioni sono state ricondotte alle pubblicazioni corrispondenti. Archivio di lavoro aggiornato al 3 novembre 2026, non censimento esaustivo.'
+          : '162 reconciled works: 143 Scopus records and 19 DBLP-only records. Seven versions have been reconciled with their corresponding publications. Working archive updated 3 November 2026, not an exhaustive census.'}
+      </p>
+      <form class="controls" style="margin-top:2rem" onsubmit="return false">
+        <label>
+          {it ? 'Cerca titolo, autore o sede' : 'Search title, author or venue'}
+          <input
+            type="search"
+            name="q"
+            data-pub-q
+            placeholder={it ? 'Es. incertezza, cybersecurity…' : 'e.g. uncertainty, cybersecurity…'}
+          />
+        </label>
+        <label>
+          {it ? 'Anno' : 'Year'}
+          <select name="year" data-pub-year>
+            <option value="">{it ? 'Tutti gli anni' : 'All years'}</option>
+            {years.map((y) => (
+              <option value={y}>{y}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          {it ? 'Fonte' : 'Source'}
+          <select name="status" data-pub-status>
+            <option value="">{it ? 'Tutte le fonti' : 'All sources'}</option>
+            <option value="Scopus">Scopus</option>
+            <option value="DBLP">{it ? 'Solo DBLP' : 'DBLP only'}</option>
+          </select>
+        </label>
+        <button type="reset">{it ? 'Azzera' : 'Reset'}</button>
+      </form>
+      <p data-pub-count aria-live="polite" class="notice">
+        162 {it ? 'opere' : 'works'}
+      </p>
+      <ol class="publications">
+        {research.works.map((w) => (
+          <li
+            class="publication"
+            data-pub-row
+            data-year={w.year}
+            data-status={w.recordStatus.startsWith('Scopus') ? 'Scopus' : 'DBLP'}
+            data-search={`${w.title} ${w.venue} ${workNames(w).join(' ')}`}
+          >
+            <div class="meta">
+              <span>{w.year}</span>
+              <span>{w.venue}</span>
+              <span class="badge">
+                {w.recordStatus.startsWith('Scopus')
+                  ? it
+                    ? 'Indicizzato in Scopus'
+                    : 'Scopus-indexed'
+                  : it
+                    ? 'Solo DBLP · affiliazioni non disponibili'
+                    : 'DBLP only · affiliations unavailable'}
+              </span>
+            </div>
+            <h2 style="font-size:1.15rem;max-width:none;margin:.7rem 0">
+              <a data-analytics-event="publication-link" href={sourceUrl(w)}>
+                {w.title}
+              </a>
+            </h2>
+            <p class="authors">
+              {it
+                ? 'Coautori con Federico Cerutti (elenco non ordinato)'
+                : 'Co-authors with Federico Cerutti (unordered list)'}
+              : {workNames(w).join(', ') || '—'}
+            </p>
+            <div class="publication-links">
+              <a data-analytics-event="publication-link" href={sourceUrl(w)}>
+                {w.doi ? 'DOI' : it ? 'Fonte originale' : 'Original source'} ↗
+              </a>
+              {dblpUrls(w)
+                .slice(0, 1)
+                .map((url) => (
+                  <a href={url}>DBLP ↗</a>
+                ))}
+              {scopusUrl(w) && <a href={scopusUrl(w)}>Scopus ↗</a>}
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p data-pub-empty hidden>
+        {it ? 'Nessun risultato. Prova altri filtri.' : 'No matching works. Try different filters.'}
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container stack">
+      <span class="eyebrow">{it ? 'Fonti supplementari' : 'Supplementary sources'}</span>
+      <h2>{it ? 'Rapporti tecnici e altri contributi' : 'Technical reports & other outputs'}</h2>
+      <p class="muted">
+        {it
+          ? '11 contributi DAIS, separati dai conteggi delle pubblicazioni indicizzate. Alcuni sono versioni o contributi collegati ad altre opere.'
+          : '11 DAIS items, separate from indexed-publication counts. Some are versions of, or contributions related to, other works.'}
+      </p>
+      <ol class="publications">
+        {research.daisReports.map((d) => (
+          <li class="publication">
+            <div class="meta">
+              <span>{d.year}</span>
+              <span>{d.type}</span>
+              <span>DAIS</span>
+            </div>
+            <h3>
+              <a data-analytics-event="research-outbound" href={d.url}>
+                {d.title}
+              </a>
+            </h3>
+            <p class="small muted">{d.authorNames.join(', ')}</p>
+            <p class="small">{d.reconciliationNote}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container stack">
+      <h2>{it ? 'Letture e sintesi selezionate' : 'Selected reading & research summaries'}</h2>
+      <p class="muted">
+        {it
+          ? 'Le pagine di approfondimento esistenti restano disponibili.'
+          : 'The existing research summaries remain available.'}
+      </p>
+      <div class="three-col">
+        {selected.map((p) => (
+          <article class="card stack">
+            <h3>
+              <a href={`${it ? '/ricerca/' : '/en/research/'}${p.pathSlug}/`}>{p.title}</a>
+            </h3>
+            <p class="small muted">{p.summary}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(
+      research.works.map((w) => ({
+        '@context': 'https://schema.org',
+        '@type': 'ScholarlyArticle',
+        headline: w.title,
+        datePublished: String(w.year),
+        url: sourceUrl(w),
+        ...(w.doi ? { identifier: w.doi } : {}),
+        author: [
+          { '@type': 'Person', name: 'Federico Cerutti' },
+          ...workNames(w).map((name) => ({ '@type': 'Person', name })),
+        ],
+      })),
+    ).replace(/</g, '\\u003c')}
+  />
+  <script>
+    const root = document.querySelector('[data-publications]');
+    if (root) {
+      const q = root.querySelector<HTMLInputElement>('[data-pub-q]')!;
+      const year = root.querySelector<HTMLSelectElement>('[data-pub-year]')!;
+      const status = root.querySelector<HTMLSelectElement>('[data-pub-status]')!;
+      const norm = (s: string) =>
+        s
+          .normalize('NFKD')
+          .replace(/\p{Diacritic}/gu, '')
+          .toLowerCase();
+      const rows = [...root.querySelectorAll<HTMLElement>('[data-pub-row]')];
+      const update = (write = true) => {
+        let count = 0;
+        for (const row of rows) {
+          const match =
+            (!q.value || norm(row.dataset.search ?? '').includes(norm(q.value))) &&
+            (!year.value || row.dataset.year === year.value) &&
+            (!status.value || row.dataset.status === status.value);
+          row.hidden = !match;
+          if (match) count++;
+        }
+        root.querySelector('[data-pub-count]')!.textContent = `${count} / ${rows.length}`;
+        root.querySelector<HTMLElement>('[data-pub-empty]')!.hidden = count > 0;
+        if (write) {
+          const params = new URLSearchParams();
+          for (const [k, v] of [
+            ['q', q.value],
+            ['year', year.value],
+            ['status', status.value],
+          ])
+            if (v) params.set(k, v);
+          history.pushState(null, '', location.pathname + (params.size ? '?' + params : ''));
+        }
+      };
+      const read = () => {
+        const params = new URLSearchParams(location.search);
+        q.value = params.get('q') ?? '';
+        year.value = params.get('year') ?? '';
+        status.value = params.get('status') ?? '';
+        update(false);
+      };
+      let timer: ReturnType<typeof setTimeout>;
+      q.addEventListener('input', () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => update(), 180);
+      });
+      year.addEventListener('change', () => update());
+      status.addEventListener('change', () => update());
+      root.querySelector('form')!.addEventListener('reset', () => {
+        clearTimeout(timer);
+        setTimeout(() => update(), 0);
+      });
+      window.addEventListener('popstate', read);
+      read();
+    }
+  </script>
+</BaseLayout>
