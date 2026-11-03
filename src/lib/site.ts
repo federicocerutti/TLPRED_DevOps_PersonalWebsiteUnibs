@@ -63,17 +63,17 @@ export const sectionLabels = {
 export const navByLocale: Record<Locale, { label: string; href: string }[]> = {
   en: [
     { label: 'Advisory', href: '/en/advisory/' },
-    { label: 'Research', href: '/en/research/' },
-    { label: 'Research network', href: '/en/research-network/' },
+    { label: 'Papers', href: '/en/research/' },
+    { label: 'Collaborations', href: '/en/research-network/' },
     { label: 'Projects', href: '/en/projects/' },
-    { label: 'About / contact', href: '/en/about/' },
+    { label: 'About', href: '/en/about/' },
   ],
   it: [
     { label: 'Consulenza', href: '/it/consulenza/' },
     { label: 'Ricerca', href: '/it/ricerca/' },
-    { label: 'Rete di ricerca', href: '/it/rete-di-ricerca/' },
+    { label: 'Collaborazioni', href: '/it/rete-di-ricerca/' },
     { label: 'Progetti', href: '/progetti/' },
-    { label: 'Profilo / contatti', href: '/it/profilo/' },
+    { label: 'Profilo', href: '/it/profilo/' },
   ],
 };
 export const secondaryNavByLocale = {

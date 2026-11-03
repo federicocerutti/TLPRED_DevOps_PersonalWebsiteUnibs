@@ -45,16 +45,15 @@ export type EventEntry = {
 };
 
 const decodeHtmlEntities = (value: string) =>
-  value
-    .replace(/&#39;/g, "'")
-    .replace(/&#38;/g, '&')
-    .replace(/&amp;/g, '&');
+  value.replace(/&#39;/g, "'").replace(/&#38;/g, '&').replace(/&amp;/g, '&');
 
 const normalizedEvents = (rawEvents as RawEvent[]).flatMap((entry) =>
   (['en', 'it'] as const).map((locale) => {
     const localized = entry[locale];
     const year = localized.meta[0]?.match(/20\d{2}/)?.[0] ?? '';
-    const baseSlug = /^\d{4}$/.test(localized.pathSlug) ? `cyberchallenge-${localized.pathSlug}` : localized.pathSlug;
+    const baseSlug = /^\d{4}$/.test(localized.pathSlug)
+      ? `cyberchallenge-${localized.pathSlug}`
+      : localized.pathSlug;
 
     return {
       translationKey: entry.key,
@@ -76,11 +75,50 @@ const normalizedEvents = (rawEvents as RawEvent[]).flatMap((entry) =>
       typeLabel: localized.typeLabel,
       year,
     } satisfies EventEntry;
-  })
+  }),
 );
 
 export function getLocalizedEvents(locale: Locale) {
-  return normalizedEvents.filter((entry) => entry.locale === locale);
+  const months = [
+    'january',
+    'february',
+    'march',
+    'april',
+    'may',
+    'june',
+    'july',
+    'august',
+    'september',
+    'october',
+    'november',
+    'december',
+  ];
+  const italianMonths = [
+    'gennaio',
+    'febbraio',
+    'marzo',
+    'aprile',
+    'maggio',
+    'giugno',
+    'luglio',
+    'agosto',
+    'settembre',
+    'ottobre',
+    'novembre',
+    'dicembre',
+  ];
+  const dateKey = (entry: EventEntry) => {
+    const text = entry.meta[0]?.toLowerCase() ?? '';
+    const index = (locale === 'it' ? italianMonths : months).findIndex((month) =>
+      text.includes(month),
+    );
+    return (
+      Number(entry.year) * 10000 + (index + 1) * 100 + Number(text.match(/^\d{1,2}/)?.[0] ?? 0)
+    );
+  };
+  return normalizedEvents
+    .filter((entry) => entry.locale === locale)
+    .sort((a, b) => dateKey(b) - dateKey(a));
 }
 
 export function getFeaturedEvents(locale: Locale, limit = 3) {
@@ -88,5 +126,7 @@ export function getFeaturedEvents(locale: Locale, limit = 3) {
 }
 
 export function getEventTranslation(translationKey: string, locale: Locale) {
-  return normalizedEvents.find((entry) => entry.translationKey === translationKey && entry.locale === locale);
+  return normalizedEvents.find(
+    (entry) => entry.translationKey === translationKey && entry.locale === locale,
+  );
 }

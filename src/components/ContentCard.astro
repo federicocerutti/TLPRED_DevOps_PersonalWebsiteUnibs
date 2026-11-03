@@ -28,7 +28,7 @@ const { title, href, summary, image, imageAttribution, imageStyle, meta = [], ta
     />
   )}
   {meta.length > 0 && <div class="meta">{meta.map((item) => <span>{item}</span>)}</div>}
-  <h3 style="margin: 0; font-size: 1.25rem; font-weight: 400; letter-spacing: -0.04em;"><a href={href}>{title}</a></h3>
+  <h3 style="margin: 0; font-size: 1.25rem; font-weight: 300; letter-spacing: -0.04em;"><a href={href}>{title}</a></h3>
   <p class="muted" style="margin: 0;">{summary}</p>
   {tags.length > 0 && <div class="meta">{tags.map((tag) => <span class="tag">{tag}</span>)}</div>}
   {ctaLabel && <div><a class="button secondary" href={href}>{ctaLabel}</a></div>}

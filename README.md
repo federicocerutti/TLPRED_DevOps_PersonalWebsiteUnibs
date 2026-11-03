@@ -85,25 +85,25 @@ REMOTE_BACKUP_DIR='.website-backups' LOCAL_BACKUP_DIR='./backups/website' ./scri
 - The content is intentionally structured in `src/lib/content-data.ts` so it can be extended without changing page templates.
 
 
-## Research-led advisory redesign (November 2026)
+## Minimal personal portfolio (3 November 2026)
 
-The site now includes bilingual advisory/about pages, an internal publications archive and an evidence-first research network. The original detail routes and content model remain in place. The derived data is public with owner-authorised reuse; raw imports and review notes stay in ignored `.private/` storage.
+The review branch `codex/research-advisory-redesign` now follows the original personal site's white background, portrait and quiet typography. All text uses self-hosted Inter Light. English and Italian routes and existing detail URLs are preserved.
+
+The homepage introduces Federico, then ARL/AFRL/Beretta collaborations, prospective-student topics and recent activity. The bilingual advisory pages explain paid commissioned research, technical consultancy and training through UniBS (contratti conto terzi), with links to the university's commissioned-research guidance, research regulations and specific conto terzi regulation. No software implementation or prototype service is offered.
+
+Collaborations use the former research-network routes but render ordinary organisation, collaborator and publication sections. Papers are grouped by year; projects by current/completed status; events are ordered by date. There are no listing searches, filters, graphs or explorer scripts. Legacy explorer query strings are ignored. `src/lib/portfolio.ts` contains curated organisation/publication IDs for homepage ordering and selections; the approved public data and integrity checks remain authoritative for attribution. Do not attribute earlier publications to a collaborator's current employer.
 
 ```sh
-npm ci
+npm ci --include=dev
 npm run check
 npm test
 npm run build
 npm run verify:dist
 npm run preview -- --host 127.0.0.1
-# In another terminal (Chrome installed):
+# With preview running and Chrome installed:
 npm run test:browser
 ```
 
-Node 22.12+ is required. Astro was updated to 7.4.5 to resolve advisories in the old dependency tree; output remains static. All added interaction code is vanilla TypeScript. Browser tests use the installed Google Chrome channel. The source includes optional development tools for typing, browser tests and formatting, without a client framework or graph dependency.
+Node 22.12+ is required. Browser tests cover company enquiries and institutional links, both languages, static content without JavaScript, legacy query URLs, white/Inter Light presentation, keyboard access and desktop/mobile layout. Screenshots are generated in `/private/tmp/portfolio-preview/`.
 
-Main additions: `/en/advisory/`, `/it/consulenza/`, `/en/about/`, `/it/profilo/`, `/en/research-network/`, `/it/rete-di-ricerca/`, `/it/ricerca/`, bilingual privacy pages. Publication summaries remain at their previous detail URLs. `/ricerca/` and `/en/` remain served, with canonical targets pointing to the primary routes.
-
-Network state uses `view=institutions|people`, `q`, `sector`, `country`, `from`, `to`, `selected`. Publication state uses `q`, `year`, `status`. Counts are identifier-based and period-specific. A derived historical affiliation never becomes evidence of present employment. DAIS and verified employer evidence do not add indexed publications. See `data/research-network/README.md` and `docs/CONTENT-REVIEW.md`.
-
-Matomo is prepared but disabled, with no production changes. See `docs/MATOMO.md` for the actual verified/blocked status. Both enablement and privacy approval flags, a real HTTPS tracker endpoint and a real Site ID are required. `scripts/deploy.sh --dry-run` now leaves the server unchanged, and website rsync protects directory or symlink `/matomo` mounts. New website backups exclude Matomo and environment files and are ignored by Git. Never run a production deployment before reviewing the preview and rollback backup.
+This is a preview revision, not a deployment. Matomo remains disabled; its consent gates and deployment protections remain in place. See `docs/MATOMO.md`. Do not deploy or activate analytics without the owner's subsequent instruction.

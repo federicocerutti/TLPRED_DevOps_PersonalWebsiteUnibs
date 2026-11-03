@@ -1,0 +1,36 @@
+---
+import type { ImageAttribution } from '../lib/content-data';
+import ContentCard from './ContentCard.astro';
+interface Item {
+  title: string;
+  href: string;
+  summary: string;
+  kind?: string;
+  status?: string;
+  image?: string;
+  imageAttribution?: ImageAttribution;
+  meta?: string[];
+  tags?: string[];
+  people?: string[];
+  years?: string[];
+}
+
+interface Props {
+  items: Item[];
+}
+const { items } = Astro.props;
+---
+
+<div class="portfolio-list">
+  {items.map((item) => (
+    <ContentCard
+      title={item.title}
+      href={item.href}
+      summary={item.summary}
+      image={item.image}
+      imageAttribution={item.imageAttribution}
+      meta={item.meta}
+      plain
+    />
+  ))}
+</div>

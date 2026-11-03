@@ -1,273 +1,71 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { research, sourceUrl, peopleById } from '../lib/research';
+import { collaborations, peopleById, worksById } from '../lib/portfolio';
+import { research, sourceUrl } from '../lib/research';
 import type { Locale } from '../lib/site';
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
 const it = locale === 'it';
-const sectors = [...new Set(research.organizations.map((o) => o.sector))].sort();
-const countries = [...new Set(research.organizations.map((o) => o.country))].sort();
-const sectorLabel = (s: string) =>
-  it
-    ? ({
-        Academic: 'Università',
-        Industry: 'Industria',
-        'Government / defence': 'Governo / difesa',
-        'Public research': 'Ricerca pubblica',
-        'Public organisation': 'Organizzazione pubblica',
-      }[s] ?? s)
-    : s;
 ---
 
 <BaseLayout
   locale={locale}
-  title={it ? 'Rete di ricerca | Federico Cerutti' : 'Research network | Federico Cerutti'}
+  title={it ? 'Collaborazioni | Federico Cerutti' : 'Collaborations | Federico Cerutti'}
   description={
     it
-      ? 'Esplora organizzazioni, ricercatori e pubblicazioni con evidenze tracciabili.'
-      : 'Explore organisations, researchers and publications with traceable evidence.'
+      ? 'Persone e organizzazioni con cui ho lavorato.'
+      : 'People and organisations I have worked with.'
   }
   alternatePath={it ? '/en/research-network/' : '/it/rete-di-ricerca/'}
 >
   <section class="page-intro">
-    <div class="container">
-      <span class="eyebrow">
-        {it ? 'Organizzazioni / Persone / Evidenze' : 'Organisations / People / Evidence'}
-      </span>
-      <h1>{it ? 'Connessioni di ricerca.' : 'Research connections.'}</h1>
-      <p class="lede">
+    <div class="container stack">
+      <h1>{it ? 'Collaborazioni' : 'Collaborations'}</h1>
+      <p>
         {it
-          ? 'Esamina il lavoro condiviso e le fonti che collegano ricercatori, università, aziende e laboratori pubblici.'
-          : 'Inspect shared work and the sources connecting researchers, universities, companies and public laboratories.'}
-      </p>
-      <p class="notice">
-        {it
-          ? 'Le connessioni descrivono evidenze bibliografiche o professionali. Non implicano incarichi di consulenza, endorsement o rapporti attuali tra organizzazioni.'
-          : 'Connections describe bibliographic or professional evidence. They do not imply consultancy contracts, endorsements or current agreements between organisations.'}
+          ? 'Lavoro con ricercatori di aziende, università e istituzioni in diversi paesi. Qui trovi le persone e alcuni dei lavori che ci collegano.'
+          : 'I work with researchers at companies, universities and institutions across different countries. Here are the people and the work we have done together.'}
       </p>
     </div>
   </section>
   <section class="section">
-    <div class="container" data-network data-locale={locale}>
-      <div class="archive-note">
-        {it
-          ? 'Snapshot del 3 novembre 2026: 162 opere riconciliate, 177 coautori, 66 organizzazioni. Le affiliazioni storiche appartengono al periodo della pubblicazione; le fonti professionali sono distinte.'
-          : 'Snapshot of 3 November 2026: 162 reconciled works, 177 co-authors, 66 organisations. Historical affiliations belong to publication time; professional sources are separate.'}
-      </div>
-      <div data-network-live hidden>
-        <div class="toolbar">
-          <div class="tabs" aria-label={it ? 'Vista della rete' : 'Network view'}>
-            <button type="button" data-view="institutions" aria-pressed="true">
-              {it ? 'Organizzazioni' : 'Institutions'}
-            </button>
-            <button type="button" data-view="people" aria-pressed="false">
-              {it ? 'Persone' : 'People'}
-            </button>
-          </div>
-          <button type="button" data-industry>
-            {it ? 'Connessioni con l’industria' : 'Industry connections'} ↗
-          </button>
-        </div>
-        <form class="controls" onsubmit="return false">
-          <label>
-            {it ? 'Cerca organizzazione o ricercatore' : 'Search organisation or researcher'}
-            <input
-              name="q"
-              type="search"
-              placeholder={it ? 'Es. IBM, Nodari, Airbus…' : 'e.g. IBM, Nodari, Airbus…'}
-            />
-          </label>
-          <label>
-            {it ? 'Tipo di organizzazione' : 'Institution type'}
-            <select name="sector">
-              <option value="">{it ? 'Tutti i tipi' : 'All types'}</option>
-              {sectors.map((s) => (
-                <option value={s}>{sectorLabel(s)}</option>
+    <div class="container collaborations-list">
+      {collaborations.map((o) => {
+        const affiliations = research.verifiedAffiliations.filter((a) => a.institutionId === o.id);
+        const names = [
+          ...new Set([
+            ...o.collaboratorIds.map((id) => peopleById.get(id)?.name).filter(Boolean),
+            ...affiliations.map((a) => a.researcherName),
+          ]),
+        ];
+        const works = o.workIds
+          .map((id) => worksById.get(id)!)
+          .filter(Boolean)
+          .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+        const reports = research.daisReports.filter((d) =>
+          affiliations.some((a) => a.sourceUrl === d.url),
+        );
+        return (
+          <article id={o.id} class="collaboration stack">
+            <h2>{o.sourceUrl ? <a href={o.sourceUrl}>{o.name}</a> : o.name}</h2>
+            <p>{names.join(', ')}</p>
+            <ul class="plain-links">
+              {works.map((w) => (
+                <li>
+                  <a href={sourceUrl(w)}>{w.title}</a> <span class="muted">({w.year})</span>
+                </li>
               ))}
-            </select>
-          </label>
-          <label>
-            {it ? 'Paese' : 'Country'}
-            <select name="country">
-              <option value="">{it ? 'Tutti i paesi' : 'All countries'}</option>
-              {countries.map((c) => (
-                <option value={c}>{c}</option>
+              {reports.map((d) => (
+                <li>
+                  <a href={d.url}>{d.title}</a> ({d.year})
+                </li>
               ))}
-            </select>
-          </label>
-          <label>
-            {it ? 'Dal (anno)' : 'From year'}
-            <input name="from" type="number" min="1900" max="2100" placeholder="2009" />
-          </label>
-          <label>
-            {it ? 'Al (anno)' : 'To year'}
-            <input name="to" type="number" min="1900" max="2100" placeholder="2026" />
-          </label>
-          <button type="reset">{it ? 'Azzera filtri' : 'Reset filters'}</button>
-        </form>
-        <p class="small muted">
-          {it
-            ? 'I filtri su paese e settore delle persone usano le affiliazioni delle singole pubblicazioni. Le fonti esterne sono mostrate separatamente per il loro anno di evidenza. I conteggi cambiano con il periodo selezionato.'
-            : 'Country and sector filters for people use individual publication affiliations. External sources are shown separately for their evidence year. Counts change with the selected period.'}
-        </p>
-        <div class="toolbar">
-          <p class="network-result-count" data-network-count aria-live="polite"></p>
-          <button data-overview-toggle type="button" aria-expanded="false">
-            {it ? 'Mostra panoramica completa' : 'Show full overview'}
-          </button>
-        </div>
-        <div class="overview" data-overview hidden>
-          <p class="small muted">
-            {it
-              ? 'Le linee continue collegano coautori o organizzazioni su pubblicazioni comuni con Federico. Le linee tratteggiate indicano fonti esterne. I conteggi non misurano la forza del rapporto.'
-              : 'Solid lines connect co-authors or organisations on shared publications with Federico. Dashed lines indicate external sources. Counts do not measure relationship strength.'}
-          </p>
-          <div data-overview-svg></div>
-          <details>
-            <summary>
-              {it
-                ? 'Tabella delle connessioni e delle pubblicazioni'
-                : 'Table of connections and publications'}
-            </summary>
-            <div class="table-wrap" data-edge-table></div>
-          </details>
-        </div>
-        <div class="network-shell">
-          <div>
-            <div
-              class="table-wrap network-table-scroll"
-              tabindex="0"
-              role="region"
-              aria-label={it ? 'Risultati della rete' : 'Network results'}
-            >
-              <table>
-                <caption>{it ? 'Risultati esplorabili' : 'Explore the results'}</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">{it ? 'Nome' : 'Name'}</th>
-                    <th scope="col">{it ? 'Contesto' : 'Context'}</th>
-                    <th scope="col">{it ? 'Opere nel periodo' : 'Works in period'}</th>
-                  </tr>
-                </thead>
-                <tbody data-network-results></tbody>
-              </table>
-            </div>
-            <p data-network-empty hidden class="notice">
-              {it
-                ? 'Nessun risultato. Verifica i filtri e l’intervallo degli anni.'
-                : 'No matches. Check your filters and year range.'}
-            </p>
-          </div>
-          <aside
-            class="network-panel"
-            data-network-panel
-            aria-label={it ? 'Evidenze della selezione' : 'Selected evidence'}
-          >
-            <h2 tabindex="-1">{it ? 'Scegli una connessione' : 'Choose a connection'}</h2>
-            <p class="notice">
-              {it
-                ? 'Apri un’organizzazione o una persona per esaminare pubblicazioni, date e fonti.'
-                : 'Open an organisation or person to inspect publications, dates and sources.'}
-            </p>
-          </aside>
-        </div>
-      </div>
-      <div data-network-fallback>
-        <p class="notice">
-          {it
-            ? 'Archivio accessibile completo. La ricerca interattiva si aggiunge quando JavaScript è disponibile.'
-            : 'Complete accessible archive. Interactive search is added when JavaScript is available.'}
-        </p>
-        <h2 style="margin:2rem 0">{it ? 'Organizzazioni' : 'Institutions'}</h2>
-        {research.organizations.map((o) => (
-          <details id={o.id}>
-            <summary>
-              {o.name} · {o.country} · {o.workIds.length}{' '}
-              {it ? 'opere indicizzate' : 'indexed works'}
-            </summary>
-            <div class="stack">
-              <p class="small">
-                {sectorLabel(o.sector)} · {o.firstYear}–{o.lastYear}
-              </p>
-              <p class="small">{o.evidenceClass}</p>
-              <p class="small">
-                {o.collaboratorIds
-                  .map((id) => peopleById.get(id)?.name)
-                  .filter(Boolean)
-                  .join(', ')}
-              </p>
-              <ul>
-                {o.workIds
-                  .map((id) => research.works.find((w) => w.id === id)!)
-                  .map((w) => (
-                    <li>
-                      <a href={sourceUrl(w)}>
-                        {w.year} · {w.title}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-              {research.verifiedAffiliations
-                .filter((a) => a.institutionId === o.id)
-                .map((a) => (
-                  <p>
-                    <a href={a.sourceUrl}>
-                      {a.researcherName} · {a.evidenceClass} · {a.year}
-                    </a>
-                  </p>
-                ))}
-            </div>
-          </details>
-        ))}
-        <h2 style="margin:2rem 0">{it ? 'Persone' : 'People'}</h2>
-        {research.people.map((p) => (
-          <details id={p.id}>
-            <summary>
-              {p.name} · {p.workIds.length} {it ? 'opere' : 'works'}
-            </summary>
-            <div class="stack">
-              <ul>
-                {p.observedAffiliations.map((a) => (
-                  <li>
-                    {research.organizations.find((o) => o.id === a.institutionId)?.name} ·{' '}
-                    {a.yearsObserved.join(', ')}
-                  </li>
-                ))}
-              </ul>
-              {research.verifiedAffiliations
-                .filter((a) => a.personId === p.id)
-                .map((a) => (
-                  <p>
-                    <a href={a.sourceUrl}>
-                      {a.institutionName} · {a.evidenceClass} · {a.year}
-                    </a>
-                  </p>
-                ))}
-              <ul>
-                {p.workIds
-                  .map((id) => research.works.find((w) => w.id === id)!)
-                  .map((w) => (
-                    <li>
-                      <a href={sourceUrl(w)}>
-                        {w.year} · {w.title}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          </details>
-        ))}
-      </div>
-      <p class="notice">
-        {it
-          ? 'Copertura e limiti: le identità prive di identificatore restano provvisorie; affiliazioni mancanti non vengono inferite. Le organizzazioni senza opere indicizzate possono avere soltanto evidenze professionali o DAIS. I conteggi per organizzazione possono sovrapporsi.'
-          : 'Coverage and limitations: identities without identifiers remain provisional; missing affiliations are not inferred. Organisations with no indexed works may have professional or DAIS evidence only. Organisation publication counts can overlap.'}
-      </p>
+            </ul>
+          </article>
+        );
+      })}
     </div>
   </section>
-  <script>
-    import '../scripts/network';
-  </script>
 </BaseLayout>

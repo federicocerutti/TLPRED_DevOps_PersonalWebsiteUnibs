@@ -1,138 +1,135 @@
 import { test, expect } from '@playwright/test';
-test('advisory journey, bilingual navigation and disabled tracking', async ({ page }) => {
-  const requests: string[] = [];
-  page.on('request', (r) => {
-    if (/matomo\.(php|js)/.test(r.url())) requests.push(r.url());
-  });
+
+test('company journey and bilingual university agreements', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('h1')).toContainText('AI, security');
+  await expect(page.locator('.home-profile')).toContainText('Full Professor');
+  await expect(page.locator('.featured-collaborations h3')).toHaveText(['ARL', 'AFRL', 'Beretta']);
+  await expect(page.getByRole('link', { name: 'TRUE', exact: true })).toHaveAttribute(
+    'href',
+    '/en/projects/true/',
+  );
+  await expect(page.getByRole('link', { name: 'NS-CEP', exact: true })).toHaveAttribute(
+    'href',
+    '/en/projects/ns-cep/',
+  );
   await page
     .getByRole('navigation', { name: 'Primary navigation' })
     .getByRole('link', { name: 'Advisory', exact: true })
     .click();
-  await expect(page).toHaveURL(/\/en\/advisory\//);
+  await expect(page.locator('main')).toContainText('contratti conto terzi');
   await expect(
-    page.getByRole('link', { name: 'Discuss an advisory engagement' }).first(),
-  ).toHaveAttribute('href', 'mailto:federico.cerutti@unibs.it');
+    page.getByRole('link', { name: 'Commissioned research', exact: true }),
+  ).toHaveAttribute('href', 'https://www.unibs.it/en/enti-aziende/ricerca-commissionata');
+  await expect(
+    page.getByRole('link', { name: 'Research regulations (in Italian)', exact: true }),
+  ).toHaveAttribute('href', /regolamenti-ricerca$/);
+  await expect(
+    page.getByRole('link', {
+      name: 'Regulation for commissioned activities (in Italian)',
+      exact: true,
+    }),
+  ).toHaveAttribute('href', 'https://www.unibs.it/it/node/1536');
+  await expect(page.locator('main a[href="mailto:federico.cerutti@unibs.it"]')).toBeVisible();
   await page.getByRole('link', { name: 'Passa a Italiano' }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'it');
-  await expect(page.locator('h1')).toContainText('decisioni tecniche');
-  await page.locator('#analytics-settings summary').click();
-  await expect(page.locator('[data-consent-accept]')).toBeDisabled();
-  expect(requests).toEqual([]);
+  await expect(page.locator('main')).toContainText('contratti conto terzi');
+  await expect(
+    page.getByRole('link', { name: 'Ricerca commissionata', exact: true }),
+  ).toHaveAttribute('href', 'https://www.unibs.it/it/enti-aziende/ricerca-commissionata');
 });
-test('publication search, year/source filters, empty/reset and history', async ({ page }) => {
-  await page.goto('/en/research/');
-  await expect(page.locator('[data-pub-row]:visible')).toHaveCount(162);
-  await page.locator('[data-pub-q]').fill('extortion');
-  await expect(page.locator('[data-pub-count]')).toContainText('2 / 162');
-  await page.locator('[data-pub-year]').selectOption('2026');
-  await expect(page.locator('[data-pub-row]:visible')).toHaveCount(2);
-  await page.locator('[data-pub-status]').selectOption('DBLP');
-  await expect(page.locator('[data-pub-empty]')).toBeVisible();
-  await page.getByRole('button', { name: 'Reset', exact: true }).click();
-  await expect(page.locator('[data-pub-row]:visible')).toHaveCount(162);
-  await page.goBack();
-  await expect(page.locator('[data-pub-empty]')).toBeVisible();
-  await page.goto('/it/ricerca/?q=uncertainty');
-  await expect(page.locator('[data-pub-q]')).toHaveValue('uncertainty');
-  await expect(page.locator('h1')).toHaveText('Pubblicazioni.');
-  await expect(page.locator('script[type="application/ld+json"]')).toHaveCount(1);
+
+test('static portfolio listings, legacy queries and attribution', async ({ page }) => {
+  for (const path of [
+    '/en/research-network/?q=private&selected=anything',
+    '/it/rete-di-ricerca/',
+    '/en/research/',
+    '/it/ricerca/',
+    '/en/projects/',
+    '/progetti/',
+    '/en/events/',
+    '/eventi/',
+  ]) {
+    await page.goto(path);
+    await expect(
+      page.locator('main input, main select, main form, main svg, [data-network-panel]'),
+    ).toHaveCount(0);
+    await expect(page.locator('h1')).toHaveCount(1);
+  }
+  await page.goto('/en/research-network/');
+  const entries = page.locator('.collaboration');
+  await expect(entries.nth(0)).toContainText('Army Research Laboratory');
+  await expect(entries.nth(1)).toContainText('Air Force Research Laboratory');
+  await expect(entries.nth(2)).toContainText('Stefano Morzenti');
+  const nec = page.locator('[id="org:nec-laboratories-europe-verified-current"]');
+  await expect(nec).toContainText('Lorenzo Nodari');
+  await expect(nec.locator('li')).toHaveCount(0);
+  await expect(page.locator('[id="org:airbus-dais-joint-demonstration"]')).toContainText(
+    'Alistair Nottle',
+  );
+  await page.goto('/en/projects/');
+  await expect(page.getByRole('heading', { name: 'Current projects', exact: true })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Completed projects', exact: true }),
+  ).toBeVisible();
 });
-test('institution evidence, people, filters, deep links and overview tables', async ({ page }) => {
-  const errors: string[] = [];
-  page.on('pageerror', (error) => errors.push(error.message));
-  await page.goto('/en/research-network/?selected=org:nec-laboratories-europe-verified-current');
-  await expect(page.locator('[data-network-count]')).toContainText('66 organisations');
-  const panel = page.locator('[data-network-panel]');
-  await expect(panel.locator('h2')).toContainText('NEC Laboratories');
-  await expect(panel).toContainText('0 works in period');
-  await expect(panel).toContainText('Lorenzo Nodari');
-  await expect(panel).toContainText('Current organisation profile');
-  await page.getByRole('button', { name: 'Industry connections' }).click();
-  await expect(page).toHaveURL(/sector=Industry/);
-  expect(await page.locator('[data-network-results] tr').count()).toBeGreaterThan(5);
-  await page.getByLabel('Search organisation or researcher').fill('Hursley');
-  await expect(page.locator('[data-network-results] tr')).toHaveCount(1);
-  await page.locator('[data-network-results] button').click();
-  await expect(panel.locator('h2')).toContainText('Hursley');
-  await expect(panel).toContainText('4 works in period');
-  await page.getByLabel('From year').fill('2020');
-  await page.getByLabel('To year').fill('2020');
-  await expect(panel).toContainText('1 works in period');
-  await page.getByRole('button', { name: 'People', exact: true }).click();
-  await page.getByRole('button', { name: 'Reset filters' }).click();
-  await page.getByRole('button', { name: 'People', exact: true }).click();
-  await expect(page.locator('[data-network-count]')).toContainText('177 people');
-  await page.getByLabel('Search organisation or researcher').fill('Morzenti');
-  await expect(page.locator('[data-network-results] tr')).toHaveCount(1);
-  await page.locator('[data-network-results] button').click();
-  await expect(panel).toContainText('Beretta');
-  await expect(panel).toContainText('2026');
-  await page.getByRole('button', { name: 'Reset filters' }).click();
-  await page.getByRole('button', { name: 'People', exact: true }).click();
-  await page.getByRole('button', { name: 'Show full overview' }).click();
-  await expect(page.locator('[data-overview] svg')).toBeVisible();
-  await page.locator('[data-overview] > details > summary').click();
-  await expect(page.locator('[data-edge-table] caption')).toContainText('720');
-  expect(errors).toEqual([]);
-});
-test('network state survives reload and browser back; keyboard selection works', async ({
-  page,
-}) => {
-  await page.goto('/it/rete-di-ricerca/?sector=Industry&q=Airbus');
-  await expect(page.locator('[data-network-results] tr')).toHaveCount(1);
-  const button = page.locator('[data-network-results] button');
-  await button.focus();
-  await page.keyboard.press('Enter');
-  await expect(page.locator('[data-network-panel] h2')).toContainText('Airbus');
-  await expect(page.locator('[data-network-panel]')).toContainText('DAIS demo participant');
-  await page.reload();
-  await expect(page.locator('[data-network-panel] h2')).toContainText('Airbus');
-  await page.goBack();
-  await expect(page.getByLabel('Cerca organizzazione o ricercatore')).toHaveValue('Airbus');
-});
-test('mobile layouts, dark theme, reduced motion and screenshots', async ({ page }) => {
+
+test('white Inter Light layouts, keyboard focus and screenshots', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('theme', 'dark'));
+  await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.goto('/');
-    await page.screenshot({
-      path: `../../outputs/after-${width === 390 ? 'mobile' : 'desktop'}.png`,
-      fullPage: true,
-    });
-    expect(
-      await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
-    ).toBeTruthy();
-    await page.getByRole('button', { name: 'Toggle theme' }).click();
-    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
-    await page.screenshot({
-      path: `../../outputs/after-${width === 390 ? 'mobile' : 'desktop'}-dark.png`,
-      fullPage: true,
-    });
-    await page.getByRole('button', { name: 'Toggle theme' }).click();
-    await page.goto('/en/research-network/?selected=org:ibm-research-hursley-uk');
-    await expect(page.locator('[data-network-panel] h2')).toHaveText('IBM Research Hursley (UK)');
-    expect(
-      await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
-    ).toBeTruthy();
-    await page.screenshot({
-      path: `../../outputs/network-${width === 390 ? 'mobile' : 'desktop'}.png`,
-      fullPage: true,
-    });
+    for (const [path, name] of [
+      ['/', 'home'],
+      ['/en/advisory/', 'advisory'],
+      ['/it/', 'home-it'],
+      ['/en/research-network/', 'collaborations'],
+    ]) {
+      await page.goto(path);
+      await page.evaluate(() => document.fonts.ready);
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+      ).toBeTruthy();
+      expect(
+        await page.locator('body').evaluate((el) => getComputedStyle(el).backgroundColor),
+      ).toBe('rgb(255, 255, 255)');
+      const weights = await page
+        .locator('main h1, main h2, main h3, main p, .primary-nav a')
+        .evaluateAll((els) => els.map((el) => getComputedStyle(el).fontWeight));
+      expect(weights.every((w) => w === '300')).toBeTruthy();
+      await expect(page.locator('[data-theme-toggle]')).toHaveCount(0);
+      const grid = page.locator('.three-col').first();
+      if (await grid.count()) {
+        const columns = await grid.evaluate(
+          (el) => getComputedStyle(el).gridTemplateColumns.split(' ').length,
+        );
+        expect(columns).toBe(width === 390 ? 1 : 3);
+      }
+      if (name !== 'collaborations')
+        await page.screenshot({
+          path: `/private/tmp/portfolio-preview/${name}-${width}.png`,
+          fullPage: true,
+        });
+    }
   }
-  await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto('/en/advisory/');
-  await page.screenshot({ path: '../../outputs/advisory-desktop.png', fullPage: true });
+  await page.goto('/');
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.skip-link')).toBeFocused();
 });
-test('essential network evidence works with JavaScript disabled', async ({ browser }) => {
+
+test('portfolio content remains available without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321/en/research-network/');
-  const fallback = page.locator('[data-network-fallback]');
-  await expect(fallback).toBeVisible();
-  await fallback.locator('summary').filter({ hasText: 'IBM Research Hursley' }).click();
-  await expect(fallback.locator('details[open]')).toContainText('Historical');
-  await expect(fallback.locator('details[open] a').first()).toHaveAttribute('href', /^https:\/\//);
+  for (const path of [
+    '/',
+    '/en/research-network/',
+    '/en/research/',
+    '/en/projects/',
+    '/it/consulenza/',
+  ]) {
+    await page.goto(`http://127.0.0.1:4321${path}`);
+    await expect(page.locator('main')).toBeVisible();
+    expect(await page.locator('main a').count()).toBeGreaterThan(2);
+  }
+  await expect(page.locator('main')).toContainText('attività a pagamento');
   await context.close();
 });

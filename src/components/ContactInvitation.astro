@@ -5,28 +5,22 @@ const it = locale === 'it';
 ---
 
 <section class="section contact-band">
-  <div class="container two-col">
-    <div>
-      <span class="eyebrow">{it ? 'Parliamone' : 'Start a conversation'}</span>
-      <h2>{it ? 'Quale decisione devi prendere?' : 'What decision are you facing?'}</h2>
-    </div>
-    <div class="stack">
-      <p class="lede">
-        {it
-          ? 'Per discutere una consulenza, scrivimi indicando il problema, il contesto della tua organizzazione e le tempistiche.'
-          : 'To discuss an advisory engagement, email me with the problem, your organisational context and your timing.'}
-      </p>
-      <div class="actions">
-        <a
-          class="button"
-          data-analytics-event="advisory-contact"
-          href={`mailto:${site.contactEmail}`}
-        >
-          {it ? 'Discutiamo una consulenza' : 'Discuss an advisory engagement'}{' '}
-          <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-      <p class="small muted">{site.contactEmail}</p>
-    </div>
+  <div class="container stack">
+    <h2>{it ? 'Contatti' : 'Contact'}</h2>
+    <p>
+      {it
+        ? 'Per ricerca, consulenza tecnico-scientifica o formazione attraverso l’Università degli Studi di Brescia, scrivimi indicando il problema, il contesto della tua organizzazione e le tempistiche indicative. Valutiamo insieme l’adeguatezza della collaborazione e definiamo attività, modalità operative e compenso secondo le procedure dell’Ateneo.'
+        : 'For research, technical consultancy or training through the University of Brescia, email me with the problem, your organisational context and indicative timing. We can discuss whether the collaboration is a fit, then define the activities, working arrangements and fee through the university’s procedures.'}
+    </p>
+    <p>
+      <a data-analytics-event="advisory-contact" href={`mailto:${site.contactEmail}`}>
+        {site.contactEmail}
+      </a>
+    </p>
+    <p>
+      <a href={it ? '/it/consulenza/' : '/en/advisory/'}>
+        {it ? 'Collaborare con l’Università' : 'Working with the university'}
+      </a>
+    </p>
   </div>
 </section>

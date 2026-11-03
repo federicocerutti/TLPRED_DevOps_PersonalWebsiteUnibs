@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
-import FilterableList from '../../components/FilterableList.astro';
+import PortfolioList from '../../components/PortfolioList.astro';
 import { getLocalizedCollection } from '../../lib/content-data';
-import { getProjectActiveYears, sectionLabels } from '../../lib/site';
+import { getProjectActiveYears } from '../../lib/site';
 
 const locale = 'it';
-const labels = sectionLabels[locale];
 const items = getLocalizedCollection('projects', locale).map((entry) => ({
   title: entry.title,
   href: `/progetti/${entry.pathSlug}/`,
@@ -21,7 +20,14 @@ const items = getLocalizedCollection('projects', locale).map((entry) => ({
   years: getProjectActiveYears(entry.startDate, entry.endDate),
 }));
 ---
-<BaseLayout locale={locale} title="Progetti | Federico Cerutti" description="Progetti selezionati su cybersecurity, AI, causal reasoning e decision support." image="/images/sourced/projects/project-true.jpg" alternatePath="/en/projects/">
+
+<BaseLayout
+  locale={locale}
+  title="Progetti | Federico Cerutti"
+  description="Progetti selezionati su cybersecurity, AI, causal reasoning e decision support."
+  image="/images/sourced/projects/project-true.jpg"
+  alternatePath="/en/projects/"
+>
   <section class="section">
     <div class="container">
       <SectionIntro title="Progetti selezionati" />
@@ -29,7 +35,18 @@ const items = getLocalizedCollection('projects', locale).map((entry) => ({
   </section>
   <section class="section">
     <div class="container">
-      <FilterableList items={items} showOpenButton={false} spacious showKindFilter={false} showTagFilter={false} showPersonFilter={false} labels={{ searchPlaceholder: labels.filterSearch, kind: labels.filterKind, status: labels.filterStatus, tag: labels.filterTag, person: labels.filterPerson, year: labels.filterYear, all: labels.all, noResults: labels.noResults, openLabel: labels.readMore }} />
+      {['running', 'finished'].map((status) => (
+        <section class="stack project-group">
+          <h2>{status === 'running' ? 'Progetti in corso' : 'Progetti conclusi'}</h2>
+          <PortfolioList
+            items={items.filter((item) =>
+              status === 'running'
+                ? ['running', 'in corso'].includes(item.status)
+                : !['running', 'in corso'].includes(item.status),
+            )}
+          />
+        </section>
+      ))}
     </div>
   </section>
 </BaseLayout>
