@@ -1,3 +1,40 @@
+# Website continuation handoff
+
+## Read first — current handoff, 3 November 2026
+
+This section supersedes older preview-only instructions and intermediate counts below. The owner authorised commit, sync and production deployment, then requested a final handoff and complete repository sync.
+
+### Completed and deployed
+
+- Website repository: `/Users/geryo/github/TLPRED_DevOps_PersonalWebsiteUnibs`; GitHub `federicocerutti/TLPRED_DevOps_PersonalWebsiteUnibs`; branch `codex/research-advisory-redesign`. Implementation release `931877c` is deployed. Documentation release `ba4fa1c` and this handoff are descendants; resume from the fetched branch tip, not an older hash mentioned below.
+- Public website: https://federico-cerutti.unibs.it/ . English and Italian homepages, collaboration/project/teaching/event listings, robots, sitemap and vCard matched the validated build over HTTPS after deployment. Sitemap: 288 canonical URLs.
+- Final content: 16 projects, 49 events and 27 teaching entries; project/event/teaching cards share three desktop columns and one mobile column. Collaboration statistics: eight companies, seven institutions/research centres and 36 universities. Institution removals, ARL attribution and original paper-reference links are preserved; raw historical evidence remains intact.
+- Homepage has LinkedIn, clickable university email and work phone `+39 030 371 5453`, plus `/federico-cerutti.vcf`. Removed the optional analytics footer panel; kept the university privacy-policy link.
+- Validation passed: no type diagnostics, 13 unit tests, 17 browser tests, 292 generated HTML files, 5,251 internal links and SEO checks for all 289 content pages. No further code change was made by the handoff-only sync.
+- Rollback backup: `web.unibs.it:/home/federico-cerutti/.website-backups/website-20261103-231020.tar.gz`; local copy `/private/tmp/website-release-backups/website-20261103-231020.tar.gz`. The temporary local copy is not a durable backup. Backup archives are deliberately excluded from Git.
+
+### Matomo: staged privately, installation and activation unfinished
+
+HTTP PHP returned source instead of executing. The harmless random-name probe was immediately removed. Apache has `proxy_fcgi` and PHP-FPM pools for other accounts, but no dedicated pool/socket for this account was found. The real HTTP PHP identity is therefore unverified. Do not use another account's pool or expose the staged application/config while PHP source is downloadable.
+
+Verified upstream Matomo 5.14.2 is staged at `/home/federico-cerutti/.local/share/matomo/releases/5.14.2` with a private `current` symlink. TLS database configuration is at `/home/federico-cerutti/.config/matomo/config.ini.php`, linked from the private release, mode 0600. The existing private credential environment/CA remains on that host. The authenticated, certificate-verified database diagnostic passed. Never print or commit credentials or read private configuration into frontend tooling.
+
+There is **no public Matomo mount, completed database installation, administrator account, real site ID, archive cron, analytics backup job or live tracking**. Production analytics configuration is `enabled:false`. Database tables were not created by this session. Prepared settings are not evidence of operating retention or country-only reporting.
+
+The prepared frontend collects page views and approximate focused-page duration only, with a 30-second heartbeat, cookies and browser-feature detection disabled, no referrers or custom events, and a fresh memory-only identifier for each document. It respects Do Not Track, Global Privacy Control and previous refusals. Native server settings must force cookieless tracking, randomise config IDs, mask three IP bytes before geolocation (104 bits for IPv6 in this release), disable visitor logs/profiles and device/referrer collection, and suppress all location detail beyond country. Verify real heartbeat correlation before activation; do not claim exact visitors/sessions or fully anonymous processing. Prepared retention is seven raw-log days and six aggregate-report months, with bounded encrypted backup retention still to implement. Apache logs belong exclusively to university sysadmins and are outside this work.
+
+### Resume the remaining work
+
+1. Read website `docs/MATOMO.md` and `ops/matomo/config.ini.php.example`; the former includes exact verified release/signature and administrator requirements.
+2. University sysadmins must provision the dedicated PHP-FPM handler and protected `/matomo/` alias/mount, identify the HTTP PHP user, grant narrowly scoped application/config/CA access, and verify upstream hardening. Do not publish an unauthenticated installer or writable private paths. No message to sysadmins was sent; messaging requires explicit owner instruction.
+3. After support is available, complete restricted installation against the existing TLS database without recreating it, obtain the real site ID and secure admin access, then apply/read back native privacy settings. Verify country-only raw records, absent cookies/browser details/referrers, per-page identifier lifetime and actual heartbeat updates.
+4. Install and verify hourly archiving with overlap protection, raw/report deletion, bounded encrypted backups, isolated restore and monitoring before activation. Keep credentials and command logs private. The owner has authorised installation/deployment; earlier preview-only restrictions are historical.
+5. Rebuild with the verified HTTPS endpoint and numeric site ID only after runtime/privacy/recovery checks pass, deploy through `scripts/deploy.sh`, and check actual production requests and reporting. The helper protects `/matomo/` and excludes it from website backups; Matomo recovery remains separate.
+
+Live work is tracked in Super Productivity **Definire una strategia per il sito personale e LinkedIn**, ID `xCOj9P1GqKHCsZUzdS2Es`; deployment and blocker notes were saved and read back. Keep that task open for the unfinished Matomo work. The credential connection for the local task API and private Matomo server configuration do not transfer through Git. Knowledge-base evidence and the portable handoff are in `management/2026-11-03-personal-website-redesign-handoff.md` and `attachments/projects/personal-website-redesign/2026-11-03/` in the private personal-knowledge repository (production handoff commit `ce9f9db` before this final sync).
+
+## Historical implementation record
+
 ## Added completed events — Fusion, TIG and Federmanager
 
 Owner reported attendance/speaking at these past events on 3 November 2026. Added bilingual records and dedicated pages, sorted into the homepage’s three newest activities:
