@@ -41,6 +41,14 @@ const socialImagePath = requestedImage.toLowerCase().endsWith('.svg')
 const socialImageUrl = new URL(socialImagePath, Astro.site ?? site.baseUrl).toString();
 const socialLocale = locale === 'it' ? 'it_IT' : 'en_GB';
 const alternateSocialLocale = locale === 'it' ? 'en_GB' : 'it_IT';
+const themeToggleTitle = locale === 'it' ? 'Cambia tema' : 'Toggle theme';
+const lightThemeLabel = locale === 'it' ? 'Chiaro' : 'Light';
+const darkThemeLabel = locale === 'it' ? 'Scuro' : 'Dark';
+const themeSystemHint =
+  locale === 'it'
+    ? 'Segue il tema del sistema finché non lo cambi.'
+    : 'Follows the system theme until you change it.';
+
 const footerAffiliations =
   locale === 'it'
     ? [
@@ -103,6 +111,18 @@ function isActivePath(href: string) {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={imageAlt} />
+    <script is:inline>
+      (() => {
+        let stored;
+        try {
+          stored = localStorage.getItem('theme');
+        } catch {}
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme =
+          stored === 'light' || stored === 'dark' ? stored : systemDark ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">
@@ -139,6 +159,39 @@ function isActivePath(href: string) {
           class="header-utilities"
           aria-label={locale === 'it' ? 'Controlli interfaccia' : 'Interface controls'}
         >
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            data-light-label={lightThemeLabel}
+            data-dark-label={darkThemeLabel}
+            data-toggle-title={themeToggleTitle}
+            data-system-hint={themeSystemHint}
+            title={themeSystemHint}
+            aria-label={themeToggleTitle}
+          >
+            <svg
+              data-theme-icon="dark"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <svg
+              data-theme-icon="light"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2.2M12 19.8V22M4.22 4.22l1.56 1.56M18.22 18.22l1.56 1.56M2 12h2.2M19.8 12H22M4.22 19.78l1.56-1.56M18.22 5.78l1.56-1.56" />
+            </svg>
+          </button>
           <a
             class="lang-switch"
             href={alternatePath ?? (locale === 'it' ? '/' : '/it/')}
@@ -218,6 +271,43 @@ function isActivePath(href: string) {
         </span>
       </div>
     </footer>
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector('[data-theme-toggle]');
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (!button) return;
+
+        const labels = {
+          light: button.dataset.lightLabel || 'Light',
+          dark: button.dataset.darkLabel || 'Dark',
+        };
+        const toggleTitle = button.dataset.toggleTitle || 'Toggle theme';
+        const systemHint = button.dataset.systemHint || '';
+
+        const applyTheme = (theme) => {
+          root.dataset.theme = theme;
+          if (themeColor) {
+            themeColor.setAttribute('content', theme === 'dark' ? '#171717' : '#ffffff');
+          }
+          button.setAttribute(
+            'title',
+            `${toggleTitle}: ${labels[theme]}${systemHint ? `. ${systemHint}` : ''}`,
+          );
+          button.setAttribute('aria-label', `${toggleTitle}: ${labels[theme]}`);
+        };
+
+        applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+        button.addEventListener('click', () => {
+          const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          try {
+            localStorage.setItem('theme', next);
+          } catch {}
+          applyTheme(next);
+        });
+      })();
+    </script>
     <Analytics locale={locale} />
   </body>
 </html>

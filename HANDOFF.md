@@ -1,3 +1,11 @@
+# Company-first portfolio revision
+
+This supersedes the earlier visual/content direction below. Night mode restored. Homepage leads with adopting AI and protecting organisational knowledge; student invitation stays secondary. Advisory gives concrete offers for knowledge protection, AI/cyber risk review, decision traceability and training, plus a plain explanation of commissioning UniBS.
+
+The papers index is removed and old index URLs redirect to DBLP. Collaboration cards are grouped companies → institutions/research centres → universities; names and Intelpoint are omitted. Cards reveal papers/reports on opening and support native no-JavaScript use. Existing public source data and affiliation boundaries remain intact.
+
+Preview first remains in force. No production deployment or analytics activation.
+
 # Minimal portfolio handoff — 3 November 2026
 
 ## Current direction

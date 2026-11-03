@@ -1,10 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CompanyIntroduction from './CompanyIntroduction.astro';
 import ContentCard from './ContentCard.astro';
 import { getProfile } from '../lib/content-data';
-import { bio as enBio } from '../lib/bio-en';
-import { bio as itBio } from '../lib/bio-it';
 import { getLocalizedEvents } from '../lib/events-data';
 import { featuredCollaborations, organizationsById, worksById } from '../lib/portfolio';
 import { sourceUrl } from '../lib/research';
@@ -29,9 +26,21 @@ const events = getLocalizedEvents(locale).slice(0, 3);
   <section class="home-introduction">
     <div class="container home-profile">
       <div class="stack">
-        <h1 class="sr-only">Federico Cerutti</h1>
-        <div class="biography" set:html={`<p>${it ? itBio : enBio}</p>`} />
-        <CompanyIntroduction locale={locale} />
+        <h1 class="home-opening">
+          {it
+            ? 'Adottare l’AI. Proteggere ciò che la tua organizzazione sa.'
+            : 'Adopt AI. Protect what your organisation knows.'}
+        </h1>
+        <p class="biography">
+          {it
+            ? 'Aiuto aziende ed enti a valutare i rischi dell’AI, proteggere le conoscenze critiche e prendere decisioni motivate su tecnologia e sicurezza.'
+            : 'I help companies and institutions assess AI risks, protect critical knowledge and make informed decisions about technology and security.'}
+        </p>
+        <p>
+          {it
+            ? 'Sono Federico Cerutti, Professore Ordinario all’Università degli Studi di Brescia. Porto ricerca su AI e cybersecurity nella consulenza tecnica e nella formazione per le organizzazioni.'
+            : 'I’m Federico Cerutti, Full Professor at the University of Brescia. I bring AI and cybersecurity research into technical consultancy and training for organisations.'}
+        </p>
         <p>
           <a href={it ? '/it/consulenza/' : '/en/advisory/'}>
             {it ? 'Ricerca, consulenza e formazione' : 'Research, consultancy and training'}
@@ -79,7 +88,7 @@ const events = getLocalizedEvents(locale).slice(0, 3);
   </section>
   <section class="section">
     <div class="container stack">
-      <h2>{it ? 'Per chi vuole fare ricerca' : 'For prospective students'}</h2>
+      <h2>{it ? 'Per gli studenti' : 'For students'}</h2>
       <p>
         {it
           ? 'Se ti interessa una tesi o un percorso di ricerca su AI, cybersecurity e ragionamento sotto incertezza, dai un’occhiata ai progetti in corso e scrivimi per discuterne.'

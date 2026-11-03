@@ -16,9 +16,11 @@ export const featuredCollaborations = [
     workIds: ['scopus:2-s2.0-105037632387'],
   },
 ];
-export const collaborations = [...research.organizations].sort((a, b) => {
-  const ai = featuredCollaborations.findIndex((x) => x.organizationId === a.id);
-  const bi = featuredCollaborations.findIndex((x) => x.organizationId === b.id);
-  return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) || a.name.localeCompare(b.name);
-});
+export const collaborations = research.organizations
+  .filter((o) => !/intelpoint/i.test(o.name))
+  .sort((a, b) => {
+    const ai = featuredCollaborations.findIndex((x) => x.organizationId === a.id);
+    const bi = featuredCollaborations.findIndex((x) => x.organizationId === b.id);
+    return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) || a.name.localeCompare(b.name);
+  });
 export { organizationsById, worksById, peopleById };

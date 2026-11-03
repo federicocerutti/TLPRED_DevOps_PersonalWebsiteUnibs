@@ -26,6 +26,8 @@ for (const file of files.filter((p) => /\.(html|js|json|map|xml|txt|css)$/.test(
     assert.ok(!body.includes(word), `Forbidden field in ${file}: ${word}`);
   if (file.endsWith('.html')) {
     htmlCount++;
+    if (/http-equiv="refresh"/i.test(body) && body.includes('https://dblp.org/pid/97/18.html'))
+      continue;
     assert.equal(
       (body.match(/<h1(?:\s|>)/g) ?? []).length,
       1,
@@ -48,7 +50,7 @@ for (const file of files.filter((p) => /\.(html|js|json|map|xml|txt|css)$/.test(
 const sitemap = readFileSync('dist/sitemap.xml', 'utf8');
 for (const file of files.filter((p) => p.endsWith('/index.html'))) {
   const url = file.replace(/^dist/, '').replace(/index.html$/, '');
-  if (url === '/en/' || url === '/ricerca/') continue;
+  if (['/en/', '/ricerca/', '/en/research/', '/it/ricerca/'].includes(url)) continue;
   assert.ok(
     sitemap.includes(`https://federico-cerutti.unibs.it${url}</loc>`),
     `Missing sitemap: ${url}`,

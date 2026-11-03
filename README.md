@@ -107,3 +107,11 @@ npm run test:browser
 Node 22.12+ is required. Browser tests cover company enquiries and institutional links, both languages, static content without JavaScript, legacy query URLs, white/Inter Light presentation, keyboard access and desktop/mobile layout. Screenshots are generated in `/private/tmp/portfolio-preview/`.
 
 This is a preview revision, not a deployment. Matomo remains disabled; its consent gates and deployment protections remain in place. See `docs/MATOMO.md`. Do not deploy or activate analytics without the owner's subsequent instruction.
+
+### Company-first revision
+
+The opening now leads with AI adoption, critical organisational knowledge and risk. Advisory covers knowledge protection, AI/cyber risk reviews, traceable decisions and tailored training, informed by the owner's knowledge-governance and teaching notes. The page explains that the organisation commissions UniBS, with activities, outputs, timing and fee defined before work begins.
+
+The neutral night theme and saved preference are restored. Collaborations are expandable cards grouped as companies, institutions/research centres and universities. Opening a card reveals related papers/reports; personal names are omitted, Intelpoint is excluded, and no unsupported NEC publication attribution is added. Native details remain operable without JavaScript. Homepage organisation links open the relevant card.
+
+The local papers archive is removed; its three former landing routes redirect to DBLP and are excluded from the sitemap. Existing research detail URLs remain available. There is no local publication listing to maintain.

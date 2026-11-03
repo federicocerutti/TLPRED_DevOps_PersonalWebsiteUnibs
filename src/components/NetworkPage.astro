@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { collaborations, peopleById, worksById } from '../lib/portfolio';
+import { collaborations, worksById } from '../lib/portfolio';
 import { research, sourceUrl } from '../lib/research';
 import type { Locale } from '../lib/site';
 interface Props {
@@ -8,6 +8,47 @@ interface Props {
 }
 const { locale } = Astro.props;
 const it = locale === 'it';
+const groups = [
+  { title: it ? 'Aziende' : 'Companies', sectors: ['Industry'] },
+  {
+    title: it ? 'Istituzioni e centri di ricerca' : 'Institutions and research centres',
+    sectors: ['Government / defence', 'Public research', 'Public organisation'],
+  },
+  { title: it ? 'Università' : 'Universities', sectors: ['Academic'] },
+];
+const summary = (o: (typeof collaborations)[number]) => {
+  const titles = o.workIds
+    .map((id) => worksById.get(id)?.title ?? '')
+    .join(' ')
+    .toLowerCase();
+  if (/beretta/i.test(o.name))
+    return it
+      ? 'Digital twin per lo sport e la riabilitazione.'
+      : 'Digital twins for sport and rehabilitation.';
+  if (/airbus/i.test(o.name))
+    return it
+      ? 'Dimostrazione congiunta nell’ambito del programma DAIS.'
+      : 'A joint demonstration within the DAIS programme.';
+  if (/nec/i.test(o.name))
+    return it
+      ? 'Collegamenti di ricerca nell’intelligenza artificiale.'
+      : 'Research connections in artificial intelligence.';
+  if (/cyber|threat|attack|security/.test(titles))
+    return it ? 'Cybersecurity e analisi delle minacce.' : 'Cybersecurity and threat analysis.';
+  if (/uncertain|bayesian|probabili|risk/.test(titles))
+    return it
+      ? 'Affidabilità dell’AI e ragionamento sotto incertezza.'
+      : 'AI reliability and reasoning under uncertainty.';
+  if (/argument/.test(titles))
+    return it ? 'Argomentazione e supporto alle decisioni.' : 'Argumentation and decision support.';
+  if (/event|signal|sensor|fusion/.test(titles))
+    return it
+      ? 'Analisi di segnali, eventi e dati da sensori.'
+      : 'Analysis of signals, events and sensor data.';
+  return it
+    ? 'Ricerca su intelligenza artificiale e ragionamento.'
+    : 'Research on artificial intelligence and reasoning.';
+};
 ---
 
 <BaseLayout
@@ -15,8 +56,8 @@ const it = locale === 'it';
   title={it ? 'Collaborazioni | Federico Cerutti' : 'Collaborations | Federico Cerutti'}
   description={
     it
-      ? 'Persone e organizzazioni con cui ho lavorato.'
-      : 'People and organisations I have worked with.'
+      ? 'Collaborazioni con aziende, istituzioni e università.'
+      : 'Collaborations with companies, institutions and universities.'
   }
   alternatePath={it ? '/en/research-network/' : '/it/rete-di-ricerca/'}
 >
@@ -25,47 +66,75 @@ const it = locale === 'it';
       <h1>{it ? 'Collaborazioni' : 'Collaborations'}</h1>
       <p>
         {it
-          ? 'Lavoro con ricercatori di aziende, università e istituzioni in diversi paesi. Qui trovi le persone e alcuni dei lavori che ci collegano.'
-          : 'I work with researchers at companies, universities and institutions across different countries. Here are the people and the work we have done together.'}
+          ? 'Dall’industria ai laboratori pubblici e alle università: ricerca condivisa su AI, cybersecurity e decisioni. Apri un’organizzazione per leggere i lavori collegati.'
+          : 'From industry to public laboratories and universities: shared research on AI, cybersecurity and decisions. Open an organisation to read the related work.'}
       </p>
     </div>
   </section>
   <section class="section">
-    <div class="container collaborations-list">
-      {collaborations.map((o) => {
-        const affiliations = research.verifiedAffiliations.filter((a) => a.institutionId === o.id);
-        const names = [
-          ...new Set([
-            ...o.collaboratorIds.map((id) => peopleById.get(id)?.name).filter(Boolean),
-            ...affiliations.map((a) => a.researcherName),
-          ]),
-        ];
-        const works = o.workIds
-          .map((id) => worksById.get(id)!)
-          .filter(Boolean)
-          .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
-        const reports = research.daisReports.filter((d) =>
-          affiliations.some((a) => a.sourceUrl === d.url),
-        );
-        return (
-          <article id={o.id} class="collaboration stack">
-            <h2>{o.sourceUrl ? <a href={o.sourceUrl}>{o.name}</a> : o.name}</h2>
-            <p>{names.join(', ')}</p>
-            <ul class="plain-links">
-              {works.map((w) => (
-                <li>
-                  <a href={sourceUrl(w)}>{w.title}</a> <span class="muted">({w.year})</span>
-                </li>
-              ))}
-              {reports.map((d) => (
-                <li>
-                  <a href={d.url}>{d.title}</a> ({d.year})
-                </li>
-              ))}
-            </ul>
-          </article>
-        );
-      })}
+    <div class="container">
+      {groups.map((group) => (
+        <section class="collaboration-group stack">
+          <h2>{group.title}</h2>
+          <div class="collaboration-cards">
+            {collaborations
+              .filter((o) => group.sectors.includes(o.sector))
+              .map((o) => {
+                const affiliations = research.verifiedAffiliations.filter(
+                  (a) => a.institutionId === o.id,
+                );
+                const works = o.workIds
+                  .map((id) => worksById.get(id)!)
+                  .filter(Boolean)
+                  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+                const reports = research.daisReports.filter((d) =>
+                  affiliations.some((a) => a.sourceUrl === d.url),
+                );
+                return (
+                  <details id={o.id} class="collaboration-card">
+                    <summary>
+                      <h3>
+                        {o.name
+                          .replace(' (verified current)', '')
+                          .replace(' (DAIS joint demonstration)', '')}
+                      </h3>
+                      <p class="small muted">{summary(o)}</p>
+                    </summary>
+                    <div class="stack">
+                      <ul class="plain-links">
+                        {works.map((w) => (
+                          <li>
+                            <a href={sourceUrl(w)}>{w.title}</a> ({w.year})
+                          </li>
+                        ))}
+                        {reports.map((d) => (
+                          <li>
+                            <a href={d.url}>{d.title}</a> ({d.year})
+                          </li>
+                        ))}
+                      </ul>
+                      {o.sourceUrl && (
+                        <p class="small">
+                          <a href={o.sourceUrl}>
+                            {it ? 'Sito dell’organizzazione' : 'Organisation website'}
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </details>
+                );
+              })}
+          </div>
+        </section>
+      ))}
     </div>
   </section>
+  <script>
+    const openTarget = () => {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    };
+    openTarget();
+    window.addEventListener('hashchange', openTarget);
+  </script>
 </BaseLayout>
