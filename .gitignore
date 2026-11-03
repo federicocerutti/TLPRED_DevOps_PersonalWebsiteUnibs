@@ -2,3 +2,11 @@ node_modules
 dist
 .astro
 .npm-cache
+
+.private/
+.env
+.env.*
+!.env.example
+backups/website/
+playwright-report/
+test-results/

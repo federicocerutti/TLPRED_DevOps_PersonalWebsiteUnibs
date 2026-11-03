@@ -56,26 +56,59 @@ const yearOptions = [...new Set(items.flatMap((item) => item.years ?? []))].sort
 
 <div class="filter-shell">
   <div class="surface filter-controls" data-filter-root>
-    <input type="search" placeholder={labels.searchPlaceholder} data-filter-search />
-    {showKindFilter && kindOptions.length > 0 && labels.kind && <select data-filter-kind>
-      <option value="">{labels.kind}: {labels.all}</option>
-      {kindOptions.map((option) => <option value={option}>{option}</option>)}
-    </select>}
-    {showStatusFilter && statusOptions.length > 0 && labels.status && <select data-filter-status>
-      <option value="">{labels.status}: {labels.all}</option>
-      {statusOptions.map((option) => <option value={option}>{option}</option>)}
-    </select>}
-    {showTagFilter && <select data-filter-tag>
-      <option value="">{labels.tag}: {labels.all}</option>
-      {tagOptions.map((option) => <option value={option}>{option}</option>)}
-    </select>}
-    {showPersonFilter && <select data-filter-person>
-      <option value="">{labels.person}: {labels.all}</option>
-      {personOptions.map((option) => <option value={option}>{option}</option>)}
-    </select>}
-    <select data-filter-year>
-      <option value="">{labels.year}: {labels.all}</option>
-      {yearOptions.map((option) => <option value={option}>{option}</option>)}
+    <input
+      type="search"
+      aria-label={labels.searchPlaceholder}
+      placeholder={labels.searchPlaceholder}
+      data-filter-search
+    />
+    {showKindFilter && kindOptions.length > 0 && labels.kind && (
+      <select aria-label={labels.kind} data-filter-kind>
+        <option value="">
+          {labels.kind}: {labels.all}
+        </option>
+        {kindOptions.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
+    )}
+    {showStatusFilter && statusOptions.length > 0 && labels.status && (
+      <select aria-label={labels.status} data-filter-status>
+        <option value="">
+          {labels.status}: {labels.all}
+        </option>
+        {statusOptions.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
+    )}
+    {showTagFilter && (
+      <select aria-label={labels.tag} data-filter-tag>
+        <option value="">
+          {labels.tag}: {labels.all}
+        </option>
+        {tagOptions.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
+    )}
+    {showPersonFilter && (
+      <select aria-label={labels.person} data-filter-person>
+        <option value="">
+          {labels.person}: {labels.all}
+        </option>
+        {personOptions.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
+    )}
+    <select aria-label={labels.year} data-filter-year>
+      <option value="">
+        {labels.year}: {labels.all}
+      </option>
+      {yearOptions.map((option) => (
+        <option value={option}>{option}</option>
+      ))}
     </select>
   </div>
   <div class:list={['filter-list', spacious && 'filter-list-spacious']} data-filter-list>
@@ -101,16 +134,40 @@ const yearOptions = [...new Set(items.flatMap((item) => item.years ?? []))].sort
           />
         )}
         <div class="stack" style="padding: 1.1rem;">
-          {item.meta && item.meta.length > 0 && <div class="meta">{item.meta.map((entry) => <span>{entry}</span>)}</div>}
-          <h3 style="margin: 0; font-size: 1.25rem; letter-spacing: -0.04em;"><a href={item.href}>{item.title}</a></h3>
-          <p class="muted" style="margin: 0;">{item.summary}</p>
-          {item.tags && item.tags.length > 0 && <div class="meta">{item.tags.map((tag) => <span class="tag">{tag}</span>)}</div>}
-          {showOpenButton && <div><a class="button secondary" href={item.href}>{labels.openLabel}</a></div>}
+          {item.meta && item.meta.length > 0 && (
+            <div class="meta">
+              {item.meta.map((entry) => (
+                <span>{entry}</span>
+              ))}
+            </div>
+          )}
+          <h3 style="margin: 0; font-size: 1.25rem; letter-spacing: -0.04em;">
+            <a href={item.href}>{item.title}</a>
+          </h3>
+          <p class="muted" style="margin: 0;">
+            {item.summary}
+          </p>
+          {item.tags && item.tags.length > 0 && (
+            <div class="meta">
+              {item.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          )}
+          {showOpenButton && (
+            <div>
+              <a class="button secondary" href={item.href}>
+                {labels.openLabel}
+              </a>
+            </div>
+          )}
         </div>
       </article>
     ))}
   </div>
-  <p class="muted is-hidden" data-filter-empty>{labels.noResults}</p>
+  <p class="muted is-hidden" data-filter-empty>
+    {labels.noResults}
+  </p>
 </div>
 
 <style>
@@ -141,7 +198,7 @@ const yearOptions = [...new Set(items.flatMap((item) => item.years ?? []))].sort
     const tag = root.querySelector('[data-filter-tag]');
     const person = root.querySelector('[data-filter-person]');
     const year = root.querySelector('[data-filter-year]');
-    const items = [...shell.querySelectorAll('.filter-item')];
+    const items = [...shell.querySelectorAll<HTMLElement>('.filter-item')];
     const empty = shell.querySelector('[data-filter-empty]');
 
     const applyFilters = () => {
@@ -155,13 +212,21 @@ const yearOptions = [...new Set(items.flatMap((item) => item.years ?? []))].sort
       let visible = 0;
 
       items.forEach((item) => {
-        const matchesQuery = !query || item.dataset.title?.includes(query) || item.dataset.summary?.includes(query);
+        const matchesQuery =
+          !query || item.dataset.title?.includes(query) || item.dataset.summary?.includes(query);
         const matchesKind = !kindValue || item.dataset.kind === kindValue;
         const matchesStatus = !statusValue || item.dataset.status === statusValue;
         const matchesTag = !tagValue || item.dataset.tags?.includes(tagValue);
         const matchesPerson = !personValue || item.dataset.people?.includes(personValue);
         const matchesYear = !yearValue || item.dataset.years?.split('|').includes(yearValue);
-        const show = Boolean(matchesQuery && matchesKind && matchesStatus && matchesTag && matchesPerson && matchesYear);
+        const show = Boolean(
+          matchesQuery &&
+          matchesKind &&
+          matchesStatus &&
+          matchesTag &&
+          matchesPerson &&
+          matchesYear,
+        );
         item.classList.toggle('is-hidden', !show);
         if (show) visible += 1;
       });
@@ -169,8 +234,12 @@ const yearOptions = [...new Set(items.flatMap((item) => item.years ?? []))].sort
       empty?.classList.toggle('is-hidden', visible !== 0);
     };
 
-    [search, kind, status, tag, person, year].forEach((control) => control?.addEventListener('input', applyFilters));
-    [kind, status, tag, person, year].forEach((control) => control?.addEventListener('change', applyFilters));
+    [search, kind, status, tag, person, year].forEach((control) =>
+      control?.addEventListener('input', applyFilters),
+    );
+    [kind, status, tag, person, year].forEach((control) =>
+      control?.addEventListener('change', applyFilters),
+    );
     applyFilters();
   });
 </script>
