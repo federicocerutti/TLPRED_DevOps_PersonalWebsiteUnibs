@@ -1,6 +1,6 @@
 # Search and AI crawler readiness
 
-Audit date: 3 November 2026. Changes are local and have not been deployed.
+Audit date: 3 November 2026. The owner authorised deployment later that day; the validated website is now live (implementation commit `931877c`).
 
 ## Implemented
 
@@ -45,3 +45,6 @@ Ordinary SEO and readable public content are the basis for AI search discovery. 
 - [Google: localized versions](https://developers.google.com/search/docs/specialty/international/localized-versions)
 - [OpenAI crawler policies](https://developers.openai.com/api/docs/bots)
 - [Schema.org WebPage](https://schema.org/WebPage)
+
+
+Deployment verification, 3 November 2026: live homepages, main listings, robots and sitemap returned HTTP 200 and matched the validated local build. The live sitemap now contains 288 canonical URLs, replacing the older 31-URL deployment described above. No analytics requests are enabled; Matomo installation is blocked by missing account PHP-FPM support (see `MATOMO.md`). Indexing/ranking and Search Console remain unverified.
