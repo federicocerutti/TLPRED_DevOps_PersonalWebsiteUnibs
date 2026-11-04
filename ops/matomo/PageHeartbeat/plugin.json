@@ -1,0 +1,9 @@
+{
+  "name": "PageHeartbeat",
+  "version": "1.0.0",
+  "description": "Correlates heartbeats within one memory-only page identity while retaining native cookieless tracking and random fingerprints.",
+  "license": "GPL v3+",
+  "require": {
+    "matomo": ">=5.14.2,<6.0.0"
+  }
+}

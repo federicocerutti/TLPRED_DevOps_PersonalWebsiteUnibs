@@ -1,5 +1,67 @@
 # Matomo: deployment status and activation runbook
 
+## Installation and tracking activation — 4 November 2026
+
+The owner requested installation and then explicitly instructed enabling tracking.
+Matomo 5.14.2 is installed at `https://federico-cerutti.unibs.it/matomo/`
+using the university-provided local MariaDB database, with table prefix `matomo_`.
+The real site ID is **1**. The PHP-FPM execution identity is the website owner;
+configuration and separately generated administrator credentials remain in private
+server storage outside the document root. The earlier PHP and remote-database
+blockers below are historical.
+
+`scripts/deploy.sh` loads the public production flags from
+`ops/matomo/production.env`. These contain only enablement flags, the public
+endpoint and site ID. Ordinary builds/previews remain disabled by default.
+To build the production configuration for verification:
+
+```sh
+set -a
+source ops/matomo/production.env
+set +a
+npm run build
+npm run verify:dist
+```
+
+The installed backend forces cookieless tracking, masks three IP bytes before
+enrichment, randomises config IDs and honours Do Not Track. Device, referrer,
+resolution, language, User ID, ecommerce, event, content and page-performance
+reporting plugins are disabled; visitor logs/profiles are disabled. Retention is
+seven raw-log days and six aggregate-report months. The default location provider
+has language-to-country guessing disabled: do not promise accurate country
+geolocation. Precise location fields must remain empty.
+
+The frontend sends an explicit memory-only per-document `cid`, which changes on
+reload and is never persisted. The separately deployed
+[`PageHeartbeat` extension](../ops/matomo/PageHeartbeat/README.md) retains native
+fingerprint randomisation but allows only heartbeat requests to match that page
+identity. Native Matomo 5.14.2 otherwise treats every randomised request as a new
+visit and cannot update duration. Real browser requests and raw test records must
+confirm that automatic heartbeats increase duration without adding pageviews,
+and that reloads create a new identity. These are page counts and approximate
+focused-page durations, not unique-person or cross-page session statistics.
+
+HTTP checks deny configuration, tmp, vendor, core and unauthenticated installer
+URLs. Hourly archiving/scheduled deletion and daily encrypted backups are installed
+with overlap locks; backups have seven-day retention. A backup restored successfully
+into an independent temporary MariaDB instance with networking disabled (38 tables,
+one administrator and one site). Backups and their key currently live on the same
+host, so this is verified local recovery, not off-host disaster recovery.
+
+The private knowledge-base handoff records credential locations, maintenance
+scripts and live verification. Do not copy that private infrastructure context or
+any secrets into this repository.
+
+### Disable tracking
+
+Set `MATOMO_ENABLED=false` in `ops/matomo/production.env` and redeploy using the
+protected helper. For immediate collection shutdown, run the native console
+command on the application host:
+
+```sh
+php /home/federico-cerutti/website/matomo/console config:set \
+  --section=Tracker --key=record_statistics --value=0
+```
 
 ## Latest owner-authorised deployment — 3 November 2026
 

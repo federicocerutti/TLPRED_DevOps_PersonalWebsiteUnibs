@@ -15,6 +15,7 @@ test('minimal analytics uses a fresh page identity, sanitised URLs and heartbeat
   const commands = () => page.evaluate(() => window._paq ?? []);
   const queue = await commands();
   expect(queue.slice(0, 2)).toEqual([['disableCookies'], ['disableBrowserFeatureDetection']]);
+  expect(queue).toContainEqual(['disablePerformanceTracking']);
   expect(queue).toContainEqual(['enableHeartBeatTimer', 30]);
   expect(queue).toContainEqual(['setReferrerUrl', '']);
   expect(queue).toContainEqual(['setRequestMethod', 'POST']);
@@ -22,6 +23,7 @@ test('minimal analytics uses a fresh page identity, sanitised URLs and heartbeat
   expect(JSON.stringify(queue)).not.toMatch(/private@example|#private/);
   const identity = queue.find(c => c[0] === 'setVisitorId')?.[1];
   expect(identity).toMatch(/^[a-f0-9]{16}$/);
+  expect(queue).toContainEqual(['appendToTrackingUrl', `cid=${identity}`]);
   await page.evaluate(() => {
     document.dispatchEvent(new Event('astro:page-load'));
     document.dispatchEvent(new CustomEvent('research:interaction', { detail: 'network-filter' }));

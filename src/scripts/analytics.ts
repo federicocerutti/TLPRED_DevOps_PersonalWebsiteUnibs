@@ -24,8 +24,12 @@ if (!window.__ceruttiAnalytics) {
       byte => byte.toString(16).padStart(2, '0')).join('');
     queue('disableCookies');
     queue('disableBrowserFeatureDetection');
+    queue('disablePerformanceTracking');
     queue('setDoNotTrack', true);
     queue('setVisitorId', pageId);
+    // Native forced-cookieless mode ignores _id; cid correlates only this page's
+    // heartbeats while the server continues randomising browser fingerprints.
+    queue('appendToTrackingUrl', 'cid=' + pageId);
     queue('setReferrerUrl', '');
     queue('setRequestMethod', 'POST');
     queue('setTrackerUrl', config.url + 'matomo.php');

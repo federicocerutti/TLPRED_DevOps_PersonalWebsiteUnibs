@@ -2,6 +2,13 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+# Production tracking settings are public and versioned; previews stay disabled
+# unless explicitly built with these flags. Private Matomo config stays on host.
+if [[ -f "$ROOT_DIR/ops/matomo/production.env" ]]; then
+  set -a
+  source "$ROOT_DIR/ops/matomo/production.env"
+  set +a
+fi
 REMOTE_TARGET="${REMOTE_TARGET:-federico-cerutti@web.unibs.it:website/}"
 TIMESTAMP="$(date +"%Y%m%d-%H%M%S")"
 DRY_RUN=false

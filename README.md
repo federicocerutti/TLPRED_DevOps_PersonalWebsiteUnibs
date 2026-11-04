@@ -50,7 +50,8 @@ Use `--dry-run` to preview the deploy rsync, or `--backup-only` to stop after th
 The final deploy step is still:
 
 ```bash
-rsync -avz --delete dist/ federico-cerutti@web.unibs.it:website/
+rsync -avz --delete --exclude=/matomo --filter='P /matomo' \
+  --filter='P /matomo/***' dist/ federico-cerutti@web.unibs.it:website/
 ```
 
 To override the destination temporarily:
@@ -58,6 +59,12 @@ To override the destination temporarily:
 ```bash
 REMOTE_TARGET='federico-cerutti@web.unibs.it:website/' ./scripts/deploy.sh
 ```
+
+The helper loads public tracking settings from `ops/matomo/production.env`;
+ordinary builds and previews leave tracking disabled unless those flags are
+explicitly supplied. Keep the Matomo exclusion/protection rules on every deploy,
+and keep its private server configuration out of frontend tooling and website
+backups. See [Matomo installation and activation](docs/MATOMO.md).
 
 To preview the deploy without writing remote files:
 
