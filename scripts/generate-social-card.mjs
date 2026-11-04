@@ -23,7 +23,7 @@ try {
  .role{font-size:21px;line-height:1.55;margin:24px 0 0;color:#606562}
  .uk{font-size:17px;line-height:1.6;margin:20px 0 0;color:#606562}
  .url{position:absolute;left:68px;bottom:27px;font-size:18px;letter-spacing:.15px;color:#71756e}
- </style></head><body><div class="card"><img class="portrait" src="data:image/png;base64,${portrait}"><div class="copy"><h1>Federico Cerutti</h1><p class="field">Adopt AI. Protect what your<br>organisation knows.</p><p class="role">AI and cybersecurity · Research, consultancy, training<br>Full Professor · University of Brescia</p><p class="uk">Honorary Senior Lecturer · Cardiff University<br>Visiting Fellow · University of Southampton<br>Visiting Professor · Imperial College London</p></div><div class="url">federico-cerutti.unibs.it</div></div></body></html>`);
+ </style></head><body><div class="card"><img class="portrait" src="data:image/png;base64,${portrait}"><div class="copy"><h1>Federico Cerutti</h1><p class="field">Adopt AI. Protect what your<br>organisation knows.</p><p class="role">AI and cybersecurity · Research, consultancy, training<br>Full Professor · University of Brescia</p><p class="uk">Director, Brescia node · CINI National Cybersecurity Lab<br>Honorary Senior Lecturer · Cardiff University<br>Visiting Fellow · University of Southampton<br>Visiting Professor · Imperial College London</p></div><div class="url">federico-cerutti.unibs.it</div></div></body></html>`);
  await page.evaluate(()=>document.fonts.ready);
  await page.screenshot({path:'public/images/federico-cerutti-ai-cybersecurity-beige.jpg',type:'jpeg',quality:92});
 } finally {await browser.close();}
