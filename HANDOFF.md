@@ -1,5 +1,52 @@
 # Website continuation handoff
 
+## Tracking live — 4 November 2026
+
+This section supersedes the PHP blocker and disabled tracking state below.
+The owner requested installing Matomo on the university's local database, then
+explicitly instructed starting tracking.
+
+- Deployed frontend implementation: **`35e2146`**, saved on GitHub branch
+  **`codex/matomo-tracking`**. GitHub returned internal server errors when updating
+  the older redesign branch; pushing the new task branch succeeded. Resume from
+  the tracking branch, preserving the original checkout.
+- Matomo 5.14.2 is live at `https://federico-cerutti.unibs.it/matomo/`, site ID **1**.
+  Private configuration and administrator credentials remain on the application
+  host, outside the document root. The private knowledge base contains the access
+  and recovery record.
+- The deployed site automatically collects pageviews and approximate page
+  duration, without analytics cookies, referrers, browser-feature or performance
+  collection. It suppresses all analytics requests for Do Not Track, Global
+  Privacy Control and prior refusals.
+- The document's random memory-only identity changes on reload and is sent as
+  `cid`. The separately installed `PageHeartbeat` extension permits only
+  heartbeats to reuse that page identity while retaining native cookieless
+  enforcement, random config IDs and IP masking. Native Matomo's random-ID
+  branch otherwise prevents heartbeat correlation. No upstream core files were
+  patched. Retest the extension before each Matomo upgrade.
+- Actual public English/Italian pageviews, native focus-change heartbeat and
+  reload identity were verified. A heartbeat increased duration to **34 seconds
+  with one pageview**, masked IP and empty device/referrer/precise-location fields.
+  The specifically identified synthetic production visits were deleted through
+  Matomo's native privacy API.
+- Type checks, 13 unit tests, all 17 browser tests, 292 generated HTML files,
+  5,249 internal links and 289 content-page SEO checks passed. The final added
+  performance-suppression command also passed the two focused analytics browser
+  tests and production request checks.
+- Hourly archiving/deletion and daily encrypted seven-day backups are installed.
+  Backups include the extension, and isolated database restore passed. Recovery
+  backups and their key are currently on the same host; no off-host disaster
+  recovery is claimed. Country reporting from the default provider is not
+  verified IP geolocation.
+- Rollback website archive:
+  `web.unibs.it:/home/federico-cerutti/.website-backups/website-20261104-112605.tar.gz`.
+  The protected deploy helper excludes Matomo from website deletion and backups.
+  It loads approved public flags from `ops/matomo/production.env`; normal
+  builds/previews remain disabled unless explicitly given those flags.
+
+See `docs/MATOMO.md` and `ops/matomo/PageHeartbeat/README.md` for current operation
+and shutdown. Super Productivity was unreachable; its task update remains unsaved.
+
 ## Read first — current handoff, 3 November 2026
 
 This section supersedes older preview-only instructions and intermediate counts below. The owner authorised commit, sync and production deployment, then requested a final handoff and complete repository sync.

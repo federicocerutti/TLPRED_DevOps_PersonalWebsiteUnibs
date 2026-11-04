@@ -52,6 +52,15 @@ The private knowledge-base handoff records credential locations, maintenance
 scripts and live verification. Do not copy that private infrastructure context or
 any secrets into this repository.
 
+Production tracking was deployed from implementation commit `35e2146`, preserved
+on GitHub branch `codex/matomo-tracking`. Actual public English/Italian pageviews
+and focus-change heartbeats passed; a heartbeat updated duration to 34 seconds
+without adding another pageview. Raw test records had masked IPs and empty device,
+referrer and precise-location fields. Reloads changed the page identity. No
+analytics cookies, browser-feature or performance payloads were recorded, and DNT,
+GPC and prior refusal suppressed all Matomo requests. Specifically identified
+synthetic visits were removed through the native privacy API and reports refreshed.
+
 ### Disable tracking
 
 Set `MATOMO_ENABLED=false` in `ops/matomo/production.env` and redeploy using the
