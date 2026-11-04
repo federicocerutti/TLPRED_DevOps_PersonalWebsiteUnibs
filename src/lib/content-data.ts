@@ -136,7 +136,7 @@ const profileByLocale: Record<Locale, Profile> = {
       'Recipient of the Rita Levi-Montalcini programme for attracting Italian researchers abroad',
       'Member of the Expert Evaluation Group for the 2015-2019 VQR exercise',
     ],
-    portrait: '/images/people/federico-cerutti-dark.png',
+    portrait: '/images/people/federico-cerutti-beige.png',
     portraitAlt: 'Ritratto di Federico Cerutti',
     socialLinks: [
       { label: 'Email', href: 'mailto:federico.cerutti@unibs.it' },
@@ -192,7 +192,7 @@ const profileByLocale: Record<Locale, Profile> = {
       'Recipient of the Rita Levi-Montalcini programme for attracting Italian researchers abroad',
       'Member of the Expert Evaluation Group for the 2015-2019 VQR exercise',
     ],
-    portrait: '/images/people/federico-cerutti-dark.png',
+    portrait: '/images/people/federico-cerutti-beige.png',
     portraitAlt: 'Portrait of Federico Cerutti',
     socialLinks: [
       { label: 'Email', href: 'mailto:federico.cerutti@unibs.it' },
