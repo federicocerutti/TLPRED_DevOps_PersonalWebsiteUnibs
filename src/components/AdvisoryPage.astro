@@ -73,6 +73,20 @@ const services = [
   </section>
   <section class="section">
     <div class="container stack">
+      <h2>{it ? 'Formazione avanzata in cybersecurity' : 'Advanced cybersecurity education'}</h2>
+      <p>
+        {it ? 'Dirigo il ' : 'I direct the University of Brescia’s '}
+        <a href="https://corsi.unibs.it/it/mascai26">
+          {it
+            ? 'Master di II livello in Cybersecurity e Compliance aziendale integrata'
+            : 'second-level Master’s programme in Cybersecurity and Integrated Corporate Compliance'}
+        </a>
+        {it ? ' dell’Università degli Studi di Brescia.' : '.'}
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container stack">
       <h2>{it ? 'Come funziona un contratto conto terzi' : 'How a university agreement works'}</h2>
       <CompanyIntroduction locale={locale} />
     </div>
