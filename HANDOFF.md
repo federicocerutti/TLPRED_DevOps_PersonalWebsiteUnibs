@@ -45,7 +45,9 @@ explicitly instructed starting tracking.
   builds/previews remain disabled unless explicitly given those flags.
 
 See `docs/MATOMO.md` and `ops/matomo/PageHeartbeat/README.md` for current operation
-and shutdown. Super Productivity was unreachable; its task update remains unsaved.
+and shutdown. Super Productivity became available before completion; the existing
+website strategy task was updated and read back, preserving its broader status and
+schedule.
 
 ## Read first — current handoff, 3 November 2026
 
