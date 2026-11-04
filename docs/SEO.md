@@ -48,3 +48,11 @@ Ordinary SEO and readable public content are the basis for AI search discovery. 
 
 
 Deployment verification, 3 November 2026: live homepages, main listings, robots and sitemap returned HTTP 200 and matched the validated local build. The live sitemap now contains 288 canonical URLs, replacing the older 31-URL deployment described above. No analytics requests are enabled; Matomo installation is blocked by missing account PHP-FPM support (see `MATOMO.md`). Indexing/ranking and Search Console remain unverified.
+
+## LinkedIn sharing preview — 4 November 2026
+
+The default Open Graph image is now `/images/federico-cerutti-ai-cybersecurity.jpg`: a 1200 × 630 JPEG with the existing portrait, the homepage's “Adopt AI. Protect what your organisation knows.” message, and AI, cybersecurity, consultancy and training context. The homepages have substantive bilingual descriptions; default-image metadata declares JPEG dimensions. Schema.org Person keeps the original portrait rather than using the promotional card.
+
+Regenerate with `node scripts/generate-social-card.mjs` using the installed Astro/Sharp dependency. The new image URL separates this asset from previously cached portrait previews. Check the homepage with [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) to request a fresh fetch before re-adding the website to Featured. Website metadata cannot force LinkedIn to refresh an already saved card. Primary guidance: [LinkedIn website sharing](https://www.linkedin.com/help/linkedin/answer/a521928).
+
+Validation: no type diagnostics, 13 unit tests, 292 generated HTML pages, 5,249 internal links and social metadata checks across 289 content pages. Matomo remains enabled through the production deploy settings.

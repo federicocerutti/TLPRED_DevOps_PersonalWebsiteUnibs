@@ -23,7 +23,7 @@ export function pageStructuredData({
         name: 'Federico Cerutti',
         honorificPrefix: 'Prof.',
         url: base,
-        image: new URL(site.socialImage, base).toString(),
+        image: new URL('/images/people/federico-cerutti.png', base).toString(),
         jobTitle: site.contactRole[locale],
         affiliation: {
           '@type': 'CollegeOrUniversity',
