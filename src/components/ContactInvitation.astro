@@ -1,16 +1,20 @@
 ---
 import { site } from '../lib/site';
-const { locale = 'en' } = Astro.props;
+const { locale = 'en', advisory = false } = Astro.props;
 const it = locale === 'it';
 ---
 
 <section class="section contact-band">
   <div class="container stack">
-    <h2>{it ? 'Contatti' : 'Contact'}</h2>
+    <h2>
+      {it
+        ? 'Parliamo delle esigenze della tua organizzazione'
+        : 'Discuss your organisation’s needs'}
+    </h2>
     <p>
       {it
-        ? 'Per ricerca, consulenza tecnico-scientifica o formazione attraverso l’Università degli Studi di Brescia, scrivimi indicando il problema, il contesto della tua organizzazione e le tempistiche indicative. Valutiamo insieme l’adeguatezza della collaborazione e definiamo attività, modalità operative e compenso secondo le procedure dell’Ateneo.'
-        : 'For research, technical consultancy or training through the University of Brescia, email me with the problem, your organisational context and indicative timing. We can discuss whether the collaboration is a fit, then define the activities, working arrangements and fee through the university’s procedures.'}
+        ? 'Per ricerca, consulenza tecnico-scientifica o formazione attraverso l’Università degli Studi di Brescia, scrivimi indicando il problema, il contesto della tua organizzazione e le tempistiche indicative. Il primo scambio serve a capire se la collaborazione è adatta al problema e a definirne il perimetro, prima di concordare l’incarico con l’Ateneo.'
+        : 'For research, technical consultancy or training through the University of Brescia, email me with the problem, your organisational context and indicative timing. The first exchange establishes whether the collaboration fits your problem and helps define its scope before agreeing an engagement through the university.'}
     </p>
     <p>
       <a data-analytics-event="advisory-contact" href={`mailto:${site.contactEmail}`}>
@@ -18,8 +22,14 @@ const it = locale === 'it';
       </a>
     </p>
     <p>
-      <a href={it ? '/it/consulenza/' : '/en/advisory/'}>
-        {it ? 'Collaborare con l’Università' : 'Working with the university'}
+      <a href={advisory ? `mailto:${site.contactEmail}` : it ? '/it/consulenza/' : '/en/advisory/'}>
+        {advisory
+          ? it
+            ? 'Scrivimi delle esigenze della tua organizzazione'
+            : 'Email me about your organisation’s needs'
+          : it
+            ? 'Collaborare con l’Università'
+            : 'Working with the university'}
       </a>
     </p>
   </div>

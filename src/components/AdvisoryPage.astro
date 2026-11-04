@@ -8,43 +8,32 @@ interface Props {
 }
 const { locale } = Astro.props;
 const it = locale === 'it';
-const services = it
-  ? [
-      [
-        'Proteggere la conoscenza critica',
-        'Individuare quali conoscenze rendono possibile il lavoro dell’organizzazione e come vengono esposte o disperse usando LLM, RAG e agenti. Il lavoro può produrre una mappa delle conoscenze critiche, dei rischi e delle priorità di protezione.',
-      ],
-      [
-        'Valutare AI e rischi cyber',
-        'Esaminare affidabilità, incertezza e sicurezza dei sistemi di AI. Confrontare metodi di valutazione, discutere scenari di abuso e definire verifiche e supervisione umana prima dell’adozione. Il risultato è una revisione tecnica con raccomandazioni e priorità.',
-      ],
-      [
-        'Rendere le decisioni ricostruibili',
-        'Collegare informazioni, vincoli e responsabilità nelle decisioni su sicurezza e AI. Individuare lacune nei processi e nella documentazione, così che una scelta possa essere spiegata e riesaminata anche quando cambiano persone o strumenti.',
-      ],
-      [
-        'Formare chi decide e chi realizza',
-        'Briefing per dirigenti e workshop per gruppi tecnici su rischi dell’AI, conoscenza organizzativa, cybersecurity e decisioni sotto incertezza. Casi e materiali sono adattati alle domande dell’organizzazione.',
-      ],
-    ]
-  : [
-      [
-        'Protect critical knowledge',
-        'Identify the knowledge your organisation depends on and how LLMs, RAG and agents can expose or erode it. The work can produce a map of critical knowledge, associated risks and priorities for protection.',
-      ],
-      [
-        'Assess AI and cyber risks',
-        'Examine the reliability, uncertainty and security of AI systems. Compare evaluation methods, explore misuse scenarios and define checks and human oversight before adoption. The output is a technical review with recommendations and priorities.',
-      ],
-      [
-        'Make decisions traceable',
-        'Connect information, constraints and responsibilities in security and AI decisions. Identify gaps in processes and documentation so that a choice can be explained and revisited as people and tools change.',
-      ],
-      [
-        'Train decision-makers and technical teams',
-        'Executive briefings and technical workshops on AI risks, organisational knowledge, cybersecurity and decisions under uncertainty. Cases and materials are adapted to the organisation’s questions.',
-      ],
-    ];
+const services = [
+  [
+    'Proteggere la conoscenza critica',
+    'Protect critical knowledge',
+    'Vuoi usare un assistente AI con documenti e competenze interne? Possiamo individuare quali conoscenze proteggere e come potrebbero essere esposte. Il lavoro può produrre una mappa delle conoscenze critiche, dei rischi e delle priorità di protezione.',
+    'Introducing an AI assistant that uses internal documents and expertise? We can examine which knowledge needs protection and how it could be exposed. The work can produce a map of critical knowledge, exposure risks and protection priorities.',
+  ],
+  [
+    'Valutare AI e rischi cyber',
+    'Assess AI and cyber risks',
+    'Devi valutare un sistema di AI o un fornitore prima dell’adozione? Possiamo esaminarne sicurezza, affidabilità e limiti. Il lavoro può produrre una valutazione tecnica con risultati, limiti dell’analisi e raccomandazioni ordinate per priorità.',
+    'Evaluating an AI system or supplier before adoption? We can examine its security, reliability and limitations. The work can produce a technical assessment with findings, limits of the analysis and prioritised recommendations.',
+  ],
+  [
+    'Rendere le decisioni ricostruibili',
+    'Make decisions traceable',
+    'Devi chiarire chi autorizza, verifica e riesamina le decisioni supportate dall’AI? Possiamo esaminare processi, responsabilità e documentazione. Il lavoro può produrre una revisione delle lacune e delle verifiche da definire per spiegare e riesaminare le scelte.',
+    'Need to establish who authorises, checks and revisits AI-supported decisions? We can examine processes, responsibilities and documentation. The work can produce a review of gaps and checks to define so that decisions can be explained and revisited.',
+  ],
+  [
+    'Formare chi decide e chi realizza',
+    'Train decision-makers and technical teams',
+    'Dirigenti o gruppi tecnici devono prendere decisioni sull’AI in azienda? Possiamo partire dalle loro domande e dai casi d’uso dell’organizzazione. Il percorso può comprendere un briefing per dirigenti o un workshop tecnico con materiali di supporto, su obiettivi e contenuti concordati.',
+    'Preparing managers or technical teams to make decisions about AI in your organisation? We can start with their questions and your use cases. An engagement can include a tailored executive briefing or technical workshop with supporting materials, based on agreed objectives and content.',
+  ],
+].map(([itTitle, enTitle, itBody, enBody]) => (it ? [itTitle, itBody] : [enTitle, enBody]));
 ---
 
 <BaseLayout
@@ -67,8 +56,8 @@ const services = it
       </p>
       <p>
         {it
-          ? 'Mi occupo di sicurezza dell’AI, cybersecurity, ragionamento sotto incertezza e collaborazione uomo–AI.'
-          : 'My work concerns AI security, cybersecurity, reasoning under uncertainty and human–AI collaboration.'}
+          ? 'Possiamo iniziare da una domanda concreta con una valutazione mirata, una revisione tecnica o un workshop su misura. Attività e risultati attesi sono definiti nel perimetro concordato.'
+          : 'We can start with a defined organisational question through a focused assessment, technical review or tailored workshop. Activities and expected outputs depend on the agreed scope.'}
       </p>
     </div>
   </section>
@@ -86,14 +75,9 @@ const services = it
     <div class="container stack">
       <h2>{it ? 'Come funziona un contratto conto terzi' : 'How a university agreement works'}</h2>
       <CompanyIntroduction locale={locale} />
-      <p>
-        {it
-          ? 'La tua organizzazione affida un incarico all’Università, che mette a disposizione competenze scientifiche e tecniche per il problema concordato. Partiamo da una conversazione: può trattarsi di una valutazione, una relazione tecnica, un’attività di ricerca o un percorso di formazione. Prima di iniziare si definiscono attività, risultati attesi, tempi e corrispettivo nel contratto con l’Ateneo.'
-          : 'Your organisation commissions the university to apply scientific and technical expertise to an agreed problem. We start with a conversation: the work might be an assessment, a technical report, a research activity or a training programme. Before work starts, the agreement with the university sets out the activities, expected outputs, timing and fee.'}
-      </p>
     </div>
   </section>
-  <ContactInvitation locale={locale} />
+  <ContactInvitation locale={locale} advisory />
   <section class="section">
     <div class="container stack">
       <h2>{it ? 'Informazioni UniBS' : 'UniBS information'}</h2>

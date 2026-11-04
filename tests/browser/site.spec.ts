@@ -39,9 +39,13 @@ test('company journey and bilingual university agreements', async ({ page }) => 
       exact: true,
     }),
   ).toHaveAttribute('href', 'https://www.unibs.it/it/node/1536');
-  await expect(page.locator('main a[href="mailto:federico.cerutti@unibs.it"]')).toBeVisible();
+  await expect(page.locator('main a[data-analytics-event="advisory-contact"]')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Email me about your organisation’s needs', exact: true })).toHaveAttribute('href', 'mailto:federico.cerutti@unibs.it');
+  await expect(page.locator('.contact-band a[href="/en/advisory/"]')).toHaveCount(0);
   await page.getByRole('link', { name: 'Passa a Italiano' }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'it');
+  await expect(page.getByRole('link', { name: 'Scrivimi delle esigenze della tua organizzazione', exact: true })).toHaveAttribute('href', 'mailto:federico.cerutti@unibs.it');
+  await expect(page.locator('.contact-band a[href="/it/consulenza/"]')).toHaveCount(0);
   await expect(page.locator('main')).toContainText('contratti conto terzi');
   await expect(
     page.getByRole('link', { name: 'Ricerca commissionata', exact: true }),
