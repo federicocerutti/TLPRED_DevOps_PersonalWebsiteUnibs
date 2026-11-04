@@ -908,7 +908,7 @@ h3 {
 
 :root[data-theme='dark'] .home-portrait,
 :root[data-theme='dark'] .portrait-block img {
-  filter: brightness(0.72) contrast(0.96);
+  filter: none;
 }
 .roles-grid {
   display: grid;

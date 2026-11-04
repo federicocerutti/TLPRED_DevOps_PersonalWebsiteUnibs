@@ -3,7 +3,7 @@ export type Locale = 'it' | 'en';
 export const site = {
   name: 'Prof. Federico Cerutti',
   baseUrl: 'https://federico-cerutti.unibs.it',
-  socialImage: '/images/federico-cerutti-ai-cybersecurity.jpg',
+  socialImage: '/images/federico-cerutti-ai-cybersecurity-dark.jpg',
   contactEmail: 'federico.cerutti@unibs.it',
   contactPhone: '+39 030 371 5453',
   contactPhoneUrl: 'tel:+390303715453',
